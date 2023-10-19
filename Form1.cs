@@ -16,5 +16,22 @@ namespace kursova
         {
             InitializeComponent();
         }
+
+        private void menuItem4_Click(object sender, EventArgs e)
+        {
+            FaqForm faqForm = new FaqForm();
+            faqForm.ShowDialog();
+        }
+
+        private void menuItem5_Click(object sender, EventArgs e)
+        {
+            AboutDevelopersForm aboutDevelopersForm = new AboutDevelopersForm();
+            aboutDevelopersForm.ShowDialog();
+        }
+
+        private void menuItem3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
