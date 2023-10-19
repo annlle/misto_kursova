@@ -25,7 +25,8 @@ namespace kursova
 
         private void menuItem5_Click(object sender, EventArgs e)
         {
-
+            AboutDevelopersForm aboutDevelopersForm = new AboutDevelopersForm();
+            aboutDevelopersForm.ShowDialog();
         }
 
         private void menuItem3_Click(object sender, EventArgs e)
