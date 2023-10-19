@@ -19,6 +19,12 @@ namespace kursova
 
         private void menuItem4_Click(object sender, EventArgs e)
         {
+            FaqForm faqForm = new FaqForm();
+            faqForm.ShowDialog();
+        }
+
+        private void menuItem5_Click(object sender, EventArgs e)
+        {
 
         }
     }

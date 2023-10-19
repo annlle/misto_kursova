@@ -73,6 +73,7 @@
             // 
             this.menuItem5.Index = 1;
             this.menuItem5.Text = "About developers";
+            this.menuItem5.Click += new System.EventHandler(this.menuItem5_Click);
             // 
             // Form1
             // 
@@ -81,6 +82,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Menu = this.mainMenu1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Misto App";
             this.ResumeLayout(false);
 
