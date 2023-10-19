@@ -27,5 +27,10 @@ namespace kursova
         {
 
         }
+
+        private void menuItem3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
