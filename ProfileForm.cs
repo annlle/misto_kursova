@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace kursova
 {
-    public partial class AboutDevelopersForm : Form
+    public partial class ProfileForm : Form
     {
-        public AboutDevelopersForm()
+        public ProfileForm()
         {
             InitializeComponent();
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -33,5 +33,22 @@ namespace kursova
         {
             Application.Exit();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PublicTransportForm publicTransportForm = new PublicTransportForm();
+            publicTransportForm.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ProfileForm profileForm = new ProfileForm();
+            profileForm.ShowDialog();
+        }
     }
 }
