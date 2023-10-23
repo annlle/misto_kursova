@@ -83,6 +83,12 @@
     <Compile Include="PublicTransportForm.Designer.cs">
       <DependentUpon>PublicTransportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SafetyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SafetyForm.Designer.cs">
+      <DependentUpon>SafetyForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutDevelopersForm.resx">
       <DependentUpon>AboutDevelopersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PublicTransportForm.resx">
       <DependentUpon>PublicTransportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SafetyForm.resx">
+      <DependentUpon>SafetyForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

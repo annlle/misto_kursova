@@ -50,5 +50,11 @@ namespace kursova
             ProfileForm profileForm = new ProfileForm();
             profileForm.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SafetyForm safetyForm = new SafetyForm();
+            safetyForm.ShowDialog();
+        }
     }
 }
