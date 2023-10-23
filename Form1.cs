@@ -62,5 +62,11 @@ namespace kursova
             TravelInfoForm travelInfoForm = new TravelInfoForm();
             travelInfoForm.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            HospitalForm hospitalForm = new HospitalForm();
+            hospitalForm.ShowDialog();
+        }
     }
 }
