@@ -52,6 +52,12 @@
     <Compile Include="AboutDevelopersForm.Designer.cs">
       <DependentUpon>AboutDevelopersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DniprogesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DniprogesForm.Designer.cs">
+      <DependentUpon>DniprogesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FaqForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalForm.Designer.cs">
+      <DependentUpon>HospitalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhortitsaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhortitsaForm.Designer.cs">
+      <DependentUpon>KhortitsaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProfileForm.cs">
       <SubType>Form</SubType>
@@ -83,20 +101,47 @@
     <Compile Include="PublicTransportForm.Designer.cs">
       <DependentUpon>PublicTransportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RainbowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RainbowForm.Designer.cs">
+      <DependentUpon>RainbowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SafetyForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SafetyForm.Designer.cs">
       <DependentUpon>SafetyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SobornyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SobornyForm.Designer.cs">
+      <DependentUpon>SobornyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TravelInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravelInfoForm.Designer.cs">
+      <DependentUpon>TravelInfoForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutDevelopersForm.resx">
       <DependentUpon>AboutDevelopersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DniprogesForm.resx">
+      <DependentUpon>DniprogesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FaqForm.resx">
       <DependentUpon>FaqForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalForm.resx">
+      <DependentUpon>HospitalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhortitsaForm.resx">
+      <DependentUpon>KhortitsaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
@@ -109,8 +154,17 @@
     <EmbeddedResource Include="PublicTransportForm.resx">
       <DependentUpon>PublicTransportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RainbowForm.resx">
+      <DependentUpon>RainbowForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SafetyForm.resx">
       <DependentUpon>SafetyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SobornyForm.resx">
+      <DependentUpon>SobornyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TravelInfoForm.resx">
+      <DependentUpon>TravelInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
