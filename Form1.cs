@@ -10,60 +10,57 @@ using System.Windows.Forms;
 
 namespace kursova
 {
-    public partial class Form1 : Form
+    public partial class mainForm : Form
     {
-        public Form1()
+        public mainForm()
         {
             InitializeComponent();
         }
 
-        private void menuItem4_Click(object sender, EventArgs e)
+        private void faqMenuItemClick(object sender, EventArgs e)
         {
             FaqForm faqForm = new FaqForm();
             faqForm.ShowDialog();
         }
 
-        private void menuItem5_Click(object sender, EventArgs e)
+        private void aboutDevelopersMenuItemClick(object sender, EventArgs e)
         {
             AboutDevelopersForm aboutDevelopersForm = new AboutDevelopersForm();
             aboutDevelopersForm.ShowDialog();
         }
 
-        private void menuItem3_Click(object sender, EventArgs e)
+        private void exitMenuItemClick(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+    
+        private void publicTransportButtonClick(object sender, EventArgs e)
         {
             PublicTransportForm publicTransportForm = new PublicTransportForm();
             publicTransportForm.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void profileButtonClick(object sender, EventArgs e)
         {
             ProfileForm profileForm = new ProfileForm();
             profileForm.ShowDialog();
+            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void safetyButtonClick(object sender, EventArgs e)
         {
             SafetyForm safetyForm = new SafetyForm();
             safetyForm.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void travelInfoButtonClick(object sender, EventArgs e)
         {
             TravelInfoForm travelInfoForm = new TravelInfoForm();
             travelInfoForm.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void hospitalButtonClick(object sender, EventArgs e)
         {
             HospitalForm hospitalForm = new HospitalForm();
             hospitalForm.ShowDialog();

@@ -1,6 +1,6 @@
 ﻿namespace kursova
 {
-    partial class Form1
+    partial class mainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -30,180 +30,179 @@
         {
             this.components = new System.ComponentModel.Container();
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
-            this.menuItem1 = new System.Windows.Forms.MenuItem();
-            this.menuItem3 = new System.Windows.Forms.MenuItem();
-            this.menuItem2 = new System.Windows.Forms.MenuItem();
-            this.menuItem4 = new System.Windows.Forms.MenuItem();
-            this.menuItem5 = new System.Windows.Forms.MenuItem();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.fileMenuItem = new System.Windows.Forms.MenuItem();
+            this.exitMenuItem = new System.Windows.Forms.MenuItem();
+            this.helpMenuItem = new System.Windows.Forms.MenuItem();
+            this.faqMenuItem = new System.Windows.Forms.MenuItem();
+            this.aboutDevelopersMenuItem = new System.Windows.Forms.MenuItem();
+            this.safetyButton = new System.Windows.Forms.Button();
+            this.travelInfoButton = new System.Windows.Forms.Button();
+            this.hospitalButton = new System.Windows.Forms.Button();
+            this.publicTransportLabel = new System.Windows.Forms.Label();
+            this.safetyLabel = new System.Windows.Forms.Label();
+            this.travelInfoLabel = new System.Windows.Forms.Label();
+            this.hospitalLabel = new System.Windows.Forms.Label();
+            this.publicTransportButton = new System.Windows.Forms.Button();
+            this.profileButton = new System.Windows.Forms.Button();
+            this.profileLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // mainMenu1
             // 
             this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem1,
-            this.menuItem2});
+            this.fileMenuItem,
+            this.helpMenuItem});
             // 
-            // menuItem1
+            // fileMenuItem
             // 
-            this.menuItem1.Index = 0;
-            this.menuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem3});
-            this.menuItem1.Text = "File";
+            this.fileMenuItem.Index = 0;
+            this.fileMenuItem.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.exitMenuItem});
+            this.fileMenuItem.Text = "File";
             // 
-            // menuItem3
+            // exitMenuItem
             // 
-            this.menuItem3.Index = 0;
-            this.menuItem3.Text = "Exit";
-            this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
+            this.exitMenuItem.Index = 0;
+            this.exitMenuItem.Text = "Exit";
+            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItemClick);
             // 
-            // menuItem2
+            // helpMenuItem
             // 
-            this.menuItem2.Index = 1;
-            this.menuItem2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem4,
-            this.menuItem5});
-            this.menuItem2.Text = "Help";
+            this.helpMenuItem.Index = 1;
+            this.helpMenuItem.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.faqMenuItem,
+            this.aboutDevelopersMenuItem});
+            this.helpMenuItem.Text = "Help";
             // 
-            // menuItem4
+            // faqMenuItem
             // 
-            this.menuItem4.Index = 0;
-            this.menuItem4.Text = "FAQ";
-            this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
+            this.faqMenuItem.Index = 0;
+            this.faqMenuItem.Text = "FAQ";
+            this.faqMenuItem.Click += new System.EventHandler(this.faqMenuItemClick);
             // 
-            // menuItem5
+            // aboutDevelopersMenuItem
             // 
-            this.menuItem5.Index = 1;
-            this.menuItem5.Text = "About developers";
-            this.menuItem5.Click += new System.EventHandler(this.menuItem5_Click);
+            this.aboutDevelopersMenuItem.Index = 1;
+            this.aboutDevelopersMenuItem.Text = "About developers";
+            this.aboutDevelopersMenuItem.Click += new System.EventHandler(this.aboutDevelopersMenuItemClick);
             // 
-            // button2
+            // safetyButton
             // 
-            this.button2.Location = new System.Drawing.Point(505, 69);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 60);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.safetyButton.Location = new System.Drawing.Point(505, 69);
+            this.safetyButton.Name = "safetyButton";
+            this.safetyButton.Size = new System.Drawing.Size(110, 60);
+            this.safetyButton.TabIndex = 1;
+            this.safetyButton.Text = "button2";
+            this.safetyButton.UseVisualStyleBackColor = true;
+            this.safetyButton.Click += new System.EventHandler(this.safetyButtonClick);
             // 
-            // button3
+            // travelInfoButton
             // 
-            this.button3.Location = new System.Drawing.Point(255, 237);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.travelInfoButton.Location = new System.Drawing.Point(255, 237);
+            this.travelInfoButton.Name = "travelInfoButton";
+            this.travelInfoButton.Size = new System.Drawing.Size(110, 60);
+            this.travelInfoButton.TabIndex = 2;
+            this.travelInfoButton.Text = "button3";
+            this.travelInfoButton.UseVisualStyleBackColor = true;
+            this.travelInfoButton.Click += new System.EventHandler(this.travelInfoButtonClick);
             // 
-            // button4
+            // hospitalButton
             // 
-            this.button4.Location = new System.Drawing.Point(505, 237);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 60);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.hospitalButton.Location = new System.Drawing.Point(505, 237);
+            this.hospitalButton.Name = "hospitalButton";
+            this.hospitalButton.Size = new System.Drawing.Size(110, 60);
+            this.hospitalButton.TabIndex = 3;
+            this.hospitalButton.Text = "button4";
+            this.hospitalButton.UseVisualStyleBackColor = true;
+            this.hospitalButton.Click += new System.EventHandler(this.hospitalButtonClick);
             // 
-            // label1
+            // publicTransportLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(222, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Громадський транспорт";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.publicTransportLabel.AutoSize = true;
+            this.publicTransportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.publicTransportLabel.Location = new System.Drawing.Point(222, 142);
+            this.publicTransportLabel.Name = "publicTransportLabel";
+            this.publicTransportLabel.Size = new System.Drawing.Size(185, 16);
+            this.publicTransportLabel.TabIndex = 4;
+            this.publicTransportLabel.Text = "Громадський транспорт";
             // 
-            // label2
+            // safetyLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(473, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Громадянська безпека";
+            this.safetyLabel.AutoSize = true;
+            this.safetyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.safetyLabel.Location = new System.Drawing.Point(473, 142);
+            this.safetyLabel.Name = "safetyLabel";
+            this.safetyLabel.Size = new System.Drawing.Size(177, 16);
+            this.safetyLabel.TabIndex = 5;
+            this.safetyLabel.Text = "Громадянська безпека";
             // 
-            // label3
+            // travelInfoLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(224, 307);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Туристична інформація";
+            this.travelInfoLabel.AutoSize = true;
+            this.travelInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.travelInfoLabel.Location = new System.Drawing.Point(224, 307);
+            this.travelInfoLabel.Name = "travelInfoLabel";
+            this.travelInfoLabel.Size = new System.Drawing.Size(183, 16);
+            this.travelInfoLabel.TabIndex = 6;
+            this.travelInfoLabel.Text = "Туристична інформація";
             // 
-            // label4
+            // hospitalLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(525, 307);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Лікарня";
+            this.hospitalLabel.AutoSize = true;
+            this.hospitalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hospitalLabel.Location = new System.Drawing.Point(525, 307);
+            this.hospitalLabel.Name = "hospitalLabel";
+            this.hospitalLabel.Size = new System.Drawing.Size(64, 16);
+            this.hospitalLabel.TabIndex = 7;
+            this.hospitalLabel.Text = "Лікарня";
             // 
-            // button1
+            // publicTransportButton
             // 
-            this.button1.Location = new System.Drawing.Point(255, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 59);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.publicTransportButton.Location = new System.Drawing.Point(255, 70);
+            this.publicTransportButton.Name = "publicTransportButton";
+            this.publicTransportButton.Size = new System.Drawing.Size(110, 59);
+            this.publicTransportButton.TabIndex = 0;
+            this.publicTransportButton.Text = "button1";
+            this.publicTransportButton.UseVisualStyleBackColor = true;
+            this.publicTransportButton.Click += new System.EventHandler(this.publicTransportButtonClick);
             // 
-            // button5
+            // profileButton
             // 
-            this.button5.Location = new System.Drawing.Point(12, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(95, 117);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.profileButton.Location = new System.Drawing.Point(12, 12);
+            this.profileButton.Name = "profileButton";
+            this.profileButton.Size = new System.Drawing.Size(95, 117);
+            this.profileButton.TabIndex = 8;
+            this.profileButton.Text = "button5";
+            this.profileButton.UseVisualStyleBackColor = true;
+            this.profileButton.Click += new System.EventHandler(this.profileButtonClick);
             // 
-            // label5
+            // profileLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(21, 137);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 18);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Профіль";
+            this.profileLabel.AutoSize = true;
+            this.profileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.profileLabel.Location = new System.Drawing.Point(21, 137);
+            this.profileLabel.Name = "profileLabel";
+            this.profileLabel.Size = new System.Drawing.Size(76, 18);
+            this.profileLabel.TabIndex = 9;
+            this.profileLabel.Text = "Профіль";
             // 
-            // Form1
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 360);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.profileLabel);
+            this.Controls.Add(this.profileButton);
+            this.Controls.Add(this.hospitalLabel);
+            this.Controls.Add(this.travelInfoLabel);
+            this.Controls.Add(this.safetyLabel);
+            this.Controls.Add(this.publicTransportLabel);
+            this.Controls.Add(this.hospitalButton);
+            this.Controls.Add(this.travelInfoButton);
+            this.Controls.Add(this.safetyButton);
+            this.Controls.Add(this.publicTransportButton);
             this.Menu = this.mainMenu1;
-            this.Name = "Form1";
+            this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Misto App";
             this.ResumeLayout(false);
@@ -214,21 +213,21 @@
         #endregion
 
         private System.Windows.Forms.MainMenu mainMenu1;
-        private System.Windows.Forms.MenuItem menuItem1;
-        private System.Windows.Forms.MenuItem menuItem3;
-        private System.Windows.Forms.MenuItem menuItem2;
-        private System.Windows.Forms.MenuItem menuItem4;
-        private System.Windows.Forms.MenuItem menuItem5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MenuItem fileMenuItem;
+        private System.Windows.Forms.MenuItem exitMenuItem;
+        private System.Windows.Forms.MenuItem helpMenuItem;
+        private System.Windows.Forms.MenuItem faqMenuItem;
+        private System.Windows.Forms.MenuItem aboutDevelopersMenuItem;
+        private System.Windows.Forms.Button publicTransportButton;
+        private System.Windows.Forms.Button safetyButton;
+        private System.Windows.Forms.Button travelInfoButton;
+        private System.Windows.Forms.Button hospitalButton;
+        private System.Windows.Forms.Label publicTransportLabel;
+        private System.Windows.Forms.Label safetyLabel;
+        private System.Windows.Forms.Label travelInfoLabel;
+        private System.Windows.Forms.Label hospitalLabel;
+        private System.Windows.Forms.Button profileButton;
+        private System.Windows.Forms.Label profileLabel;
     }
 }
 

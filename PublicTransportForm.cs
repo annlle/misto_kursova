@@ -23,38 +23,29 @@ namespace kursova
             UpdateButtonText();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void directionButtonClick(object sender, EventArgs e)
         {
             isForward = !isForward;
             UpdateButtonText();
         }
         private void UpdateButtonText()
         {
-            button1.Text = isForward ? "Прямий" : "Зворотній";
+            directionButton.Text = isForward ? "Прямий" : "Зворотній";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void backButtonClick(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
+    }
 
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(comboBox1.Text))
-            {
-                button7.Enabled = true;
-            }
-            else
-            {
-                button7.Enabled = false;
-            }
-        }
-
-        
+    public class transportInfoPanel : Panel
+    {
+        public PictureBox transportPanelPicture { get; private set; }
+        public Label numberPanelLabel { get; private set; }
+        public Label directionPanelLabel { get; private set; }
+        public Label frequencyPanelLabel { get; private set; }
+        public Label timePanelLabel { get; private set; }
     }
 }

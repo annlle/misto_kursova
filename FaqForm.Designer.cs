@@ -28,49 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.mistoAppLabel = new System.Windows.Forms.Label();
+            this.welcomeToFaqLabel = new System.Windows.Forms.Label();
+            this.sourceLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.faqLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // mistoAppLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Misto App (c) 2023";
+            this.mistoAppLabel.AutoSize = true;
+            this.mistoAppLabel.Location = new System.Drawing.Point(99, 180);
+            this.mistoAppLabel.Name = "mistoAppLabel";
+            this.mistoAppLabel.Size = new System.Drawing.Size(96, 13);
+            this.mistoAppLabel.TabIndex = 0;
+            this.mistoAppLabel.Text = "Misto App (c) 2023";
             // 
-            // label2
+            // welcomeToFaqLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(58, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Welcome to FAQ !";
+            this.welcomeToFaqLabel.AutoSize = true;
+            this.welcomeToFaqLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.welcomeToFaqLabel.Location = new System.Drawing.Point(77, 9);
+            this.welcomeToFaqLabel.Name = "welcomeToFaqLabel";
+            this.welcomeToFaqLabel.Size = new System.Drawing.Size(154, 20);
+            this.welcomeToFaqLabel.TabIndex = 1;
+            this.welcomeToFaqLabel.Text = "Welcome to FAQ !";
             // 
-            // linkLabel1
+            // sourceLinkLabel
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(95, 117);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 13);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Source Code";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.sourceLinkLabel.AutoSize = true;
+            this.sourceLinkLabel.Location = new System.Drawing.Point(113, 157);
+            this.sourceLinkLabel.Name = "sourceLinkLabel";
+            this.sourceLinkLabel.Size = new System.Drawing.Size(69, 13);
+            this.sourceLinkLabel.TabIndex = 2;
+            this.sourceLinkLabel.TabStop = true;
+            this.sourceLinkLabel.Text = "Source Code";
+            this.sourceLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.sourceLinkLabelClick);
+            // 
+            // faqLabel
+            // 
+            this.faqLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.faqLabel.Location = new System.Drawing.Point(23, 41);
+            this.faqLabel.Name = "faqLabel";
+            this.faqLabel.Size = new System.Drawing.Size(253, 101);
+            this.faqLabel.TabIndex = 3;
+            this.faqLabel.Text = "Додаток, який містить різноманітну інформацію про місто, містить 4 розділи( грома" +
+    "дський транспорт, громадська безпека, туристична інформація, лікарня) та головне" +
+    " меню, сторінку профілю. ";
+            this.faqLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FaqForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 162);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(297, 202);
+            this.Controls.Add(this.faqLabel);
+            this.Controls.Add(this.sourceLinkLabel);
+            this.Controls.Add(this.welcomeToFaqLabel);
+            this.Controls.Add(this.mistoAppLabel);
             this.Name = "FaqForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FAQ";
@@ -81,8 +95,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label mistoAppLabel;
+        private System.Windows.Forms.Label welcomeToFaqLabel;
+        private System.Windows.Forms.LinkLabel sourceLinkLabel;
+        private System.Windows.Forms.Label faqLabel;
     }
 }

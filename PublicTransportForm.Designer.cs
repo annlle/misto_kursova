@@ -28,149 +28,237 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.typeOfTransportLabel = new System.Windows.Forms.Label();
+            this.directionLabel = new System.Windows.Forms.Label();
+            this.directionButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
+            this.marshrutkaButton = new System.Windows.Forms.Button();
+            this.trolleybusButton = new System.Windows.Forms.Button();
+            this.tramvaiButton = new System.Windows.Forms.Button();
+            this.busButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.transportInfoPanel = new System.Windows.Forms.Panel();
+            this.timePanelLabel = new System.Windows.Forms.Label();
+            this.frequencyPanelLabel = new System.Windows.Forms.Label();
+            this.directionPanelLabel = new System.Windows.Forms.Label();
+            this.numberPanelLabel = new System.Windows.Forms.Label();
+            this.transportPanelPicture = new System.Windows.Forms.PictureBox();
+            this.listOfStationsLabel = new System.Windows.Forms.Label();
+            this.stationLabel = new System.Windows.Forms.Label();
+            this.transportInfoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transportPanelPicture)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // typeOfTransportLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(106, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Оберіть вид транспорту:";
+            this.typeOfTransportLabel.AutoSize = true;
+            this.typeOfTransportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.typeOfTransportLabel.Location = new System.Drawing.Point(330, 74);
+            this.typeOfTransportLabel.Name = "typeOfTransportLabel";
+            this.typeOfTransportLabel.Size = new System.Drawing.Size(112, 16);
+            this.typeOfTransportLabel.TabIndex = 1;
+            this.typeOfTransportLabel.Text = "Вид транспорту";
             // 
-            // label2
+            // directionLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(8, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Оберіть напрямок:";
+            this.directionLabel.AutoSize = true;
+            this.directionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directionLabel.Location = new System.Drawing.Point(44, 74);
+            this.directionLabel.Name = "directionLabel";
+            this.directionLabel.Size = new System.Drawing.Size(72, 16);
+            this.directionLabel.TabIndex = 3;
+            this.directionLabel.Text = "Напрямок";
             // 
-            // button1
+            // directionButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(141, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 39);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Прямий";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.directionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directionButton.Location = new System.Drawing.Point(29, 103);
+            this.directionButton.Name = "directionButton";
+            this.directionButton.Size = new System.Drawing.Size(104, 39);
+            this.directionButton.TabIndex = 4;
+            this.directionButton.Text = "Прямий";
+            this.directionButton.UseVisualStyleBackColor = true;
+            this.directionButton.Click += new System.EventHandler(this.directionButtonClick);
             // 
-            // button2
+            // backButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(11, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 37);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "НАЗАД";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.Location = new System.Drawing.Point(12, 12);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(75, 25);
+            this.backButton.TabIndex = 5;
+            this.backButton.Text = "НАЗАД";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButtonClick);
             // 
-            // button3
+            // marshrutkaButton
             // 
-            this.button3.Location = new System.Drawing.Point(13, 183);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 44);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Маршрутне таксі";
-            this.button3.UseVisualStyleBackColor = true;
+            this.marshrutkaButton.Location = new System.Drawing.Point(216, 103);
+            this.marshrutkaButton.Name = "marshrutkaButton";
+            this.marshrutkaButton.Size = new System.Drawing.Size(86, 41);
+            this.marshrutkaButton.TabIndex = 6;
+            this.marshrutkaButton.Text = "Маршрутне таксі";
+            this.marshrutkaButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // trolleybusButton
             // 
-            this.button4.Location = new System.Drawing.Point(105, 183);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 44);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Троллейбус";
-            this.button4.UseVisualStyleBackColor = true;
+            this.trolleybusButton.Location = new System.Drawing.Point(308, 103);
+            this.trolleybusButton.Name = "trolleybusButton";
+            this.trolleybusButton.Size = new System.Drawing.Size(86, 41);
+            this.trolleybusButton.TabIndex = 7;
+            this.trolleybusButton.Text = "Троллейбус";
+            this.trolleybusButton.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // tramvaiButton
             // 
-            this.button5.Location = new System.Drawing.Point(197, 183);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 42);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Трамвай";
-            this.button5.UseVisualStyleBackColor = true;
+            this.tramvaiButton.Location = new System.Drawing.Point(400, 103);
+            this.tramvaiButton.Name = "tramvaiButton";
+            this.tramvaiButton.Size = new System.Drawing.Size(86, 39);
+            this.tramvaiButton.TabIndex = 8;
+            this.tramvaiButton.Text = "Трамвай";
+            this.tramvaiButton.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // busButton
             // 
-            this.button6.Location = new System.Drawing.Point(289, 183);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(86, 42);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Автобус";
-            this.button6.UseVisualStyleBackColor = true;
+            this.busButton.Location = new System.Drawing.Point(492, 103);
+            this.busButton.Name = "busButton";
+            this.busButton.Size = new System.Drawing.Size(86, 39);
+            this.busButton.TabIndex = 9;
+            this.busButton.Text = "Автобус";
+            this.busButton.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // panel1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 250);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(362, 21);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.panel1.Location = new System.Drawing.Point(29, 185);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(312, 278);
+            this.panel1.TabIndex = 10;
             // 
-            // button7
+            // transportInfoPanel
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(126, 296);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(138, 43);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Зберегти";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.transportInfoPanel.Controls.Add(this.timePanelLabel);
+            this.transportInfoPanel.Controls.Add(this.frequencyPanelLabel);
+            this.transportInfoPanel.Controls.Add(this.directionPanelLabel);
+            this.transportInfoPanel.Controls.Add(this.numberPanelLabel);
+            this.transportInfoPanel.Controls.Add(this.transportPanelPicture);
+            this.transportInfoPanel.Location = new System.Drawing.Point(148, 12);
+            this.transportInfoPanel.Name = "transportInfoPanel";
+            this.transportInfoPanel.Size = new System.Drawing.Size(360, 59);
+            this.transportInfoPanel.TabIndex = 11;
+            this.transportInfoPanel.Visible = false;
+            // 
+            // timePanelLabel
+            // 
+            this.timePanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timePanelLabel.Location = new System.Drawing.Point(236, 1);
+            this.timePanelLabel.Name = "timePanelLabel";
+            this.timePanelLabel.Size = new System.Drawing.Size(121, 55);
+            this.timePanelLabel.TabIndex = 4;
+            this.timePanelLabel.Text = "10:00 - 20:00";
+            this.timePanelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // frequencyPanelLabel
+            // 
+            this.frequencyPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.frequencyPanelLabel.Location = new System.Drawing.Point(133, 29);
+            this.frequencyPanelLabel.Name = "frequencyPanelLabel";
+            this.frequencyPanelLabel.Size = new System.Drawing.Size(90, 22);
+            this.frequencyPanelLabel.TabIndex = 3;
+            this.frequencyPanelLabel.Text = "Кожні 30 хв.";
+            this.frequencyPanelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // directionPanelLabel
+            // 
+            this.directionPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directionPanelLabel.Location = new System.Drawing.Point(133, 3);
+            this.directionPanelLabel.Name = "directionPanelLabel";
+            this.directionPanelLabel.Size = new System.Drawing.Size(90, 22);
+            this.directionPanelLabel.TabIndex = 2;
+            this.directionPanelLabel.Text = "Прямий";
+            this.directionPanelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numberPanelLabel
+            // 
+            this.numberPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberPanelLabel.Location = new System.Drawing.Point(68, 3);
+            this.numberPanelLabel.Name = "numberPanelLabel";
+            this.numberPanelLabel.Size = new System.Drawing.Size(59, 53);
+            this.numberPanelLabel.TabIndex = 1;
+            this.numberPanelLabel.Text = "39";
+            this.numberPanelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // transportPanelPicture
+            // 
+            this.transportPanelPicture.Location = new System.Drawing.Point(3, 3);
+            this.transportPanelPicture.Name = "transportPanelPicture";
+            this.transportPanelPicture.Size = new System.Drawing.Size(59, 53);
+            this.transportPanelPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.transportPanelPicture.TabIndex = 0;
+            this.transportPanelPicture.TabStop = false;
+            // 
+            // listOfStationsLabel
+            // 
+            this.listOfStationsLabel.Location = new System.Drawing.Point(388, 209);
+            this.listOfStationsLabel.Name = "listOfStationsLabel";
+            this.listOfStationsLabel.Size = new System.Drawing.Size(225, 253);
+            this.listOfStationsLabel.TabIndex = 12;
+            this.listOfStationsLabel.Text = "label7";
+            this.listOfStationsLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // stationLabel
+            // 
+            this.stationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.stationLabel.Location = new System.Drawing.Point(448, 176);
+            this.stationLabel.Name = "stationLabel";
+            this.stationLabel.Size = new System.Drawing.Size(93, 22);
+            this.stationLabel.TabIndex = 13;
+            this.stationLabel.Text = "Зупинки";
+            this.stationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PublicTransportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 366);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(643, 512);
+            this.Controls.Add(this.stationLabel);
+            this.Controls.Add(this.listOfStationsLabel);
+            this.Controls.Add(this.transportInfoPanel);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.busButton);
+            this.Controls.Add(this.tramvaiButton);
+            this.Controls.Add(this.trolleybusButton);
+            this.Controls.Add(this.marshrutkaButton);
+            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.directionButton);
+            this.Controls.Add(this.directionLabel);
+            this.Controls.Add(this.typeOfTransportLabel);
             this.Name = "PublicTransportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Public Transport";
+            this.transportInfoPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.transportPanelPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label typeOfTransportLabel;
+        private System.Windows.Forms.Label directionLabel;
+        private System.Windows.Forms.Button directionButton;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Button marshrutkaButton;
+        private System.Windows.Forms.Button trolleybusButton;
+        private System.Windows.Forms.Button tramvaiButton;
+        private System.Windows.Forms.Button busButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel transportInfoPanel;
+        private System.Windows.Forms.Label numberPanelLabel;
+        private System.Windows.Forms.PictureBox transportPanelPicture;
+        private System.Windows.Forms.Label directionPanelLabel;
+        private System.Windows.Forms.Label timePanelLabel;
+        private System.Windows.Forms.Label frequencyPanelLabel;
+        private System.Windows.Forms.Label listOfStationsLabel;
+        private System.Windows.Forms.Label stationLabel;
     }
 }

@@ -29,179 +29,180 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.profilePicture = new System.Windows.Forms.PictureBox();
+            this.surnameLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.patronymLabel = new System.Windows.Forms.Label();
+            this.usersSurnameLabel = new System.Windows.Forms.Label();
+            this.usersNameLabel = new System.Windows.Forms.Label();
+            this.usersPatronymLabel = new System.Windows.Forms.Label();
+            this.sexLabel = new System.Windows.Forms.Label();
+            this.usersSexLabel = new System.Windows.Forms.Label();
+            this.ageLabel = new System.Windows.Forms.Label();
+            this.usersAgeLabel = new System.Windows.Forms.Label();
+            this.backButton = new System.Windows.Forms.Button();
+            this.usersDoctorsAppointmentLabel = new System.Windows.Forms.Label();
+            this.listOfAppointmentsComboBox = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // profilePicture
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(141, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 162);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.profilePicture.Image = ((System.Drawing.Image)(resources.GetObject("profilePicture.Image")));
+            this.profilePicture.Location = new System.Drawing.Point(12, 62);
+            this.profilePicture.Name = "profilePicture";
+            this.profilePicture.Size = new System.Drawing.Size(158, 162);
+            this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.profilePicture.TabIndex = 0;
+            this.profilePicture.TabStop = false;
             // 
-            // label1
+            // surnameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(326, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Фамілія:";
+            this.surnameLabel.AutoSize = true;
+            this.surnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.surnameLabel.Location = new System.Drawing.Point(197, 74);
+            this.surnameLabel.Name = "surnameLabel";
+            this.surnameLabel.Size = new System.Drawing.Size(67, 16);
+            this.surnameLabel.TabIndex = 1;
+            this.surnameLabel.Text = "Фамілія:";
             // 
-            // label2
+            // nameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(326, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Ім\'я:";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.Location = new System.Drawing.Point(197, 104);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(37, 16);
+            this.nameLabel.TabIndex = 2;
+            this.nameLabel.Text = "Ім\'я:";
             // 
-            // label3
+            // patronymLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(326, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "По батькові:";
+            this.patronymLabel.AutoSize = true;
+            this.patronymLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.patronymLabel.Location = new System.Drawing.Point(197, 137);
+            this.patronymLabel.Name = "patronymLabel";
+            this.patronymLabel.Size = new System.Drawing.Size(99, 16);
+            this.patronymLabel.TabIndex = 3;
+            this.patronymLabel.Text = "По батькові:";
             // 
-            // label4
+            // usersSurnameLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(441, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
+            this.usersSurnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersSurnameLabel.Location = new System.Drawing.Point(312, 74);
+            this.usersSurnameLabel.Name = "usersSurnameLabel";
+            this.usersSurnameLabel.Size = new System.Drawing.Size(223, 16);
+            this.usersSurnameLabel.TabIndex = 4;
+            this.usersSurnameLabel.Text = "label4";
             // 
-            // label5
+            // usersNameLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(441, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "label5";
+            this.usersNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersNameLabel.Location = new System.Drawing.Point(312, 104);
+            this.usersNameLabel.Name = "usersNameLabel";
+            this.usersNameLabel.Size = new System.Drawing.Size(223, 16);
+            this.usersNameLabel.TabIndex = 5;
+            this.usersNameLabel.Text = "label5";
             // 
-            // label6
+            // usersPatronymLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(441, 99);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "label6";
+            this.usersPatronymLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersPatronymLabel.Location = new System.Drawing.Point(312, 137);
+            this.usersPatronymLabel.Name = "usersPatronymLabel";
+            this.usersPatronymLabel.Size = new System.Drawing.Size(223, 16);
+            this.usersPatronymLabel.TabIndex = 6;
+            this.usersPatronymLabel.Text = "label6";
             // 
-            // label7
+            // sexLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(326, 131);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Стать:";
+            this.sexLabel.AutoSize = true;
+            this.sexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sexLabel.Location = new System.Drawing.Point(197, 169);
+            this.sexLabel.Name = "sexLabel";
+            this.sexLabel.Size = new System.Drawing.Size(54, 16);
+            this.sexLabel.TabIndex = 7;
+            this.sexLabel.Text = "Стать:";
             // 
-            // label8
+            // usersSexLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(441, 131);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "label8";
+            this.usersSexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersSexLabel.Location = new System.Drawing.Point(312, 169);
+            this.usersSexLabel.Name = "usersSexLabel";
+            this.usersSexLabel.Size = new System.Drawing.Size(223, 16);
+            this.usersSexLabel.TabIndex = 8;
+            this.usersSexLabel.Text = "label8";
             // 
-            // label9
+            // ageLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(326, 164);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "ВІк:";
+            this.ageLabel.AutoSize = true;
+            this.ageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ageLabel.Location = new System.Drawing.Point(197, 202);
+            this.ageLabel.Name = "ageLabel";
+            this.ageLabel.Size = new System.Drawing.Size(33, 16);
+            this.ageLabel.TabIndex = 9;
+            this.ageLabel.Text = "ВІк:";
             // 
-            // label10
+            // usersAgeLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(441, 164);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "label10";
+            this.usersAgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersAgeLabel.Location = new System.Drawing.Point(312, 202);
+            this.usersAgeLabel.Name = "usersAgeLabel";
+            this.usersAgeLabel.Size = new System.Drawing.Size(223, 16);
+            this.usersAgeLabel.TabIndex = 10;
+            this.usersAgeLabel.Text = "label10";
             // 
-            // comboBox1
+            // backButton
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(260, 225);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 21);
-            this.comboBox1.TabIndex = 11;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.Location = new System.Drawing.Point(12, 12);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(68, 25);
+            this.backButton.TabIndex = 13;
+            this.backButton.Text = "НАЗАД";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // label11
+            // usersDoctorsAppointmentLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(138, 228);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Збережені маршрути:";
+            this.usersDoctorsAppointmentLabel.AutoSize = true;
+            this.usersDoctorsAppointmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersDoctorsAppointmentLabel.Location = new System.Drawing.Point(15, 267);
+            this.usersDoctorsAppointmentLabel.Name = "usersDoctorsAppointmentLabel";
+            this.usersDoctorsAppointmentLabel.Size = new System.Drawing.Size(271, 16);
+            this.usersDoctorsAppointmentLabel.TabIndex = 14;
+            this.usersDoctorsAppointmentLabel.Text = "Актуальні записи на прийоми до лікарів:\r\n";
             // 
-            // button1
+            // listOfAppointmentsComboBox
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(22, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 40);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "НАЗАД";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.listOfAppointmentsComboBox.FormattingEnabled = true;
+            this.listOfAppointmentsComboBox.Location = new System.Drawing.Point(292, 262);
+            this.listOfAppointmentsComboBox.Name = "listOfAppointmentsComboBox";
+            this.listOfAppointmentsComboBox.Size = new System.Drawing.Size(249, 21);
+            this.listOfAppointmentsComboBox.TabIndex = 15;
             // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 337);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.listOfAppointmentsComboBox);
+            this.Controls.Add(this.usersDoctorsAppointmentLabel);
+            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.usersAgeLabel);
+            this.Controls.Add(this.ageLabel);
+            this.Controls.Add(this.usersSexLabel);
+            this.Controls.Add(this.sexLabel);
+            this.Controls.Add(this.usersPatronymLabel);
+            this.Controls.Add(this.usersNameLabel);
+            this.Controls.Add(this.usersSurnameLabel);
+            this.Controls.Add(this.patronymLabel);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.surnameLabel);
+            this.Controls.Add(this.profilePicture);
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ProfileForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,19 +210,19 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox profilePicture;
+        private System.Windows.Forms.Label surnameLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label patronymLabel;
+        private System.Windows.Forms.Label usersSurnameLabel;
+        private System.Windows.Forms.Label usersNameLabel;
+        private System.Windows.Forms.Label usersPatronymLabel;
+        private System.Windows.Forms.Label sexLabel;
+        private System.Windows.Forms.Label usersSexLabel;
+        private System.Windows.Forms.Label ageLabel;
+        private System.Windows.Forms.Label usersAgeLabel;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Label usersDoctorsAppointmentLabel;
+        private System.Windows.Forms.ComboBox listOfAppointmentsComboBox;
     }
 }
