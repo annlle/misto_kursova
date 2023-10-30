@@ -28,112 +28,220 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.typeLabel = new System.Windows.Forms.Label();
+            this.backButton = new System.Windows.Forms.Button();
+            this.levelSafetyLabel = new System.Windows.Forms.Label();
+            this.levelSafetyComboBox = new System.Windows.Forms.ComboBox();
+            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.postButton = new System.Windows.Forms.Button();
+            this.typeComboBox = new System.Windows.Forms.ComboBox();
+            this.locationLabel = new System.Windows.Forms.Label();
+            this.locationTextBox = new System.Windows.Forms.TextBox();
+            this.safetyListPanel = new System.Windows.Forms.Panel();
+            this.safetyPanel = new System.Windows.Forms.Panel();
+            this.locationPanelLabel = new System.Windows.Forms.Label();
+            this.levelSafetyPanelLabel = new System.Windows.Forms.Label();
+            this.typePanelLabel = new System.Windows.Forms.Label();
+            this.safetyListLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.safetyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // typeLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(37, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Що відбулось:";
+            this.typeLabel.AutoSize = true;
+            this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.typeLabel.Location = new System.Drawing.Point(23, 148);
+            this.typeLabel.Name = "typeLabel";
+            this.typeLabel.Size = new System.Drawing.Size(127, 20);
+            this.typeLabel.TabIndex = 0;
+            this.typeLabel.Text = "Що відбулося:";
             // 
-            // textBox1
+            // backButton
             // 
-            this.textBox1.Location = new System.Drawing.Point(203, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 1;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.Location = new System.Drawing.Point(14, 12);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(100, 29);
+            this.backButton.TabIndex = 2;
+            this.backButton.Text = "НАЗАД";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // button1
+            // levelSafetyLabel
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "НАЗАД";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.levelSafetyLabel.AutoSize = true;
+            this.levelSafetyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.levelSafetyLabel.Location = new System.Drawing.Point(23, 222);
+            this.levelSafetyLabel.Name = "levelSafetyLabel";
+            this.levelSafetyLabel.Size = new System.Drawing.Size(162, 20);
+            this.levelSafetyLabel.TabIndex = 3;
+            this.levelSafetyLabel.Text = "Рівень небезпеки:";
             // 
-            // label2
+            // levelSafetyComboBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(37, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Рівень небезпеки:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.levelSafetyComboBox.FormattingEnabled = true;
+            this.levelSafetyComboBox.Items.AddRange(new object[] {
             "Зелений",
             "Жовтий",
             "Помаранчевий",
             "Червоний"});
-            this.comboBox1.Location = new System.Drawing.Point(203, 119);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(166, 21);
-            this.comboBox1.TabIndex = 4;
+            this.levelSafetyComboBox.Location = new System.Drawing.Point(189, 221);
+            this.levelSafetyComboBox.Name = "levelSafetyComboBox";
+            this.levelSafetyComboBox.Size = new System.Drawing.Size(166, 21);
+            this.levelSafetyComboBox.TabIndex = 4;
             // 
-            // label3
+            // descriptionLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(37, 154);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Опис:";
+            this.descriptionLabel.AutoSize = true;
+            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.descriptionLabel.Location = new System.Drawing.Point(23, 256);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(56, 20);
+            this.descriptionLabel.TabIndex = 5;
+            this.descriptionLabel.Text = "Опис:";
             // 
-            // textBox2
+            // descriptionTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(203, 154);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 145);
-            this.textBox2.TabIndex = 6;
+            this.descriptionTextBox.Location = new System.Drawing.Point(189, 256);
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(166, 145);
+            this.descriptionTextBox.TabIndex = 6;
             // 
-            // button2
+            // postButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(133, 318);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 42);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Опублікувати";
-            this.button2.UseVisualStyleBackColor = true;
+            this.postButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.postButton.Location = new System.Drawing.Point(121, 439);
+            this.postButton.Name = "postButton";
+            this.postButton.Size = new System.Drawing.Size(130, 42);
+            this.postButton.TabIndex = 7;
+            this.postButton.Text = "Опублікувати";
+            this.postButton.UseVisualStyleBackColor = true;
+            // 
+            // typeComboBox
+            // 
+            this.typeComboBox.FormattingEnabled = true;
+            this.typeComboBox.Items.AddRange(new object[] {
+            "Зелений",
+            "Жовтий",
+            "Помаранчевий",
+            "Червоний"});
+            this.typeComboBox.Location = new System.Drawing.Point(189, 147);
+            this.typeComboBox.Name = "typeComboBox";
+            this.typeComboBox.Size = new System.Drawing.Size(166, 21);
+            this.typeComboBox.TabIndex = 8;
+            // 
+            // locationLabel
+            // 
+            this.locationLabel.AutoSize = true;
+            this.locationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.locationLabel.Location = new System.Drawing.Point(23, 185);
+            this.locationLabel.Name = "locationLabel";
+            this.locationLabel.Size = new System.Drawing.Size(77, 20);
+            this.locationLabel.TabIndex = 9;
+            this.locationLabel.Text = "Адреса:";
+            // 
+            // locationTextBox
+            // 
+            this.locationTextBox.Location = new System.Drawing.Point(189, 185);
+            this.locationTextBox.Name = "locationTextBox";
+            this.locationTextBox.Size = new System.Drawing.Size(166, 20);
+            this.locationTextBox.TabIndex = 10;
+            // 
+            // safetyListPanel
+            // 
+            this.safetyListPanel.Location = new System.Drawing.Point(436, 147);
+            this.safetyListPanel.Name = "safetyListPanel";
+            this.safetyListPanel.Size = new System.Drawing.Size(319, 254);
+            this.safetyListPanel.TabIndex = 11;
+            // 
+            // safetyPanel
+            // 
+            this.safetyPanel.Controls.Add(this.locationPanelLabel);
+            this.safetyPanel.Controls.Add(this.levelSafetyPanelLabel);
+            this.safetyPanel.Controls.Add(this.typePanelLabel);
+            this.safetyPanel.Location = new System.Drawing.Point(436, 439);
+            this.safetyPanel.Name = "safetyPanel";
+            this.safetyPanel.Size = new System.Drawing.Size(304, 60);
+            this.safetyPanel.TabIndex = 12;
+            this.safetyPanel.Visible = false;
+            // 
+            // locationPanelLabel
+            // 
+            this.locationPanelLabel.AutoSize = true;
+            this.locationPanelLabel.Location = new System.Drawing.Point(21, 36);
+            this.locationPanelLabel.Name = "locationPanelLabel";
+            this.locationPanelLabel.Size = new System.Drawing.Size(44, 13);
+            this.locationPanelLabel.TabIndex = 2;
+            this.locationPanelLabel.Text = "Адреса";
+            // 
+            // levelSafetyPanelLabel
+            // 
+            this.levelSafetyPanelLabel.AutoSize = true;
+            this.levelSafetyPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.levelSafetyPanelLabel.Location = new System.Drawing.Point(196, 20);
+            this.levelSafetyPanelLabel.Name = "levelSafetyPanelLabel";
+            this.levelSafetyPanelLabel.Size = new System.Drawing.Size(56, 16);
+            this.levelSafetyPanelLabel.TabIndex = 1;
+            this.levelSafetyPanelLabel.Text = "РІвень";
+            // 
+            // typePanelLabel
+            // 
+            this.typePanelLabel.AutoSize = true;
+            this.typePanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.typePanelLabel.Location = new System.Drawing.Point(20, 5);
+            this.typePanelLabel.Name = "typePanelLabel";
+            this.typePanelLabel.Size = new System.Drawing.Size(122, 20);
+            this.typePanelLabel.TabIndex = 0;
+            this.typePanelLabel.Text = "Що відбулося";
+            // 
+            // safetyListLabel
+            // 
+            this.safetyListLabel.AutoSize = true;
+            this.safetyListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.safetyListLabel.Location = new System.Drawing.Point(523, 83);
+            this.safetyListLabel.Name = "safetyListLabel";
+            this.safetyListLabel.Size = new System.Drawing.Size(141, 24);
+            this.safetyListLabel.TabIndex = 13;
+            this.safetyListLabel.Text = "Список подій";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(104, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 24);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Додати подію";
             // 
             // SafetyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 408);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(808, 537);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.safetyListLabel);
+            this.Controls.Add(this.safetyPanel);
+            this.Controls.Add(this.safetyListPanel);
+            this.Controls.Add(this.locationTextBox);
+            this.Controls.Add(this.locationLabel);
+            this.Controls.Add(this.typeComboBox);
+            this.Controls.Add(this.postButton);
+            this.Controls.Add(this.descriptionTextBox);
+            this.Controls.Add(this.descriptionLabel);
+            this.Controls.Add(this.levelSafetyComboBox);
+            this.Controls.Add(this.levelSafetyLabel);
+            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.typeLabel);
             this.Name = "SafetyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Safety";
             this.Load += new System.EventHandler(this.SafetyForm_Load);
+            this.safetyPanel.ResumeLayout(false);
+            this.safetyPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,13 +249,22 @@
 
         #endregion
 
+        private System.Windows.Forms.Label typeLabel;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Label levelSafetyLabel;
+        private System.Windows.Forms.ComboBox levelSafetyComboBox;
+        private System.Windows.Forms.Label descriptionLabel;
+        private System.Windows.Forms.TextBox descriptionTextBox;
+        private System.Windows.Forms.Button postButton;
+        private System.Windows.Forms.ComboBox typeComboBox;
+        private System.Windows.Forms.Label locationLabel;
+        private System.Windows.Forms.TextBox locationTextBox;
+        private System.Windows.Forms.Panel safetyListPanel;
+        private System.Windows.Forms.Panel safetyPanel;
+        private System.Windows.Forms.Label typePanelLabel;
+        private System.Windows.Forms.Label levelSafetyPanelLabel;
+        private System.Windows.Forms.Label locationPanelLabel;
+        private System.Windows.Forms.Label safetyListLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
     }
 }

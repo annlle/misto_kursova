@@ -22,11 +22,19 @@ namespace kursova
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
         }
+
+    }
+
+    public class safetyPanel : Panel
+    {
+        public Label typePanelLabel { get; private set; }
+        public Label levelSafetyPanelLabel { get; private set; }
+        public Label locationPanelLabel { get; private set; }
     }
 }
