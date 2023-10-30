@@ -28,65 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.backButton = new System.Windows.Forms.Button();
+            this.districtLabel = new System.Windows.Forms.Label();
+            this.hospitalLabel = new System.Windows.Forms.Label();
+            this.doctorLabel = new System.Windows.Forms.Label();
+            this.districtComboBox = new System.Windows.Forms.ComboBox();
+            this.hospitalComboBox = new System.Windows.Forms.ComboBox();
+            this.doctorComboBox = new System.Windows.Forms.ComboBox();
+            this.doctorPhotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.doctorNameLabel = new System.Windows.Forms.Label();
+            this.doctorInfoLabel = new System.Windows.Forms.Label();
+            this.signButton = new System.Windows.Forms.Button();
+            this.timeComboBox = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorPhotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // backButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "НАЗАД";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.Location = new System.Drawing.Point(12, 12);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(104, 46);
+            this.backButton.TabIndex = 0;
+            this.backButton.Text = "НАЗАД";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // label1
+            // districtLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(18, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Район:";
+            this.districtLabel.AutoSize = true;
+            this.districtLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.districtLabel.Location = new System.Drawing.Point(18, 109);
+            this.districtLabel.Name = "districtLabel";
+            this.districtLabel.Size = new System.Drawing.Size(68, 22);
+            this.districtLabel.TabIndex = 1;
+            this.districtLabel.Text = "Район:";
             // 
-            // label2
+            // hospitalLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(18, 147);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 22);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Лікарня:";
+            this.hospitalLabel.AutoSize = true;
+            this.hospitalLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hospitalLabel.Location = new System.Drawing.Point(18, 147);
+            this.hospitalLabel.Name = "hospitalLabel";
+            this.hospitalLabel.Size = new System.Drawing.Size(84, 22);
+            this.hospitalLabel.TabIndex = 2;
+            this.hospitalLabel.Text = "Лікарня:";
             // 
-            // label3
+            // doctorLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(18, 186);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 22);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Лікар:";
+            this.doctorLabel.AutoSize = true;
+            this.doctorLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.doctorLabel.Location = new System.Drawing.Point(18, 186);
+            this.doctorLabel.Name = "doctorLabel";
+            this.doctorLabel.Size = new System.Drawing.Size(63, 22);
+            this.doctorLabel.TabIndex = 3;
+            this.doctorLabel.Text = "Лікар:";
             // 
-            // comboBox1
+            // districtComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.districtComboBox.FormattingEnabled = true;
+            this.districtComboBox.Items.AddRange(new object[] {
             "Вознесенівський",
             "Дніпровський",
             "Заводський",
@@ -94,30 +95,30 @@
             "Олександрівський",
             "Хортицький",
             "Шевченківський"});
-            this.comboBox1.Location = new System.Drawing.Point(141, 112);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 21);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.districtComboBox.Location = new System.Drawing.Point(141, 112);
+            this.districtComboBox.Name = "districtComboBox";
+            this.districtComboBox.Size = new System.Drawing.Size(230, 21);
+            this.districtComboBox.TabIndex = 4;
+            this.districtComboBox.SelectedIndexChanged += new System.EventHandler(this.districtComboBox_SelectedIndexChanged);
             // 
-            // comboBox2
+            // hospitalComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.hospitalComboBox.FormattingEnabled = true;
+            this.hospitalComboBox.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.comboBox2.Location = new System.Drawing.Point(141, 150);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(230, 21);
-            this.comboBox2.TabIndex = 5;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.hospitalComboBox.Location = new System.Drawing.Point(141, 150);
+            this.hospitalComboBox.Name = "hospitalComboBox";
+            this.hospitalComboBox.Size = new System.Drawing.Size(230, 21);
+            this.hospitalComboBox.TabIndex = 5;
+            this.hospitalComboBox.SelectedIndexChanged += new System.EventHandler(this.hospitalComboBox_SelectedIndexChanged);
             // 
-            // comboBox3
+            // doctorComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.doctorComboBox.FormattingEnabled = true;
+            this.doctorComboBox.Items.AddRange(new object[] {
             "Гастроентеролог",
             "Дерматолог",
             "Ендокринолог",
@@ -133,69 +134,80 @@
             "Стоматолог",
             "Терапевт",
             ""});
-            this.comboBox3.Location = new System.Drawing.Point(141, 189);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(230, 21);
-            this.comboBox3.TabIndex = 6;
+            this.doctorComboBox.Location = new System.Drawing.Point(141, 189);
+            this.doctorComboBox.Name = "doctorComboBox";
+            this.doctorComboBox.Size = new System.Drawing.Size(230, 21);
+            this.doctorComboBox.TabIndex = 6;
+            this.doctorComboBox.SelectedIndexChanged += new System.EventHandler(this.doctorComboBox_SelectedIndexChanged);
             // 
-            // pictureBox1
+            // doctorPhotoPictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 243);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 121);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.doctorPhotoPictureBox.Location = new System.Drawing.Point(12, 243);
+            this.doctorPhotoPictureBox.Name = "doctorPhotoPictureBox";
+            this.doctorPhotoPictureBox.Size = new System.Drawing.Size(105, 121);
+            this.doctorPhotoPictureBox.TabIndex = 7;
+            this.doctorPhotoPictureBox.TabStop = false;
             // 
-            // label4
+            // doctorNameLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(142, 253);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "ПІБ лікаря";
+            this.doctorNameLabel.AutoSize = true;
+            this.doctorNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.doctorNameLabel.Location = new System.Drawing.Point(142, 253);
+            this.doctorNameLabel.Name = "doctorNameLabel";
+            this.doctorNameLabel.Size = new System.Drawing.Size(83, 16);
+            this.doctorNameLabel.TabIndex = 8;
+            this.doctorNameLabel.Text = "ПІБ лікаря";
             // 
-            // label5
+            // doctorInfoLabel
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(142, 288);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(229, 76);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Інфо про лікаря";
+            this.doctorInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.doctorInfoLabel.Location = new System.Drawing.Point(142, 288);
+            this.doctorInfoLabel.Name = "doctorInfoLabel";
+            this.doctorInfoLabel.Size = new System.Drawing.Size(229, 52);
+            this.doctorInfoLabel.TabIndex = 9;
+            this.doctorInfoLabel.Text = "Інфо про лікаря";
             // 
-            // button2
+            // signButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(141, 403);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 37);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Записатися";
-            this.button2.UseVisualStyleBackColor = true;
+            this.signButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.signButton.Location = new System.Drawing.Point(141, 403);
+            this.signButton.Name = "signButton";
+            this.signButton.Size = new System.Drawing.Size(122, 37);
+            this.signButton.TabIndex = 10;
+            this.signButton.Text = "Записатися";
+            this.signButton.UseVisualStyleBackColor = true;
+            // 
+            // timeComboBox
+            // 
+            this.timeComboBox.FormattingEnabled = true;
+            this.timeComboBox.Location = new System.Drawing.Point(141, 343);
+            this.timeComboBox.Name = "timeComboBox";
+            this.timeComboBox.Size = new System.Drawing.Size(106, 21);
+            this.timeComboBox.TabIndex = 11;
+            this.timeComboBox.SelectedIndexChanged += new System.EventHandler(this.timeComboBox_SelectedIndexChanged);
             // 
             // HospitalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 467);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.timeComboBox);
+            this.Controls.Add(this.signButton);
+            this.Controls.Add(this.doctorInfoLabel);
+            this.Controls.Add(this.doctorNameLabel);
+            this.Controls.Add(this.doctorPhotoPictureBox);
+            this.Controls.Add(this.doctorComboBox);
+            this.Controls.Add(this.hospitalComboBox);
+            this.Controls.Add(this.districtComboBox);
+            this.Controls.Add(this.doctorLabel);
+            this.Controls.Add(this.hospitalLabel);
+            this.Controls.Add(this.districtLabel);
+            this.Controls.Add(this.backButton);
             this.Name = "HospitalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hospital";
             this.Load += new System.EventHandler(this.HospitalForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorPhotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,16 +215,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Label districtLabel;
+        private System.Windows.Forms.Label hospitalLabel;
+        private System.Windows.Forms.Label doctorLabel;
+        private System.Windows.Forms.ComboBox districtComboBox;
+        private System.Windows.Forms.ComboBox hospitalComboBox;
+        private System.Windows.Forms.ComboBox doctorComboBox;
+        private System.Windows.Forms.PictureBox doctorPhotoPictureBox;
+        private System.Windows.Forms.Label doctorNameLabel;
+        private System.Windows.Forms.Label doctorInfoLabel;
+        private System.Windows.Forms.Button signButton;
+        private System.Windows.Forms.ComboBox timeComboBox;
     }
 }

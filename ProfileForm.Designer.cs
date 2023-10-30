@@ -189,7 +189,7 @@
             this.usersEmailLabel.Name = "usersEmailLabel";
             this.usersEmailLabel.Size = new System.Drawing.Size(334, 16);
             this.usersEmailLabel.TabIndex = 17;
-            this.usersEmailLabel.Text = "label10";
+            this.usersEmailLabel.Text = "label12";
             // 
             // emailLabel
             // 
