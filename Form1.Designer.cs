@@ -1,6 +1,6 @@
 ﻿namespace kursova
 {
-    partial class mainForm
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -186,7 +186,7 @@
             this.profileLabel.TabIndex = 9;
             this.profileLabel.Text = "Профіль";
             // 
-            // mainForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -202,7 +202,7 @@
             this.Controls.Add(this.safetyButton);
             this.Controls.Add(this.publicTransportButton);
             this.Menu = this.mainMenu1;
-            this.Name = "mainForm";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Misto App";
             this.ResumeLayout(false);

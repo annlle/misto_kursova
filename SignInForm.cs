@@ -10,23 +10,31 @@ using System.Windows.Forms;
 
 namespace kursova
 {
-    public partial class SafetyForm : Form
+    public partial class SignInForm : Form
     {
-        public SafetyForm()
+        
+        public SignInForm()
         {
             InitializeComponent();
         }
 
-        private void SafetyForm_Load(object sender, EventArgs e)
+        private void SignInForm_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void signInButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
+        }
+
+        private void signUpLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            SignUpForm signUpForm = new SignUpForm();
+            signUpForm.ShowDialog();
         }
     }
 }

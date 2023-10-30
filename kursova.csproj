@@ -113,6 +113,18 @@
     <Compile Include="SafetyForm.Designer.cs">
       <DependentUpon>SafetyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SobornyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SafetyForm.resx">
       <DependentUpon>SafetyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SobornyForm.resx">
       <DependentUpon>SobornyForm.cs</DependentUpon>

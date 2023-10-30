@@ -40,7 +40,9 @@ namespace kursova
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
         }
     }
 }

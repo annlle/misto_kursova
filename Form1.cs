@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace kursova
 {
-    public partial class mainForm : Form
+    public partial class MainForm : Form
     {
-        public mainForm()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -37,32 +37,35 @@ namespace kursova
     
         private void publicTransportButtonClick(object sender, EventArgs e)
         {
+            this.Hide();
             PublicTransportForm publicTransportForm = new PublicTransportForm();
             publicTransportForm.ShowDialog();
         }
 
         private void profileButtonClick(object sender, EventArgs e)
         {
+            this.Hide();
             ProfileForm profileForm = new ProfileForm();
-            profileForm.ShowDialog();
-            
-            
+            profileForm.ShowDialog(); 
         }
 
         private void safetyButtonClick(object sender, EventArgs e)
         {
+            this.Hide();
             SafetyForm safetyForm = new SafetyForm();
             safetyForm.ShowDialog();
         }
 
         private void travelInfoButtonClick(object sender, EventArgs e)
         {
+            this.Hide();
             TravelInfoForm travelInfoForm = new TravelInfoForm();
             travelInfoForm.ShowDialog();
         }
 
         private void hospitalButtonClick(object sender, EventArgs e)
         {
+            this.Hide();
             HospitalForm hospitalForm = new HospitalForm();
             hospitalForm.ShowDialog();
         }

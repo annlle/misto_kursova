@@ -43,6 +43,8 @@
             this.backButton = new System.Windows.Forms.Button();
             this.usersDoctorsAppointmentLabel = new System.Windows.Forms.Label();
             this.listOfAppointmentsComboBox = new System.Windows.Forms.ComboBox();
+            this.usersEmailLabel = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             // 
             this.surnameLabel.AutoSize = true;
             this.surnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.surnameLabel.Location = new System.Drawing.Point(197, 74);
+            this.surnameLabel.Location = new System.Drawing.Point(197, 62);
             this.surnameLabel.Name = "surnameLabel";
             this.surnameLabel.Size = new System.Drawing.Size(67, 16);
             this.surnameLabel.TabIndex = 1;
@@ -70,7 +72,7 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.Location = new System.Drawing.Point(197, 104);
+            this.nameLabel.Location = new System.Drawing.Point(197, 92);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(37, 16);
             this.nameLabel.TabIndex = 2;
@@ -80,7 +82,7 @@
             // 
             this.patronymLabel.AutoSize = true;
             this.patronymLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.patronymLabel.Location = new System.Drawing.Point(197, 137);
+            this.patronymLabel.Location = new System.Drawing.Point(197, 125);
             this.patronymLabel.Name = "patronymLabel";
             this.patronymLabel.Size = new System.Drawing.Size(99, 16);
             this.patronymLabel.TabIndex = 3;
@@ -89,7 +91,7 @@
             // usersSurnameLabel
             // 
             this.usersSurnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersSurnameLabel.Location = new System.Drawing.Point(312, 74);
+            this.usersSurnameLabel.Location = new System.Drawing.Point(312, 62);
             this.usersSurnameLabel.Name = "usersSurnameLabel";
             this.usersSurnameLabel.Size = new System.Drawing.Size(223, 16);
             this.usersSurnameLabel.TabIndex = 4;
@@ -98,7 +100,7 @@
             // usersNameLabel
             // 
             this.usersNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersNameLabel.Location = new System.Drawing.Point(312, 104);
+            this.usersNameLabel.Location = new System.Drawing.Point(312, 92);
             this.usersNameLabel.Name = "usersNameLabel";
             this.usersNameLabel.Size = new System.Drawing.Size(223, 16);
             this.usersNameLabel.TabIndex = 5;
@@ -107,7 +109,7 @@
             // usersPatronymLabel
             // 
             this.usersPatronymLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersPatronymLabel.Location = new System.Drawing.Point(312, 137);
+            this.usersPatronymLabel.Location = new System.Drawing.Point(312, 125);
             this.usersPatronymLabel.Name = "usersPatronymLabel";
             this.usersPatronymLabel.Size = new System.Drawing.Size(223, 16);
             this.usersPatronymLabel.TabIndex = 6;
@@ -117,7 +119,7 @@
             // 
             this.sexLabel.AutoSize = true;
             this.sexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sexLabel.Location = new System.Drawing.Point(197, 169);
+            this.sexLabel.Location = new System.Drawing.Point(197, 157);
             this.sexLabel.Name = "sexLabel";
             this.sexLabel.Size = new System.Drawing.Size(54, 16);
             this.sexLabel.TabIndex = 7;
@@ -126,7 +128,7 @@
             // usersSexLabel
             // 
             this.usersSexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersSexLabel.Location = new System.Drawing.Point(312, 169);
+            this.usersSexLabel.Location = new System.Drawing.Point(312, 157);
             this.usersSexLabel.Name = "usersSexLabel";
             this.usersSexLabel.Size = new System.Drawing.Size(223, 16);
             this.usersSexLabel.TabIndex = 8;
@@ -136,7 +138,7 @@
             // 
             this.ageLabel.AutoSize = true;
             this.ageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ageLabel.Location = new System.Drawing.Point(197, 202);
+            this.ageLabel.Location = new System.Drawing.Point(197, 190);
             this.ageLabel.Name = "ageLabel";
             this.ageLabel.Size = new System.Drawing.Size(33, 16);
             this.ageLabel.TabIndex = 9;
@@ -145,7 +147,7 @@
             // usersAgeLabel
             // 
             this.usersAgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersAgeLabel.Location = new System.Drawing.Point(312, 202);
+            this.usersAgeLabel.Location = new System.Drawing.Point(312, 190);
             this.usersAgeLabel.Name = "usersAgeLabel";
             this.usersAgeLabel.Size = new System.Drawing.Size(223, 16);
             this.usersAgeLabel.TabIndex = 10;
@@ -166,7 +168,7 @@
             // 
             this.usersDoctorsAppointmentLabel.AutoSize = true;
             this.usersDoctorsAppointmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersDoctorsAppointmentLabel.Location = new System.Drawing.Point(15, 267);
+            this.usersDoctorsAppointmentLabel.Location = new System.Drawing.Point(15, 288);
             this.usersDoctorsAppointmentLabel.Name = "usersDoctorsAppointmentLabel";
             this.usersDoctorsAppointmentLabel.Size = new System.Drawing.Size(271, 16);
             this.usersDoctorsAppointmentLabel.TabIndex = 14;
@@ -175,16 +177,37 @@
             // listOfAppointmentsComboBox
             // 
             this.listOfAppointmentsComboBox.FormattingEnabled = true;
-            this.listOfAppointmentsComboBox.Location = new System.Drawing.Point(292, 262);
+            this.listOfAppointmentsComboBox.Location = new System.Drawing.Point(292, 283);
             this.listOfAppointmentsComboBox.Name = "listOfAppointmentsComboBox";
             this.listOfAppointmentsComboBox.Size = new System.Drawing.Size(249, 21);
             this.listOfAppointmentsComboBox.TabIndex = 15;
+            // 
+            // usersEmailLabel
+            // 
+            this.usersEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersEmailLabel.Location = new System.Drawing.Point(172, 238);
+            this.usersEmailLabel.Name = "usersEmailLabel";
+            this.usersEmailLabel.Size = new System.Drawing.Size(334, 16);
+            this.usersEmailLabel.TabIndex = 17;
+            this.usersEmailLabel.Text = "label10";
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.emailLabel.Location = new System.Drawing.Point(15, 238);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(151, 16);
+            this.emailLabel.TabIndex = 16;
+            this.emailLabel.Text = "Електронна пошта:";
             // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 337);
+            this.Controls.Add(this.usersEmailLabel);
+            this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.listOfAppointmentsComboBox);
             this.Controls.Add(this.usersDoctorsAppointmentLabel);
             this.Controls.Add(this.backButton);
@@ -224,5 +247,7 @@
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label usersDoctorsAppointmentLabel;
         private System.Windows.Forms.ComboBox listOfAppointmentsComboBox;
+        private System.Windows.Forms.Label usersEmailLabel;
+        private System.Windows.Forms.Label emailLabel;
     }
 }

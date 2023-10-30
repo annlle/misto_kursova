@@ -19,7 +19,10 @@ namespace kursova
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            this.Close();  
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
         }
+
     }
 }
