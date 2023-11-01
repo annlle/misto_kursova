@@ -64,9 +64,9 @@
             this.surnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.surnameLabel.Location = new System.Drawing.Point(197, 62);
             this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(67, 16);
+            this.surnameLabel.Size = new System.Drawing.Size(81, 16);
             this.surnameLabel.TabIndex = 1;
-            this.surnameLabel.Text = "Фамілія:";
+            this.surnameLabel.Text = "Прізвище:";
             // 
             // nameLabel
             // 
@@ -142,7 +142,7 @@
             this.ageLabel.Name = "ageLabel";
             this.ageLabel.Size = new System.Drawing.Size(33, 16);
             this.ageLabel.TabIndex = 9;
-            this.ageLabel.Text = "ВІк:";
+            this.ageLabel.Text = "Вік:";
             // 
             // usersAgeLabel
             // 
