@@ -124,10 +124,8 @@
             // 
             this.typeComboBox.FormattingEnabled = true;
             this.typeComboBox.Items.AddRange(new object[] {
-            "Зелений",
-            "Жовтий",
-            "Помаранчевий",
-            "Червоний"});
+            "Пограбування",
+            "Пожежа"});
             this.typeComboBox.Location = new System.Drawing.Point(189, 147);
             this.typeComboBox.Name = "typeComboBox";
             this.typeComboBox.Size = new System.Drawing.Size(166, 21);
