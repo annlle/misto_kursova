@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,22 @@ namespace kursova
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
+            string surname = usersSurnameTextBox.Text;
+            string name = usersNameTextBox.Text;
+            string patronymic = usersPatronymTextBox.Text;
+            string sex = usersSexComboBox.Text;
+            string age = usersAgeTextBox.Text;
+            string mail = usersEmailTextBox.Text;
+            string password = usersPasswordTextBox.Text;
+            StreamWriter writer = new StreamWriter("user.json");
+            writer.WriteLine(surname);
+            writer.WriteLine(name);
+            writer.WriteLine(patronymic);
+            writer.WriteLine(sex);
+            writer.WriteLine(age);
+            writer.WriteLine(mail);
+            writer.WriteLine(password);
+            writer.Close();
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();

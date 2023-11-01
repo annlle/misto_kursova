@@ -190,7 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 360);
+            this.ClientSize = new System.Drawing.Size(701, 381);
             this.Controls.Add(this.profileLabel);
             this.Controls.Add(this.profileButton);
             this.Controls.Add(this.hospitalLabel);
@@ -201,7 +201,9 @@
             this.Controls.Add(this.travelInfoButton);
             this.Controls.Add(this.safetyButton);
             this.Controls.Add(this.publicTransportButton);
+            this.MaximumSize = new System.Drawing.Size(717, 441);
             this.Menu = this.mainMenu1;
+            this.MinimumSize = new System.Drawing.Size(717, 441);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Misto App";

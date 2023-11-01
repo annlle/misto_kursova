@@ -55,6 +55,7 @@
             this.usersEmailTextBox.Name = "usersEmailTextBox";
             this.usersEmailTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersEmailTextBox.TabIndex = 1;
+            this.usersEmailTextBox.TextChanged += new System.EventHandler(this.usersEmailTextBox_TextChanged);
             // 
             // usersPasswordTextBox
             // 
@@ -64,6 +65,7 @@
             this.usersPasswordTextBox.PasswordChar = '●';
             this.usersPasswordTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersPasswordTextBox.TabIndex = 2;
+            this.usersPasswordTextBox.TextChanged += new System.EventHandler(this.usersPasswordTextBox_TextChanged);
             // 
             // signInButton
             // 
@@ -130,6 +132,8 @@
             this.Controls.Add(this.usersPasswordTextBox);
             this.Controls.Add(this.usersEmailTextBox);
             this.Controls.Add(this.signInLabel);
+            this.MaximumSize = new System.Drawing.Size(326, 389);
+            this.MinimumSize = new System.Drawing.Size(326, 389);
             this.Name = "SignInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Misto App Sign in";

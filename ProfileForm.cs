@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,21 +13,34 @@ using System.Windows.Forms;
 namespace kursova
 {
 
-    
+
     public partial class ProfileForm : Form
     {
+        private User user = new User();
         public ProfileForm()
         {
             InitializeComponent();
+            string name, surname, patronymic, sex, age, mail, password;
+            StreamReader reader = new StreamReader("user.json"); //считываем инфу с примерочного файла, проверка все ли работает
+            surname = reader.ReadLine();
+            name = reader.ReadLine();
+            patronymic = reader.ReadLine();
+            sex = reader.ReadLine();
+            age = reader.ReadLine();
+            mail = reader.ReadLine();
+            password = reader.ReadLine();
+            reader.Close();
+            user.setuser(surname, name, patronymic, sex, age, mail, password);
+            StreamWriter wwriter = new StreamWriter("uuser.json"); //выписываем во второй проверочный файл инфу для проверки все ли норм сохранилось в 1 файл, и норм ли работают функции
+            wwriter.WriteLine(user.getname());
+            wwriter.Close();
         }
-
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
         }
-
     }
     public abstract class GetSet
     {
@@ -37,7 +51,7 @@ namespace kursova
             public abstract string getage();
             public abstract string getmail();
             public abstract void getnoted();
-            public abstract void setuser();
+            public abstract void setuser(string surname, string name, string patronymic, string sex, string age, string mail, string password);
             public abstract void saveuser();
     }
     public class saved
@@ -51,16 +65,16 @@ namespace kursova
             this.doctor = doctor;
             this.time = time;
             this.hospital = hospital;
-            next.doctor = null;
+            next = null;
         }
     }    
     public class User : GetSet 
     {
-        private string name, surname, patronymic, sex, age, mail;
+        private string surname, name, patronymic, sex, age, mail, password;
         private saved head;
         public User()
         {
-            head.doctor = null;
+            head = null;
         }
         public void Add(string doctor, string time, string hospital)
         {
@@ -72,7 +86,7 @@ namespace kursova
             else
             {
                 saved current = head;
-                while(current.next.doctor != null)
+                while(current.next != null)
                 {
                     current = current.next;
                 }
@@ -103,22 +117,26 @@ namespace kursova
         {
             return mail;
         }
-        public override void setuser()
+        public override void setuser(string surname, string name, string patronymic, string sex, string age, string mail, string password)
         {
-            string name="aboba";
+            this.surname = surname;
             this.name = name;
-            //реализовать добавление инфы о юзере из файла с его инфой
+            this.patronymic = patronymic;
+            this.sex = sex;
+            this.age = age;
+            this.mail = mail;
+            this.password = password;
         }
         public override void saveuser()
         {
-            string name;
-            name = this.name;
+            string surname;
+            surname = this.surname;
             //реализовать сохранение инфы о юзере в файл
         }
         public override void getnoted()
         {
             saved current = head;
-            while(current.doctor != null)
+            while(current != null)
             {
                 //реализовать добавление инфы из current в list с записями к врачу
                 current = current.next;

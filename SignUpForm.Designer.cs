@@ -83,7 +83,6 @@
             this.usersPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersPasswordTextBox.Location = new System.Drawing.Point(368, 148);
             this.usersPasswordTextBox.Name = "usersPasswordTextBox";
-            this.usersPasswordTextBox.PasswordChar = '●';
             this.usersPasswordTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersPasswordTextBox.TabIndex = 8;
             // 
@@ -120,7 +119,6 @@
             this.usersSurnameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersSurnameTextBox.Location = new System.Drawing.Point(26, 89);
             this.usersSurnameTextBox.Name = "usersSurnameTextBox";
-            this.usersSurnameTextBox.PasswordChar = '●';
             this.usersSurnameTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersSurnameTextBox.TabIndex = 12;
             // 
@@ -139,7 +137,6 @@
             this.usersNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersNameTextBox.Location = new System.Drawing.Point(26, 139);
             this.usersNameTextBox.Name = "usersNameTextBox";
-            this.usersNameTextBox.PasswordChar = '●';
             this.usersNameTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersNameTextBox.TabIndex = 14;
             // 
@@ -158,7 +155,6 @@
             this.usersPatronymTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersPatronymTextBox.Location = new System.Drawing.Point(26, 186);
             this.usersPatronymTextBox.Name = "usersPatronymTextBox";
-            this.usersPatronymTextBox.PasswordChar = '●';
             this.usersPatronymTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersPatronymTextBox.TabIndex = 16;
             // 
@@ -177,7 +173,6 @@
             this.usersAgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersAgeTextBox.Location = new System.Drawing.Point(26, 236);
             this.usersAgeTextBox.Name = "usersAgeTextBox";
-            this.usersAgeTextBox.PasswordChar = '●';
             this.usersAgeTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersAgeTextBox.TabIndex = 18;
             // 
