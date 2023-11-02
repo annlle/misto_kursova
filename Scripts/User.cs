@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,23 @@ namespace kursova.Scripts
         {
             // это все должно быть в цикле, который перебирает пользователей с файла
             // Сначала читается зашифрованная версия с файла, потом сразу дешифруется и заменяется в полях класса
-            User userFromFile = new User { Mail = "wwI8lm6iG9p42JAhc1AQG0qicZsICD9YW1VTfDyXyTg=", Password = "fbIqlWuBmKL2TPLqnyXwJw==" }; // testmail@gmail.com : test123 (!ПРИ КЛЮЧЕ "secretKeyExample"!)
+            // testmail@gmail.com : test123 (!ПРИ КЛЮЧЕ "secretKeyExample"!)
+
+            StreamReader reader = new StreamReader("user.json");
+
+            User userFromFile = new User
+            {
+                Surname = reader.ReadLine(),
+                Name = reader.ReadLine(),
+                Patronymic = reader.ReadLine(),
+                Sex = reader.ReadLine(),
+                Age = Convert.ToInt32(reader.ReadLine()),
+                Mail = reader.ReadLine(),
+                Password = reader.ReadLine()
+            }; 
+            reader.Close();
+
+            
             userFromFile.Mail = Encryptor.Decrypt(userFromFile.Mail);
             userFromFile.Password = Encryptor.Decrypt(userFromFile.Password);
 
