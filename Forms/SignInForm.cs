@@ -17,8 +17,6 @@ namespace kursova
 {
     public partial class SignInForm : Form
     {
-        private bool isMailCorrect = false;
-        private bool isPasswordCorrect = false;
         private User User = new User { };
 
         private CancellationTokenSource timerCancellation;

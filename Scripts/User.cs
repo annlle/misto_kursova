@@ -20,7 +20,11 @@ namespace kursova.Scripts
 
         public bool TryGetUser(string mail)
         {
-            User userFromFile = new User { Mail = "testmail@gmail.com", Password = "test123" };
+            // это все должно быть в цикле, который перебирает пользователей с файла
+            // Сначала читается зашифрованная версия с файла, потом сразу дешифруется и заменяется в полях класса
+            User userFromFile = new User { Mail = "wwI8lm6iG9p42JAhc1AQG0qicZsICD9YW1VTfDyXyTg=", Password = "fbIqlWuBmKL2TPLqnyXwJw==" }; // testmail@gmail.com : test123 (!ПРИ КЛЮЧЕ "secretKeyExample"!)
+            userFromFile.Mail = Encryptor.Decrypt(userFromFile.Mail);
+            userFromFile.Password = Encryptor.Decrypt(userFromFile.Password);
 
             if (mail == userFromFile.Mail)
             {
