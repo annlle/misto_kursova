@@ -34,15 +34,16 @@ namespace kursova
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            User = new User { };
-
-            User.Mail = usersEmailTextBox.Text;
-            User.Password = usersPasswordTextBox.Text;
-            User.Surname = usersSurnameTextBox.Text;
-            User.Name = usersNameTextBox.Text;
-            User.Patronymic = usersPatronymTextBox.Text;
-            User.Sex = usersSexComboBox.Text;
-            User.Age = Convert.ToInt32(usersAgeTextBox.Text);
+            User = new User
+            {
+                Mail = usersEmailTextBox.Text,
+                Password = usersPasswordTextBox.Text,
+                Surname = usersSurnameTextBox.Text,
+                Name = usersNameTextBox.Text,
+                Patronymic = usersPatronymTextBox.Text,
+                Sex = usersSexComboBox.Text,
+                Age = Convert.ToInt32(usersAgeTextBox.Text)
+            };
 
             User.CurrentUser = this.User;
 

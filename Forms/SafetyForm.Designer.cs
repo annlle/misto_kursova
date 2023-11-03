@@ -31,7 +31,6 @@
             this.typeLabel = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.levelSafetyLabel = new System.Windows.Forms.Label();
-            this.levelSafetyComboBox = new System.Windows.Forms.ComboBox();
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.postButton = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.typePanelLabel = new System.Windows.Forms.Label();
             this.safetyListLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelDanger = new System.Windows.Forms.Panel();
             this.safetyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,19 +78,6 @@
             this.levelSafetyLabel.Size = new System.Drawing.Size(162, 20);
             this.levelSafetyLabel.TabIndex = 3;
             this.levelSafetyLabel.Text = "Рівень небезпеки:";
-            // 
-            // levelSafetyComboBox
-            // 
-            this.levelSafetyComboBox.FormattingEnabled = true;
-            this.levelSafetyComboBox.Items.AddRange(new object[] {
-            "Зелений",
-            "Жовтий",
-            "Помаранчевий",
-            "Червоний"});
-            this.levelSafetyComboBox.Location = new System.Drawing.Point(189, 221);
-            this.levelSafetyComboBox.Name = "levelSafetyComboBox";
-            this.levelSafetyComboBox.Size = new System.Drawing.Size(166, 21);
-            this.levelSafetyComboBox.TabIndex = 4;
             // 
             // descriptionLabel
             // 
@@ -162,7 +149,7 @@
             this.safetyPanel.Controls.Add(this.typePanelLabel);
             this.safetyPanel.Location = new System.Drawing.Point(436, 439);
             this.safetyPanel.Name = "safetyPanel";
-            this.safetyPanel.Size = new System.Drawing.Size(304, 60);
+            this.safetyPanel.Size = new System.Drawing.Size(319, 60);
             this.safetyPanel.TabIndex = 12;
             this.safetyPanel.Visible = false;
             // 
@@ -183,7 +170,7 @@
             this.levelSafetyPanelLabel.Name = "levelSafetyPanelLabel";
             this.levelSafetyPanelLabel.Size = new System.Drawing.Size(56, 16);
             this.levelSafetyPanelLabel.TabIndex = 1;
-            this.levelSafetyPanelLabel.Text = "РІвень";
+            this.levelSafetyPanelLabel.Text = "Рівень";
             // 
             // typePanelLabel
             // 
@@ -215,11 +202,19 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Додати подію";
             // 
+            // panelDanger
+            // 
+            this.panelDanger.Location = new System.Drawing.Point(189, 222);
+            this.panelDanger.Name = "panelDanger";
+            this.panelDanger.Size = new System.Drawing.Size(166, 20);
+            this.panelDanger.TabIndex = 15;
+            // 
             // SafetyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 537);
+            this.Controls.Add(this.panelDanger);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.safetyListLabel);
             this.Controls.Add(this.safetyPanel);
@@ -230,7 +225,6 @@
             this.Controls.Add(this.postButton);
             this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.descriptionLabel);
-            this.Controls.Add(this.levelSafetyComboBox);
             this.Controls.Add(this.levelSafetyLabel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.typeLabel);
@@ -250,7 +244,6 @@
         private System.Windows.Forms.Label typeLabel;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label levelSafetyLabel;
-        private System.Windows.Forms.ComboBox levelSafetyComboBox;
         private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.Button postButton;
@@ -264,5 +257,6 @@
         private System.Windows.Forms.Label locationPanelLabel;
         private System.Windows.Forms.Label safetyListLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelDanger;
     }
 }
