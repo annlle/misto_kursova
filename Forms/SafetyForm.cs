@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kursova.Scripts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -115,6 +116,13 @@ namespace kursova
                 sectorSelected = true;
                 selectedSectorIndex = dangerSectors.IndexOf(currentSector);
             }
+        }
+
+        private void postButton_Click(object sender, EventArgs e)
+        {
+            Location loc = new Location(locationTextBox.Text);
+
+            descriptionTextBox.Text = loc.GoogleMapsLink;
         }
     }
 

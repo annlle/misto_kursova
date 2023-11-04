@@ -106,6 +106,7 @@
             this.postButton.TabIndex = 7;
             this.postButton.Text = "Опублікувати";
             this.postButton.UseVisualStyleBackColor = true;
+            this.postButton.Click += new System.EventHandler(this.postButton_Click);
             // 
             // typeComboBox
             // 
