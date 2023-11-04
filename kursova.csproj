@@ -81,6 +81,7 @@
     </Compile>
     <Compile Include="Scripts\Appointment.cs" />
     <Compile Include="Scripts\Encryptor.cs" />
+    <Compile Include="Scripts\GooglePlacesAutoComplete.cs" />
     <Compile Include="Scripts\Location.cs" />
     <Compile Include="Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

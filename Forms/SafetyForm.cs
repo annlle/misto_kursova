@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace kursova
 {
@@ -123,6 +124,26 @@ namespace kursova
             Location loc = new Location(locationTextBox.Text);
 
             descriptionTextBox.Text = loc.GoogleMapsLink;
+        }
+
+        private void locationTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string input = locationTextBox.Text;
+            List<string> results = GooglePlacesAutoComplete.GetAutoCompleteResults(input);
+
+            locationListBox.Items.Clear();
+            locationListBox.Items.AddRange(results.ToArray());
+
+            locationListBox.Visible = locationListBox.Items.Count > 0;
+        }
+
+        private void locationListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (locationListBox.SelectedIndex != -1)
+            {
+                locationTextBox.Text = locationListBox.SelectedItem.ToString();
+                locationListBox.Visible = false;
+            }
         }
     }
 

@@ -36,7 +36,6 @@
             this.postButton = new System.Windows.Forms.Button();
             this.typeComboBox = new System.Windows.Forms.ComboBox();
             this.locationLabel = new System.Windows.Forms.Label();
-            this.locationTextBox = new System.Windows.Forms.TextBox();
             this.safetyListPanel = new System.Windows.Forms.Panel();
             this.safetyPanel = new System.Windows.Forms.Panel();
             this.locationPanelLabel = new System.Windows.Forms.Label();
@@ -45,6 +44,8 @@
             this.safetyListLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelDanger = new System.Windows.Forms.Panel();
+            this.locationTextBox = new System.Windows.Forms.TextBox();
+            this.locationListBox = new System.Windows.Forms.ListBox();
             this.safetyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,13 +130,6 @@
             this.locationLabel.TabIndex = 9;
             this.locationLabel.Text = "Адреса:";
             // 
-            // locationTextBox
-            // 
-            this.locationTextBox.Location = new System.Drawing.Point(189, 185);
-            this.locationTextBox.Name = "locationTextBox";
-            this.locationTextBox.Size = new System.Drawing.Size(166, 20);
-            this.locationTextBox.TabIndex = 10;
-            // 
             // safetyListPanel
             // 
             this.safetyListPanel.Location = new System.Drawing.Point(436, 147);
@@ -210,17 +204,36 @@
             this.panelDanger.Size = new System.Drawing.Size(166, 20);
             this.panelDanger.TabIndex = 15;
             // 
+            // locationTextBox
+            // 
+            this.locationTextBox.Location = new System.Drawing.Point(189, 185);
+            this.locationTextBox.Name = "locationTextBox";
+            this.locationTextBox.Size = new System.Drawing.Size(166, 20);
+            this.locationTextBox.TabIndex = 16;
+            this.locationTextBox.TextChanged += new System.EventHandler(this.locationTextBox_TextChanged);
+            // 
+            // locationListBox
+            // 
+            this.locationListBox.FormattingEnabled = true;
+            this.locationListBox.Location = new System.Drawing.Point(189, 207);
+            this.locationListBox.Name = "locationListBox";
+            this.locationListBox.Size = new System.Drawing.Size(166, 43);
+            this.locationListBox.TabIndex = 17;
+            this.locationListBox.Visible = false;
+            this.locationListBox.SelectedIndexChanged += new System.EventHandler(this.locationListBox_SelectedIndexChanged);
+            // 
             // SafetyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 537);
+            this.Controls.Add(this.locationListBox);
+            this.Controls.Add(this.locationTextBox);
             this.Controls.Add(this.panelDanger);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.safetyListLabel);
             this.Controls.Add(this.safetyPanel);
             this.Controls.Add(this.safetyListPanel);
-            this.Controls.Add(this.locationTextBox);
             this.Controls.Add(this.locationLabel);
             this.Controls.Add(this.typeComboBox);
             this.Controls.Add(this.postButton);
@@ -250,7 +263,6 @@
         private System.Windows.Forms.Button postButton;
         private System.Windows.Forms.ComboBox typeComboBox;
         private System.Windows.Forms.Label locationLabel;
-        private System.Windows.Forms.TextBox locationTextBox;
         private System.Windows.Forms.Panel safetyListPanel;
         private System.Windows.Forms.Panel safetyPanel;
         private System.Windows.Forms.Label typePanelLabel;
@@ -259,5 +271,7 @@
         private System.Windows.Forms.Label safetyListLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelDanger;
+        private System.Windows.Forms.TextBox locationTextBox;
+        private System.Windows.Forms.ListBox locationListBox;
     }
 }
