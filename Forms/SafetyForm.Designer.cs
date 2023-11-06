@@ -46,7 +46,9 @@
             this.panelDanger = new System.Windows.Forms.Panel();
             this.locationTextBox = new System.Windows.Forms.TextBox();
             this.locationListBox = new System.Windows.Forms.ListBox();
+            this.mapPanelPictureBox = new System.Windows.Forms.PictureBox();
             this.safetyPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mapPanelPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // typeLabel
@@ -139,10 +141,11 @@
             // 
             // safetyPanel
             // 
+            this.safetyPanel.Controls.Add(this.mapPanelPictureBox);
             this.safetyPanel.Controls.Add(this.locationPanelLabel);
             this.safetyPanel.Controls.Add(this.levelSafetyPanelLabel);
             this.safetyPanel.Controls.Add(this.typePanelLabel);
-            this.safetyPanel.Location = new System.Drawing.Point(436, 439);
+            this.safetyPanel.Location = new System.Drawing.Point(436, 449);
             this.safetyPanel.Name = "safetyPanel";
             this.safetyPanel.Size = new System.Drawing.Size(319, 60);
             this.safetyPanel.TabIndex = 12;
@@ -150,30 +153,27 @@
             // 
             // locationPanelLabel
             // 
-            this.locationPanelLabel.AutoSize = true;
-            this.locationPanelLabel.Location = new System.Drawing.Point(21, 36);
+            this.locationPanelLabel.Location = new System.Drawing.Point(3, 20);
             this.locationPanelLabel.Name = "locationPanelLabel";
-            this.locationPanelLabel.Size = new System.Drawing.Size(44, 13);
+            this.locationPanelLabel.Size = new System.Drawing.Size(187, 39);
             this.locationPanelLabel.TabIndex = 2;
             this.locationPanelLabel.Text = "Адреса";
             // 
             // levelSafetyPanelLabel
             // 
-            this.levelSafetyPanelLabel.AutoSize = true;
+            this.levelSafetyPanelLabel.BackColor = System.Drawing.Color.Red;
             this.levelSafetyPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.levelSafetyPanelLabel.Location = new System.Drawing.Point(162, 9);
+            this.levelSafetyPanelLabel.Location = new System.Drawing.Point(0, 0);
             this.levelSafetyPanelLabel.Name = "levelSafetyPanelLabel";
-            this.levelSafetyPanelLabel.Size = new System.Drawing.Size(56, 16);
+            this.levelSafetyPanelLabel.Size = new System.Drawing.Size(59, 20);
             this.levelSafetyPanelLabel.TabIndex = 1;
-            this.levelSafetyPanelLabel.Text = "Рівень";
             // 
             // typePanelLabel
             // 
-            this.typePanelLabel.AutoSize = true;
             this.typePanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.typePanelLabel.Location = new System.Drawing.Point(20, 5);
+            this.typePanelLabel.Location = new System.Drawing.Point(66, 2);
             this.typePanelLabel.Name = "typePanelLabel";
-            this.typePanelLabel.Size = new System.Drawing.Size(122, 20);
+            this.typePanelLabel.Size = new System.Drawing.Size(122, 21);
             this.typePanelLabel.TabIndex = 0;
             this.typePanelLabel.Text = "Що відбулося";
             // 
@@ -222,6 +222,15 @@
             this.locationListBox.Visible = false;
             this.locationListBox.SelectedIndexChanged += new System.EventHandler(this.locationListBox_SelectedIndexChanged);
             // 
+            // mapPanelPictureBox
+            // 
+            this.mapPanelPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mapPanelPictureBox.Location = new System.Drawing.Point(196, 3);
+            this.mapPanelPictureBox.Name = "mapPanelPictureBox";
+            this.mapPanelPictureBox.Size = new System.Drawing.Size(120, 54);
+            this.mapPanelPictureBox.TabIndex = 3;
+            this.mapPanelPictureBox.TabStop = false;
+            // 
             // SafetyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,7 +256,7 @@
             this.Text = "Safety";
             this.Load += new System.EventHandler(this.SafetyForm_Load);
             this.safetyPanel.ResumeLayout(false);
-            this.safetyPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mapPanelPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +282,6 @@
         private System.Windows.Forms.Panel panelDanger;
         private System.Windows.Forms.TextBox locationTextBox;
         private System.Windows.Forms.ListBox locationListBox;
+        private System.Windows.Forms.PictureBox mapPanelPictureBox;
     }
 }

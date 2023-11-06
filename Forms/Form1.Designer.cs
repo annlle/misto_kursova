@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.fileMenuItem = new System.Windows.Forms.MenuItem();
             this.exitMenuItem = new System.Windows.Forms.MenuItem();
@@ -88,101 +89,122 @@
             // 
             // safetyButton
             // 
-            this.safetyButton.Location = new System.Drawing.Point(505, 69);
+            this.safetyButton.BackColor = System.Drawing.Color.White;
+            this.safetyButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("safetyButton.BackgroundImage")));
+            this.safetyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.safetyButton.Location = new System.Drawing.Point(515, 77);
             this.safetyButton.Name = "safetyButton";
-            this.safetyButton.Size = new System.Drawing.Size(110, 60);
+            this.safetyButton.Size = new System.Drawing.Size(131, 94);
             this.safetyButton.TabIndex = 1;
-            this.safetyButton.Text = "button2";
-            this.safetyButton.UseVisualStyleBackColor = true;
+            this.safetyButton.UseVisualStyleBackColor = false;
             this.safetyButton.Click += new System.EventHandler(this.safetyButtonClick);
             // 
             // travelInfoButton
             // 
-            this.travelInfoButton.Location = new System.Drawing.Point(255, 237);
+            this.travelInfoButton.BackColor = System.Drawing.Color.White;
+            this.travelInfoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("travelInfoButton.BackgroundImage")));
+            this.travelInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.travelInfoButton.Location = new System.Drawing.Point(265, 242);
             this.travelInfoButton.Name = "travelInfoButton";
-            this.travelInfoButton.Size = new System.Drawing.Size(110, 60);
+            this.travelInfoButton.Size = new System.Drawing.Size(131, 94);
             this.travelInfoButton.TabIndex = 2;
-            this.travelInfoButton.Text = "button3";
-            this.travelInfoButton.UseVisualStyleBackColor = true;
+            this.travelInfoButton.UseVisualStyleBackColor = false;
             this.travelInfoButton.Click += new System.EventHandler(this.travelInfoButtonClick);
             // 
             // hospitalButton
             // 
-            this.hospitalButton.Location = new System.Drawing.Point(505, 237);
+            this.hospitalButton.BackColor = System.Drawing.Color.White;
+            this.hospitalButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hospitalButton.BackgroundImage")));
+            this.hospitalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.hospitalButton.Location = new System.Drawing.Point(515, 242);
             this.hospitalButton.Name = "hospitalButton";
-            this.hospitalButton.Size = new System.Drawing.Size(110, 60);
+            this.hospitalButton.Size = new System.Drawing.Size(131, 94);
             this.hospitalButton.TabIndex = 3;
-            this.hospitalButton.Text = "button4";
-            this.hospitalButton.UseVisualStyleBackColor = true;
+            this.hospitalButton.UseVisualStyleBackColor = false;
             this.hospitalButton.Click += new System.EventHandler(this.hospitalButtonClick);
             // 
             // publicTransportLabel
             // 
             this.publicTransportLabel.AutoSize = true;
-            this.publicTransportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.publicTransportLabel.Location = new System.Drawing.Point(222, 142);
+            this.publicTransportLabel.BackColor = System.Drawing.Color.Transparent;
+            this.publicTransportLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.publicTransportLabel.ForeColor = System.Drawing.Color.White;
+            this.publicTransportLabel.Location = new System.Drawing.Point(243, 184);
             this.publicTransportLabel.Name = "publicTransportLabel";
-            this.publicTransportLabel.Size = new System.Drawing.Size(185, 16);
+            this.publicTransportLabel.Size = new System.Drawing.Size(184, 21);
             this.publicTransportLabel.TabIndex = 4;
             this.publicTransportLabel.Text = "Громадський транспорт";
             // 
             // safetyLabel
             // 
             this.safetyLabel.AutoSize = true;
-            this.safetyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.safetyLabel.Location = new System.Drawing.Point(473, 142);
+            this.safetyLabel.BackColor = System.Drawing.Color.Transparent;
+            this.safetyLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.safetyLabel.ForeColor = System.Drawing.Color.White;
+            this.safetyLabel.Location = new System.Drawing.Point(494, 184);
             this.safetyLabel.Name = "safetyLabel";
-            this.safetyLabel.Size = new System.Drawing.Size(177, 16);
+            this.safetyLabel.Size = new System.Drawing.Size(180, 21);
             this.safetyLabel.TabIndex = 5;
             this.safetyLabel.Text = "Громадянська безпека";
             // 
             // travelInfoLabel
             // 
             this.travelInfoLabel.AutoSize = true;
-            this.travelInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.travelInfoLabel.Location = new System.Drawing.Point(224, 307);
+            this.travelInfoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.travelInfoLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.travelInfoLabel.ForeColor = System.Drawing.Color.White;
+            this.travelInfoLabel.Location = new System.Drawing.Point(245, 349);
             this.travelInfoLabel.Name = "travelInfoLabel";
-            this.travelInfoLabel.Size = new System.Drawing.Size(183, 16);
+            this.travelInfoLabel.Size = new System.Drawing.Size(181, 21);
             this.travelInfoLabel.TabIndex = 6;
             this.travelInfoLabel.Text = "Туристична інформація";
             // 
             // hospitalLabel
             // 
             this.hospitalLabel.AutoSize = true;
-            this.hospitalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hospitalLabel.Location = new System.Drawing.Point(525, 307);
+            this.hospitalLabel.BackColor = System.Drawing.Color.Transparent;
+            this.hospitalLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hospitalLabel.ForeColor = System.Drawing.Color.White;
+            this.hospitalLabel.Location = new System.Drawing.Point(546, 349);
             this.hospitalLabel.Name = "hospitalLabel";
-            this.hospitalLabel.Size = new System.Drawing.Size(64, 16);
+            this.hospitalLabel.Size = new System.Drawing.Size(67, 21);
             this.hospitalLabel.TabIndex = 7;
             this.hospitalLabel.Text = "Лікарня";
             // 
             // publicTransportButton
             // 
-            this.publicTransportButton.Location = new System.Drawing.Point(255, 70);
+            this.publicTransportButton.BackColor = System.Drawing.Color.White;
+            this.publicTransportButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publicTransportButton.BackgroundImage")));
+            this.publicTransportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.publicTransportButton.Location = new System.Drawing.Point(265, 78);
             this.publicTransportButton.Name = "publicTransportButton";
-            this.publicTransportButton.Size = new System.Drawing.Size(110, 59);
+            this.publicTransportButton.Size = new System.Drawing.Size(131, 93);
             this.publicTransportButton.TabIndex = 0;
             this.publicTransportButton.Text = "button1";
-            this.publicTransportButton.UseVisualStyleBackColor = true;
+            this.publicTransportButton.UseVisualStyleBackColor = false;
             this.publicTransportButton.Click += new System.EventHandler(this.publicTransportButtonClick);
             // 
             // profileButton
             // 
+            this.profileButton.BackColor = System.Drawing.Color.Transparent;
+            this.profileButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profileButton.BackgroundImage")));
+            this.profileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.profileButton.Location = new System.Drawing.Point(12, 12);
             this.profileButton.Name = "profileButton";
-            this.profileButton.Size = new System.Drawing.Size(95, 117);
+            this.profileButton.Size = new System.Drawing.Size(165, 161);
             this.profileButton.TabIndex = 8;
-            this.profileButton.Text = "button5";
-            this.profileButton.UseVisualStyleBackColor = true;
+            this.profileButton.UseVisualStyleBackColor = false;
             this.profileButton.Click += new System.EventHandler(this.profileButtonClick);
             // 
             // profileLabel
             // 
             this.profileLabel.AutoSize = true;
-            this.profileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.profileLabel.Location = new System.Drawing.Point(21, 137);
+            this.profileLabel.BackColor = System.Drawing.Color.Transparent;
+            this.profileLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.profileLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.profileLabel.Location = new System.Drawing.Point(56, 176);
             this.profileLabel.Name = "profileLabel";
-            this.profileLabel.Size = new System.Drawing.Size(76, 18);
+            this.profileLabel.Size = new System.Drawing.Size(77, 24);
             this.profileLabel.TabIndex = 9;
             this.profileLabel.Text = "Профіль";
             // 
@@ -190,7 +212,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 381);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(701, 402);
             this.Controls.Add(this.profileLabel);
             this.Controls.Add(this.profileButton);
             this.Controls.Add(this.hospitalLabel);
@@ -201,6 +225,7 @@
             this.Controls.Add(this.travelInfoButton);
             this.Controls.Add(this.safetyButton);
             this.Controls.Add(this.publicTransportButton);
+            this.DoubleBuffered = true;
             this.MaximumSize = new System.Drawing.Size(717, 441);
             this.Menu = this.mainMenu1;
             this.MinimumSize = new System.Drawing.Size(717, 441);
