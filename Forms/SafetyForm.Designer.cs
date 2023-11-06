@@ -161,7 +161,7 @@
             // 
             this.levelSafetyPanelLabel.AutoSize = true;
             this.levelSafetyPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.levelSafetyPanelLabel.Location = new System.Drawing.Point(196, 20);
+            this.levelSafetyPanelLabel.Location = new System.Drawing.Point(162, 9);
             this.levelSafetyPanelLabel.Name = "levelSafetyPanelLabel";
             this.levelSafetyPanelLabel.Size = new System.Drawing.Size(56, 16);
             this.levelSafetyPanelLabel.TabIndex = 1;
