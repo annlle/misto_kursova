@@ -41,13 +41,4 @@ namespace kursova
         }
 
     }
-
-    public class transportInfoPanel : Panel
-    {
-        public PictureBox transportPanelPicture { get; private set; }
-        public Label numberPanelLabel { get; private set; }
-        public Label directionPanelLabel { get; private set; }
-        public Label frequencyPanelLabel { get; private set; }
-        public Label timePanelLabel { get; private set; }
-    }
 }
