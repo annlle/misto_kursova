@@ -91,7 +91,7 @@
             // 
             this.safetyButton.BackColor = System.Drawing.Color.White;
             this.safetyButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("safetyButton.BackgroundImage")));
-            this.safetyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.safetyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.safetyButton.Location = new System.Drawing.Point(515, 77);
             this.safetyButton.Name = "safetyButton";
             this.safetyButton.Size = new System.Drawing.Size(131, 94);
@@ -103,7 +103,7 @@
             // 
             this.travelInfoButton.BackColor = System.Drawing.Color.White;
             this.travelInfoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("travelInfoButton.BackgroundImage")));
-            this.travelInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.travelInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.travelInfoButton.Location = new System.Drawing.Point(265, 242);
             this.travelInfoButton.Name = "travelInfoButton";
             this.travelInfoButton.Size = new System.Drawing.Size(131, 94);
@@ -115,7 +115,7 @@
             // 
             this.hospitalButton.BackColor = System.Drawing.Color.White;
             this.hospitalButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hospitalButton.BackgroundImage")));
-            this.hospitalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.hospitalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.hospitalButton.Location = new System.Drawing.Point(515, 242);
             this.hospitalButton.Name = "hospitalButton";
             this.hospitalButton.Size = new System.Drawing.Size(131, 94);
@@ -175,20 +175,19 @@
             // 
             this.publicTransportButton.BackColor = System.Drawing.Color.White;
             this.publicTransportButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publicTransportButton.BackgroundImage")));
-            this.publicTransportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.publicTransportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.publicTransportButton.Location = new System.Drawing.Point(265, 78);
             this.publicTransportButton.Name = "publicTransportButton";
             this.publicTransportButton.Size = new System.Drawing.Size(131, 93);
             this.publicTransportButton.TabIndex = 0;
-            this.publicTransportButton.Text = "button1";
             this.publicTransportButton.UseVisualStyleBackColor = false;
             this.publicTransportButton.Click += new System.EventHandler(this.publicTransportButtonClick);
             // 
             // profileButton
             // 
-            this.profileButton.BackColor = System.Drawing.Color.Transparent;
+            this.profileButton.BackColor = System.Drawing.Color.White;
             this.profileButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profileButton.BackgroundImage")));
-            this.profileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.profileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.profileButton.Location = new System.Drawing.Point(12, 12);
             this.profileButton.Name = "profileButton";
             this.profileButton.Size = new System.Drawing.Size(165, 161);
@@ -214,7 +213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(701, 402);
+            this.ClientSize = new System.Drawing.Size(740, 433);
             this.Controls.Add(this.profileLabel);
             this.Controls.Add(this.profileButton);
             this.Controls.Add(this.hospitalLabel);
@@ -226,7 +225,6 @@
             this.Controls.Add(this.safetyButton);
             this.Controls.Add(this.publicTransportButton);
             this.DoubleBuffered = true;
-            this.MaximumSize = new System.Drawing.Size(717, 441);
             this.Menu = this.mainMenu1;
             this.MinimumSize = new System.Drawing.Size(717, 441);
             this.Name = "MainForm";
