@@ -12,6 +12,7 @@ using System.Threading;
 using kursova.Scripts;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml.Linq;
+using Newtonsoft.Json;
 
 namespace kursova
 {
@@ -34,30 +35,10 @@ namespace kursova
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            User = new User
-            {
-                Mail = usersEmailTextBox.Text,
-                Password = usersPasswordTextBox.Text,
-                Surname = usersSurnameTextBox.Text,
-                Name = usersNameTextBox.Text,
-                Patronymic = usersPatronymTextBox.Text,
-                Sex = usersSexComboBox.Text,
-                Age = Convert.ToInt32(usersAgeTextBox.Text)
-            };
+            User.WriteUser(User.CurrentUser, usersEmailTextBox.Text, usersPasswordTextBox.Text, usersSurnameTextBox.Text,
+                usersNameTextBox.Text, usersPatronymTextBox.Text, usersSexComboBox.Text, Convert.ToInt32(usersAgeTextBox.Text));
 
-            User.CurrentUser = this.User;
-
-            // Оно перезапишет текущего тестового пользователя, поэтому пока не доставать из коммента (надо сделать нормальную работу с файлами)
-
-            //StreamWriter writer = new StreamWriter("user.json");
-            //writer.WriteLine(User.CurrentUser.Surname);
-            //writer.WriteLine(User.CurrentUser.Name);
-            //writer.WriteLine(User.CurrentUser.Patronymic);
-            //writer.WriteLine(User.CurrentUser.Sex);
-            //writer.WriteLine(User.CurrentUser.Age);
-            //writer.WriteLine(Encryptor.Encrypt(User.CurrentUser.Mail));
-            //writer.WriteLine(Encryptor.Encrypt(User.CurrentUser.Password));
-            //writer.Close();
+            User.CurrentUser.Mail = Encryptor.Decrypt(User.CurrentUser.Mail);
 
             this.Hide();
             MainForm mainForm = new MainForm();
@@ -90,7 +71,7 @@ namespace kursova
                 mailCheckerLabel.Text = "";
                 return;
             }
-            else if (User.TryGetUser(usersEmailTextBox.Text))
+            else if (User.CheckUserMail(usersEmailTextBox.Text))
             {
                 mailCheckerLabel.Text = "Пошта вже зайнята!";
                 mailCheckerLabel.ForeColor = Color.Red;

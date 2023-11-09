@@ -28,7 +28,7 @@ namespace kursova
 
         private void SignInForm_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void signInButton_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace kursova
                 signInButton.Enabled = false;
                 return;
             }
-            else if (User.TryGetUser(usersEmailTextBox.Text))
+            else if (User.CheckUserMail(usersEmailTextBox.Text))
             {
                 mailCheckerLabel.Text = "Пошту знайдено!";
                 mailCheckerLabel.ForeColor = Color.Green;

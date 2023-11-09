@@ -156,6 +156,7 @@
     <EmbeddedResource Include="Forms\TravelInfoForm.resx">
       <DependentUpon>TravelInfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Data\user_test.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

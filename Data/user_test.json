@@ -1,0 +1,28 @@
+{
+  "Users": [
+    {
+      "surname": "Тестовий",
+      "name": "Тест",
+      "patronymic": "Тестович",
+      "sex": "Чоловік",
+      "age": 18,
+      "mail": "wwI8lm6iG9p42JAhc1AQG0qicZsICD9YW1VTfDyXyTg=",
+      "password": "fbIqlWuBmKL2TPLqnyXwJw==",
+      "appointments": [
+
+      ]
+    },
+    {
+      "surname": "hgukg",
+      "name": "abobighjkghch",
+      "patronymic": "abogkghbus",
+      "sex": "Чоловік",
+      "age": 54,
+      "mail": "wwI8lm6iG9p42JAhc1AQG0qicZsICD9YW1VTfDyXyTg=",
+      "password": "fbIqlWuBmKL2TPLqnyXwJw==",
+      "appointments": [
+
+      ]
+    }
+  ]
+}
