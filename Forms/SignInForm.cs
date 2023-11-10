@@ -26,11 +26,6 @@ namespace kursova
             InitializeComponent();
         }
 
-        private void SignInForm_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void signInButton_Click(object sender, EventArgs e)
         {
             if(usersPasswordTextBox.Text == User.Password)
