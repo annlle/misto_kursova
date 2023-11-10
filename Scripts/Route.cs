@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace kursova.Scripts
 {
-    enum TypeOfTransport
+    public enum TypeOfTransport
     {
         minibus,
         trolleybus,
@@ -17,10 +17,10 @@ namespace kursova.Scripts
     public class Route 
     {
         public int RouteNumber { get; set; }
-        public TypeOfTransport typeOfTransport { get; set; }
+        public TypeOfTransport TypeOfTransport { get; set; }
         public bool Direction { get; set; }
-        public List<string> Stops = new List<string> ();
-        public pair(string, string) time { get; set; }                    // початковий та кінцевий час 
-        public string interval { get; set; }
+        public List<string> Stops { get; set; }
+        public Tuple<string, string> Time { get; set; } // початковий та цінцевий час
+        public string Interval { get; set; }
     }
 }
