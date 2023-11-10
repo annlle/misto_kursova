@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -146,6 +147,58 @@ namespace kursova
             }
         }
 
+        private void EventPanel_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Brush brush = new SolidBrush(Color.LightGray);
+
+            int width = eventPanelTemplate.Width;
+            int height = eventPanelTemplate.Height;
+            int cornerRadius = 10;
+
+            FillRoundedBackground(g, brush, width, height, cornerRadius * 2);
+
+            // Настройки капсулы
+            brush = new SolidBrush(Color.Red);
+            int x = 8;
+            int y = 7;
+            width = 12;
+            height = 46;
+
+            FillCapsule(g, brush, x, y, width, height);
+        }
+
+        private void FillCapsule(Graphics g, Brush brush, int x, int y, int width, int height)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            // x, y, width, height, startAngle, sweepAngle
+            // x1, y1, x2, y2
+
+            path.AddArc(x, y, width, width, 180, 180);
+            //path.AddLine(x + width + 1, y + (width / 2), x + width + 1, y + height - (width / 2) + 1); // если не использовать сглаживание, чинит правую сторону капсулы
+            path.AddArc(x, y + height - width, width, width, 0, 180);
+
+            // Сама отрисовка
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.FillPath(brush, path);
+            g.SmoothingMode = SmoothingMode.Default;
+        }
+
+        private void FillRoundedBackground(Graphics g, Brush brush, int width, int height, int cornerCircleDiameter)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            path.AddArc(0, 0, cornerCircleDiameter, cornerCircleDiameter, 180, 90);
+            path.AddArc(width - cornerCircleDiameter, 0, cornerCircleDiameter, cornerCircleDiameter, -90, 90);
+            path.AddArc(width - cornerCircleDiameter, height - cornerCircleDiameter, cornerCircleDiameter, cornerCircleDiameter, 0, 90);
+            path.AddArc(0, height - cornerCircleDiameter, cornerCircleDiameter, cornerCircleDiameter, 90, 90);
+
+            // Сама отрисовка
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            g.FillPath(brush, path);
+            g.SmoothingMode = SmoothingMode.Default;
+        }
     }
 
     public class safetyPanel : Panel

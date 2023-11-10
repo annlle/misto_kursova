@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SafetyForm));
             this.typeLabel = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.levelSafetyLabel = new System.Windows.Forms.Label();
@@ -37,17 +38,16 @@
             this.typeComboBox = new System.Windows.Forms.ComboBox();
             this.locationLabel = new System.Windows.Forms.Label();
             this.safetyListPanel = new System.Windows.Forms.Panel();
-            this.safetyPanel = new System.Windows.Forms.Panel();
+            this.eventPanelTemplate = new System.Windows.Forms.Panel();
+            this.mapPanelPictureBox = new System.Windows.Forms.PictureBox();
             this.locationPanelLabel = new System.Windows.Forms.Label();
-            this.levelSafetyPanelLabel = new System.Windows.Forms.Label();
             this.typePanelLabel = new System.Windows.Forms.Label();
             this.safetyListLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelDanger = new System.Windows.Forms.Panel();
             this.locationTextBox = new System.Windows.Forms.TextBox();
             this.locationListBox = new System.Windows.Forms.ListBox();
-            this.mapPanelPictureBox = new System.Windows.Forms.PictureBox();
-            this.safetyPanel.SuspendLayout();
+            this.eventPanelTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mapPanelPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,46 +136,49 @@
             // 
             this.safetyListPanel.Location = new System.Drawing.Point(436, 147);
             this.safetyListPanel.Name = "safetyListPanel";
-            this.safetyListPanel.Size = new System.Drawing.Size(319, 254);
+            this.safetyListPanel.Size = new System.Drawing.Size(320, 254);
             this.safetyListPanel.TabIndex = 11;
             // 
-            // safetyPanel
+            // eventPanelTemplate
             // 
-            this.safetyPanel.Controls.Add(this.mapPanelPictureBox);
-            this.safetyPanel.Controls.Add(this.locationPanelLabel);
-            this.safetyPanel.Controls.Add(this.levelSafetyPanelLabel);
-            this.safetyPanel.Controls.Add(this.typePanelLabel);
-            this.safetyPanel.Location = new System.Drawing.Point(436, 449);
-            this.safetyPanel.Name = "safetyPanel";
-            this.safetyPanel.Size = new System.Drawing.Size(319, 60);
-            this.safetyPanel.TabIndex = 12;
-            this.safetyPanel.Visible = false;
+            this.eventPanelTemplate.BackColor = System.Drawing.Color.Transparent;
+            this.eventPanelTemplate.Controls.Add(this.mapPanelPictureBox);
+            this.eventPanelTemplate.Controls.Add(this.locationPanelLabel);
+            this.eventPanelTemplate.Controls.Add(this.typePanelLabel);
+            this.eventPanelTemplate.Location = new System.Drawing.Point(436, 449);
+            this.eventPanelTemplate.Name = "eventPanelTemplate";
+            this.eventPanelTemplate.Size = new System.Drawing.Size(320, 60);
+            this.eventPanelTemplate.TabIndex = 12;
+            this.eventPanelTemplate.Paint += new System.Windows.Forms.PaintEventHandler(this.EventPanel_Paint);
+            // 
+            // mapPanelPictureBox
+            // 
+            this.mapPanelPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mapPanelPictureBox.BackgroundImage")));
+            this.mapPanelPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mapPanelPictureBox.Location = new System.Drawing.Point(260, 5);
+            this.mapPanelPictureBox.Name = "mapPanelPictureBox";
+            this.mapPanelPictureBox.Size = new System.Drawing.Size(50, 50);
+            this.mapPanelPictureBox.TabIndex = 3;
+            this.mapPanelPictureBox.TabStop = false;
             // 
             // locationPanelLabel
             // 
-            this.locationPanelLabel.Location = new System.Drawing.Point(3, 20);
+            this.locationPanelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.locationPanelLabel.Location = new System.Drawing.Point(30, 25);
             this.locationPanelLabel.Name = "locationPanelLabel";
-            this.locationPanelLabel.Size = new System.Drawing.Size(187, 39);
+            this.locationPanelLabel.Size = new System.Drawing.Size(215, 30);
             this.locationPanelLabel.TabIndex = 2;
-            this.locationPanelLabel.Text = "Адреса";
-            // 
-            // levelSafetyPanelLabel
-            // 
-            this.levelSafetyPanelLabel.BackColor = System.Drawing.Color.Red;
-            this.levelSafetyPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.levelSafetyPanelLabel.Location = new System.Drawing.Point(0, 0);
-            this.levelSafetyPanelLabel.Name = "levelSafetyPanelLabel";
-            this.levelSafetyPanelLabel.Size = new System.Drawing.Size(59, 20);
-            this.levelSafetyPanelLabel.TabIndex = 1;
+            this.locationPanelLabel.Text = "Космічний житломасив, Запоріжжя, Запорізька область, 69000\r\n";
             // 
             // typePanelLabel
             // 
+            this.typePanelLabel.BackColor = System.Drawing.Color.Transparent;
             this.typePanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.typePanelLabel.Location = new System.Drawing.Point(66, 2);
+            this.typePanelLabel.Location = new System.Drawing.Point(30, 5);
             this.typePanelLabel.Name = "typePanelLabel";
-            this.typePanelLabel.Size = new System.Drawing.Size(122, 21);
+            this.typePanelLabel.Size = new System.Drawing.Size(215, 21);
             this.typePanelLabel.TabIndex = 0;
-            this.typePanelLabel.Text = "Що відбулося";
+            this.typePanelLabel.Text = "Суета Alarm";
             // 
             // safetyListLabel
             // 
@@ -222,15 +225,6 @@
             this.locationListBox.Visible = false;
             this.locationListBox.SelectedIndexChanged += new System.EventHandler(this.locationListBox_SelectedIndexChanged);
             // 
-            // mapPanelPictureBox
-            // 
-            this.mapPanelPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mapPanelPictureBox.Location = new System.Drawing.Point(196, 3);
-            this.mapPanelPictureBox.Name = "mapPanelPictureBox";
-            this.mapPanelPictureBox.Size = new System.Drawing.Size(120, 54);
-            this.mapPanelPictureBox.TabIndex = 3;
-            this.mapPanelPictureBox.TabStop = false;
-            // 
             // SafetyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,7 +235,7 @@
             this.Controls.Add(this.panelDanger);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.safetyListLabel);
-            this.Controls.Add(this.safetyPanel);
+            this.Controls.Add(this.eventPanelTemplate);
             this.Controls.Add(this.safetyListPanel);
             this.Controls.Add(this.locationLabel);
             this.Controls.Add(this.typeComboBox);
@@ -255,7 +249,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Safety";
             this.Load += new System.EventHandler(this.SafetyForm_Load);
-            this.safetyPanel.ResumeLayout(false);
+            this.eventPanelTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mapPanelPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -273,9 +267,8 @@
         private System.Windows.Forms.ComboBox typeComboBox;
         private System.Windows.Forms.Label locationLabel;
         private System.Windows.Forms.Panel safetyListPanel;
-        private System.Windows.Forms.Panel safetyPanel;
+        private System.Windows.Forms.Panel eventPanelTemplate;
         private System.Windows.Forms.Label typePanelLabel;
-        private System.Windows.Forms.Label levelSafetyPanelLabel;
         private System.Windows.Forms.Label locationPanelLabel;
         private System.Windows.Forms.Label safetyListLabel;
         private System.Windows.Forms.Label label1;
