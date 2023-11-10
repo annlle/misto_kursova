@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace kursova.Scripts
 {
-    enum TypeOfEvent 
+    public enum TypeOfEvent 
     {
         fire,
         robbery,
@@ -16,7 +16,7 @@ namespace kursova.Scripts
 
     public class Event
     {
-        public TypeOfEvent Event { get; set; }
+        public TypeOfEvent EventType { get; set; }
         public Location Location { get; set; }
         public int DangerLevel { get; set; }
     }
