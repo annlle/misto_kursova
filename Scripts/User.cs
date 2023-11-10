@@ -102,36 +102,32 @@ namespace kursova.Scripts
 
             UsersList listOfUsers = ReadUser();
 
-            if (listOfUsers != null)
+            if (listOfUsers == null)
+                return false;
+
+            foreach (User user in listOfUsers.Users)
             {
-                foreach (User user in listOfUsers.Users)
-                {
-                    user.Mail = Encryptor.Decrypt(user.Mail);
-                    user.Password = Encryptor.Decrypt(user.Password);
-                }
-
-                foreach (User user in listOfUsers.Users)
-                {
-                    if (mail == user.Mail)
-                    {
-                        this.Surname = user.Surname;
-                        this.Name = user.Name;
-                        this.Patronymic = user.Patronymic;
-                        this.Sex = user.Sex;
-                        this.Age = user.Age;
-                        this.Mail = user.Mail;
-                        this.Password = user.Password;
-                        this.Appointments = user.Appointments;
-
-                        return true;
-                    }
-                    else
-                        return false;
-                }
-                return false;
+                user.Mail = Encryptor.Decrypt(user.Mail);
+                user.Password = Encryptor.Decrypt(user.Password);
             }
-            else
-                return false;
+
+            foreach (User user in listOfUsers.Users)
+            {
+                if (mail == user.Mail)
+                {
+                    this.Surname = user.Surname;
+                    this.Name = user.Name;
+                    this.Patronymic = user.Patronymic;
+                    this.Sex = user.Sex;
+                    this.Age = user.Age;
+                    this.Mail = user.Mail;
+                    this.Password = user.Password;
+                    this.Appointments = user.Appointments;
+
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void AddAppointment(Appointment newAppointment) 
