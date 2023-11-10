@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using kursova.Scripts;
+using kursova.Scripts.Extensions;
 
 namespace kursova.Scripts
 {
@@ -24,7 +25,7 @@ namespace kursova.Scripts
         public int Age { get; set; }
         public string Mail { get; set; }
         public string Password { get; set; }
-        public List<Appointment> Appointments = new List<Appointment> { new Appointment { Test = "Перший запис!" } };
+        public List<Appointment> Appointments = new List<Appointment>();
         public static User CurrentUser { get; set; } // мы можем создавать экземпляры пользователей (объекты класса), но при этом у нас всегда есть статический текущий
 
         public UsersList ReadUser()
