@@ -9,7 +9,8 @@ using System.IO;
 using System.Security.Cryptography;
 using Newtonsoft.Json.Linq;
 using System.Net;
-using DotNetEnv;
+using dotenv;
+using dotenv.net;
 
 namespace kursova.Scripts.Extensions
 {
@@ -50,8 +51,8 @@ namespace kursova.Scripts.Extensions
 
         static Encryptor()
         {
-            Env.Load();
-            key = Env.GetString("ENCRYPTION_KEY");
+            DotEnv.Load();
+            key = DotEnv.Read()["ENCRYPTION_KEY"];
         }
 
         public static string Encrypt(string input)
@@ -102,8 +103,8 @@ namespace kursova.Scripts.Extensions
 
         static GooglePlacesAutoComplete()
         {
-            Env.Load();
-            apiKey = Env.GetString("API_KEY");
+            DotEnv.Load();
+            apiKey = DotEnv.Read()["API_KEY"];
         }
 
         public static List<string> GetAutoCompleteResults(string input)
