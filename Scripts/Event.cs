@@ -6,17 +6,30 @@ using System.Threading.Tasks;
 
 namespace kursova.Scripts
 {
-    public enum TypeOfEvent 
+    public enum EventType 
     {
-        fire,
-        robbery,
-        attack,
-        vandalism
+        Fire,
+        Robbery,
+        Attack,
+        Vandalism,
+        Other
+    }
+
+    public static class EventTranslations
+    {
+        public static Dictionary<EventType, string> UkrainianTranslations = new Dictionary<EventType, string>
+        {
+            { EventType.Fire, "Пожежа" },
+            { EventType.Robbery, "Грабіж" },
+            { EventType.Attack, "Атака" },
+            { EventType.Vandalism, "Вандалізм" },
+            { EventType.Other, "Інше" }
+        };
     }
 
     public class Event
     {
-        public TypeOfEvent EventType { get; set; }
+        public EventType EventType { get; set; }
         public Location Location { get; set; }
         public int DangerLevel { get; set; }
     }

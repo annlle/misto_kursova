@@ -98,6 +98,9 @@
     </Compile>
     <Compile Include="Scripts\Appointment.cs" />
     <Compile Include="Scripts\Event.cs" />
+    <Compile Include="Scripts\EventTile.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Scripts\Extensions.cs" />
     <Compile Include="Scripts\Location.cs" />
     <Compile Include="Scripts\Program.cs" />
@@ -138,6 +141,7 @@
       <DependentUpon>TravelInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Scripts\Route.cs" />
+    <Compile Include="Scripts\RouteTile.cs" />
     <Compile Include="Scripts\User.cs" />
     <EmbeddedResource Include="Forms\AboutDevelopersForm.resx">
       <DependentUpon>AboutDevelopersForm.cs</DependentUpon>

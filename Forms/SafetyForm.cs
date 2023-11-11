@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ namespace kursova
 {
     public partial class SafetyForm : Form
     {
+        List<Event> events;
         int totalSectors = 4;
         List<Panel> dangerSectors = new List<Panel>();
         List<Color> dangerColors = new List<Color>
@@ -43,6 +45,41 @@ namespace kursova
         private void SafetyForm_Load(object sender, EventArgs e)
         {
             InitializeDangerBar();
+            eventPanel.VerticalScroll.SmallChange = 20;
+
+            // автоматичекое добавление типов ивентов из словаря
+            foreach (var eventType in EventTranslations.UkrainianTranslations)
+                typeComboBox.Items.Add(eventType.Value);
+
+            events = new List<Event> 
+            {
+                new Event
+                {
+                    EventType = EventType.Fire,
+                    Location = new Location("Запоріжжя, вул. Чумаченка, 15"),
+                    DangerLevel = 0
+                },
+                new Event
+                {
+                    EventType = EventType.Robbery,
+                    Location = new Location("Запоріжжя, вул. Світла, 17"),
+                    DangerLevel = 1
+                },
+                new Event
+                {
+                    EventType = EventType.Attack,
+                    Location = new Location("Запоріжжя, вул. Чумаченка, 15"),
+                    DangerLevel = 2
+                },
+                new Event
+                {
+                    EventType = EventType.Vandalism,
+                    Location = new Location("Запоріжжя, вул. Світла, 17"),
+                    DangerLevel = 3
+                }
+            };
+
+            RenderEventPanel();
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -116,16 +153,44 @@ namespace kursova
         {
             if (sender is Panel currentSector)
             {
-                sectorSelected = true;
-                selectedSectorIndex = dangerSectors.IndexOf(currentSector);
+                if (sectorSelected && selectedSectorIndex == dangerSectors.IndexOf(currentSector))
+                {
+                    sectorSelected = false;
+                    selectedSectorIndex = -1;
+
+                }
+                else
+                {
+                    sectorSelected = true;
+                    selectedSectorIndex = dangerSectors.IndexOf(currentSector);
+                }
             }
         }
 
         private void postButton_Click(object sender, EventArgs e)
         {
-            Location loc = new Location(locationTextBox.Text);
+            events.Add(new Event
+            {
+                EventType = (EventType)typeComboBox.SelectedIndex,
+                Location = new Location(locationTextBox.Text),
+                DangerLevel = selectedSectorIndex
+            });
 
-            descriptionTextBox.Text = loc.GoogleMapsLink;
+            RenderEventPanel();
+        }
+
+        private void RenderEventPanel()
+        {
+            eventPanel.Controls.Clear();
+
+            foreach (var @event in events)
+            {
+                EventTile newTile = new EventTile(eventTileTemplate, typeTileTemplate, locationTileTemplate, locationLinkTileTemplate, @event);
+                newTile.Location = new Point(0, eventPanel.Controls.Count * 65);
+                newTile.Paint += EventTile_Paint;
+                newTile.Visible = true;
+                eventPanel.Controls.Add(newTile);
+            }
         }
 
         private void locationTextBox_TextChanged(object sender, EventArgs e)
@@ -148,25 +213,50 @@ namespace kursova
             }
         }
 
-        private void EventPanel_Paint(object sender, PaintEventArgs e)
+        private void EventTile_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
             Brush brush = new SolidBrush(Color.LightGray);
 
-            int width = eventPanelTemplate.Width;
-            int height = eventPanelTemplate.Height;
+            int width = eventTileTemplate.Width;
+            int height = eventTileTemplate.Height;
             int cornerRadius = 10;
 
             GraphicsHelper.FillRoundedBackground(g, brush, width, height, cornerRadius * 2);
 
             // Настройки капсулы
-            brush = new SolidBrush(Color.Red);
+            if (sender is EventTile eventTile)
+                brush = GetBrushByDangerLevel(eventTile.Event.DangerLevel);
+            else
+                brush = new SolidBrush(Color.Blue);
             int x = 8;
             int y = 7;
             width = 12;
             height = 46;
 
             GraphicsHelper.FillCapsule(g, brush, x, y, width, height);
+        }
+
+        private Brush GetBrushByDangerLevel(int dangerLevel)
+        {
+            switch (dangerLevel)
+            {
+                case 0:
+                    return new SolidBrush(dangerColors[0]);
+                case 1:
+                    return new SolidBrush(dangerColors[1]);
+                case 2:
+                    return new SolidBrush(dangerColors[2]);
+                case 3:
+                    return new SolidBrush(dangerColors[3]);
+                default:
+                    return new SolidBrush(Color.LightGray);
+            }
+        }
+
+        private void locationTextBox_Leave(object sender, EventArgs e)
+        {
+            locationListBox.Visible = false;
         }
     }
 
