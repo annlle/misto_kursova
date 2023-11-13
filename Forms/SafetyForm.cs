@@ -45,6 +45,7 @@ namespace kursova
         private void SafetyForm_Load(object sender, EventArgs e)
         {
             InitializeDangerBar();
+
             eventPanel.VerticalScroll.SmallChange = 20;
 
             // автоматичекое добавление типов ивентов из словаря

@@ -36,17 +36,17 @@
             this.trolleybusButton = new System.Windows.Forms.Button();
             this.tramvaiButton = new System.Windows.Forms.Button();
             this.busButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.transportInfoPanel = new System.Windows.Forms.Panel();
-            this.timePanelLabel = new System.Windows.Forms.Label();
-            this.frequencyPanelLabel = new System.Windows.Forms.Label();
-            this.directionPanelLabel = new System.Windows.Forms.Label();
-            this.numberPanelLabel = new System.Windows.Forms.Label();
-            this.transportPanelPicture = new System.Windows.Forms.PictureBox();
+            this.routePanel = new System.Windows.Forms.Panel();
+            this.routeTileTemplate = new System.Windows.Forms.Panel();
+            this.timeTileTemplate = new System.Windows.Forms.Label();
+            this.frequencyTileTemplate = new System.Windows.Forms.Label();
+            this.directionTileTemplate = new System.Windows.Forms.Label();
+            this.numberTileTemplate = new System.Windows.Forms.Label();
+            this.PictureTileTemplate = new System.Windows.Forms.PictureBox();
             this.listOfStationsLabel = new System.Windows.Forms.Label();
             this.stationLabel = new System.Windows.Forms.Label();
-            this.transportInfoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.transportPanelPicture)).BeginInit();
+            this.routeTileTemplate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureTileTemplate)).BeginInit();
             this.SuspendLayout();
             // 
             // typeOfTransportLabel
@@ -127,74 +127,80 @@
             this.busButton.Text = "Автобус";
             this.busButton.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // routePanel
             // 
-            this.panel1.Location = new System.Drawing.Point(29, 185);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 297);
-            this.panel1.TabIndex = 10;
+            this.routePanel.AutoScroll = true;
+            this.routePanel.Location = new System.Drawing.Point(29, 185);
+            this.routePanel.Name = "routePanel";
+            this.routePanel.Size = new System.Drawing.Size(323, 297);
+            this.routePanel.TabIndex = 10;
             // 
-            // transportInfoPanel
+            // routeTileTemplate
             // 
-            this.transportInfoPanel.Controls.Add(this.timePanelLabel);
-            this.transportInfoPanel.Controls.Add(this.frequencyPanelLabel);
-            this.transportInfoPanel.Controls.Add(this.directionPanelLabel);
-            this.transportInfoPanel.Controls.Add(this.numberPanelLabel);
-            this.transportInfoPanel.Controls.Add(this.transportPanelPicture);
-            this.transportInfoPanel.Location = new System.Drawing.Point(148, 12);
-            this.transportInfoPanel.Name = "transportInfoPanel";
-            this.transportInfoPanel.Size = new System.Drawing.Size(360, 59);
-            this.transportInfoPanel.TabIndex = 11;
-            this.transportInfoPanel.Visible = false;
+            this.routeTileTemplate.Controls.Add(this.timeTileTemplate);
+            this.routeTileTemplate.Controls.Add(this.frequencyTileTemplate);
+            this.routeTileTemplate.Controls.Add(this.directionTileTemplate);
+            this.routeTileTemplate.Controls.Add(this.numberTileTemplate);
+            this.routeTileTemplate.Controls.Add(this.PictureTileTemplate);
+            this.routeTileTemplate.Location = new System.Drawing.Point(148, 12);
+            this.routeTileTemplate.Name = "routeTileTemplate";
+            this.routeTileTemplate.Size = new System.Drawing.Size(305, 60);
+            this.routeTileTemplate.TabIndex = 11;
+            this.routeTileTemplate.Paint += new System.Windows.Forms.PaintEventHandler(this.RouteTile_Paint);
             // 
-            // timePanelLabel
+            // timeTileTemplate
             // 
-            this.timePanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timePanelLabel.Location = new System.Drawing.Point(236, 1);
-            this.timePanelLabel.Name = "timePanelLabel";
-            this.timePanelLabel.Size = new System.Drawing.Size(121, 55);
-            this.timePanelLabel.TabIndex = 4;
-            this.timePanelLabel.Text = "10:00 - 20:00";
-            this.timePanelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timeTileTemplate.BackColor = System.Drawing.Color.Transparent;
+            this.timeTileTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timeTileTemplate.Location = new System.Drawing.Point(230, 5);
+            this.timeTileTemplate.Name = "timeTileTemplate";
+            this.timeTileTemplate.Size = new System.Drawing.Size(70, 50);
+            this.timeTileTemplate.TabIndex = 4;
+            this.timeTileTemplate.Text = "10:00\r\n20:00";
+            this.timeTileTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // frequencyPanelLabel
+            // frequencyTileTemplate
             // 
-            this.frequencyPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.frequencyPanelLabel.Location = new System.Drawing.Point(133, 29);
-            this.frequencyPanelLabel.Name = "frequencyPanelLabel";
-            this.frequencyPanelLabel.Size = new System.Drawing.Size(90, 22);
-            this.frequencyPanelLabel.TabIndex = 3;
-            this.frequencyPanelLabel.Text = "Кожні 30 хв.";
-            this.frequencyPanelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.frequencyTileTemplate.BackColor = System.Drawing.Color.Transparent;
+            this.frequencyTileTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.frequencyTileTemplate.Location = new System.Drawing.Point(125, 33);
+            this.frequencyTileTemplate.Name = "frequencyTileTemplate";
+            this.frequencyTileTemplate.Size = new System.Drawing.Size(100, 22);
+            this.frequencyTileTemplate.TabIndex = 3;
+            this.frequencyTileTemplate.Text = "Кожні 20-30 хв.";
+            this.frequencyTileTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // directionPanelLabel
+            // directionTileTemplate
             // 
-            this.directionPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.directionPanelLabel.Location = new System.Drawing.Point(133, 3);
-            this.directionPanelLabel.Name = "directionPanelLabel";
-            this.directionPanelLabel.Size = new System.Drawing.Size(90, 22);
-            this.directionPanelLabel.TabIndex = 2;
-            this.directionPanelLabel.Text = "Прямий";
-            this.directionPanelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.directionTileTemplate.BackColor = System.Drawing.Color.Transparent;
+            this.directionTileTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.directionTileTemplate.Location = new System.Drawing.Point(125, 5);
+            this.directionTileTemplate.Name = "directionTileTemplate";
+            this.directionTileTemplate.Size = new System.Drawing.Size(100, 22);
+            this.directionTileTemplate.TabIndex = 2;
+            this.directionTileTemplate.Text = "Зворотній";
+            this.directionTileTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // numberPanelLabel
+            // numberTileTemplate
             // 
-            this.numberPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberPanelLabel.Location = new System.Drawing.Point(68, 3);
-            this.numberPanelLabel.Name = "numberPanelLabel";
-            this.numberPanelLabel.Size = new System.Drawing.Size(59, 53);
-            this.numberPanelLabel.TabIndex = 1;
-            this.numberPanelLabel.Text = "39";
-            this.numberPanelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.numberTileTemplate.BackColor = System.Drawing.Color.Transparent;
+            this.numberTileTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberTileTemplate.Location = new System.Drawing.Point(60, 5);
+            this.numberTileTemplate.Name = "numberTileTemplate";
+            this.numberTileTemplate.Size = new System.Drawing.Size(60, 50);
+            this.numberTileTemplate.TabIndex = 1;
+            this.numberTileTemplate.Text = "39";
+            this.numberTileTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // transportPanelPicture
+            // PictureTileTemplate
             // 
-            this.transportPanelPicture.Location = new System.Drawing.Point(3, 3);
-            this.transportPanelPicture.Name = "transportPanelPicture";
-            this.transportPanelPicture.Size = new System.Drawing.Size(59, 53);
-            this.transportPanelPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.transportPanelPicture.TabIndex = 0;
-            this.transportPanelPicture.TabStop = false;
+            this.PictureTileTemplate.BackColor = System.Drawing.Color.Transparent;
+            this.PictureTileTemplate.Location = new System.Drawing.Point(5, 5);
+            this.PictureTileTemplate.Name = "PictureTileTemplate";
+            this.PictureTileTemplate.Size = new System.Drawing.Size(50, 50);
+            this.PictureTileTemplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureTileTemplate.TabIndex = 0;
+            this.PictureTileTemplate.TabStop = false;
             // 
             // listOfStationsLabel
             // 
@@ -221,8 +227,8 @@
             this.ClientSize = new System.Drawing.Size(643, 512);
             this.Controls.Add(this.stationLabel);
             this.Controls.Add(this.listOfStationsLabel);
-            this.Controls.Add(this.transportInfoPanel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.routeTileTemplate);
+            this.Controls.Add(this.routePanel);
             this.Controls.Add(this.busButton);
             this.Controls.Add(this.tramvaiButton);
             this.Controls.Add(this.trolleybusButton);
@@ -234,8 +240,9 @@
             this.Name = "PublicTransportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Public Transport";
-            this.transportInfoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.transportPanelPicture)).EndInit();
+            this.Load += new System.EventHandler(this.PublicTransportForm_Load);
+            this.routeTileTemplate.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureTileTemplate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,13 +257,13 @@
         private System.Windows.Forms.Button trolleybusButton;
         private System.Windows.Forms.Button tramvaiButton;
         private System.Windows.Forms.Button busButton;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel transportInfoPanel;
-        private System.Windows.Forms.Label numberPanelLabel;
-        private System.Windows.Forms.PictureBox transportPanelPicture;
-        private System.Windows.Forms.Label directionPanelLabel;
-        private System.Windows.Forms.Label timePanelLabel;
-        private System.Windows.Forms.Label frequencyPanelLabel;
+        private System.Windows.Forms.Panel routePanel;
+        private System.Windows.Forms.Panel routeTileTemplate;
+        private System.Windows.Forms.Label numberTileTemplate;
+        private System.Windows.Forms.PictureBox PictureTileTemplate;
+        private System.Windows.Forms.Label directionTileTemplate;
+        private System.Windows.Forms.Label timeTileTemplate;
+        private System.Windows.Forms.Label frequencyTileTemplate;
         private System.Windows.Forms.Label listOfStationsLabel;
         private System.Windows.Forms.Label stationLabel;
     }

@@ -9,9 +9,9 @@ namespace kursova.Scripts
     public enum TypeOfTransport
     {
         minibus,
+        bus,
         trolleybus,
-        tram,
-        bus
+        tram
     }
 
     public class Route 

@@ -141,7 +141,9 @@
       <DependentUpon>TravelInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Scripts\Route.cs" />
-    <Compile Include="Scripts\RouteTile.cs" />
+    <Compile Include="Scripts\RouteTile.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Scripts\User.cs" />
     <EmbeddedResource Include="Forms\AboutDevelopersForm.resx">
       <DependentUpon>AboutDevelopersForm.cs</DependentUpon>
