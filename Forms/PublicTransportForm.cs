@@ -24,8 +24,6 @@ namespace kursova
 
         private void PublicTransportForm_Load(object sender, EventArgs e)
         {
-            UpdateButtonText();
-
             routePanel.VerticalScroll.SmallChange = 20;
 
             // Тестовый список
@@ -176,16 +174,6 @@ namespace kursova
             {
                 listOfStationsLabel.Text += stop + '\n';
             }
-        }
-
-        private void directionButtonClick(object sender, EventArgs e)
-        {
-            isForward = !isForward;
-            UpdateButtonText();
-        }
-        private void UpdateButtonText()
-        {
-            directionButton.Text = isForward ? "Прямий" : "Зворотній";
         }
 
         private void backButtonClick(object sender, EventArgs e)

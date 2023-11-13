@@ -28,14 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.typeOfTransportLabel = new System.Windows.Forms.Label();
-            this.directionLabel = new System.Windows.Forms.Label();
-            this.directionButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
-            this.marshrutkaButton = new System.Windows.Forms.Button();
-            this.trolleybusButton = new System.Windows.Forms.Button();
-            this.tramvaiButton = new System.Windows.Forms.Button();
-            this.busButton = new System.Windows.Forms.Button();
             this.routePanel = new System.Windows.Forms.Panel();
             this.routeTileTemplate = new System.Windows.Forms.Panel();
             this.timeTileTemplate = new System.Windows.Forms.Label();
@@ -45,40 +38,24 @@
             this.PictureTileTemplate = new System.Windows.Forms.PictureBox();
             this.listOfStationsLabel = new System.Windows.Forms.Label();
             this.stationLabel = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.routeTileTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureTileTemplate)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // typeOfTransportLabel
-            // 
-            this.typeOfTransportLabel.AutoSize = true;
-            this.typeOfTransportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.typeOfTransportLabel.Location = new System.Drawing.Point(330, 74);
-            this.typeOfTransportLabel.Name = "typeOfTransportLabel";
-            this.typeOfTransportLabel.Size = new System.Drawing.Size(112, 16);
-            this.typeOfTransportLabel.TabIndex = 1;
-            this.typeOfTransportLabel.Text = "Вид транспорту";
-            // 
-            // directionLabel
-            // 
-            this.directionLabel.AutoSize = true;
-            this.directionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.directionLabel.Location = new System.Drawing.Point(44, 74);
-            this.directionLabel.Name = "directionLabel";
-            this.directionLabel.Size = new System.Drawing.Size(72, 16);
-            this.directionLabel.TabIndex = 3;
-            this.directionLabel.Text = "Напрямок";
-            // 
-            // directionButton
-            // 
-            this.directionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.directionButton.Location = new System.Drawing.Point(29, 103);
-            this.directionButton.Name = "directionButton";
-            this.directionButton.Size = new System.Drawing.Size(104, 39);
-            this.directionButton.TabIndex = 4;
-            this.directionButton.Text = "Прямий";
-            this.directionButton.UseVisualStyleBackColor = true;
-            this.directionButton.Click += new System.EventHandler(this.directionButtonClick);
             // 
             // backButton
             // 
@@ -90,42 +67,6 @@
             this.backButton.Text = "НАЗАД";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButtonClick);
-            // 
-            // marshrutkaButton
-            // 
-            this.marshrutkaButton.Location = new System.Drawing.Point(216, 103);
-            this.marshrutkaButton.Name = "marshrutkaButton";
-            this.marshrutkaButton.Size = new System.Drawing.Size(86, 41);
-            this.marshrutkaButton.TabIndex = 6;
-            this.marshrutkaButton.Text = "Маршрутне таксі";
-            this.marshrutkaButton.UseVisualStyleBackColor = true;
-            // 
-            // trolleybusButton
-            // 
-            this.trolleybusButton.Location = new System.Drawing.Point(308, 103);
-            this.trolleybusButton.Name = "trolleybusButton";
-            this.trolleybusButton.Size = new System.Drawing.Size(86, 41);
-            this.trolleybusButton.TabIndex = 7;
-            this.trolleybusButton.Text = "Троллейбус";
-            this.trolleybusButton.UseVisualStyleBackColor = true;
-            // 
-            // tramvaiButton
-            // 
-            this.tramvaiButton.Location = new System.Drawing.Point(400, 103);
-            this.tramvaiButton.Name = "tramvaiButton";
-            this.tramvaiButton.Size = new System.Drawing.Size(86, 39);
-            this.tramvaiButton.TabIndex = 8;
-            this.tramvaiButton.Text = "Трамвай";
-            this.tramvaiButton.UseVisualStyleBackColor = true;
-            // 
-            // busButton
-            // 
-            this.busButton.Location = new System.Drawing.Point(492, 103);
-            this.busButton.Name = "busButton";
-            this.busButton.Size = new System.Drawing.Size(86, 39);
-            this.busButton.TabIndex = 9;
-            this.busButton.Text = "Автобус";
-            this.busButton.UseVisualStyleBackColor = true;
             // 
             // routePanel
             // 
@@ -146,6 +87,7 @@
             this.routeTileTemplate.Name = "routeTileTemplate";
             this.routeTileTemplate.Size = new System.Drawing.Size(305, 60);
             this.routeTileTemplate.TabIndex = 11;
+            this.routeTileTemplate.Visible = false;
             this.routeTileTemplate.Paint += new System.Windows.Forms.PaintEventHandler(this.RouteTile_Paint);
             // 
             // timeTileTemplate
@@ -220,43 +162,170 @@
             this.stationLabel.Text = "Зупинки";
             this.stationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(29, 93);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(92, 86);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Напрямок";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Location = new System.Drawing.Point(127, 134);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(80, 45);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Пошук";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioButton8);
+            this.groupBox3.Controls.Add(this.radioButton7);
+            this.groupBox3.Controls.Add(this.radioButton6);
+            this.groupBox3.Controls.Add(this.radioButton5);
+            this.groupBox3.Controls.Add(this.radioButton4);
+            this.groupBox3.Location = new System.Drawing.Point(213, 134);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(400, 45);
+            this.groupBox3.TabIndex = 16;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Вид транспорту";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(5, 20);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(86, 17);
+            this.radioButton1.TabIndex = 16;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Не важливо";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(5, 42);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(65, 17);
+            this.radioButton2.TabIndex = 17;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Прямий";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(5, 64);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(75, 17);
+            this.radioButton3.TabIndex = 18;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Зворотній";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(5, 20);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(70, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Checked = true;
+            this.radioButton4.Location = new System.Drawing.Point(7, 19);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(76, 17);
+            this.radioButton4.TabIndex = 0;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Будь-який";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(84, 19);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(82, 17);
+            this.radioButton5.TabIndex = 1;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Маршрутка";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(169, 19);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(66, 17);
+            this.radioButton6.TabIndex = 2;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Автобус";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(239, 19);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(79, 17);
+            this.radioButton7.TabIndex = 3;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "Тролейбус";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(321, 19);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(70, 17);
+            this.radioButton8.TabIndex = 4;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "Трамвай";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
             // PublicTransportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 512);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.stationLabel);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.listOfStationsLabel);
             this.Controls.Add(this.routeTileTemplate);
             this.Controls.Add(this.routePanel);
-            this.Controls.Add(this.busButton);
-            this.Controls.Add(this.tramvaiButton);
-            this.Controls.Add(this.trolleybusButton);
-            this.Controls.Add(this.marshrutkaButton);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.directionButton);
-            this.Controls.Add(this.directionLabel);
-            this.Controls.Add(this.typeOfTransportLabel);
             this.Name = "PublicTransportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Public Transport";
             this.Load += new System.EventHandler(this.PublicTransportForm_Load);
             this.routeTileTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureTileTemplate)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label typeOfTransportLabel;
-        private System.Windows.Forms.Label directionLabel;
-        private System.Windows.Forms.Button directionButton;
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.Button marshrutkaButton;
-        private System.Windows.Forms.Button trolleybusButton;
-        private System.Windows.Forms.Button tramvaiButton;
-        private System.Windows.Forms.Button busButton;
         private System.Windows.Forms.Panel routePanel;
         private System.Windows.Forms.Panel routeTileTemplate;
         private System.Windows.Forms.Label numberTileTemplate;
@@ -266,5 +335,17 @@
         private System.Windows.Forms.Label frequencyTileTemplate;
         private System.Windows.Forms.Label listOfStationsLabel;
         private System.Windows.Forms.Label stationLabel;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton6;
     }
 }
