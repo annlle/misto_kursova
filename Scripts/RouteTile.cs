@@ -89,6 +89,5 @@ namespace kursova.Scripts
             };
             this.Controls.Add(TypePicture);
         }
-
     }
 }

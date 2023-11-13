@@ -260,13 +260,4 @@ namespace kursova
             locationListBox.Visible = false;
         }
     }
-
-    public class safetyPanel : Panel
-    {
-        public Label typePanelLabel { get; private set; }
-        public Label levelSafetyPanelLabel { get; private set; }
-        public Label locationPanelLabel { get; private set; }
-        public Label mapPanelPictureBox { get; private set; }
-
-    }
 }

@@ -14,7 +14,6 @@ namespace kursova
 {
     public partial class PublicTransportForm : Form
     {
-        bool isForward = true;
         List<Route> routes;
 
         public PublicTransportForm()
@@ -159,11 +158,6 @@ namespace kursova
         private void FilterChanged(object sender, EventArgs e)
         {
             RenderRoutePanel();
-        }
-
-        private void Control_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void routeTile_Click(object sender, EventArgs e)
