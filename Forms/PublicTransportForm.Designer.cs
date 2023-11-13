@@ -131,7 +131,7 @@
             // 
             this.panel1.Location = new System.Drawing.Point(29, 185);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 278);
+            this.panel1.Size = new System.Drawing.Size(312, 297);
             this.panel1.TabIndex = 10;
             // 
             // transportInfoPanel
@@ -200,10 +200,9 @@
             // 
             this.listOfStationsLabel.Location = new System.Drawing.Point(388, 209);
             this.listOfStationsLabel.Name = "listOfStationsLabel";
-            this.listOfStationsLabel.Size = new System.Drawing.Size(225, 253);
+            this.listOfStationsLabel.Size = new System.Drawing.Size(225, 273);
             this.listOfStationsLabel.TabIndex = 12;
-            this.listOfStationsLabel.Text = "label7";
-            this.listOfStationsLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.listOfStationsLabel.Text = "Оберіть маршрут";
             // 
             // stationLabel
             // 

@@ -148,6 +148,7 @@
             this.eventTileTemplate.Name = "eventTileTemplate";
             this.eventTileTemplate.Size = new System.Drawing.Size(320, 60);
             this.eventTileTemplate.TabIndex = 12;
+            this.eventTileTemplate.Visible = false;
             this.eventTileTemplate.Paint += new System.Windows.Forms.PaintEventHandler(this.EventTile_Paint);
             // 
             // locationLinkTileTemplate
