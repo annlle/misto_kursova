@@ -130,6 +130,19 @@ namespace kursova
 
             foreach (var route in routes)
             {
+                if (
+                    dirNotStraightRadioButton.Checked && route.StraightDirection ||
+                    dirStraightRadioButton.Checked && !route.StraightDirection ||
+                    numberSearchTextBox.Text.Length > 0 && !route.RouteNumber.ToString().Contains(numberSearchTextBox.Text) ||
+                    minibusRadioButton.Checked && route.TypeOfTransport != TypeOfTransport.minibus ||
+                    busRadioButton.Checked && route.TypeOfTransport != TypeOfTransport.bus ||
+                    trolleybusRadioButton.Checked && route.TypeOfTransport != TypeOfTransport.trolleybus ||
+                    tramRadioButton.Checked && route.TypeOfTransport != TypeOfTransport.tram
+                    )
+                {
+                    continue;
+                }
+
                 RouteTile newTile = new RouteTile(routeTileTemplate, numberTileTemplate, directionTileTemplate, frequencyTileTemplate, timeTileTemplate, PictureTileTemplate, route);
                 newTile.Location = new Point(0, routePanel.Controls.Count * 65);
                 newTile.Paint += RouteTile_Paint;
@@ -141,6 +154,11 @@ namespace kursova
                 newTile.Visible = true;
                 routePanel.Controls.Add(newTile);
             }
+        }
+
+        private void FilterChanged(object sender, EventArgs e)
+        {
+            RenderRoutePanel();
         }
 
         private void Control_Click(object sender, EventArgs e)
