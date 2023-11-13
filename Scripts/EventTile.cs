@@ -24,29 +24,34 @@ namespace kursova.Scripts
             // Копирование свойств элементов
             Event = e;
 
-            Type = new Label();
-            Type.Text = EventTranslations.UkrainianTranslations[Event.EventType];
-            Type.Font = type.Font;
-            Type.Location = type.Location;
-            Type.Size = type.Size;
-            Type.BackColor = type.BackColor;
+            Type = new Label
+            {
+                Text = EventTranslations.UkrainianTranslations[Event.EventType],
+                Font = type.Font,
+                Location = type.Location,
+                Size = type.Size,
+                BackColor = type.BackColor
+            };
             this.Controls.Add(Type);
 
-            LocationLabel = new Label();
-            LocationLabel.Text = Event.Location.Name;
-            LocationLabel.Font = loc.Font;
-            LocationLabel.Location = loc.Location;
-            LocationLabel.Size = loc.Size;
-            LocationLabel.BackColor = loc.BackColor;
+            LocationLabel = new Label
+            {
+                Text = Event.Location.Name,
+                Font = loc.Font,
+                Location = loc.Location,
+                Size = loc.Size,
+                BackColor = loc.BackColor
+            };
             this.Controls.Add(LocationLabel);
 
-            LocationLink = new PictureBox();
-            LocationLink.Image = locLink.Image;
-            LocationLink.SizeMode = locLink.SizeMode;
-            LocationLink.Location = locLink.Location;
-            LocationLink.Size = locLink.Size;
-            LocationLink.BackColor = locLink.BackColor;
-            LocationLink.Image = locLink.Image;
+            LocationLink = new PictureBox
+            {
+                Image = locLink.Image,
+                SizeMode = locLink.SizeMode,
+                Location = locLink.Location,
+                Size = locLink.Size,
+                BackColor = locLink.BackColor
+            };
             LocationLink.Click += Event.Location.OpenLink;
             this.Controls.Add(LocationLink);
         }
