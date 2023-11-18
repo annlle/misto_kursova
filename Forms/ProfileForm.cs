@@ -25,15 +25,14 @@ namespace kursova
             usersSurnameLabel.Text = User.CurrentUser.Surname;
             usersNameLabel.Text = User.CurrentUser.Name;
             usersPatronymLabel.Text = User.CurrentUser.Patronymic;
-            usersSexLabel.Text = User.CurrentUser.Sex;
+            usersSexLabel.Text = User.CurrentUser.Sex.ToString();
             usersAgeLabel.Text = User.CurrentUser.Age.ToString();
             usersEmailLabel.Text = User.CurrentUser.Mail;
 
-            //listOfAppointmentsComboBox.Items.AddRange(User.CurrentUser.Appointments.GetRange(0, User.CurrentUser.Appointments.Count).ToArray());
-
             foreach (var appointment in User.CurrentUser.Appointments)
             {
-                listOfAppointmentsComboBox.Items.Add(appointment.Test);
+                string item = appointment.Hospital.Name + " - " + appointment.DateTime.Day + '.' + appointment.DateTime.Month + '.' + appointment.DateTime.Year;
+                appointmentsListBox.Items.Add(item);
             }
         }
 

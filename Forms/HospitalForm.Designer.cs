@@ -28,19 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Вознесенівський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Дніпровський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Заводський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Комунарський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Олександрівський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Хортицький", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Шевченківський", System.Windows.Forms.HorizontalAlignment.Left);
             this.backButton = new System.Windows.Forms.Button();
-            this.districtLabel = new System.Windows.Forms.Label();
-            this.hospitalLabel = new System.Windows.Forms.Label();
-            this.doctorLabel = new System.Windows.Forms.Label();
-            this.districtComboBox = new System.Windows.Forms.ComboBox();
-            this.hospitalComboBox = new System.Windows.Forms.ComboBox();
-            this.doctorComboBox = new System.Windows.Forms.ComboBox();
-            this.doctorPhotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.doctorPictureBox = new System.Windows.Forms.PictureBox();
             this.doctorNameLabel = new System.Windows.Forms.Label();
-            this.doctorInfoLabel = new System.Windows.Forms.Label();
             this.signButton = new System.Windows.Forms.Button();
-            this.timeComboBox = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.doctorPhotoPictureBox)).BeginInit();
+            this.hospitalsListView = new System.Windows.Forms.ListView();
+            this.hospitalHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.adressHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.doctorsListView = new System.Windows.Forms.ListView();
+            this.specializationLabel = new System.Windows.Forms.Label();
+            this.appointmentDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.appointmentTimePicker = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // backButton
@@ -54,160 +60,147 @@
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // districtLabel
+            // doctorPictureBox
             // 
-            this.districtLabel.AutoSize = true;
-            this.districtLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.districtLabel.Location = new System.Drawing.Point(18, 109);
-            this.districtLabel.Name = "districtLabel";
-            this.districtLabel.Size = new System.Drawing.Size(68, 22);
-            this.districtLabel.TabIndex = 1;
-            this.districtLabel.Text = "Район:";
-            // 
-            // hospitalLabel
-            // 
-            this.hospitalLabel.AutoSize = true;
-            this.hospitalLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hospitalLabel.Location = new System.Drawing.Point(18, 147);
-            this.hospitalLabel.Name = "hospitalLabel";
-            this.hospitalLabel.Size = new System.Drawing.Size(84, 22);
-            this.hospitalLabel.TabIndex = 2;
-            this.hospitalLabel.Text = "Лікарня:";
-            // 
-            // doctorLabel
-            // 
-            this.doctorLabel.AutoSize = true;
-            this.doctorLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.doctorLabel.Location = new System.Drawing.Point(18, 186);
-            this.doctorLabel.Name = "doctorLabel";
-            this.doctorLabel.Size = new System.Drawing.Size(63, 22);
-            this.doctorLabel.TabIndex = 3;
-            this.doctorLabel.Text = "Лікар:";
-            // 
-            // districtComboBox
-            // 
-            this.districtComboBox.FormattingEnabled = true;
-            this.districtComboBox.Items.AddRange(new object[] {
-            "Вознесенівський",
-            "Дніпровський",
-            "Заводський",
-            "Комунарський",
-            "Олександрівський",
-            "Хортицький",
-            "Шевченківський"});
-            this.districtComboBox.Location = new System.Drawing.Point(141, 112);
-            this.districtComboBox.Name = "districtComboBox";
-            this.districtComboBox.Size = new System.Drawing.Size(230, 21);
-            this.districtComboBox.TabIndex = 4;
-            this.districtComboBox.SelectedIndexChanged += new System.EventHandler(this.districtComboBox_SelectedIndexChanged);
-            // 
-            // hospitalComboBox
-            // 
-            this.hospitalComboBox.FormattingEnabled = true;
-            this.hospitalComboBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.hospitalComboBox.Location = new System.Drawing.Point(141, 150);
-            this.hospitalComboBox.Name = "hospitalComboBox";
-            this.hospitalComboBox.Size = new System.Drawing.Size(230, 21);
-            this.hospitalComboBox.TabIndex = 5;
-            this.hospitalComboBox.SelectedIndexChanged += new System.EventHandler(this.hospitalComboBox_SelectedIndexChanged);
-            // 
-            // doctorComboBox
-            // 
-            this.doctorComboBox.FormattingEnabled = true;
-            this.doctorComboBox.Items.AddRange(new object[] {
-            "Гастроентеролог",
-            "Дерматолог",
-            "Ендокринолог",
-            "Кардіолог",
-            "Косметолог",
-            "Логопед",
-            "Масажист",
-            "Невролог",
-            "Онколог",
-            "Офтальмолог",
-            "Педіатр",
-            "Психотерапевт",
-            "Стоматолог",
-            "Терапевт",
-            ""});
-            this.doctorComboBox.Location = new System.Drawing.Point(141, 189);
-            this.doctorComboBox.Name = "doctorComboBox";
-            this.doctorComboBox.Size = new System.Drawing.Size(230, 21);
-            this.doctorComboBox.TabIndex = 6;
-            this.doctorComboBox.SelectedIndexChanged += new System.EventHandler(this.doctorComboBox_SelectedIndexChanged);
-            // 
-            // doctorPhotoPictureBox
-            // 
-            this.doctorPhotoPictureBox.Location = new System.Drawing.Point(12, 243);
-            this.doctorPhotoPictureBox.Name = "doctorPhotoPictureBox";
-            this.doctorPhotoPictureBox.Size = new System.Drawing.Size(105, 121);
-            this.doctorPhotoPictureBox.TabIndex = 7;
-            this.doctorPhotoPictureBox.TabStop = false;
+            this.doctorPictureBox.Location = new System.Drawing.Point(369, 362);
+            this.doctorPictureBox.Name = "doctorPictureBox";
+            this.doctorPictureBox.Size = new System.Drawing.Size(97, 97);
+            this.doctorPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.doctorPictureBox.TabIndex = 7;
+            this.doctorPictureBox.TabStop = false;
             // 
             // doctorNameLabel
             // 
             this.doctorNameLabel.AutoSize = true;
             this.doctorNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.doctorNameLabel.Location = new System.Drawing.Point(142, 253);
+            this.doctorNameLabel.Location = new System.Drawing.Point(489, 362);
             this.doctorNameLabel.Name = "doctorNameLabel";
             this.doctorNameLabel.Size = new System.Drawing.Size(83, 16);
             this.doctorNameLabel.TabIndex = 8;
             this.doctorNameLabel.Text = "ПІБ лікаря";
             // 
-            // doctorInfoLabel
-            // 
-            this.doctorInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.doctorInfoLabel.Location = new System.Drawing.Point(142, 288);
-            this.doctorInfoLabel.Name = "doctorInfoLabel";
-            this.doctorInfoLabel.Size = new System.Drawing.Size(229, 52);
-            this.doctorInfoLabel.TabIndex = 9;
-            this.doctorInfoLabel.Text = "Інфо про лікаря";
-            // 
             // signButton
             // 
             this.signButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.signButton.Location = new System.Drawing.Point(141, 403);
+            this.signButton.Location = new System.Drawing.Point(492, 557);
             this.signButton.Name = "signButton";
             this.signButton.Size = new System.Drawing.Size(122, 37);
             this.signButton.TabIndex = 10;
             this.signButton.Text = "Записатися";
             this.signButton.UseVisualStyleBackColor = true;
+            this.signButton.Click += new System.EventHandler(this.signButton_Click);
             // 
-            // timeComboBox
+            // hospitalsListView
             // 
-            this.timeComboBox.FormattingEnabled = true;
-            this.timeComboBox.Location = new System.Drawing.Point(141, 343);
-            this.timeComboBox.Name = "timeComboBox";
-            this.timeComboBox.Size = new System.Drawing.Size(106, 21);
-            this.timeComboBox.TabIndex = 11;
-            this.timeComboBox.SelectedIndexChanged += new System.EventHandler(this.timeComboBox_SelectedIndexChanged);
+            this.hospitalsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.hospitalHeader,
+            this.adressHeader});
+            this.hospitalsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            listViewGroup8.Header = "Вознесенівський";
+            listViewGroup8.Name = "listViewGroup1";
+            listViewGroup9.Header = "Дніпровський";
+            listViewGroup9.Name = "listViewGroup2";
+            listViewGroup10.Header = "Заводський";
+            listViewGroup10.Name = "listViewGroup3";
+            listViewGroup11.Header = "Комунарський";
+            listViewGroup11.Name = "listViewGroup4";
+            listViewGroup12.Header = "Олександрівський";
+            listViewGroup12.Name = "listViewGroup5";
+            listViewGroup13.Header = "Хортицький";
+            listViewGroup13.Name = "listViewGroup6";
+            listViewGroup14.Header = "Шевченківський";
+            listViewGroup14.Name = "listViewGroup7";
+            this.hospitalsListView.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup8,
+            listViewGroup9,
+            listViewGroup10,
+            listViewGroup11,
+            listViewGroup12,
+            listViewGroup13,
+            listViewGroup14});
+            this.hospitalsListView.HideSelection = false;
+            this.hospitalsListView.Location = new System.Drawing.Point(12, 80);
+            this.hospitalsListView.MultiSelect = false;
+            this.hospitalsListView.Name = "hospitalsListView";
+            this.hospitalsListView.Size = new System.Drawing.Size(739, 250);
+            this.hospitalsListView.TabIndex = 12;
+            this.hospitalsListView.UseCompatibleStateImageBehavior = false;
+            this.hospitalsListView.View = System.Windows.Forms.View.Details;
+            this.hospitalsListView.SelectedIndexChanged += new System.EventHandler(this.hospitalsListView_SelectedIndexChanged);
+            // 
+            // hospitalHeader
+            // 
+            this.hospitalHeader.Text = "Лікарня";
+            this.hospitalHeader.Width = 287;
+            // 
+            // adressHeader
+            // 
+            this.adressHeader.Text = "Адреса";
+            this.adressHeader.Width = 428;
+            // 
+            // doctorsListView
+            // 
+            this.doctorsListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.doctorsListView.HideSelection = false;
+            this.doctorsListView.Location = new System.Drawing.Point(12, 337);
+            this.doctorsListView.Name = "doctorsListView";
+            this.doctorsListView.Size = new System.Drawing.Size(249, 257);
+            this.doctorsListView.TabIndex = 13;
+            this.doctorsListView.UseCompatibleStateImageBehavior = false;
+            this.doctorsListView.View = System.Windows.Forms.View.List;
+            this.doctorsListView.SelectedIndexChanged += new System.EventHandler(this.doctorsListView_SelectedIndexChanged);
+            // 
+            // specializationLabel
+            // 
+            this.specializationLabel.AutoSize = true;
+            this.specializationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.specializationLabel.Location = new System.Drawing.Point(489, 389);
+            this.specializationLabel.Name = "specializationLabel";
+            this.specializationLabel.Size = new System.Drawing.Size(86, 15);
+            this.specializationLabel.TabIndex = 14;
+            this.specializationLabel.Text = "Спеціалізація";
+            // 
+            // appointmentDatePicker
+            // 
+            this.appointmentDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.appointmentDatePicker.Location = new System.Drawing.Point(458, 516);
+            this.appointmentDatePicker.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
+            this.appointmentDatePicker.MinDate = new System.DateTime(2023, 11, 18, 0, 0, 0, 0);
+            this.appointmentDatePicker.Name = "appointmentDatePicker";
+            this.appointmentDatePicker.Size = new System.Drawing.Size(91, 20);
+            this.appointmentDatePicker.TabIndex = 15;
+            this.appointmentDatePicker.Value = new System.DateTime(2023, 11, 18, 16, 35, 37, 0);
+            // 
+            // appointmentTimePicker
+            // 
+            this.appointmentTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.appointmentTimePicker.Location = new System.Drawing.Point(555, 516);
+            this.appointmentTimePicker.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
+            this.appointmentTimePicker.MinDate = new System.DateTime(2023, 11, 18, 0, 0, 0, 0);
+            this.appointmentTimePicker.Name = "appointmentTimePicker";
+            this.appointmentTimePicker.Size = new System.Drawing.Size(91, 20);
+            this.appointmentTimePicker.TabIndex = 16;
+            this.appointmentTimePicker.Value = new System.DateTime(2023, 11, 18, 16, 35, 37, 0);
             // 
             // HospitalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 467);
-            this.Controls.Add(this.timeComboBox);
+            this.ClientSize = new System.Drawing.Size(763, 606);
+            this.Controls.Add(this.appointmentTimePicker);
+            this.Controls.Add(this.appointmentDatePicker);
+            this.Controls.Add(this.specializationLabel);
+            this.Controls.Add(this.doctorsListView);
+            this.Controls.Add(this.hospitalsListView);
             this.Controls.Add(this.signButton);
-            this.Controls.Add(this.doctorInfoLabel);
             this.Controls.Add(this.doctorNameLabel);
-            this.Controls.Add(this.doctorPhotoPictureBox);
-            this.Controls.Add(this.doctorComboBox);
-            this.Controls.Add(this.hospitalComboBox);
-            this.Controls.Add(this.districtComboBox);
-            this.Controls.Add(this.doctorLabel);
-            this.Controls.Add(this.hospitalLabel);
-            this.Controls.Add(this.districtLabel);
+            this.Controls.Add(this.doctorPictureBox);
             this.Controls.Add(this.backButton);
             this.Name = "HospitalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hospital";
             this.Load += new System.EventHandler(this.HospitalForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.doctorPhotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,16 +209,15 @@
         #endregion
 
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.Label districtLabel;
-        private System.Windows.Forms.Label hospitalLabel;
-        private System.Windows.Forms.Label doctorLabel;
-        private System.Windows.Forms.ComboBox districtComboBox;
-        private System.Windows.Forms.ComboBox hospitalComboBox;
-        private System.Windows.Forms.ComboBox doctorComboBox;
-        private System.Windows.Forms.PictureBox doctorPhotoPictureBox;
+        private System.Windows.Forms.PictureBox doctorPictureBox;
         private System.Windows.Forms.Label doctorNameLabel;
-        private System.Windows.Forms.Label doctorInfoLabel;
         private System.Windows.Forms.Button signButton;
-        private System.Windows.Forms.ComboBox timeComboBox;
+        private System.Windows.Forms.ListView hospitalsListView;
+        private System.Windows.Forms.ColumnHeader hospitalHeader;
+        private System.Windows.Forms.ColumnHeader adressHeader;
+        private System.Windows.Forms.ListView doctorsListView;
+        private System.Windows.Forms.Label specializationLabel;
+        private System.Windows.Forms.DateTimePicker appointmentDatePicker;
+        private System.Windows.Forms.DateTimePicker appointmentTimePicker;
     }
 }

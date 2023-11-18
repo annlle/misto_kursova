@@ -14,6 +14,12 @@ using dotenv.net;
 
 namespace kursova.Scripts.Extensions
 {
+    public enum Sex
+    {
+        Male,
+        Female
+    }
+
     public static class GraphicsHelper
     {
         public static void FillCapsule(Graphics g, Brush brush, int x, int y, int width, int height)

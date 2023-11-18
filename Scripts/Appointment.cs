@@ -8,8 +8,8 @@ namespace kursova.Scripts
 {
     public class Appointment
     {
-        public string Test { get; set; }
-        // Запись к врачу
-        // Поля: лікарь (экземпляр класса), час запису, посилання на гугл мітку лікарні
+        public Hospital Hospital { get; set; }
+        public Doctor Doctor { get; set; }
+        public DateTime DateTime { get; set; }
     }
 }

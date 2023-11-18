@@ -42,10 +42,15 @@
             this.usersAgeLabel = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.usersDoctorsAppointmentLabel = new System.Windows.Forms.Label();
-            this.listOfAppointmentsComboBox = new System.Windows.Forms.ComboBox();
             this.usersEmailLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
+            this.appointmentsListBox = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // profilePicture
@@ -168,19 +173,11 @@
             // 
             this.usersDoctorsAppointmentLabel.AutoSize = true;
             this.usersDoctorsAppointmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersDoctorsAppointmentLabel.Location = new System.Drawing.Point(15, 288);
+            this.usersDoctorsAppointmentLabel.Location = new System.Drawing.Point(142, 277);
             this.usersDoctorsAppointmentLabel.Name = "usersDoctorsAppointmentLabel";
-            this.usersDoctorsAppointmentLabel.Size = new System.Drawing.Size(271, 16);
+            this.usersDoctorsAppointmentLabel.Size = new System.Drawing.Size(268, 16);
             this.usersDoctorsAppointmentLabel.TabIndex = 14;
-            this.usersDoctorsAppointmentLabel.Text = "Актуальні записи на прийоми до лікарів:\r\n";
-            // 
-            // listOfAppointmentsComboBox
-            // 
-            this.listOfAppointmentsComboBox.FormattingEnabled = true;
-            this.listOfAppointmentsComboBox.Location = new System.Drawing.Point(292, 283);
-            this.listOfAppointmentsComboBox.Name = "listOfAppointmentsComboBox";
-            this.listOfAppointmentsComboBox.Size = new System.Drawing.Size(249, 21);
-            this.listOfAppointmentsComboBox.TabIndex = 15;
+            this.usersDoctorsAppointmentLabel.Text = "Актуальні записи на прийоми до лікарів";
             // 
             // usersEmailLabel
             // 
@@ -201,14 +198,66 @@
             this.emailLabel.TabIndex = 16;
             this.emailLabel.Text = "Електронна пошта:";
             // 
+            // appointmentsListBox
+            // 
+            this.appointmentsListBox.FormattingEnabled = true;
+            this.appointmentsListBox.Location = new System.Drawing.Point(12, 300);
+            this.appointmentsListBox.Name = "appointmentsListBox";
+            this.appointmentsListBox.Size = new System.Drawing.Size(239, 95);
+            this.appointmentsListBox.TabIndex = 18;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(261, 300);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Лікарня: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(261, 325);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Лікар: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(261, 351);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 16);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Час: ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(501, 355);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 337);
+            this.ClientSize = new System.Drawing.Size(553, 407);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.appointmentsListBox);
             this.Controls.Add(this.usersEmailLabel);
             this.Controls.Add(this.emailLabel);
-            this.Controls.Add(this.listOfAppointmentsComboBox);
             this.Controls.Add(this.usersDoctorsAppointmentLabel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.usersAgeLabel);
@@ -227,6 +276,7 @@
             this.Text = "ProfileForm";
             this.Load += new System.EventHandler(this.ProfileForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,8 +297,12 @@
         private System.Windows.Forms.Label usersAgeLabel;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label usersDoctorsAppointmentLabel;
-        private System.Windows.Forms.ComboBox listOfAppointmentsComboBox;
         private System.Windows.Forms.Label usersEmailLabel;
         private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.ListBox appointmentsListBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

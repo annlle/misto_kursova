@@ -37,7 +37,7 @@ namespace kursova
         private void signUpButton_Click(object sender, EventArgs e)
         {
             User.WriteUser(User.CurrentUser, usersEmailTextBox.Text, usersPasswordTextBox.Text, usersSurnameTextBox.Text,
-                usersNameTextBox.Text, usersPatronymTextBox.Text, usersSexComboBox.Text, Convert.ToInt32(usersAgeTextBox.Text));
+                usersNameTextBox.Text, usersPatronymTextBox.Text, usersSexComboBox.Text == "Чоловік" ? Sex.Male : Sex.Female, Convert.ToInt32(usersAgeTextBox.Text));
 
             User.CurrentUser.Mail = Encryptor.Decrypt(User.CurrentUser.Mail);
 

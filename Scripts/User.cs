@@ -21,7 +21,7 @@ namespace kursova.Scripts
         public string Surname { get; set; }
         public string Name { get; set; }
         public string Patronymic { get; set; }
-        public string Sex { get; set; }
+        public Sex Sex { get; set; }
         public int Age { get; set; }
         public string Mail { get; set; }
         public string Password { get; set; }
@@ -59,7 +59,7 @@ namespace kursova.Scripts
                 return null;
         }
 
-        public void WriteUser(User newUser, string mail, string password, string surname, string name, string patronymic, string sex, int age)
+        public void WriteUser(User newUser, string mail, string password, string surname, string name, string patronymic, Sex sex, int age)
         {
             string filePath = Path.Combine("Data", "user_test.json");
 
@@ -129,11 +129,6 @@ namespace kursova.Scripts
                 }
             }
             return false;
-        }
-
-        public void AddAppointment(Appointment newAppointment) 
-        {
-            Appointments.Add(newAppointment);
         }
     }
 }

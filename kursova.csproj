@@ -97,11 +97,13 @@
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Scripts\Appointment.cs" />
+    <Compile Include="Scripts\Doctor.cs" />
     <Compile Include="Scripts\Event.cs" />
     <Compile Include="Scripts\EventTile.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Scripts\Extensions.cs" />
+    <Compile Include="Scripts\Hospital.cs" />
     <Compile Include="Scripts\Location.cs" />
     <Compile Include="Scripts\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
