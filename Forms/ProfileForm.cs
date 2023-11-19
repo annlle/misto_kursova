@@ -16,8 +16,8 @@ namespace kursova
 {
     public partial class ProfileForm : Form
     {
-        Image doctorMalePicture = Image.FromFile(Path.Combine("Data", "doctor-male.png"));
-        Image doctorFemalePicture = Image.FromFile(Path.Combine("Data", "doctor-female.png"));
+        Image MalePicture = Image.FromFile(Path.Combine("Data", "man.png"));
+        Image FemalePicture = Image.FromFile(Path.Combine("Data", "woman.png"));
         Appointment currentAppointment;
 
         public ProfileForm()
@@ -33,6 +33,7 @@ namespace kursova
             usersSexLabel.Text = User.CurrentUser.Sex.ToString();
             usersAgeLabel.Text = User.CurrentUser.Age.ToString();
             usersEmailLabel.Text = User.CurrentUser.Mail;
+            profilePicture.Image = User.CurrentUser.Sex == Sex.Male ? MalePicture : FemalePicture;
 
             List<Appointment> appointments = User.CurrentUser.Appointments;
 
