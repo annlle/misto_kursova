@@ -11,6 +11,7 @@ using Newtonsoft.Json.Linq;
 using System.Net;
 using dotenv;
 using dotenv.net;
+using System.Collections;
 
 namespace kursova.Scripts.Extensions
 {
@@ -119,8 +120,18 @@ namespace kursova.Scripts.Extensions
 
             using (WebClient client = new WebClient())
             {
+                string json;
+
                 client.Encoding = Encoding.UTF8;
-                string json = client.DownloadString(autoCompleteUrl);
+                try
+                {
+                    json = client.DownloadString(autoCompleteUrl);
+                }
+                catch (Exception ex)
+                {
+                    return new List<string>();
+                }
+                    
                 JObject response = JObject.Parse(json);
 
                 if (response["status"].ToString() == "OK")
@@ -139,6 +150,62 @@ namespace kursova.Scripts.Extensions
             }
 
             return new List<string>();
+        }
+    }
+
+    public static class Sorter
+    {
+        private static void Swap<T>(List<T> list, int i, int j)
+        {
+            T temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
+        }
+
+        private static int Partition<T>(List<T> list, int low, int high) where T : IComparable<T>
+        {
+            T pivot = list[(low + high) / 2];
+
+            int i = low - 1;
+            int j = high + 1;
+
+            while (true)
+            {
+                do
+                {
+                    i++;
+                } while (list[i].CompareTo(pivot) < 0);
+
+                do
+                {
+                    j--;
+                } while (list[j].CompareTo(pivot) > 0);
+
+                if (i < j)
+                {
+                    Swap(list, i, j);
+                }
+                else
+                {
+                    return j;
+                }
+            }
+        }
+
+        public static void QuickSort<T>(this List<T> list) where T : IComparable<T>
+        {
+            QuickSort(list, 0, list.Count - 1);
+        }
+
+        public static void QuickSort<T>(List<T> list, int low, int high) where T : IComparable<T>
+        {
+            if (low < high)
+            {
+                int partitionIndex = Partition(list, low, high);
+
+                QuickSort(list, low, partitionIndex);
+                QuickSort(list, partitionIndex + 1, high);
+            }
         }
     }
 }

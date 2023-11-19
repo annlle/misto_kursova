@@ -21,12 +21,24 @@ namespace kursova.Scripts
         {
             List<string> autoCompleteResults = GooglePlacesAutoComplete.GetAutoCompleteResults(locationName);
             Name = autoCompleteResults.Count > 0 ? autoCompleteResults[0] : locationName;
-            GoogleMapsLink = GenerateGoogleMapsLink(locationName);
+            GoogleMapsLink = GenerateGoogleMapsLink(Name);
         }
 
         private string GenerateGoogleMapsLink(string locationName)
         {
             return $"https://www.google.com/maps?q={WebUtility.UrlEncode(locationName)}"; // кодирование в URL формат, чтобы не было ошибок из-за возможных спец символов
+        }
+
+        public void OpenLink()
+        {
+            try
+            {
+                Process.Start(GoogleMapsLink);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при открытии ссылки: {ex.Message}");
+            }
         }
 
         public void OpenLink(object sender, EventArgs e)

@@ -29,6 +29,10 @@ namespace kursova
 
         private void HospitalForm_Load(object sender, EventArgs e)
         {
+            appointmentDatePicker.MinDate = DateTime.Now;
+            appointmentDatePicker.MaxDate = DateTime.Now.AddMonths(1);
+            appointmentDatePicker.Value = DateTime.Now;
+
             hospitals = new List<Hospital>
             {
                 new Hospital
@@ -178,7 +182,7 @@ namespace kursova
 
         private void signButton_Click(object sender, EventArgs e)
         {
-            DateTime dateTime = appointmentDatePicker.Value.Date;
+            DateTime dateTime = appointmentDatePicker.Value;
 
             Appointment appointment = new Appointment
             {

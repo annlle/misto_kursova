@@ -1,4 +1,5 @@
 ﻿using kursova.Scripts;
+using kursova.Scripts.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -15,6 +16,10 @@ namespace kursova
 {
     public partial class ProfileForm : Form
     {
+        Image doctorMalePicture = Image.FromFile(Path.Combine("Data", "doctor-male.png"));
+        Image doctorFemalePicture = Image.FromFile(Path.Combine("Data", "doctor-female.png"));
+        Appointment currentAppointment;
+
         public ProfileForm()
         {
             InitializeComponent();
@@ -29,11 +34,22 @@ namespace kursova
             usersAgeLabel.Text = User.CurrentUser.Age.ToString();
             usersEmailLabel.Text = User.CurrentUser.Mail;
 
-            foreach (var appointment in User.CurrentUser.Appointments)
+            List<Appointment> appointments = User.CurrentUser.Appointments;
+
+            appointments.QuickSort();
+
+            foreach (var appointment in appointments)
             {
-                string item = appointment.Hospital.Name + " - " + appointment.DateTime.Day + '.' + appointment.DateTime.Month + '.' + appointment.DateTime.Year;
+                string date = appointment.DateTime.ToString();
+                date = date.Remove(date.Length - 3, 3);
+                string item = appointment.Hospital.Name + " - " + date;
                 appointmentsListBox.Items.Add(item);
             }
+
+            hospitalLabel.Text = "";
+            doctorLabel.Text = "";
+            dateLabel.Text = "";
+            locationLinkPictureBox.Visible = false;
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -41,6 +57,35 @@ namespace kursova
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
+        }
+
+        private void appointmentsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hospitalLabel.Text = "";
+            doctorLabel.Text = "";
+            dateLabel.Text = "";
+            locationLinkPictureBox.Visible = false;
+
+            if (appointmentsListBox.SelectedItems.Count < 1)
+                return;
+
+            string[] words = appointmentsListBox.SelectedItem.ToString().Split(' ');
+            string date = words[words.Count() - 2] + ' ' + words[words.Count() - 1];
+
+            currentAppointment = User.CurrentUser.Appointments.FirstOrDefault(a => a.DateTime.ToString().Remove(date.Length, 3) == date);
+
+            if (currentAppointment == null)
+                return;
+
+            hospitalLabel.Text = currentAppointment.Hospital.Name;
+            doctorLabel.Text = currentAppointment.Doctor.Name;
+            dateLabel.Text = currentAppointment.DateTime.ToString().Remove(date.Length, 3);
+            locationLinkPictureBox.Visible = true;
+        }
+
+        private void locationLinkPictureBox_Click(object sender, EventArgs e)
+        {
+            currentAppointment.Hospital.Location.OpenLink();
         }
     }
 }

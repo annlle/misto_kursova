@@ -45,12 +45,15 @@
             this.usersEmailLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
             this.appointmentsListBox = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.hospitalTitleLabel = new System.Windows.Forms.Label();
+            this.doctorTitleLabel = new System.Windows.Forms.Label();
+            this.dateTitleLabel = new System.Windows.Forms.Label();
+            this.locationLinkPictureBox = new System.Windows.Forms.PictureBox();
+            this.hospitalLabel = new System.Windows.Forms.Label();
+            this.doctorLabel = new System.Windows.Forms.Label();
+            this.dateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationLinkPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // profilePicture
@@ -205,56 +208,88 @@
             this.appointmentsListBox.Name = "appointmentsListBox";
             this.appointmentsListBox.Size = new System.Drawing.Size(239, 95);
             this.appointmentsListBox.TabIndex = 18;
+            this.appointmentsListBox.SelectedIndexChanged += new System.EventHandler(this.appointmentsListBox_SelectedIndexChanged);
             // 
-            // label1
+            // hospitalTitleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(261, 300);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Лікарня: ";
+            this.hospitalTitleLabel.AutoSize = true;
+            this.hospitalTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hospitalTitleLabel.Location = new System.Drawing.Point(261, 300);
+            this.hospitalTitleLabel.Name = "hospitalTitleLabel";
+            this.hospitalTitleLabel.Size = new System.Drawing.Size(60, 16);
+            this.hospitalTitleLabel.TabIndex = 19;
+            this.hospitalTitleLabel.Text = "Лікарня:";
             // 
-            // label2
+            // doctorTitleLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(261, 325);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Лікар: ";
+            this.doctorTitleLabel.AutoSize = true;
+            this.doctorTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.doctorTitleLabel.Location = new System.Drawing.Point(261, 325);
+            this.doctorTitleLabel.Name = "doctorTitleLabel";
+            this.doctorTitleLabel.Size = new System.Drawing.Size(45, 16);
+            this.doctorTitleLabel.TabIndex = 20;
+            this.doctorTitleLabel.Text = "Лікар:";
             // 
-            // label3
+            // dateTitleLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(261, 351);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 16);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Час: ";
+            this.dateTitleLabel.AutoSize = true;
+            this.dateTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTitleLabel.Location = new System.Drawing.Point(261, 351);
+            this.dateTitleLabel.Name = "dateTitleLabel";
+            this.dateTitleLabel.Size = new System.Drawing.Size(42, 16);
+            this.dateTitleLabel.TabIndex = 21;
+            this.dateTitleLabel.Text = "Дата:";
             // 
-            // pictureBox1
+            // locationLinkPictureBox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(501, 355);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
+            this.locationLinkPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("locationLinkPictureBox.Image")));
+            this.locationLinkPictureBox.Location = new System.Drawing.Point(501, 355);
+            this.locationLinkPictureBox.Name = "locationLinkPictureBox";
+            this.locationLinkPictureBox.Size = new System.Drawing.Size(40, 40);
+            this.locationLinkPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.locationLinkPictureBox.TabIndex = 22;
+            this.locationLinkPictureBox.TabStop = false;
+            this.locationLinkPictureBox.Click += new System.EventHandler(this.locationLinkPictureBox_Click);
+            // 
+            // hospitalLabel
+            // 
+            this.hospitalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hospitalLabel.Location = new System.Drawing.Point(327, 300);
+            this.hospitalLabel.Name = "hospitalLabel";
+            this.hospitalLabel.Size = new System.Drawing.Size(214, 16);
+            this.hospitalLabel.TabIndex = 23;
+            this.hospitalLabel.Text = "label11";
+            // 
+            // doctorLabel
+            // 
+            this.doctorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.doctorLabel.Location = new System.Drawing.Point(327, 325);
+            this.doctorLabel.Name = "doctorLabel";
+            this.doctorLabel.Size = new System.Drawing.Size(214, 16);
+            this.doctorLabel.TabIndex = 24;
+            this.doctorLabel.Text = "label12";
+            // 
+            // dateLabel
+            // 
+            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateLabel.Location = new System.Drawing.Point(327, 351);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(168, 16);
+            this.dateLabel.TabIndex = 25;
+            this.dateLabel.Text = "label13";
             // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 407);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dateLabel);
+            this.Controls.Add(this.doctorLabel);
+            this.Controls.Add(this.hospitalLabel);
+            this.Controls.Add(this.locationLinkPictureBox);
+            this.Controls.Add(this.dateTitleLabel);
+            this.Controls.Add(this.doctorTitleLabel);
+            this.Controls.Add(this.hospitalTitleLabel);
             this.Controls.Add(this.appointmentsListBox);
             this.Controls.Add(this.usersEmailLabel);
             this.Controls.Add(this.emailLabel);
@@ -276,7 +311,7 @@
             this.Text = "ProfileForm";
             this.Load += new System.EventHandler(this.ProfileForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationLinkPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,9 +335,12 @@
         private System.Windows.Forms.Label usersEmailLabel;
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.ListBox appointmentsListBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label hospitalTitleLabel;
+        private System.Windows.Forms.Label doctorTitleLabel;
+        private System.Windows.Forms.Label dateTitleLabel;
+        private System.Windows.Forms.PictureBox locationLinkPictureBox;
+        private System.Windows.Forms.Label hospitalLabel;
+        private System.Windows.Forms.Label doctorLabel;
+        private System.Windows.Forms.Label dateLabel;
     }
 }

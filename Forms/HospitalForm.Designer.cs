@@ -45,7 +45,6 @@
             this.doctorsListView = new System.Windows.Forms.ListView();
             this.specializationLabel = new System.Windows.Forms.Label();
             this.appointmentDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.appointmentTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.doctorPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,32 +161,21 @@
             // 
             // appointmentDatePicker
             // 
-            this.appointmentDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.appointmentDatePicker.Location = new System.Drawing.Point(458, 516);
+            this.appointmentDatePicker.CustomFormat = "dd.MM.yyyy HH:mm";
+            this.appointmentDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.appointmentDatePicker.Location = new System.Drawing.Point(492, 522);
             this.appointmentDatePicker.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
-            this.appointmentDatePicker.MinDate = new System.DateTime(2023, 11, 18, 0, 0, 0, 0);
+            this.appointmentDatePicker.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.appointmentDatePicker.Name = "appointmentDatePicker";
-            this.appointmentDatePicker.Size = new System.Drawing.Size(91, 20);
+            this.appointmentDatePicker.Size = new System.Drawing.Size(122, 20);
             this.appointmentDatePicker.TabIndex = 15;
-            this.appointmentDatePicker.Value = new System.DateTime(2023, 11, 18, 16, 35, 37, 0);
-            // 
-            // appointmentTimePicker
-            // 
-            this.appointmentTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.appointmentTimePicker.Location = new System.Drawing.Point(555, 516);
-            this.appointmentTimePicker.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
-            this.appointmentTimePicker.MinDate = new System.DateTime(2023, 11, 18, 0, 0, 0, 0);
-            this.appointmentTimePicker.Name = "appointmentTimePicker";
-            this.appointmentTimePicker.Size = new System.Drawing.Size(91, 20);
-            this.appointmentTimePicker.TabIndex = 16;
-            this.appointmentTimePicker.Value = new System.DateTime(2023, 11, 18, 16, 35, 37, 0);
+            this.appointmentDatePicker.Value = new System.DateTime(2023, 1, 1, 12, 0, 0, 0);
             // 
             // HospitalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 606);
-            this.Controls.Add(this.appointmentTimePicker);
             this.Controls.Add(this.appointmentDatePicker);
             this.Controls.Add(this.specializationLabel);
             this.Controls.Add(this.doctorsListView);
@@ -218,6 +206,5 @@
         private System.Windows.Forms.ListView doctorsListView;
         private System.Windows.Forms.Label specializationLabel;
         private System.Windows.Forms.DateTimePicker appointmentDatePicker;
-        private System.Windows.Forms.DateTimePicker appointmentTimePicker;
     }
 }
