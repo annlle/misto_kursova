@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="sightPhotoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="attractionPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA/sAAAMKCAIAAABV1MPRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7s/fdfHEe+6A+fP+P58ZzvPa/ne5+ze9c+3nPP3bv2Bu967fVmrbOR
+        wAAADsABataJCQAA/7JJREFUeF7s/fdfHEe+6A+fP+P58ZzvPa/ne5+ze9c+3nPP3bv2Bu967fVmrbOR
         bQUr54ByzkJCWbJyQEIBJCQQmYlMAoaZYWByztM9OQAK63vP82lKbrcLGIZhBgYov94eFdXVcbq73lXz
         6ep/cnr8GApHT5O1PS8EG99MB0RpPx8+IY1NJcxahLbOPJ5mE8focmBXwWQCh+KhRneVlxiNex0ObIPH
         RUV7EFsggUvbyYfWkhLtio1XRS+AxzpLm0eegVpN3/1HVijJO34fZmy42IotcHKArxX7ojFabFJ10ED3
@@ -4891,9 +4891,40 @@
         LgQAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="sightTextLabel.Text" xml:space="preserve">
-    <value>Запоріжжя — місто в Україні, адміністративний центр Запорізької області. 
-За кількістю населення — шосте місто країни.
-Є одним з найбільших адміністративних, індустріальних та культурних центрів півдня України з розвиненим машинобудуванням, чорною та кольоровою металургією, хімічною та будівельною промисловістю, річковим портом і важливим транзитним залізничним вузлом.</value>
+  <data name="locationLinkPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAABv5JREFUeF7tXVtonEUYbb3jvXihKtRr1QdBMRXFlwXJspdkk4gugopWtFVftNUH
+        RWvik8U7pPFN+6C1XkAwij6I2iCItVofYsWnFntJTe0Na6UX2+j5yCks46TZ3Zl/883sHDhsut3/+875
+        Zv7L/P/s7KyEhIQYkM/nLyyVSneUy+UB8D1wPbipq6trD3iY3CPvyf/h79V47ZdtisXiBQyT4AIUtQNF
+        fRX8GX9PgP82Sdl2VGJ1d3ffyPAJ9aCnp+csFO0JFG+DUVRvlNjg0mq1eibTJphAoeagSAN43V1bvCyJ
+        fLvA/t7e3nMpIwGYjeLcB+6oLVaLKZ1gsWiZlNSmqFQql6OHfmMUZ8YILSOFQuEyymsvwHwviiBXSNbi
+        zCD/BKuU2RaYjcZ40SiCNk5A4wuidVJypMBVzYkw+6ZhXjPf7ujoOJny44IYQ68btpjWzo9zudxJtBEN
+        5DC10mI2CEL7KvEwaSUCBHDOqIfLaSdsYNRdgRmX2x5aKB5up60wgcaYBxMtG3lnTezpe2XsRHvBQc4b
+        agZ9vghPa8TbpMWAAOELbYYi4T20GQYgeA74R42B2Ph7sVg8m3b1A4KfNwxERxwBnqVd3cjn82dA7E6b
+        iZgIj7uCeJ4iD5dsBiLlEtrWC4gcNURHS+wlG2hbJ0ql0gKb8Mh5Pe3rA8S9ZojNhOiZW8AVYBGHyGvl
+        vCWUv+U9fGYI3Fq7TYZ8ifb1AcWQ2SE20V6I+Nvwurieu68DAwMn4LNV8Ldj22fEn5hSF2TeFMRlds8K
+        jTEsM1KYrm7INtj2E1tMH0Tso9gzz2c6PZAJaTbBnjgoPZ6pGgb3lkEjpk/qu+mIniJTeGxiXfm5PGlk
+        mqYhjSJ7mSW+MxF3GdPoAYStNoW6Eka3NXOYmgo8fI3ZcrkQMeUBli5A2I+mUFfC6IMM7w2Iu8jM40ro
+        XMfwegBhXq9mYHKLj0OVCblCQ3yvl8TQuonh9QDCfD+IGmRo70BsGafYcjZFNMhOhtYDiDpkE9sscdVW
+        YmjvQPyymc+RBxlaD9AgRyxCXTifob2jUChcY8nnwn8YWg8gar8h0olZ3tqW2LaczRKdcR9D6wGEeX1C
+        6PNy14TEtuVslmiQcYbWA4j61Sa2WeIUcjVDe4fchLTldOAoQ+sBGmTEIrRphnRSh/cvGVoPIGqVTawD
+        hxjaOxD7DSOXE+F9JUPrAYQ9Ywp15NZQBobgkwyvBxDVY4h0Jo5aDzG8N6A3P2zL5ULozDO8HkDYFaZQ
+        V6J4Yz6vtmQuFeJuN/O4EuOai5hCFWTq6D6bYEf6vP2exYOq3UyhDxC31hDri5ofUH3FNPoAcS8bYr1R
+        enczhy8epj4143nkc0ylDyiazPiwifZFuRvweAOTHOT7797PGbWE55uZUh8wAj4dIg+aojOgXLYOyeBR
+        Rt1yb0rIEbgM+mSckfk0IDTG3iwuzb0CItfYxEfKj2hbL9AgyyzCoyT2yEdoWy/QIDfYxMdG+DyK10to
+        Wzcg9Jda8ZHya9rVD/SefouB2LiIdvUD1/5XQnAMX4Weiof7+vrOo90wgL1kncVIFIS3YdoMBxC+xDQS
+        EcNbvkmWzYNwrxMfNBB7x1iwKwTBQEhLMdVLvfeupgN6U1RjEvg5BM6lvTABI9+axgLmO7QVLkql0t0W
+        Y0ESe4feO7v1givJyZLgVpMBUe+DqEYBM48a5oIj9vTbaCd8YOR+KvYS+Qat1WwAXEsr8QANstRiNAhC
+        exdtxAM+TZzJ5cSbpXwPPc71e0PcS+QxMeXHh2q1egpMbjRNayU60AilxwuYvNdmXiEncDFyC2XHC84g
+        lJ8kshVBEz+g5PgBswXDvDbK71ll9h1HlcBe8plRBDWEtlcos31QqVSugvlWTKpriGiM8c7OznMos72A
+        Aiw3C6KA91Ne+4GDxawXGGuEP7jMso8CaJS7LIVpOXGoOoIx4ALKam+gGJmt+FYvoeF1yknAXjIPBfnL
+        VqhWELk3y+x5ykkQoDAzOW2ohzISjkG+Z4Ge+r2lWJkSOd+nhAQTKNB1YCvHJjuK6Zekjw8U6SmjaFny
+        TqZNmAq8+diKX+Z5lykTpgOKNR+N8rdRQJ/cHtzs9ZkGGsT7Ehik/KxqkWkSGgGKl8VawO13J9cXZAY9
+        Cuhtkh1irZfHyAyf0Awwir8JhfSx4ul+WfySYRNcgAZ52lLghogYCxkuwRVcJuMLs8gN8EOGSvAF9PC5
+        4Lil2NNxY9s+AcwaaJBbwUbOJwfADm6ekAXQII8ZRZ+SuCB4gJslZAk0ylu2BqglPrOCH0/IGrlc7jQU
+        /Hjfg/8ujTdaDDTIpeD/TvJ4TxbOvJgfS2glZFICGqD2JuQB/Dv87wGGDDQC2qC8Ga8ynajMtxMSEiLE
+        rFn/AURDejhrVryMAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>

@@ -97,6 +97,7 @@
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Scripts\Appointment.cs" />
+    <Compile Include="Scripts\Attraction.cs" />
     <Compile Include="Scripts\Doctor.cs" />
     <Compile Include="Scripts\Event.cs" />
     <Compile Include="Scripts\EventTile.cs">

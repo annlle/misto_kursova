@@ -101,7 +101,8 @@ namespace kursova
                     Width = sectorWidth,
                     Height = panelDanger.Height,
                     Location = new Point(i * sectorWidth, 0),
-                    BackColor = inactiveDangerColors[i]
+                    BackColor = inactiveDangerColors[i],
+                    Cursor = Cursors.Hand
                 };
 
                 sector.MouseEnter += Sector_MouseEnter;

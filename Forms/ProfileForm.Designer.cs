@@ -242,6 +242,7 @@
             // 
             // locationLinkPictureBox
             // 
+            this.locationLinkPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.locationLinkPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("locationLinkPictureBox.Image")));
             this.locationLinkPictureBox.Location = new System.Drawing.Point(501, 355);
             this.locationLinkPictureBox.Name = "locationLinkPictureBox";

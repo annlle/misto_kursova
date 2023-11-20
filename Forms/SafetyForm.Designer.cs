@@ -154,6 +154,7 @@
             // locationLinkTileTemplate
             // 
             this.locationLinkTileTemplate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.locationLinkTileTemplate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.locationLinkTileTemplate.Image = ((System.Drawing.Image)(resources.GetObject("locationLinkTileTemplate.Image")));
             this.locationLinkTileTemplate.Location = new System.Drawing.Point(260, 5);
             this.locationLinkTileTemplate.Name = "locationLinkTileTemplate";

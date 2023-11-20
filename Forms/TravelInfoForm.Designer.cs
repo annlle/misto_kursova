@@ -29,33 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TravelInfoForm));
-            this.sightPhotoPictureBox = new System.Windows.Forms.PictureBox();
-            this.sightTextLabel = new System.Windows.Forms.Label();
+            this.attractionPictureBox = new System.Windows.Forms.PictureBox();
+            this.attractionTextLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.sightLabel = new System.Windows.Forms.Label();
-            this.sightListComboBox = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.sightPhotoPictureBox)).BeginInit();
+            this.attractionsComboBox = new System.Windows.Forms.ComboBox();
+            this.locationLinkPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.attractionPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationLinkPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // sightPhotoPictureBox
+            // attractionPictureBox
             // 
-            this.sightPhotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sightPhotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("sightPhotoPictureBox.Image")));
-            this.sightPhotoPictureBox.Location = new System.Drawing.Point(383, 103);
-            this.sightPhotoPictureBox.Name = "sightPhotoPictureBox";
-            this.sightPhotoPictureBox.Size = new System.Drawing.Size(394, 302);
-            this.sightPhotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.sightPhotoPictureBox.TabIndex = 0;
-            this.sightPhotoPictureBox.TabStop = false;
+            this.attractionPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.attractionPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("attractionPictureBox.Image")));
+            this.attractionPictureBox.Location = new System.Drawing.Point(383, 103);
+            this.attractionPictureBox.Name = "attractionPictureBox";
+            this.attractionPictureBox.Size = new System.Drawing.Size(394, 302);
+            this.attractionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.attractionPictureBox.TabIndex = 0;
+            this.attractionPictureBox.TabStop = false;
             // 
-            // sightTextLabel
+            // attractionTextLabel
             // 
-            this.sightTextLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sightTextLabel.Location = new System.Drawing.Point(22, 112);
-            this.sightTextLabel.Name = "sightTextLabel";
-            this.sightTextLabel.Size = new System.Drawing.Size(355, 302);
-            this.sightTextLabel.TabIndex = 1;
-            this.sightTextLabel.Text = resources.GetString("sightTextLabel.Text");
+            this.attractionTextLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.attractionTextLabel.Location = new System.Drawing.Point(22, 112);
+            this.attractionTextLabel.Name = "attractionTextLabel";
+            this.attractionTextLabel.Size = new System.Drawing.Size(355, 302);
+            this.attractionTextLabel.TabIndex = 1;
             // 
             // button1
             // 
@@ -78,28 +79,44 @@
             this.sightLabel.TabIndex = 3;
             this.sightLabel.Text = "Оберіть пам\'ятку:";
             // 
-            // sightListComboBox
+            // attractionsComboBox
             // 
-            this.sightListComboBox.FormattingEnabled = true;
-            this.sightListComboBox.Location = new System.Drawing.Point(326, 51);
-            this.sightListComboBox.Name = "sightListComboBox";
-            this.sightListComboBox.Size = new System.Drawing.Size(287, 21);
-            this.sightListComboBox.TabIndex = 4;
+            this.attractionsComboBox.FormattingEnabled = true;
+            this.attractionsComboBox.Location = new System.Drawing.Point(326, 51);
+            this.attractionsComboBox.Name = "attractionsComboBox";
+            this.attractionsComboBox.Size = new System.Drawing.Size(287, 21);
+            this.attractionsComboBox.TabIndex = 4;
+            this.attractionsComboBox.SelectedIndexChanged += new System.EventHandler(this.attractionsComboBox_SelectedIndexChanged);
+            // 
+            // locationLinkPictureBox
+            // 
+            this.locationLinkPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.locationLinkPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("locationLinkPictureBox.Image")));
+            this.locationLinkPictureBox.Location = new System.Drawing.Point(728, 12);
+            this.locationLinkPictureBox.Name = "locationLinkPictureBox";
+            this.locationLinkPictureBox.Size = new System.Drawing.Size(60, 60);
+            this.locationLinkPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.locationLinkPictureBox.TabIndex = 23;
+            this.locationLinkPictureBox.TabStop = false;
+            this.locationLinkPictureBox.Click += new System.EventHandler(this.locationLinkPictureBox_Click);
             // 
             // TravelInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.sightListComboBox);
+            this.Controls.Add(this.locationLinkPictureBox);
+            this.Controls.Add(this.attractionsComboBox);
             this.Controls.Add(this.sightLabel);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.sightTextLabel);
-            this.Controls.Add(this.sightPhotoPictureBox);
+            this.Controls.Add(this.attractionTextLabel);
+            this.Controls.Add(this.attractionPictureBox);
             this.Name = "TravelInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Travel Info";
-            ((System.ComponentModel.ISupportInitialize)(this.sightPhotoPictureBox)).EndInit();
+            this.Load += new System.EventHandler(this.TravelInfoForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.attractionPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationLinkPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,10 +124,11 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox sightPhotoPictureBox;
-        private System.Windows.Forms.Label sightTextLabel;
+        private System.Windows.Forms.PictureBox attractionPictureBox;
+        private System.Windows.Forms.Label attractionTextLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label sightLabel;
-        private System.Windows.Forms.ComboBox sightListComboBox;
+        private System.Windows.Forms.ComboBox attractionsComboBox;
+        private System.Windows.Forms.PictureBox locationLinkPictureBox;
     }
 }

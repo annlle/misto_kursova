@@ -31,6 +31,7 @@ namespace kursova.Scripts
             // Копирование свойств template
             this.Size = template.Size;
             this.BackColor = template.BackColor;
+            this.Cursor = Cursors.Hand;
 
             // Копирование свойств элементов
             Route = route;
@@ -42,7 +43,8 @@ namespace kursova.Scripts
                 Location = num.Location,
                 Size = num.Size,
                 BackColor = num.BackColor,
-                TextAlign = num.TextAlign
+                TextAlign = num.TextAlign,
+                Cursor = Cursors.Hand
             };
             this.Controls.Add(Number);
 
@@ -53,7 +55,8 @@ namespace kursova.Scripts
                 Location = dir.Location,
                 Size = dir.Size,
                 BackColor = dir.BackColor,
-                TextAlign = dir.TextAlign
+                TextAlign = dir.TextAlign,
+                Cursor = Cursors.Hand
             };
             this.Controls.Add(Direction);
 
@@ -64,7 +67,8 @@ namespace kursova.Scripts
                 Location = freq.Location,
                 Size = freq.Size,
                 BackColor = freq.BackColor,
-                TextAlign = freq.TextAlign
+                TextAlign = freq.TextAlign,
+                Cursor = Cursors.Hand
             };
             this.Controls.Add(Frequency);
 
@@ -75,7 +79,8 @@ namespace kursova.Scripts
                 Location = time.Location,
                 Size = time.Size,
                 BackColor = time.BackColor,
-                TextAlign = time.TextAlign
+                TextAlign = time.TextAlign,
+                Cursor = Cursors.Hand
             };
             this.Controls.Add(Time);
 
@@ -85,7 +90,8 @@ namespace kursova.Scripts
                 SizeMode = typePic.SizeMode,
                 Location = typePic.Location,
                 Size = typePic.Size,
-                BackColor = typePic.BackColor
+                BackColor = typePic.BackColor,
+                Cursor = Cursors.Hand
             };
             this.Controls.Add(TypePicture);
         }

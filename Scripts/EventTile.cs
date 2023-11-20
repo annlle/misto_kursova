@@ -50,7 +50,8 @@ namespace kursova.Scripts
                 SizeMode = locLink.SizeMode,
                 Location = locLink.Location,
                 Size = locLink.Size,
-                BackColor = locLink.BackColor
+                BackColor = locLink.BackColor,
+                Cursor = locLink.Cursor
             };
             LocationLink.Click += Event.Location.OpenLink;
             this.Controls.Add(LocationLink);
