@@ -52,7 +52,7 @@
             // 
             // attractionTextLabel
             // 
-            this.attractionTextLabel.BackColor = System.Drawing.Color.Transparent;
+            this.attractionTextLabel.BackColor = System.Drawing.Color.White;
             this.attractionTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.attractionTextLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.attractionTextLabel.Location = new System.Drawing.Point(12, 103);
