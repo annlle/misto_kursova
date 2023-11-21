@@ -1,4 +1,6 @@
-﻿using System;
+﻿using kursova.Scripts.Extensions;
+using kursova.Scripts;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.AxHost;
+using System.IO;
 
 namespace kursova
 {
@@ -24,6 +27,12 @@ namespace kursova
         {
             InitializeComponent();
             InitializeButtons();
+
+            //Image MalePicture = Image.FromFile(Path.Combine("Data", "profileMButton.png")); ; // Provide the actual file path
+            //Image FemalePicture = Image.FromFile(Path.Combine("Data", "profileFButton.png")); // Provide the actual file path
+
+            // Set the initial background image based on the user's sex
+            //profileButton.BackgroundImage = User.CurrentUser.Sex == Sex.Male ? MalePicture : FemalePicture;
         }
 
         private void InitializeButtons()

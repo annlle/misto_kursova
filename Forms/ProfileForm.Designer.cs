@@ -52,14 +52,17 @@
             this.hospitalLabel = new System.Windows.Forms.Label();
             this.doctorLabel = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
+            this.sortComboBox = new System.Windows.Forms.ComboBox();
+            this.sortLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // profilePicture
             // 
+            this.profilePicture.BackColor = System.Drawing.Color.Transparent;
             this.profilePicture.Image = ((System.Drawing.Image)(resources.GetObject("profilePicture.Image")));
-            this.profilePicture.Location = new System.Drawing.Point(12, 62);
+            this.profilePicture.Location = new System.Drawing.Point(9, 76);
             this.profilePicture.Name = "profilePicture";
             this.profilePicture.Size = new System.Drawing.Size(158, 162);
             this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -68,183 +71,221 @@
             // 
             // surnameLabel
             // 
-            this.surnameLabel.AutoSize = true;
-            this.surnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.surnameLabel.Location = new System.Drawing.Point(197, 62);
+            this.surnameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.surnameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.surnameLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.surnameLabel.ForeColor = System.Drawing.Color.White;
+            this.surnameLabel.Location = new System.Drawing.Point(194, 75);
             this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(81, 16);
+            this.surnameLabel.Size = new System.Drawing.Size(109, 27);
             this.surnameLabel.TabIndex = 1;
             this.surnameLabel.Text = "Прізвище:";
             // 
             // nameLabel
             // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.Location = new System.Drawing.Point(197, 92);
+            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(194, 106);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(37, 16);
+            this.nameLabel.Size = new System.Drawing.Size(109, 26);
             this.nameLabel.TabIndex = 2;
             this.nameLabel.Text = "Ім\'я:";
             // 
             // patronymLabel
             // 
-            this.patronymLabel.AutoSize = true;
-            this.patronymLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.patronymLabel.Location = new System.Drawing.Point(197, 125);
+            this.patronymLabel.BackColor = System.Drawing.Color.Transparent;
+            this.patronymLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.patronymLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.patronymLabel.ForeColor = System.Drawing.Color.White;
+            this.patronymLabel.Location = new System.Drawing.Point(194, 139);
             this.patronymLabel.Name = "patronymLabel";
-            this.patronymLabel.Size = new System.Drawing.Size(99, 16);
+            this.patronymLabel.Size = new System.Drawing.Size(109, 26);
             this.patronymLabel.TabIndex = 3;
             this.patronymLabel.Text = "По батькові:";
             // 
             // usersSurnameLabel
             // 
-            this.usersSurnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersSurnameLabel.Location = new System.Drawing.Point(312, 62);
+            this.usersSurnameLabel.BackColor = System.Drawing.Color.White;
+            this.usersSurnameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usersSurnameLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersSurnameLabel.Location = new System.Drawing.Point(309, 75);
             this.usersSurnameLabel.Name = "usersSurnameLabel";
-            this.usersSurnameLabel.Size = new System.Drawing.Size(223, 16);
+            this.usersSurnameLabel.Size = new System.Drawing.Size(223, 27);
             this.usersSurnameLabel.TabIndex = 4;
             this.usersSurnameLabel.Text = "label4";
             // 
             // usersNameLabel
             // 
-            this.usersNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersNameLabel.Location = new System.Drawing.Point(312, 92);
+            this.usersNameLabel.BackColor = System.Drawing.Color.White;
+            this.usersNameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usersNameLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersNameLabel.Location = new System.Drawing.Point(309, 105);
             this.usersNameLabel.Name = "usersNameLabel";
-            this.usersNameLabel.Size = new System.Drawing.Size(223, 16);
+            this.usersNameLabel.Size = new System.Drawing.Size(223, 27);
             this.usersNameLabel.TabIndex = 5;
             this.usersNameLabel.Text = "label5";
             // 
             // usersPatronymLabel
             // 
-            this.usersPatronymLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersPatronymLabel.Location = new System.Drawing.Point(312, 125);
+            this.usersPatronymLabel.BackColor = System.Drawing.Color.White;
+            this.usersPatronymLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usersPatronymLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersPatronymLabel.Location = new System.Drawing.Point(309, 138);
             this.usersPatronymLabel.Name = "usersPatronymLabel";
-            this.usersPatronymLabel.Size = new System.Drawing.Size(223, 16);
+            this.usersPatronymLabel.Size = new System.Drawing.Size(223, 27);
             this.usersPatronymLabel.TabIndex = 6;
             this.usersPatronymLabel.Text = "label6";
             // 
             // sexLabel
             // 
-            this.sexLabel.AutoSize = true;
-            this.sexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sexLabel.Location = new System.Drawing.Point(197, 157);
+            this.sexLabel.BackColor = System.Drawing.Color.Transparent;
+            this.sexLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sexLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sexLabel.ForeColor = System.Drawing.Color.White;
+            this.sexLabel.Location = new System.Drawing.Point(194, 171);
             this.sexLabel.Name = "sexLabel";
-            this.sexLabel.Size = new System.Drawing.Size(54, 16);
+            this.sexLabel.Size = new System.Drawing.Size(109, 25);
             this.sexLabel.TabIndex = 7;
             this.sexLabel.Text = "Стать:";
             // 
             // usersSexLabel
             // 
-            this.usersSexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersSexLabel.Location = new System.Drawing.Point(312, 157);
+            this.usersSexLabel.BackColor = System.Drawing.Color.White;
+            this.usersSexLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usersSexLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersSexLabel.Location = new System.Drawing.Point(309, 170);
             this.usersSexLabel.Name = "usersSexLabel";
-            this.usersSexLabel.Size = new System.Drawing.Size(223, 16);
+            this.usersSexLabel.Size = new System.Drawing.Size(223, 26);
             this.usersSexLabel.TabIndex = 8;
             this.usersSexLabel.Text = "label8";
             // 
             // ageLabel
             // 
-            this.ageLabel.AutoSize = true;
-            this.ageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ageLabel.Location = new System.Drawing.Point(197, 190);
+            this.ageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ageLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ageLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ageLabel.ForeColor = System.Drawing.Color.White;
+            this.ageLabel.Location = new System.Drawing.Point(194, 204);
             this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(33, 16);
+            this.ageLabel.Size = new System.Drawing.Size(109, 25);
             this.ageLabel.TabIndex = 9;
             this.ageLabel.Text = "Вік:";
             // 
             // usersAgeLabel
             // 
-            this.usersAgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersAgeLabel.Location = new System.Drawing.Point(312, 190);
+            this.usersAgeLabel.BackColor = System.Drawing.Color.White;
+            this.usersAgeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usersAgeLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersAgeLabel.Location = new System.Drawing.Point(309, 203);
             this.usersAgeLabel.Name = "usersAgeLabel";
-            this.usersAgeLabel.Size = new System.Drawing.Size(223, 16);
+            this.usersAgeLabel.Size = new System.Drawing.Size(223, 26);
             this.usersAgeLabel.TabIndex = 10;
             this.usersAgeLabel.Text = "label10";
             // 
             // backButton
             // 
+            this.backButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.backButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButton.BackgroundImage")));
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backButton.Location = new System.Drawing.Point(12, 12);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(68, 25);
+            this.backButton.Size = new System.Drawing.Size(58, 58);
             this.backButton.TabIndex = 13;
-            this.backButton.Text = "НАЗАД";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // usersDoctorsAppointmentLabel
             // 
             this.usersDoctorsAppointmentLabel.AutoSize = true;
-            this.usersDoctorsAppointmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersDoctorsAppointmentLabel.Location = new System.Drawing.Point(142, 277);
+            this.usersDoctorsAppointmentLabel.BackColor = System.Drawing.Color.Transparent;
+            this.usersDoctorsAppointmentLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersDoctorsAppointmentLabel.ForeColor = System.Drawing.Color.White;
+            this.usersDoctorsAppointmentLabel.Location = new System.Drawing.Point(110, 310);
             this.usersDoctorsAppointmentLabel.Name = "usersDoctorsAppointmentLabel";
-            this.usersDoctorsAppointmentLabel.Size = new System.Drawing.Size(268, 16);
+            this.usersDoctorsAppointmentLabel.Size = new System.Drawing.Size(355, 24);
             this.usersDoctorsAppointmentLabel.TabIndex = 14;
             this.usersDoctorsAppointmentLabel.Text = "Актуальні записи на прийоми до лікарів";
             // 
             // usersEmailLabel
             // 
-            this.usersEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersEmailLabel.Location = new System.Drawing.Point(172, 238);
+            this.usersEmailLabel.BackColor = System.Drawing.Color.White;
+            this.usersEmailLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usersEmailLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usersEmailLabel.Location = new System.Drawing.Point(174, 251);
             this.usersEmailLabel.Name = "usersEmailLabel";
-            this.usersEmailLabel.Size = new System.Drawing.Size(334, 16);
+            this.usersEmailLabel.Size = new System.Drawing.Size(334, 25);
             this.usersEmailLabel.TabIndex = 17;
             this.usersEmailLabel.Text = "label12";
             // 
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.emailLabel.Location = new System.Drawing.Point(15, 238);
+            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.emailLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emailLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.emailLabel.ForeColor = System.Drawing.Color.White;
+            this.emailLabel.Location = new System.Drawing.Point(12, 252);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(151, 16);
+            this.emailLabel.Size = new System.Drawing.Size(139, 22);
             this.emailLabel.TabIndex = 16;
             this.emailLabel.Text = "Електронна пошта:";
             // 
             // appointmentsListBox
             // 
+            this.appointmentsListBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.appointmentsListBox.FormattingEnabled = true;
-            this.appointmentsListBox.Location = new System.Drawing.Point(12, 300);
+            this.appointmentsListBox.ItemHeight = 19;
+            this.appointmentsListBox.Location = new System.Drawing.Point(9, 386);
             this.appointmentsListBox.Name = "appointmentsListBox";
-            this.appointmentsListBox.Size = new System.Drawing.Size(239, 95);
+            this.appointmentsListBox.Size = new System.Drawing.Size(239, 99);
             this.appointmentsListBox.TabIndex = 18;
             this.appointmentsListBox.SelectedIndexChanged += new System.EventHandler(this.appointmentsListBox_SelectedIndexChanged);
             // 
             // hospitalTitleLabel
             // 
-            this.hospitalTitleLabel.AutoSize = true;
-            this.hospitalTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hospitalTitleLabel.Location = new System.Drawing.Point(261, 300);
+            this.hospitalTitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.hospitalTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.hospitalTitleLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hospitalTitleLabel.ForeColor = System.Drawing.Color.White;
+            this.hospitalTitleLabel.Location = new System.Drawing.Point(256, 395);
             this.hospitalTitleLabel.Name = "hospitalTitleLabel";
-            this.hospitalTitleLabel.Size = new System.Drawing.Size(60, 16);
+            this.hospitalTitleLabel.Size = new System.Drawing.Size(81, 25);
             this.hospitalTitleLabel.TabIndex = 19;
             this.hospitalTitleLabel.Text = "Лікарня:";
             // 
             // doctorTitleLabel
             // 
-            this.doctorTitleLabel.AutoSize = true;
-            this.doctorTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.doctorTitleLabel.Location = new System.Drawing.Point(261, 325);
+            this.doctorTitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.doctorTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.doctorTitleLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.doctorTitleLabel.ForeColor = System.Drawing.Color.White;
+            this.doctorTitleLabel.Location = new System.Drawing.Point(256, 423);
             this.doctorTitleLabel.Name = "doctorTitleLabel";
-            this.doctorTitleLabel.Size = new System.Drawing.Size(45, 16);
+            this.doctorTitleLabel.Size = new System.Drawing.Size(81, 25);
             this.doctorTitleLabel.TabIndex = 20;
             this.doctorTitleLabel.Text = "Лікар:";
             // 
             // dateTitleLabel
             // 
-            this.dateTitleLabel.AutoSize = true;
-            this.dateTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTitleLabel.Location = new System.Drawing.Point(261, 351);
+            this.dateTitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.dateTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dateTitleLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTitleLabel.ForeColor = System.Drawing.Color.White;
+            this.dateTitleLabel.Location = new System.Drawing.Point(256, 450);
             this.dateTitleLabel.Name = "dateTitleLabel";
-            this.dateTitleLabel.Size = new System.Drawing.Size(42, 16);
+            this.dateTitleLabel.Size = new System.Drawing.Size(81, 25);
             this.dateTitleLabel.TabIndex = 21;
             this.dateTitleLabel.Text = "Дата:";
             // 
             // locationLinkPictureBox
             // 
+            this.locationLinkPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.locationLinkPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.locationLinkPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("locationLinkPictureBox.Image")));
-            this.locationLinkPictureBox.Location = new System.Drawing.Point(501, 355);
+            this.locationLinkPictureBox.Location = new System.Drawing.Point(512, 450);
             this.locationLinkPictureBox.Name = "locationLinkPictureBox";
             this.locationLinkPictureBox.Size = new System.Drawing.Size(40, 40);
             this.locationLinkPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -254,36 +295,63 @@
             // 
             // hospitalLabel
             // 
-            this.hospitalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hospitalLabel.Location = new System.Drawing.Point(327, 300);
+            this.hospitalLabel.BackColor = System.Drawing.Color.White;
+            this.hospitalLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hospitalLabel.Location = new System.Drawing.Point(338, 395);
             this.hospitalLabel.Name = "hospitalLabel";
-            this.hospitalLabel.Size = new System.Drawing.Size(214, 16);
+            this.hospitalLabel.Size = new System.Drawing.Size(214, 25);
             this.hospitalLabel.TabIndex = 23;
             this.hospitalLabel.Text = "label11";
             // 
             // doctorLabel
             // 
-            this.doctorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.doctorLabel.Location = new System.Drawing.Point(327, 325);
+            this.doctorLabel.BackColor = System.Drawing.Color.White;
+            this.doctorLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.doctorLabel.Location = new System.Drawing.Point(338, 424);
             this.doctorLabel.Name = "doctorLabel";
-            this.doctorLabel.Size = new System.Drawing.Size(214, 16);
+            this.doctorLabel.Size = new System.Drawing.Size(214, 24);
             this.doctorLabel.TabIndex = 24;
             this.doctorLabel.Text = "label12";
             // 
             // dateLabel
             // 
-            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateLabel.Location = new System.Drawing.Point(327, 351);
+            this.dateLabel.BackColor = System.Drawing.Color.White;
+            this.dateLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateLabel.Location = new System.Drawing.Point(338, 451);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(168, 16);
+            this.dateLabel.Size = new System.Drawing.Size(168, 26);
             this.dateLabel.TabIndex = 25;
             this.dateLabel.Text = "label13";
+            // 
+            // sortComboBox
+            // 
+            this.sortComboBox.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sortComboBox.FormattingEnabled = true;
+            this.sortComboBox.Location = new System.Drawing.Point(108, 355);
+            this.sortComboBox.Name = "sortComboBox";
+            this.sortComboBox.Size = new System.Drawing.Size(140, 28);
+            this.sortComboBox.TabIndex = 26;
+            // 
+            // sortLabel
+            // 
+            this.sortLabel.BackColor = System.Drawing.Color.Transparent;
+            this.sortLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sortLabel.ForeColor = System.Drawing.Color.White;
+            this.sortLabel.Location = new System.Drawing.Point(12, 358);
+            this.sortLabel.Name = "sortLabel";
+            this.sortLabel.Size = new System.Drawing.Size(97, 25);
+            this.sortLabel.TabIndex = 27;
+            this.sortLabel.Text = "Сортувати за";
             // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 407);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(564, 498);
+            this.Controls.Add(this.sortLabel);
+            this.Controls.Add(this.sortComboBox);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.doctorLabel);
             this.Controls.Add(this.hospitalLabel);
@@ -307,6 +375,7 @@
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.surnameLabel);
             this.Controls.Add(this.profilePicture);
+            this.DoubleBuffered = true;
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ProfileForm";
@@ -343,5 +412,7 @@
         private System.Windows.Forms.Label hospitalLabel;
         private System.Windows.Forms.Label doctorLabel;
         private System.Windows.Forms.Label dateLabel;
+        private System.Windows.Forms.ComboBox sortComboBox;
+        private System.Windows.Forms.Label sortLabel;
     }
 }
