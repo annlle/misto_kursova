@@ -235,12 +235,12 @@
             // 
             // appointmentsListBox
             // 
-            this.appointmentsListBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.appointmentsListBox.Font = new System.Drawing.Font("Franklin Gothic Demi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.appointmentsListBox.FormattingEnabled = true;
-            this.appointmentsListBox.ItemHeight = 19;
+            this.appointmentsListBox.ItemHeight = 17;
             this.appointmentsListBox.Location = new System.Drawing.Point(9, 386);
             this.appointmentsListBox.Name = "appointmentsListBox";
-            this.appointmentsListBox.Size = new System.Drawing.Size(239, 99);
+            this.appointmentsListBox.Size = new System.Drawing.Size(239, 89);
             this.appointmentsListBox.TabIndex = 18;
             this.appointmentsListBox.SelectedIndexChanged += new System.EventHandler(this.appointmentsListBox_SelectedIndexChanged);
             // 

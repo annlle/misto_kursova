@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             this.passwordLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
             this.signUpButton = new System.Windows.Forms.Button();
@@ -51,26 +52,28 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordLabel.Location = new System.Drawing.Point(365, 132);
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordLabel.Location = new System.Drawing.Point(365, 123);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(59, 16);
+            this.passwordLabel.Size = new System.Drawing.Size(65, 21);
             this.passwordLabel.TabIndex = 11;
             this.passwordLabel.Text = "Пароль:";
             // 
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.emailLabel.Location = new System.Drawing.Point(365, 73);
+            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.emailLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.emailLabel.Location = new System.Drawing.Point(365, 65);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(134, 16);
+            this.emailLabel.Size = new System.Drawing.Size(144, 21);
             this.emailLabel.TabIndex = 10;
             this.emailLabel.Text = "Електронна пошта:";
             // 
             // signUpButton
             // 
-            this.signUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.signUpButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.signUpButton.Location = new System.Drawing.Point(224, 358);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(200, 50);
@@ -82,7 +85,7 @@
             // usersPasswordTextBox
             // 
             this.usersPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersPasswordTextBox.Location = new System.Drawing.Point(368, 148);
+            this.usersPasswordTextBox.Location = new System.Drawing.Point(369, 147);
             this.usersPasswordTextBox.Name = "usersPasswordTextBox";
             this.usersPasswordTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersPasswordTextBox.TabIndex = 8;
@@ -99,20 +102,22 @@
             // signUpLabel
             // 
             this.signUpLabel.AutoSize = true;
-            this.signUpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.signUpLabel.BackColor = System.Drawing.Color.Transparent;
+            this.signUpLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.signUpLabel.Location = new System.Drawing.Point(20, 20);
             this.signUpLabel.Name = "signUpLabel";
-            this.signUpLabel.Size = new System.Drawing.Size(245, 31);
+            this.signUpLabel.Size = new System.Drawing.Size(176, 37);
             this.signUpLabel.TabIndex = 6;
-            this.signUpLabel.Text = "Зареєструватися";
+            this.signUpLabel.Text = "Реєстрація";
             // 
             // surnameLabel
             // 
             this.surnameLabel.AutoSize = true;
-            this.surnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.surnameLabel.Location = new System.Drawing.Point(23, 73);
+            this.surnameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.surnameLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.surnameLabel.Location = new System.Drawing.Point(23, 65);
             this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(72, 16);
+            this.surnameLabel.Size = new System.Drawing.Size(83, 21);
             this.surnameLabel.TabIndex = 13;
             this.surnameLabel.Text = "Прізвище:";
             // 
@@ -127,17 +132,18 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nameLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.Location = new System.Drawing.Point(23, 123);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(32, 16);
+            this.nameLabel.Size = new System.Drawing.Size(41, 21);
             this.nameLabel.TabIndex = 15;
             this.nameLabel.Text = "Ім\'я:";
             // 
             // usersNameTextBox
             // 
             this.usersNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersNameTextBox.Location = new System.Drawing.Point(26, 139);
+            this.usersNameTextBox.Location = new System.Drawing.Point(26, 147);
             this.usersNameTextBox.Name = "usersNameTextBox";
             this.usersNameTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersNameTextBox.TabIndex = 14;
@@ -145,17 +151,18 @@
             // patronymLabel
             // 
             this.patronymLabel.AutoSize = true;
-            this.patronymLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.patronymLabel.Location = new System.Drawing.Point(23, 170);
+            this.patronymLabel.BackColor = System.Drawing.Color.Transparent;
+            this.patronymLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.patronymLabel.Location = new System.Drawing.Point(23, 178);
             this.patronymLabel.Name = "patronymLabel";
-            this.patronymLabel.Size = new System.Drawing.Size(87, 16);
+            this.patronymLabel.Size = new System.Drawing.Size(97, 21);
             this.patronymLabel.TabIndex = 17;
             this.patronymLabel.Text = "По батькові:";
             // 
             // usersPatronymTextBox
             // 
             this.usersPatronymTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersPatronymTextBox.Location = new System.Drawing.Point(26, 186);
+            this.usersPatronymTextBox.Location = new System.Drawing.Point(26, 203);
             this.usersPatronymTextBox.Name = "usersPatronymTextBox";
             this.usersPatronymTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersPatronymTextBox.TabIndex = 16;
@@ -163,17 +170,18 @@
             // ageLabel
             // 
             this.ageLabel.AutoSize = true;
-            this.ageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ageLabel.Location = new System.Drawing.Point(23, 220);
+            this.ageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ageLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ageLabel.Location = new System.Drawing.Point(23, 239);
             this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(29, 16);
+            this.ageLabel.Size = new System.Drawing.Size(36, 21);
             this.ageLabel.TabIndex = 19;
             this.ageLabel.Text = "Вік:";
             // 
             // usersAgeTextBox
             // 
             this.usersAgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersAgeTextBox.Location = new System.Drawing.Point(26, 236);
+            this.usersAgeTextBox.Location = new System.Drawing.Point(26, 260);
             this.usersAgeTextBox.Name = "usersAgeTextBox";
             this.usersAgeTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersAgeTextBox.TabIndex = 18;
@@ -181,10 +189,11 @@
             // sexLabel
             // 
             this.sexLabel.AutoSize = true;
-            this.sexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sexLabel.Location = new System.Drawing.Point(23, 273);
+            this.sexLabel.BackColor = System.Drawing.Color.Transparent;
+            this.sexLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sexLabel.Location = new System.Drawing.Point(23, 299);
             this.sexLabel.Name = "sexLabel";
-            this.sexLabel.Size = new System.Drawing.Size(48, 16);
+            this.sexLabel.Size = new System.Drawing.Size(52, 21);
             this.sexLabel.TabIndex = 20;
             this.sexLabel.Text = "Стать:";
             // 
@@ -194,25 +203,28 @@
             this.usersSexComboBox.Items.AddRange(new object[] {
             "Чоловік",
             "Жінка"});
-            this.usersSexComboBox.Location = new System.Drawing.Point(26, 292);
+            this.usersSexComboBox.Location = new System.Drawing.Point(26, 318);
             this.usersSexComboBox.Name = "usersSexComboBox";
             this.usersSexComboBox.Size = new System.Drawing.Size(234, 21);
             this.usersSexComboBox.TabIndex = 21;
             // 
             // backButton
             // 
-            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.backButton.Location = new System.Drawing.Point(12, 397);
+            this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(229)))), ((int)(((byte)(163)))));
+            this.backButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButton.BackgroundImage")));
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.backButton.Location = new System.Drawing.Point(12, 373);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(107, 35);
+            this.backButton.Size = new System.Drawing.Size(63, 59);
             this.backButton.TabIndex = 22;
-            this.backButton.Text = "НАЗАД";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // mailCheckerLabel
             // 
             this.mailCheckerLabel.AutoSize = true;
+            this.mailCheckerLabel.BackColor = System.Drawing.Color.Transparent;
             this.mailCheckerLabel.ForeColor = System.Drawing.Color.Red;
             this.mailCheckerLabel.Location = new System.Drawing.Point(366, 112);
             this.mailCheckerLabel.Name = "mailCheckerLabel";
@@ -223,6 +235,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(676, 444);
             this.Controls.Add(this.mailCheckerLabel);
             this.Controls.Add(this.backButton);
@@ -242,6 +256,7 @@
             this.Controls.Add(this.usersPasswordTextBox);
             this.Controls.Add(this.usersEmailTextBox);
             this.Controls.Add(this.signUpLabel);
+            this.DoubleBuffered = true;
             this.Name = "SignUpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Misto App Sign Up";
