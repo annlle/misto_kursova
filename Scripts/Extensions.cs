@@ -162,7 +162,7 @@ namespace kursova.Scripts.Extensions
             list[j] = temp;
         }
 
-        private static int Partition<T>(List<T> list, int low, int high) where T : IComparable<T>
+        private static int Partition<T>(List<T> list, int low, int high, bool inverted) where T : IComparable<T>
         {
             T pivot = list[(low + high) / 2];
 
@@ -174,12 +174,12 @@ namespace kursova.Scripts.Extensions
                 do
                 {
                     i++;
-                } while (list[i].CompareTo(pivot) < 0);
+                } while ((inverted ? list[i].CompareTo(pivot) > 0 : list[i].CompareTo(pivot) < 0));
 
                 do
                 {
                     j--;
-                } while (list[j].CompareTo(pivot) > 0);
+                } while ((inverted ? list[j].CompareTo(pivot) < 0 : list[j].CompareTo(pivot) > 0));
 
                 if (i < j)
                 {
@@ -192,19 +192,19 @@ namespace kursova.Scripts.Extensions
             }
         }
 
-        public static void QuickSort<T>(this List<T> list) where T : IComparable<T>
+        public static void QuickSort<T>(this List<T> list, bool inverted = false) where T : IComparable<T>
         {
-            QuickSort(list, 0, list.Count - 1);
+            QuickSort(list, 0, list.Count - 1, inverted);
         }
 
-        public static void QuickSort<T>(List<T> list, int low, int high) where T : IComparable<T>
+        private static void QuickSort<T>(List<T> list, int low, int high, bool inverted) where T : IComparable<T>
         {
             if (low < high)
             {
-                int partitionIndex = Partition(list, low, high);
+                int partitionIndex = Partition(list, low, high, inverted);
 
-                QuickSort(list, low, partitionIndex);
-                QuickSort(list, partitionIndex + 1, high);
+                QuickSort(list, low, partitionIndex, inverted);
+                QuickSort(list, partitionIndex + 1, high, inverted);
             }
         }
     }

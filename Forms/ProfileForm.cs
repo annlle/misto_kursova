@@ -19,6 +19,7 @@ namespace kursova
         Image MalePicture = Image.FromFile(Path.Combine("Data", "man.png"));
         Image FemalePicture = Image.FromFile(Path.Combine("Data", "woman.png"));
         Appointment currentAppointment;
+        List<Appointment> appointments = User.CurrentUser.Appointments;
 
         public ProfileForm()
         {
@@ -30,22 +31,13 @@ namespace kursova
             usersSurnameLabel.Text = User.CurrentUser.Surname;
             usersNameLabel.Text = User.CurrentUser.Name;
             usersPatronymLabel.Text = User.CurrentUser.Patronymic;
-            usersSexLabel.Text = User.CurrentUser.Sex.ToString();
+            usersSexLabel.Text = User.CurrentUser.Sex == Sex.Male ? "Чоловік" : "Жінка";
             usersAgeLabel.Text = User.CurrentUser.Age.ToString();
             usersEmailLabel.Text = User.CurrentUser.Mail;
             profilePicture.Image = User.CurrentUser.Sex == Sex.Male ? MalePicture : FemalePicture;
 
-            List<Appointment> appointments = User.CurrentUser.Appointments;
 
-            appointments.QuickSort();
-
-            foreach (var appointment in appointments)
-            {
-                string date = appointment.DateTime.ToString();
-                date = date.Remove(date.Length - 3, 3);
-                string item = appointment.Hospital.Name + " - " + date;
-                appointmentsListBox.Items.Add(item);
-            }
+            sortComboBox.SelectedIndex = 0;
 
             hospitalLabel.Text = "";
             doctorLabel.Text = "";
@@ -87,6 +79,23 @@ namespace kursova
         private void locationLinkPictureBox_Click(object sender, EventArgs e)
         {
             currentAppointment.Hospital.Location.OpenLink();
+        }
+
+        private void sortComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            appointmentsListBox.Items.Clear();
+
+            bool inverted = sortComboBox.Text == sortComboBox.Items[0].ToString() ? false : true;
+
+            appointments.QuickSort(inverted);
+
+            foreach (var appointment in appointments)
+            {
+                string date = appointment.DateTime.ToString();
+                date = date.Remove(date.Length - 3, 3);
+                string item = appointment.Hospital.Name + " - " + date;
+                appointmentsListBox.Items.Add(item);
+            }
         }
     }
 }

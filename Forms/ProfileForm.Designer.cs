@@ -250,7 +250,7 @@
             this.hospitalTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hospitalTitleLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.hospitalTitleLabel.ForeColor = System.Drawing.Color.White;
-            this.hospitalTitleLabel.Location = new System.Drawing.Point(256, 395);
+            this.hospitalTitleLabel.Location = new System.Drawing.Point(256, 355);
             this.hospitalTitleLabel.Name = "hospitalTitleLabel";
             this.hospitalTitleLabel.Size = new System.Drawing.Size(81, 25);
             this.hospitalTitleLabel.TabIndex = 19;
@@ -262,7 +262,7 @@
             this.doctorTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.doctorTitleLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.doctorTitleLabel.ForeColor = System.Drawing.Color.White;
-            this.doctorTitleLabel.Location = new System.Drawing.Point(256, 423);
+            this.doctorTitleLabel.Location = new System.Drawing.Point(256, 383);
             this.doctorTitleLabel.Name = "doctorTitleLabel";
             this.doctorTitleLabel.Size = new System.Drawing.Size(81, 25);
             this.doctorTitleLabel.TabIndex = 20;
@@ -274,7 +274,7 @@
             this.dateTitleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dateTitleLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTitleLabel.ForeColor = System.Drawing.Color.White;
-            this.dateTitleLabel.Location = new System.Drawing.Point(256, 450);
+            this.dateTitleLabel.Location = new System.Drawing.Point(256, 410);
             this.dateTitleLabel.Name = "dateTitleLabel";
             this.dateTitleLabel.Size = new System.Drawing.Size(81, 25);
             this.dateTitleLabel.TabIndex = 21;
@@ -285,9 +285,9 @@
             this.locationLinkPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.locationLinkPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.locationLinkPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("locationLinkPictureBox.Image")));
-            this.locationLinkPictureBox.Location = new System.Drawing.Point(512, 450);
+            this.locationLinkPictureBox.Location = new System.Drawing.Point(502, 440);
             this.locationLinkPictureBox.Name = "locationLinkPictureBox";
-            this.locationLinkPictureBox.Size = new System.Drawing.Size(40, 40);
+            this.locationLinkPictureBox.Size = new System.Drawing.Size(50, 50);
             this.locationLinkPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.locationLinkPictureBox.TabIndex = 22;
             this.locationLinkPictureBox.TabStop = false;
@@ -296,30 +296,33 @@
             // hospitalLabel
             // 
             this.hospitalLabel.BackColor = System.Drawing.Color.White;
+            this.hospitalLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hospitalLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hospitalLabel.Location = new System.Drawing.Point(338, 395);
+            this.hospitalLabel.Location = new System.Drawing.Point(343, 355);
             this.hospitalLabel.Name = "hospitalLabel";
-            this.hospitalLabel.Size = new System.Drawing.Size(214, 25);
+            this.hospitalLabel.Size = new System.Drawing.Size(209, 25);
             this.hospitalLabel.TabIndex = 23;
             this.hospitalLabel.Text = "label11";
             // 
             // doctorLabel
             // 
             this.doctorLabel.BackColor = System.Drawing.Color.White;
+            this.doctorLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.doctorLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.doctorLabel.Location = new System.Drawing.Point(338, 424);
+            this.doctorLabel.Location = new System.Drawing.Point(343, 384);
             this.doctorLabel.Name = "doctorLabel";
-            this.doctorLabel.Size = new System.Drawing.Size(214, 24);
+            this.doctorLabel.Size = new System.Drawing.Size(209, 24);
             this.doctorLabel.TabIndex = 24;
             this.doctorLabel.Text = "label12";
             // 
             // dateLabel
             // 
             this.dateLabel.BackColor = System.Drawing.Color.White;
+            this.dateLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dateLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateLabel.Location = new System.Drawing.Point(338, 451);
+            this.dateLabel.Location = new System.Drawing.Point(343, 411);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(168, 26);
+            this.dateLabel.Size = new System.Drawing.Size(209, 26);
             this.dateLabel.TabIndex = 25;
             this.dateLabel.Text = "label13";
             // 
@@ -327,10 +330,14 @@
             // 
             this.sortComboBox.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sortComboBox.FormattingEnabled = true;
+            this.sortComboBox.Items.AddRange(new object[] {
+            "Найближчі",
+            "Найвіддаленіші"});
             this.sortComboBox.Location = new System.Drawing.Point(108, 355);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.Size = new System.Drawing.Size(140, 28);
             this.sortComboBox.TabIndex = 26;
+            this.sortComboBox.SelectedIndexChanged += new System.EventHandler(this.sortComboBox_SelectedIndexChanged);
             // 
             // sortLabel
             // 
