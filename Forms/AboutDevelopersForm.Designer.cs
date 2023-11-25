@@ -239,9 +239,10 @@
             this.Controls.Add(this.database);
             this.Controls.Add(this.algorithms);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AboutDevelopersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "About Developers";
+            this.Text = "Про розробників";
             ((System.ComponentModel.ISupportInitialize)(this.glasses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.algorithms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();

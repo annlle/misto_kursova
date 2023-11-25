@@ -376,9 +376,10 @@
             this.Controls.Add(this.surnameLabel);
             this.Controls.Add(this.profilePicture);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ProfileForm";
+            this.Text = "Профіль";
             this.Load += new System.EventHandler(this.ProfileForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkPictureBox)).EndInit();

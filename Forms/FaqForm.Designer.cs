@@ -96,9 +96,10 @@
             this.Controls.Add(this.welcomeToFaqLabel);
             this.Controls.Add(this.mistoAppLabel);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FaqForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FAQ";
+            this.Text = "Інфо";
             this.ResumeLayout(false);
             this.PerformLayout();
 

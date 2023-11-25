@@ -365,9 +365,10 @@
             this.Controls.Add(this.routePanel);
             this.Controls.Add(this.backButton);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PublicTransportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Public Transport";
+            this.Text = "Громадський транспорт";
             this.Load += new System.EventHandler(this.PublicTransportForm_Load);
             this.routeTileTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureTileTemplate)).EndInit();

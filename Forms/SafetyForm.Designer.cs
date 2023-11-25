@@ -45,8 +45,8 @@
             this.safetyListLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelDanger = new System.Windows.Forms.Panel();
-            this.locationTextBox = new System.Windows.Forms.TextBox();
             this.locationListBox = new System.Windows.Forms.ListBox();
+            this.locationTextBox = new System.Windows.Forms.TextBox();
             this.eventTileTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkTileTemplate)).BeginInit();
             this.panelDanger.SuspendLayout();
@@ -222,16 +222,6 @@
             this.panelDanger.Size = new System.Drawing.Size(166, 20);
             this.panelDanger.TabIndex = 15;
             // 
-            // locationTextBox
-            // 
-            this.locationTextBox.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.locationTextBox.Location = new System.Drawing.Point(189, 189);
-            this.locationTextBox.Name = "locationTextBox";
-            this.locationTextBox.Size = new System.Drawing.Size(166, 26);
-            this.locationTextBox.TabIndex = 16;
-            this.locationTextBox.TextChanged += new System.EventHandler(this.locationTextBox_TextChanged);
-            this.locationTextBox.Leave += new System.EventHandler(this.locationTextBox_Leave);
-            // 
             // locationListBox
             // 
             this.locationListBox.FormattingEnabled = true;
@@ -241,6 +231,16 @@
             this.locationListBox.TabIndex = 17;
             this.locationListBox.Visible = false;
             this.locationListBox.SelectedIndexChanged += new System.EventHandler(this.locationListBox_SelectedIndexChanged);
+            // 
+            // locationTextBox
+            // 
+            this.locationTextBox.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.locationTextBox.Location = new System.Drawing.Point(189, 189);
+            this.locationTextBox.Name = "locationTextBox";
+            this.locationTextBox.Size = new System.Drawing.Size(166, 26);
+            this.locationTextBox.TabIndex = 16;
+            this.locationTextBox.TextChanged += new System.EventHandler(this.locationTextBox_TextChanged);
+            this.locationTextBox.Leave += new System.EventHandler(this.locationTextBox_Leave);
             // 
             // SafetyForm
             // 
@@ -264,9 +264,10 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.typeLabel);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SafetyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Safety";
+            this.Text = "Громадянська безпека";
             this.Load += new System.EventHandler(this.SafetyForm_Load);
             this.eventTileTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkTileTemplate)).EndInit();

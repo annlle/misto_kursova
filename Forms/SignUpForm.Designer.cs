@@ -257,9 +257,10 @@
             this.Controls.Add(this.usersEmailTextBox);
             this.Controls.Add(this.signUpLabel);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignUpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Misto App Sign Up";
+            this.Text = "Реєстрація";
             this.ResumeLayout(false);
             this.PerformLayout();
 

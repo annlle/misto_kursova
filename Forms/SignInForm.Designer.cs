@@ -154,11 +154,12 @@
             this.Controls.Add(this.usersEmailTextBox);
             this.Controls.Add(this.signInLabel);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(326, 389);
             this.MinimumSize = new System.Drawing.Size(326, 389);
             this.Name = "SignInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Misto App Sign in";
+            this.Text = "Вхід";
             this.ResumeLayout(false);
             this.PerformLayout();
 

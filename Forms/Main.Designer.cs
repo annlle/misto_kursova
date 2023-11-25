@@ -225,6 +225,7 @@
             this.Controls.Add(this.safetyButton);
             this.Controls.Add(this.publicTransportButton);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Menu = this.mainMenu1;
             this.MinimumSize = new System.Drawing.Size(717, 441);
             this.Name = "MainForm";

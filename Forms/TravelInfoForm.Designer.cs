@@ -121,9 +121,10 @@
             this.Controls.Add(this.attractionTextLabel);
             this.Controls.Add(this.attractionPictureBox);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TravelInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Travel Info";
+            this.Text = "Туристична інформація";
             this.Load += new System.EventHandler(this.TravelInfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.attractionPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkPictureBox)).EndInit();
