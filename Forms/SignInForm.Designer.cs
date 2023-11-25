@@ -63,7 +63,7 @@
             // usersPasswordTextBox
             // 
             this.usersPasswordTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usersPasswordTextBox.Location = new System.Drawing.Point(37, 165);
+            this.usersPasswordTextBox.Location = new System.Drawing.Point(37, 174);
             this.usersPasswordTextBox.Name = "usersPasswordTextBox";
             this.usersPasswordTextBox.PasswordChar = '●';
             this.usersPasswordTextBox.Size = new System.Drawing.Size(234, 26);
@@ -73,7 +73,7 @@
             // 
             this.signInButton.Enabled = false;
             this.signInButton.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.signInButton.Location = new System.Drawing.Point(76, 218);
+            this.signInButton.Location = new System.Drawing.Point(76, 230);
             this.signInButton.Name = "signInButton";
             this.signInButton.Size = new System.Drawing.Size(154, 43);
             this.signInButton.TabIndex = 3;
@@ -97,7 +97,7 @@
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
             this.passwordLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordLabel.Location = new System.Drawing.Point(34, 141);
+            this.passwordLabel.Location = new System.Drawing.Point(34, 150);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(120, 21);
             this.passwordLabel.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.signUpSuggestionLabel.BackColor = System.Drawing.Color.Transparent;
             this.signUpSuggestionLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.signUpSuggestionLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.signUpSuggestionLabel.Location = new System.Drawing.Point(66, 264);
+            this.signUpSuggestionLabel.Location = new System.Drawing.Point(66, 276);
             this.signUpSuggestionLabel.Name = "signUpSuggestionLabel";
             this.signUpSuggestionLabel.Size = new System.Drawing.Size(174, 17);
             this.signUpSuggestionLabel.TabIndex = 6;
@@ -120,7 +120,7 @@
             this.signUpLinkLabel.AutoSize = true;
             this.signUpLinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.signUpLinkLabel.Font = new System.Drawing.Font("Franklin Gothic Book", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.signUpLinkLabel.Location = new System.Drawing.Point(100, 281);
+            this.signUpLinkLabel.Location = new System.Drawing.Point(100, 293);
             this.signUpLinkLabel.Name = "signUpLinkLabel";
             this.signUpLinkLabel.Size = new System.Drawing.Size(104, 17);
             this.signUpLinkLabel.TabIndex = 7;
@@ -131,11 +131,14 @@
             // mailCheckerLabel
             // 
             this.mailCheckerLabel.AutoSize = true;
-            this.mailCheckerLabel.ForeColor = System.Drawing.Color.Red;
-            this.mailCheckerLabel.Location = new System.Drawing.Point(35, 128);
+            this.mailCheckerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.mailCheckerLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mailCheckerLabel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.mailCheckerLabel.Location = new System.Drawing.Point(35, 132);
             this.mailCheckerLabel.Name = "mailCheckerLabel";
-            this.mailCheckerLabel.Size = new System.Drawing.Size(0, 13);
+            this.mailCheckerLabel.Size = new System.Drawing.Size(113, 18);
             this.mailCheckerLabel.TabIndex = 8;
+            this.mailCheckerLabel.Text = "Пошту знайдено!";
             // 
             // SignInForm
             // 

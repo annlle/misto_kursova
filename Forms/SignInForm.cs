@@ -71,7 +71,7 @@ namespace kursova
             else if (User.CheckUserMail(usersEmailTextBox.Text))
             {
                 mailCheckerLabel.Text = "Пошту знайдено!";
-                mailCheckerLabel.ForeColor = Color.Green;
+                mailCheckerLabel.ForeColor = Color.DarkGreen;
                 signInButton.Enabled = true;
             }
             else
