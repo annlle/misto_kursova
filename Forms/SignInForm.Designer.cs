@@ -136,9 +136,8 @@
             this.mailCheckerLabel.ForeColor = System.Drawing.Color.DarkGreen;
             this.mailCheckerLabel.Location = new System.Drawing.Point(35, 132);
             this.mailCheckerLabel.Name = "mailCheckerLabel";
-            this.mailCheckerLabel.Size = new System.Drawing.Size(113, 18);
+            this.mailCheckerLabel.Size = new System.Drawing.Size(0, 18);
             this.mailCheckerLabel.TabIndex = 8;
-            this.mailCheckerLabel.Text = "Пошту знайдено!";
             // 
             // SignInForm
             // 

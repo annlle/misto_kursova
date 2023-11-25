@@ -48,7 +48,7 @@
             this.sexGroupBox = new System.Windows.Forms.GroupBox();
             this.femaleRadioButton = new System.Windows.Forms.RadioButton();
             this.maleRadioButton = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.sexLabel = new System.Windows.Forms.Label();
             this.sexGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -247,16 +247,16 @@
             this.maleRadioButton.Text = "Чоловік";
             this.maleRadioButton.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // sexLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(24, 292);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 21);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Стать:";
+            this.sexLabel.AutoSize = true;
+            this.sexLabel.BackColor = System.Drawing.Color.Transparent;
+            this.sexLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sexLabel.Location = new System.Drawing.Point(24, 292);
+            this.sexLabel.Name = "sexLabel";
+            this.sexLabel.Size = new System.Drawing.Size(52, 21);
+            this.sexLabel.TabIndex = 25;
+            this.sexLabel.Text = "Стать:";
             // 
             // SignUpForm
             // 
@@ -265,7 +265,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(676, 444);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.sexLabel);
             this.Controls.Add(this.sexGroupBox);
             this.Controls.Add(this.mailCheckerLabel);
             this.Controls.Add(this.backButton);
@@ -316,6 +316,6 @@
         private System.Windows.Forms.GroupBox sexGroupBox;
         private System.Windows.Forms.RadioButton femaleRadioButton;
         private System.Windows.Forms.RadioButton maleRadioButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label sexLabel;
     }
 }
