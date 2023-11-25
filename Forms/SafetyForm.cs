@@ -218,7 +218,7 @@ namespace kursova
         private void EventTile_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Brush brush = new SolidBrush(Color.LightGray);
+            Brush brush = new SolidBrush(Color.White);
 
             int width = eventTileTemplate.Width;
             int height = eventTileTemplate.Height;
@@ -258,7 +258,8 @@ namespace kursova
 
         private void locationTextBox_Leave(object sender, EventArgs e)
         {
-            locationListBox.Visible = false;
+            if (!locationListBox.Bounds.Contains(new Point(Cursor.Position.X - this.Location.X, Cursor.Position.Y - this.Location.Y)))
+                locationListBox.Visible = false;
         }
     }
 }

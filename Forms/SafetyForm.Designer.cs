@@ -49,7 +49,6 @@
             this.locationTextBox = new System.Windows.Forms.TextBox();
             this.eventTileTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkTileTemplate)).BeginInit();
-            this.panelDanger.SuspendLayout();
             this.SuspendLayout();
             // 
             // typeLabel
@@ -104,7 +103,7 @@
             this.descriptionTextBox.Location = new System.Drawing.Point(189, 255);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(166, 145);
+            this.descriptionTextBox.Size = new System.Drawing.Size(180, 145);
             this.descriptionTextBox.TabIndex = 6;
             // 
             // postButton
@@ -124,7 +123,7 @@
             this.typeComboBox.FormattingEnabled = true;
             this.typeComboBox.Location = new System.Drawing.Point(189, 151);
             this.typeComboBox.Name = "typeComboBox";
-            this.typeComboBox.Size = new System.Drawing.Size(166, 29);
+            this.typeComboBox.Size = new System.Drawing.Size(180, 29);
             this.typeComboBox.TabIndex = 8;
             // 
             // locationLabel
@@ -216,18 +215,17 @@
             // 
             // panelDanger
             // 
-            this.panelDanger.Controls.Add(this.locationListBox);
             this.panelDanger.Location = new System.Drawing.Point(189, 226);
             this.panelDanger.Name = "panelDanger";
-            this.panelDanger.Size = new System.Drawing.Size(166, 20);
+            this.panelDanger.Size = new System.Drawing.Size(180, 20);
             this.panelDanger.TabIndex = 15;
             // 
             // locationListBox
             // 
             this.locationListBox.FormattingEnabled = true;
-            this.locationListBox.Location = new System.Drawing.Point(0, -4);
+            this.locationListBox.Location = new System.Drawing.Point(189, 211);
             this.locationListBox.Name = "locationListBox";
-            this.locationListBox.Size = new System.Drawing.Size(166, 30);
+            this.locationListBox.Size = new System.Drawing.Size(180, 69);
             this.locationListBox.TabIndex = 17;
             this.locationListBox.Visible = false;
             this.locationListBox.SelectedIndexChanged += new System.EventHandler(this.locationListBox_SelectedIndexChanged);
@@ -237,7 +235,7 @@
             this.locationTextBox.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.locationTextBox.Location = new System.Drawing.Point(189, 189);
             this.locationTextBox.Name = "locationTextBox";
-            this.locationTextBox.Size = new System.Drawing.Size(166, 26);
+            this.locationTextBox.Size = new System.Drawing.Size(180, 26);
             this.locationTextBox.TabIndex = 16;
             this.locationTextBox.TextChanged += new System.EventHandler(this.locationTextBox_TextChanged);
             this.locationTextBox.Leave += new System.EventHandler(this.locationTextBox_Leave);
@@ -249,6 +247,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(808, 537);
+            this.Controls.Add(this.locationListBox);
             this.Controls.Add(this.locationTextBox);
             this.Controls.Add(this.panelDanger);
             this.Controls.Add(this.label1);
@@ -271,7 +270,6 @@
             this.Load += new System.EventHandler(this.SafetyForm_Load);
             this.eventTileTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkTileTemplate)).EndInit();
-            this.panelDanger.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
