@@ -30,9 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
-            this.fileMenuItem = new System.Windows.Forms.MenuItem();
-            this.exitMenuItem = new System.Windows.Forms.MenuItem();
+            this.helpMenu = new System.Windows.Forms.MainMenu(this.components);
             this.helpMenuItem = new System.Windows.Forms.MenuItem();
             this.faqMenuItem = new System.Windows.Forms.MenuItem();
             this.aboutDevelopersMenuItem = new System.Windows.Forms.MenuItem();
@@ -48,32 +46,19 @@
             this.profileLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // mainMenu1
+            // helpMenu
             // 
-            this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.fileMenuItem,
+            this.helpMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.helpMenuItem});
-            // 
-            // fileMenuItem
-            // 
-            this.fileMenuItem.Index = 0;
-            this.fileMenuItem.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.exitMenuItem});
-            this.fileMenuItem.Text = "File";
-            // 
-            // exitMenuItem
-            // 
-            this.exitMenuItem.Index = 0;
-            this.exitMenuItem.Text = "Exit";
-            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItemClick);
+            this.helpMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // helpMenuItem
             // 
-            this.helpMenuItem.Index = 1;
+            this.helpMenuItem.Index = 0;
             this.helpMenuItem.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.faqMenuItem,
             this.aboutDevelopersMenuItem});
-            this.helpMenuItem.Text = "Help";
+            this.helpMenuItem.Text = "Справка";
             // 
             // faqMenuItem
             // 
@@ -84,7 +69,7 @@
             // aboutDevelopersMenuItem
             // 
             this.aboutDevelopersMenuItem.Index = 1;
-            this.aboutDevelopersMenuItem.Text = "About developers";
+            this.aboutDevelopersMenuItem.Text = "Про розробників";
             this.aboutDevelopersMenuItem.Click += new System.EventHandler(this.aboutDevelopersMenuItemClick);
             // 
             // safetyButton
@@ -226,7 +211,7 @@
             this.Controls.Add(this.publicTransportButton);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Menu = this.mainMenu1;
+            this.Menu = this.helpMenu;
             this.MinimumSize = new System.Drawing.Size(717, 441);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -238,9 +223,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MainMenu mainMenu1;
-        private System.Windows.Forms.MenuItem fileMenuItem;
-        private System.Windows.Forms.MenuItem exitMenuItem;
+        private System.Windows.Forms.MainMenu helpMenu;
         private System.Windows.Forms.MenuItem helpMenuItem;
         private System.Windows.Forms.MenuItem faqMenuItem;
         private System.Windows.Forms.MenuItem aboutDevelopersMenuItem;

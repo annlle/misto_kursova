@@ -47,7 +47,7 @@ namespace kursova
                     AnimationCancellation = null
                 };
 
-                int index = i; // Create a copy of the loop variable for the lambda expression
+                int index = i;
 
                 buttons[i].MouseEnter += (sender, e) =>
                 {
@@ -66,7 +66,6 @@ namespace kursova
             if (data.AnimationCancellation != null && !data.AnimationCancellation.Token.IsCancellationRequested)
             {
                 data.AnimationCancellation.Cancel();
-                await Task.Delay(20);
             }
 
             data.AnimationCancellation = new CancellationTokenSource();
@@ -78,7 +77,6 @@ namespace kursova
             if (data.AnimationCancellation != null && !data.AnimationCancellation.Token.IsCancellationRequested)
             {
                 data.AnimationCancellation.Cancel();
-                await Task.Delay(20);
             }
 
             data.AnimationCancellation = new CancellationTokenSource();
@@ -92,7 +90,7 @@ namespace kursova
             float progress = 0f; // 0 - 1
             double start = data.CurrentZoom;
 
-            CancellationTokenSource animationCancellation = data.AnimationCancellation; // Capture the CancellationTokenSource
+            CancellationTokenSource animationCancellation = data.AnimationCancellation;
 
             while (progress < 1f)
             {
@@ -195,6 +193,7 @@ namespace kursova
             hospitalForm.ShowDialog();
         }
     }
+
     public class ButtonAnimationData
     {
         public double CurrentZoom { get; set; }
