@@ -92,6 +92,76 @@ namespace kursova
                 }
             };
 
+            sortComboBox.SelectedIndex = 0;
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
+        }
+
+        private void hospitalsListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            doctorsListBox.Items.Clear();
+            selectedHospital = default;
+            selectedDoctor = default;
+            doctorNameLabel.Text = "ПІБ Лікаря";
+            specializationLabel.Text = "Спеціалізація";
+            doctorPictureBox.Image = null;
+
+            if (hospitalsListView.SelectedItems.Count < 1)
+                return;
+
+            string selectedHospitalName = hospitalsListView.SelectedItems[0].Text;
+            selectedHospital = hospitals.FirstOrDefault(h => h.Name == selectedHospitalName);
+
+            foreach (var doctor in selectedHospital.Doctors)
+            {
+                doctorsListBox.Items.Add(doctor.Specialization);
+            }
+        }
+
+        private void doctorsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            doctorNameLabel.Text = "ПІБ Лікаря";
+            specializationLabel.Text = "Спеціалізація";
+            doctorPictureBox.Image = null;
+
+            if (doctorsListBox.SelectedItems.Count < 1)
+                return;
+
+            string selectedDoctorSpecialization = doctorsListBox.SelectedItems[0].ToString();
+            selectedDoctor = selectedHospital.Doctors.FirstOrDefault(d => d.Specialization == selectedDoctorSpecialization);
+
+            doctorNameLabel.Text = selectedDoctor.Name;
+            specializationLabel.Text = selectedDoctor.Specialization;
+            doctorPictureBox.Image = selectedDoctor.Sex == Sex.Male ? doctorMalePicture : doctorFemalePicture;
+        }
+
+        private void signButton_Click(object sender, EventArgs e)
+        {
+            DateTime dateTime = appointmentDatePicker.Value;
+
+            Appointment appointment = new Appointment
+            {
+                Doctor = selectedDoctor,
+                Hospital = selectedHospital,
+                DateTime = dateTime
+            };
+
+            User.CurrentUser.Appointments.Add(appointment);
+        }
+
+        private void sortComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hospitalsListView.Items.Clear();
+
+            bool inverted = !(sortComboBox.Text == sortComboBox.Items[0].ToString());
+
+            hospitals.QuickSort(hospital => hospital.Name, inverted);
+
             foreach (var hospital in hospitals)
             {
                 hospitalsListView.Items.Add(hospital.Name);
@@ -133,65 +203,6 @@ namespace kursova
                 hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
                 hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[5];
             }
-        }
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
-        }
-
-        private void hospitalsListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            doctorsListView.Items.Clear();
-            selectedHospital = default;
-            selectedDoctor = default;
-            doctorNameLabel.Text = "";
-            specializationLabel.Text = "";
-            doctorPictureBox.Image = null;
-
-            if (hospitalsListView.SelectedItems.Count < 1)
-                return;
-
-            string selectedHospitalName = hospitalsListView.SelectedItems[0].Text;
-            selectedHospital = hospitals.FirstOrDefault(h => h.Name == selectedHospitalName);
-
-            foreach (var doctor in selectedHospital.Doctors)
-            {
-                doctorsListView.Items.Add(doctor.Specialization);
-            }
-        }
-
-        private void doctorsListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            doctorNameLabel.Text = "";
-            specializationLabel.Text = "";
-            doctorPictureBox.Image = null;
-
-            if (doctorsListView.SelectedItems.Count < 1)
-                return;
-
-            string selectedDoctorSpecialization = doctorsListView.SelectedItems[0].Text;
-            selectedDoctor = selectedHospital.Doctors.FirstOrDefault(d => d.Specialization == selectedDoctorSpecialization);
-
-            doctorNameLabel.Text = selectedDoctor.Name;
-            specializationLabel.Text = selectedDoctor.Specialization;
-            doctorPictureBox.Image = selectedDoctor.Sex == Sex.Male ? doctorMalePicture : doctorFemalePicture;
-        }
-
-        private void signButton_Click(object sender, EventArgs e)
-        {
-            DateTime dateTime = appointmentDatePicker.Value;
-
-            Appointment appointment = new Appointment
-            {
-                Doctor = selectedDoctor,
-                Hospital = selectedHospital,
-                DateTime = dateTime
-            };
-
-            User.CurrentUser.Appointments.Add(appointment);
         }
     }
 }
