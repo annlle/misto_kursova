@@ -85,7 +85,7 @@ namespace kursova
         {
             appointmentsListBox.Items.Clear();
 
-            bool inverted = sortComboBox.Text == sortComboBox.Items[0].ToString() ? false : true;
+            bool inverted = !(sortComboBox.Text == sortComboBox.Items[0].ToString());
 
             appointments.QuickSort(inverted);
 

@@ -52,7 +52,7 @@
             this.minibusRadioButton = new System.Windows.Forms.RadioButton();
             this.anyTypeRadioButton = new System.Windows.Forms.RadioButton();
             this.sortLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.sortComboBox = new System.Windows.Forms.ComboBox();
             this.routeTileTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureTileTemplate)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -193,7 +193,7 @@
             // 
             this.dirNotStraightRadioButton.AutoSize = true;
             this.dirNotStraightRadioButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dirNotStraightRadioButton.Location = new System.Drawing.Point(5, 64);
+            this.dirNotStraightRadioButton.Location = new System.Drawing.Point(5, 70);
             this.dirNotStraightRadioButton.Name = "dirNotStraightRadioButton";
             this.dirNotStraightRadioButton.Size = new System.Drawing.Size(99, 25);
             this.dirNotStraightRadioButton.TabIndex = 18;
@@ -205,7 +205,7 @@
             // 
             this.dirStraightRadioButton.AutoSize = true;
             this.dirStraightRadioButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dirStraightRadioButton.Location = new System.Drawing.Point(5, 42);
+            this.dirStraightRadioButton.Location = new System.Drawing.Point(5, 45);
             this.dirStraightRadioButton.Name = "dirStraightRadioButton";
             this.dirStraightRadioButton.Size = new System.Drawing.Size(85, 25);
             this.dirStraightRadioButton.TabIndex = 17;
@@ -234,7 +234,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(164, 79);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(176, 45);
+            this.groupBox2.Size = new System.Drawing.Size(176, 52);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Пошук";
@@ -259,7 +259,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.Location = new System.Drawing.Point(165, 130);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(493, 45);
+            this.groupBox3.Size = new System.Drawing.Size(486, 49);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Вид транспорту";
@@ -332,20 +332,25 @@
             this.sortLabel.BackColor = System.Drawing.Color.Transparent;
             this.sortLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sortLabel.ForeColor = System.Drawing.Color.Black;
-            this.sortLabel.Location = new System.Drawing.Point(30, 205);
+            this.sortLabel.Location = new System.Drawing.Point(30, 197);
             this.sortLabel.Name = "sortLabel";
             this.sortLabel.Size = new System.Drawing.Size(105, 21);
             this.sortLabel.TabIndex = 17;
             this.sortLabel.Text = "Сортувати за";
             // 
-            // comboBox1
+            // sortComboBox
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(132, 201);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(172, 28);
-            this.comboBox1.TabIndex = 18;
+            this.sortComboBox.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sortComboBox.FormattingEnabled = true;
+            this.sortComboBox.Items.AddRange(new object[] {
+            "Зростання номеру",
+            "Спадання номеру",
+            "Тип"});
+            this.sortComboBox.Location = new System.Drawing.Point(132, 193);
+            this.sortComboBox.Name = "sortComboBox";
+            this.sortComboBox.Size = new System.Drawing.Size(172, 28);
+            this.sortComboBox.TabIndex = 18;
+            this.sortComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // PublicTransportForm
             // 
@@ -354,7 +359,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(662, 561);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.sortComboBox);
             this.Controls.Add(this.sortLabel);
             this.Controls.Add(this.stationLabel);
             this.Controls.Add(this.groupBox3);
@@ -407,6 +412,6 @@
         private System.Windows.Forms.RadioButton trolleybusRadioButton;
         private System.Windows.Forms.RadioButton busRadioButton;
         private System.Windows.Forms.Label sortLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox sortComboBox;
     }
 }

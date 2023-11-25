@@ -120,7 +120,7 @@ namespace kursova
                 },
             };
 
-            RenderRoutePanel();
+            sortComboBox.SelectedIndex = 0;
         }
 
         private void RenderRoutePanel()
@@ -198,13 +198,25 @@ namespace kursova
         private void RouteTile_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Brush brush = new SolidBrush(Color.LightGray);
+            Brush brush = new SolidBrush(Color.White);
 
             int width = routeTileTemplate.Width;
             int height = routeTileTemplate.Height;
             int cornerRadius = 10;
 
             GraphicsHelper.FillRoundedBackground(g, brush, width, height, cornerRadius * 2);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (sortComboBox.Text == sortComboBox.Items[0].ToString())
+                routes.QuickSort(route => route.RouteNumber);
+            else if (sortComboBox.Text == sortComboBox.Items[1].ToString())
+                routes.QuickSort(route => route.RouteNumber, true);
+            else
+                routes.QuickSort(route => route.TypeOfTransport);
+
+            RenderRoutePanel();
         }
     }
 }

@@ -192,9 +192,34 @@ namespace kursova.Scripts.Extensions
             }
         }
 
-        public static void QuickSort<T>(this List<T> list, bool inverted = false) where T : IComparable<T>
+        private static int Partition<T, TKey>(List<T> list, Func<T, TKey> keySelector, int low, int high, bool inverted)
         {
-            QuickSort(list, 0, list.Count - 1, inverted);
+            T pivot = list[(low + high) / 2];
+
+            int i = low - 1;
+            int j = high + 1;
+
+            while (true)
+            {
+                do
+                {
+                    i++;
+                } while ((inverted ? Comparer<TKey>.Default.Compare(keySelector(list[i]), keySelector(pivot)) > 0 : Comparer<TKey>.Default.Compare(keySelector(list[i]), keySelector(pivot)) < 0));
+
+                do
+                {
+                    j--;
+                } while ((inverted ? Comparer<TKey>.Default.Compare(keySelector(list[j]), keySelector(pivot)) < 0 : Comparer<TKey>.Default.Compare(keySelector(list[j]), keySelector(pivot)) > 0));
+
+                if (i < j)
+                {
+                    Swap(list, i, j);
+                }
+                else
+                {
+                    return j;
+                }
+            }
         }
 
         private static void QuickSort<T>(List<T> list, int low, int high, bool inverted) where T : IComparable<T>
@@ -206,6 +231,27 @@ namespace kursova.Scripts.Extensions
                 QuickSort(list, low, partitionIndex, inverted);
                 QuickSort(list, partitionIndex + 1, high, inverted);
             }
+        }
+
+        private static void QuickSort<T, TKey>(List<T> list, Func<T, TKey> keySelector, int low, int high, bool inverted)
+        {
+            if (low < high)
+            {
+                int partitionIndex = Partition(list, keySelector, low, high, inverted);
+
+                QuickSort(list, keySelector, low, partitionIndex, inverted);
+                QuickSort(list, keySelector, partitionIndex + 1, high, inverted);
+            }
+        }
+
+        public static void QuickSort<T>(this List<T> list, bool inverted = false) where T : IComparable<T>
+        {
+            QuickSort(list, 0, list.Count - 1, inverted);
+        }
+
+        public static void QuickSort<T, TKey>(this List<T> list, Func<T, TKey> keySelector, bool inverted = false)
+        {
+            QuickSort(list, keySelector, 0, list.Count - 1, inverted);
         }
     }
 }
