@@ -3,3 +3,4 @@ bin/
 obj/
 
 !bin/Debug/user.json
+!bin/Debug/Data/stop.xml
