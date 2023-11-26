@@ -151,7 +151,7 @@ namespace kursova
                 DateTime = dateTime
             };
 
-            User.CurrentUser.Appointments.Add(appointment);
+            User.CurrentUser.WriteUserAppointments(appointment);           
         }
 
         private void sortComboBox_SelectedIndexChanged(object sender, EventArgs e)

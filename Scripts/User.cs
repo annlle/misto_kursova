@@ -17,7 +17,6 @@ namespace kursova.Scripts
 
     public class User
     {
-        private UsersList listOfUsers;
         public string Surname { get; set; }
         public string Name { get; set; }
         public string Patronymic { get; set; }
@@ -34,7 +33,7 @@ namespace kursova.Scripts
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath); 
-                listOfUsers = JsonConvert.DeserializeObject<UsersList>(json);
+                UsersList listOfUsers = JsonConvert.DeserializeObject<UsersList>(json);
 
                 if (listOfUsers != null && listOfUsers.Users != null)
                 {
@@ -63,7 +62,7 @@ namespace kursova.Scripts
         {
             string filePath = Path.Combine("Data", "user_test.json");
 
-            listOfUsers = ReadUser();
+            UsersList listOfUsers = ReadUser();
 
             newUser = new User
             {
@@ -73,7 +72,7 @@ namespace kursova.Scripts
                 Name = name,
                 Patronymic = patronymic,
                 Sex = sex,
-                Age = Convert.ToInt32(age)
+                Age = Convert.ToInt32(age),
             };
 
             if (listOfUsers == null)
@@ -93,7 +92,18 @@ namespace kursova.Scripts
                 string json = JsonConvert.SerializeObject(listOfUsers);
                 File.WriteAllText(filePath, json);
             }
+        }
 
+        public void WriteUserAppointments(Appointment appointment)
+        {
+            string filePath = Path.Combine("Data", "user_test.json");
+
+            UsersList listOfUsers = ReadUser();
+
+            User.CurrentUser.Appointments.Add(appointment);
+
+            string json = JsonConvert.SerializeObject(listOfUsers);
+            File.WriteAllText(filePath, json);
         }
 
         public bool CheckUserMail(string mail)
