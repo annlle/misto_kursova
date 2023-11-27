@@ -76,6 +76,7 @@
             // 
             // signUpButton
             // 
+            this.signUpButton.Enabled = false;
             this.signUpButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.signUpButton.Location = new System.Drawing.Point(224, 358);
             this.signUpButton.Name = "signUpButton";
@@ -92,6 +93,7 @@
             this.usersPasswordTextBox.Name = "usersPasswordTextBox";
             this.usersPasswordTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersPasswordTextBox.TabIndex = 8;
+            this.usersPasswordTextBox.TextChanged += new System.EventHandler(this.usersPasswordTextBox_TextChanged);
             // 
             // usersEmailTextBox
             // 
@@ -131,6 +133,7 @@
             this.usersSurnameTextBox.Name = "usersSurnameTextBox";
             this.usersSurnameTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersSurnameTextBox.TabIndex = 12;
+            this.usersSurnameTextBox.TextChanged += new System.EventHandler(this.usersSurnameTextBox_TextChanged);
             // 
             // nameLabel
             // 
@@ -150,6 +153,7 @@
             this.usersNameTextBox.Name = "usersNameTextBox";
             this.usersNameTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersNameTextBox.TabIndex = 14;
+            this.usersNameTextBox.TextChanged += new System.EventHandler(this.usersNameTextBox_TextChanged);
             // 
             // patronymLabel
             // 
@@ -169,6 +173,7 @@
             this.usersPatronymTextBox.Name = "usersPatronymTextBox";
             this.usersPatronymTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersPatronymTextBox.TabIndex = 16;
+            this.usersPatronymTextBox.TextChanged += new System.EventHandler(this.usersPatronymTextBox_TextChanged);
             // 
             // ageLabel
             // 
@@ -188,6 +193,7 @@
             this.usersAgeTextBox.Name = "usersAgeTextBox";
             this.usersAgeTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersAgeTextBox.TabIndex = 18;
+            this.usersAgeTextBox.TextChanged += new System.EventHandler(this.usersAgeTextBox_TextChanged);
             // 
             // backButton
             // 

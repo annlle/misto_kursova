@@ -46,6 +46,20 @@ namespace kursova
             mainForm.ShowDialog();
         }
 
+        private void UpdateSignUpButtonState()
+        {
+            signUpButton.Enabled = false;
+            bool isEmailValid = usersEmailTextBox.Text.Length > 5;
+            bool isPasswordValid = usersPasswordTextBox.Text.Length > 0;
+            bool isSurnameValid = usersSurnameTextBox.Text.Length > 0;
+            bool isNameValid = usersNameTextBox.Text.Length > 0;
+            bool isPatronymValid = usersPatronymTextBox.Text.Length > 0;
+            bool isAgeValid = int.TryParse(usersAgeTextBox.Text, out _);
+            bool radioButtonChecked = maleRadioButton.Checked || femaleRadioButton.Checked;
+
+            signUpButton.Enabled = isEmailValid && isPasswordValid && isSurnameValid && isNameValid && isPatronymValid && isAgeValid && radioButtonChecked;
+        }
+
         private async void usersEmailTextBox_TextChanged(object sender, EventArgs e)
         {
             mailCheckerLabel.Text = "";
@@ -58,6 +72,33 @@ namespace kursova
             timerCancellation = new CancellationTokenSource();
 
             await CheckMail(timerCancellation.Token);
+
+            UpdateSignUpButtonState();
+        }
+
+        private void usersPasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateSignUpButtonState();
+        }
+
+        private void usersSurnameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateSignUpButtonState();
+        }
+
+        private void usersNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateSignUpButtonState();
+        }
+
+        private void usersPatronymTextBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateSignUpButtonState();
+        }
+
+        private void usersAgeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateSignUpButtonState();
         }
 
         private async Task CheckMail(CancellationToken cancellationToken)
