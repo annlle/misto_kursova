@@ -103,6 +103,7 @@
     <Compile Include="Scripts\EventTile.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Scripts\ExceptionHandler.cs" />
     <Compile Include="Scripts\Extensions.cs" />
     <Compile Include="Scripts\Hospital.cs" />
     <Compile Include="Scripts\Location.cs" />
