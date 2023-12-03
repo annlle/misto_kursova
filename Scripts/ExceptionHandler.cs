@@ -12,18 +12,20 @@ namespace kursova.Scripts
         public enum ErrorType
         {
             FileNotFound,
-            FormNotFound
+            FormNotFound,
+            InvalidEmail,
+            InvalidPassword,
+            UnknownError
             // Буду добавлять по необходимости
         }
 
         public ErrorType Type { get; private set; }
         public string ErrorDetails { get; private set; }
 
-        public ExceptionHandler(ErrorType type, string errorDetails)
+        public ExceptionHandler(ErrorType type = ExceptionHandler.ErrorType.UnknownError, string errorDetails = "")
         {
             Type = type;
             ErrorDetails = errorDetails;
-            HandleError();
         }
 
         public void HandleError()
@@ -36,7 +38,16 @@ namespace kursova.Scripts
                 case ErrorType.FormNotFound:
                     MessageBox.Show($"Помилка завантаження вікна! {ErrorDetails}", "Помилка!");
                     break;
+                case ErrorType.InvalidEmail:
+                    MessageBox.Show($"Помилка при введені пошти! {ErrorDetails}", "Помилка!");
+                    break;
+                case ErrorType.InvalidPassword:
+                    MessageBox.Show($"Невірний пароль! {ErrorDetails}", "Помилка!");
+                    break;
                 // Буду добавлять по необходимости
+                default:
+                    MessageBox.Show($"Невідома помилка! {ErrorDetails}", "Помилка!");
+                    break;
             }
         }
     }

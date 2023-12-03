@@ -28,16 +28,23 @@ namespace kursova
 
         private void signInButton_Click(object sender, EventArgs e)
         {
-            if(usersPasswordTextBox.Text == User.Password)
+            try
             {
-                User.CurrentUser = this.User; // выставляем текущего пользователя если пароль правильный
-                this.Hide();
-                MainForm mainForm = new MainForm();
-                mainForm.ShowDialog();
+                if (usersPasswordTextBox.Text == User.Password)
+                {
+                    User.CurrentUser = this.User; // выставляем текущего пользователя если пароль правильный
+                    this.Hide();
+                    MainForm mainForm = new MainForm();
+                    mainForm.ShowDialog();
+                }
+                else
+                {
+                    throw new ExceptionHandler(ExceptionHandler.ErrorType.InvalidPassword);
+                }
             }
-            else
+            catch (ExceptionHandler ex)
             {
-                MessageBox.Show("Невірний пароль!", "Помилка"); // при неверном пароле, можно поменять на что-то получше
+                ex.HandleError();
             }
         }
 

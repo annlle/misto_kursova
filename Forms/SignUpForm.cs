@@ -14,6 +14,8 @@ using System.Xml.Linq;
 using Newtonsoft.Json;
 using kursova.Scripts;
 using kursova.Scripts.Extensions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Text.RegularExpressions;
 
 namespace kursova
 {
@@ -49,20 +51,24 @@ namespace kursova
         private void UpdateSignUpButtonState()
         {
             signUpButton.Enabled = false;
-            bool isEmailValid = usersEmailTextBox.Text.Length > 5;
-            bool isPasswordValid = usersPasswordTextBox.Text.Length > 0;
-            bool isSurnameValid = usersSurnameTextBox.Text.Length > 0;
-            bool isNameValid = usersNameTextBox.Text.Length > 0;
-            bool isPatronymValid = usersPatronymTextBox.Text.Length > 0;
-            bool isAgeValid = int.TryParse(usersAgeTextBox.Text, out _);
+            bool isEmailLabelValid = IsEmailValid() && !IsEmailOccupied();
+            bool isPasswordLabelValid = usersPasswordTextBox.Text.Length >= 8;
+            bool isSurnameLabelValid = usersSurnameTextBox.Text.Length > 0;
+            bool isNameLabelValid = usersNameTextBox.Text.Length > 0;
+            bool isPatronymLabelValid = usersPatronymTextBox.Text.Length > 0;
+            bool isAgeLabelValid = usersAgeTextBox.Text.Length > 0;
             bool radioButtonChecked = maleRadioButton.Checked || femaleRadioButton.Checked;
 
-            signUpButton.Enabled = isEmailValid && isPasswordValid && isSurnameValid && isNameValid && isPatronymValid && isAgeValid && radioButtonChecked;
+            signUpButton.Enabled = isEmailLabelValid && isPasswordLabelValid && isSurnameLabelValid && isNameLabelValid && isPatronymLabelValid && isAgeLabelValid && radioButtonChecked;
         }
 
         private async void usersEmailTextBox_TextChanged(object sender, EventArgs e)
         {
             mailCheckerLabel.Text = "";
+
+            passwordLabel.Location = new System.Drawing.Point(365, 123);
+            usersPasswordTextBox.Location = new System.Drawing.Point(368, 147);
+            passwordCheckerLabel.Location = new System.Drawing.Point(366, 169);
 
             if (timerCancellation != null && !timerCancellation.Token.IsCancellationRequested)
             {
@@ -76,9 +82,97 @@ namespace kursova
             UpdateSignUpButtonState();
         }
 
-        private void usersPasswordTextBox_TextChanged(object sender, EventArgs e)
+        private async void usersPasswordTextBox_TextChanged(object sender, EventArgs e)
         {
+            passwordCheckerLabel.Text = "";
+
+            if (timerCancellation != null && !timerCancellation.Token.IsCancellationRequested)
+            {
+                timerCancellation.Cancel();
+            }
+
+            timerCancellation = new CancellationTokenSource();
+
+            await CheckPassword(timerCancellation.Token);
+
             UpdateSignUpButtonState();
+        }
+
+        private async Task CheckMail(CancellationToken cancellationToken)
+        {
+            await Task.Delay(1000); // время перед выводом текста о проверке почты
+
+            if (cancellationToken.IsCancellationRequested)
+                return;
+
+            if (IsEmailOccupied())
+            {
+                passwordLabel.Location = new System.Drawing.Point(365, 132);
+                usersPasswordTextBox.Location = new System.Drawing.Point(368, 156);
+                passwordCheckerLabel.Location = new System.Drawing.Point(366, 178);
+                mailCheckerLabel.Text = "Пошта вже зайнята!";
+                mailCheckerLabel.ForeColor = Color.Red;
+            }
+            else if (!IsEmailValid() && usersEmailTextBox.Text.Length > 0)
+            {
+                passwordLabel.Location = new System.Drawing.Point(365, 147);
+                usersPasswordTextBox.Location = new System.Drawing.Point(368, 171);
+                passwordCheckerLabel.Location = new System.Drawing.Point(366, 193);
+                mailCheckerLabel.Text = "Пошта не підходить!\nПритримуйтесь стандарту: example@email.com";
+                mailCheckerLabel.ForeColor = Color.Red;
+            }
+        }
+
+        private bool IsEmailOccupied()
+        {
+            return User.CheckUserMail(usersEmailTextBox.Text);
+        }
+
+        private bool IsEmailValid()
+        {
+            string pattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            return Regex.IsMatch(usersEmailTextBox.Text, pattern);
+        }
+
+        private async Task CheckPassword(CancellationToken cancellationToken)
+        {
+            await Task.Delay(1000); // время перед выводом текста о проверке пароля
+
+            if (cancellationToken.IsCancellationRequested)
+                return;
+
+            if (usersPasswordTextBox.Text.Length > 0 && usersPasswordTextBox.Text.Length < 8)
+            {
+                passwordCheckerLabel.Text = "Пароль повинен бути не менше 8 символів!";
+                passwordCheckerLabel.ForeColor = Color.Red;
+            }
+            
+        }
+
+        private void usersEmailTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string pattern = @"^[a-zA-Z0-9.@]+$";
+            if (!Regex.IsMatch(e.KeyChar.ToString(), pattern) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void usersPasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string pattern = @"^[a-zA-Z0-9.,!@#$%^&*()_+{}\[\]:;<>,.?~\\-]+$";
+            if (!Regex.IsMatch(e.KeyChar.ToString(), pattern) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void usersAgeTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
         }
 
         private void usersSurnameTextBox_TextChanged(object sender, EventArgs e)
@@ -101,28 +195,19 @@ namespace kursova
             UpdateSignUpButtonState();
         }
 
-        private async Task CheckMail(CancellationToken cancellationToken)
+        private void maleRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            await Task.Delay(1000); // время перед выводом текста о проверке почты
+            UpdateSignUpButtonState();
+        }
 
-            if (cancellationToken.IsCancellationRequested)
-                return;
+        private void femaleRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateSignUpButtonState();
+        }
 
-            if (usersEmailTextBox.Text.Length < 5) // порог длины почты (если меньше 5 символов, ничего не будет написано)
-            {
-                mailCheckerLabel.Text = "";
-                return;
-            }
-            else if (User.CheckUserMail(usersEmailTextBox.Text))
-            {
-                mailCheckerLabel.Text = "Пошта вже зайнята!";
-                mailCheckerLabel.ForeColor = Color.Red;
-            }
-            else
-            {
-                mailCheckerLabel.Text = "Пошта підходить!";
-                mailCheckerLabel.ForeColor = Color.Green;
-            }
+        private void SignUpForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
