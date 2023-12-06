@@ -148,7 +148,6 @@
     <Compile Include="Scripts\RouteTile.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Scripts\Stops.cs" />
     <Compile Include="Scripts\User.cs" />
     <EmbeddedResource Include="Forms\AboutDevelopersForm.resx">
       <DependentUpon>AboutDevelopersForm.cs</DependentUpon>

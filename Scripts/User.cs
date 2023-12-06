@@ -29,7 +29,7 @@ namespace kursova.Scripts
 
         public UsersList ReadUser()
         {
-            string filePath = Path.Combine("Data", "user_test.json");
+            string filePath = Path.Combine("Data", "user.json");
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath); 
@@ -60,7 +60,7 @@ namespace kursova.Scripts
 
         public void WriteUser(User newUser, string mail, string password, string surname, string name, string patronymic, Sex sex, int age)
         {
-            string filePath = Path.Combine("Data", "user_test.json");
+            string filePath = Path.Combine("Data", "user.json");
 
             UsersList listOfUsers = ReadUser();
 
@@ -96,11 +96,12 @@ namespace kursova.Scripts
 
         public void WriteUserAppointments(Appointment appointment)
         {
-            string filePath = Path.Combine("Data", "user_test.json");
+            string filePath = Path.Combine("Data", "user.json");
 
             UsersList listOfUsers = ReadUser();
 
             User.CurrentUser.Appointments.Add(appointment);
+            User.CurrentUser.Mail = Encryptor.Decrypt(User.CurrentUser.Mail);
 
             string json = JsonConvert.SerializeObject(listOfUsers);
             File.WriteAllText(filePath, json);

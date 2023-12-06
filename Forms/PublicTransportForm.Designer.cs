@@ -80,7 +80,7 @@
             this.routePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.routePanel.Location = new System.Drawing.Point(34, 229);
             this.routePanel.Name = "routePanel";
-            this.routePanel.Size = new System.Drawing.Size(332, 295);
+            this.routePanel.Size = new System.Drawing.Size(334, 295);
             this.routePanel.TabIndex = 10;
             // 
             // routeTileTemplate
@@ -93,7 +93,7 @@
             this.routeTileTemplate.Controls.Add(this.PictureTileTemplate);
             this.routeTileTemplate.Location = new System.Drawing.Point(127, 13);
             this.routeTileTemplate.Name = "routeTileTemplate";
-            this.routeTileTemplate.Size = new System.Drawing.Size(305, 60);
+            this.routeTileTemplate.Size = new System.Drawing.Size(311, 60);
             this.routeTileTemplate.TabIndex = 11;
             this.routeTileTemplate.Visible = false;
             this.routeTileTemplate.Paint += new System.Windows.Forms.PaintEventHandler(this.RouteTile_Paint);
@@ -102,9 +102,9 @@
             // 
             this.timeTileTemplate.BackColor = System.Drawing.Color.Transparent;
             this.timeTileTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timeTileTemplate.Location = new System.Drawing.Point(230, 5);
+            this.timeTileTemplate.Location = new System.Drawing.Point(245, 5);
             this.timeTileTemplate.Name = "timeTileTemplate";
-            this.timeTileTemplate.Size = new System.Drawing.Size(70, 50);
+            this.timeTileTemplate.Size = new System.Drawing.Size(77, 50);
             this.timeTileTemplate.TabIndex = 4;
             this.timeTileTemplate.Text = "10:00\r\n20:00";
             this.timeTileTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -115,7 +115,7 @@
             this.frequencyTileTemplate.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.frequencyTileTemplate.Location = new System.Drawing.Point(125, 33);
             this.frequencyTileTemplate.Name = "frequencyTileTemplate";
-            this.frequencyTileTemplate.Size = new System.Drawing.Size(100, 22);
+            this.frequencyTileTemplate.Size = new System.Drawing.Size(127, 22);
             this.frequencyTileTemplate.TabIndex = 3;
             this.frequencyTileTemplate.Text = "Кожні 20-30 хв.";
             this.frequencyTileTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,7 +137,7 @@
             this.numberTileTemplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numberTileTemplate.Location = new System.Drawing.Point(60, 5);
             this.numberTileTemplate.Name = "numberTileTemplate";
-            this.numberTileTemplate.Size = new System.Drawing.Size(60, 50);
+            this.numberTileTemplate.Size = new System.Drawing.Size(59, 50);
             this.numberTileTemplate.TabIndex = 1;
             this.numberTileTemplate.Text = "39";
             this.numberTileTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -162,12 +162,13 @@
             this.listOfStationsLabel.Size = new System.Drawing.Size(225, 295);
             this.listOfStationsLabel.TabIndex = 12;
             this.listOfStationsLabel.Text = "Оберіть маршрут";
+            this.listOfStationsLabel.AutoSizeChanged += new System.EventHandler(this.routeTile_Click);
             // 
             // stationLabel
             // 
             this.stationLabel.BackColor = System.Drawing.Color.Transparent;
             this.stationLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stationLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.stationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.stationLabel.Location = new System.Drawing.Point(456, 194);
             this.stationLabel.Name = "stationLabel";
             this.stationLabel.Size = new System.Drawing.Size(93, 22);
@@ -181,7 +182,7 @@
             this.groupBox1.Controls.Add(this.dirNotStraightRadioButton);
             this.groupBox1.Controls.Add(this.dirStraightRadioButton);
             this.groupBox1.Controls.Add(this.dirDsntMatterRadioButton);
-            this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(29, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(120, 100);
@@ -231,7 +232,7 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.numberSearchTextBox);
-            this.groupBox2.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(164, 79);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(176, 52);
@@ -256,7 +257,7 @@
             this.groupBox3.Controls.Add(this.busRadioButton);
             this.groupBox3.Controls.Add(this.minibusRadioButton);
             this.groupBox3.Controls.Add(this.anyTypeRadioButton);
-            this.groupBox3.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.Location = new System.Drawing.Point(165, 130);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(486, 49);
@@ -330,25 +331,25 @@
             // 
             this.sortLabel.AutoSize = true;
             this.sortLabel.BackColor = System.Drawing.Color.Transparent;
-            this.sortLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sortLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sortLabel.ForeColor = System.Drawing.Color.Black;
             this.sortLabel.Location = new System.Drawing.Point(30, 197);
             this.sortLabel.Name = "sortLabel";
-            this.sortLabel.Size = new System.Drawing.Size(105, 21);
+            this.sortLabel.Size = new System.Drawing.Size(111, 20);
             this.sortLabel.TabIndex = 17;
             this.sortLabel.Text = "Сортувати за";
             // 
             // sortComboBox
             // 
-            this.sortComboBox.Font = new System.Drawing.Font("Franklin Gothic Demi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sortComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sortComboBox.FormattingEnabled = true;
             this.sortComboBox.Items.AddRange(new object[] {
             "Зростання номеру",
             "Спадання номеру",
             "Тип"});
-            this.sortComboBox.Location = new System.Drawing.Point(132, 193);
+            this.sortComboBox.Location = new System.Drawing.Point(147, 191);
             this.sortComboBox.Name = "sortComboBox";
-            this.sortComboBox.Size = new System.Drawing.Size(172, 28);
+            this.sortComboBox.Size = new System.Drawing.Size(172, 26);
             this.sortComboBox.TabIndex = 18;
             this.sortComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
