@@ -49,6 +49,7 @@
             this.femaleRadioButton = new System.Windows.Forms.RadioButton();
             this.maleRadioButton = new System.Windows.Forms.RadioButton();
             this.sexLabel = new System.Windows.Forms.Label();
+            this.passwordCheckerLabel = new System.Windows.Forms.Label();
             this.sexGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,10 +91,13 @@
             // 
             this.usersPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersPasswordTextBox.Location = new System.Drawing.Point(369, 153);
+            this.usersPasswordTextBox.MaxLength = 20;
             this.usersPasswordTextBox.Name = "usersPasswordTextBox";
+            this.usersPasswordTextBox.PasswordChar = '●';
             this.usersPasswordTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersPasswordTextBox.TabIndex = 8;
             this.usersPasswordTextBox.TextChanged += new System.EventHandler(this.usersPasswordTextBox_TextChanged);
+            this.usersPasswordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usersPasswordTextBox_KeyPress);
             // 
             // usersEmailTextBox
             // 
@@ -103,6 +107,7 @@
             this.usersEmailTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersEmailTextBox.TabIndex = 7;
             this.usersEmailTextBox.TextChanged += new System.EventHandler(this.usersEmailTextBox_TextChanged);
+            this.usersEmailTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usersEmailTextBox_KeyPress);
             // 
             // signUpLabel
             // 
@@ -190,10 +195,12 @@
             // 
             this.usersAgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersAgeTextBox.Location = new System.Drawing.Point(26, 260);
+            this.usersAgeTextBox.MaxLength = 2;
             this.usersAgeTextBox.Name = "usersAgeTextBox";
             this.usersAgeTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersAgeTextBox.TabIndex = 18;
             this.usersAgeTextBox.TextChanged += new System.EventHandler(this.usersAgeTextBox_TextChanged);
+            this.usersAgeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usersAgeTextBox_KeyPress);
             // 
             // backButton
             // 
@@ -264,6 +271,17 @@
             this.sexLabel.TabIndex = 25;
             this.sexLabel.Text = "Стать:";
             // 
+            // passwordCheckerLabel
+            // 
+            this.passwordCheckerLabel.AutoSize = true;
+            this.passwordCheckerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordCheckerLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordCheckerLabel.ForeColor = System.Drawing.Color.Green;
+            this.passwordCheckerLabel.Location = new System.Drawing.Point(366, 176);
+            this.passwordCheckerLabel.Name = "passwordCheckerLabel";
+            this.passwordCheckerLabel.Size = new System.Drawing.Size(0, 17);
+            this.passwordCheckerLabel.TabIndex = 27;
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +289,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(676, 444);
+            this.Controls.Add(this.passwordCheckerLabel);
             this.Controls.Add(this.sexLabel);
             this.Controls.Add(this.sexGroupBox);
             this.Controls.Add(this.mailCheckerLabel);
@@ -294,6 +313,7 @@
             this.Name = "SignUpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Реєстрація";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUpForm_FormClosing);
             this.sexGroupBox.ResumeLayout(false);
             this.sexGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -323,5 +343,6 @@
         private System.Windows.Forms.RadioButton femaleRadioButton;
         private System.Windows.Forms.RadioButton maleRadioButton;
         private System.Windows.Forms.Label sexLabel;
+        private System.Windows.Forms.Label passwordCheckerLabel;
     }
 }
