@@ -17,7 +17,7 @@ namespace kursova
 {
     public partial class SafetyForm : Form
     {
-        List<Event> events;
+        List<Event> events = new List<Event>();
         int totalSectors = 4;
         List<Panel> dangerSectors = new List<Panel>();
         List<Color> dangerColors = new List<Color>
@@ -52,35 +52,41 @@ namespace kursova
             foreach (var eventType in EventTranslations.UkrainianTranslations)
                 typeComboBox.Items.Add(eventType.Value);
 
-            events = new List<Event> 
+            // этот список случайных адресов должен браться из файла
+            List<Location> randomLocations = new List<Location>
             {
-                new Event
-                {
-                    EventType = EventType.Fire,
-                    Location = new Location("Запоріжжя, вул. Чумаченка, 15"),
-                    DangerLevel = 0
-                },
-                new Event
-                {
-                    EventType = EventType.Robbery,
-                    Location = new Location("Запоріжжя, вул. Світла, 17"),
-                    DangerLevel = 1
-                },
-                new Event
-                {
-                    EventType = EventType.Attack,
-                    Location = new Location("Запоріжжя, вул. Чумаченка, 15"),
-                    DangerLevel = 2
-                },
-                new Event
-                {
-                    EventType = EventType.Vandalism,
-                    Location = new Location("Запоріжжя, вул. Світла, 17"),
-                    DangerLevel = 3
-                }
+                new Location("Запоріжжя Чумаченка 15"),
+                new Location("Запоріжжя Світла 10"),
+                new Location("Запоріжжя Парамонова 8"),
+                new Location("Запоріжжя Північнокільцева 25"),
+                new Location("Запоріжжя Козака Бабури 3"),
+                new Location("Запоріжжя Миру 14а"),
+                new Location("Запоріжжя Перемоги 33"),
+                new Location("Запоріжжя Бульвар Шевченка 7")
             };
 
+            Random random = new Random();
+
+            GenerateRandomEvents(random.Next(3, 11), randomLocations);
+
             RenderEventPanel();
+        }
+
+        private void GenerateRandomEvents(int quantity, List<Location> randomLocations)
+        {
+            Random random = new Random();
+
+            for (int i = 0; i < quantity; i++)
+            {
+                Event newEvent = new Event
+                {
+                    EventType = (EventType)Enum.ToObject(typeof(EventType), random.Next(Convert.ToInt32(EventType.Other) + 1)),
+                    Location = randomLocations[random.Next(randomLocations.Count)],
+                    DangerLevel = random.Next(0, 4)
+                };
+
+                events.Add(newEvent);
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)
