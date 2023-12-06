@@ -46,7 +46,7 @@
             this.attractionPictureBox.Location = new System.Drawing.Point(383, 103);
             this.attractionPictureBox.Name = "attractionPictureBox";
             this.attractionPictureBox.Size = new System.Drawing.Size(394, 302);
-            this.attractionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.attractionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.attractionPictureBox.TabIndex = 0;
             this.attractionPictureBox.TabStop = false;
             // 
@@ -77,10 +77,10 @@
             // 
             this.sightLabel.AutoSize = true;
             this.sightLabel.BackColor = System.Drawing.Color.Transparent;
-            this.sightLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sightLabel.Location = new System.Drawing.Point(219, 44);
             this.sightLabel.Name = "sightLabel";
-            this.sightLabel.Size = new System.Drawing.Size(158, 24);
+            this.sightLabel.Size = new System.Drawing.Size(169, 24);
             this.sightLabel.TabIndex = 3;
             this.sightLabel.Text = "Оберіть пам\'ятку:";
             // 
