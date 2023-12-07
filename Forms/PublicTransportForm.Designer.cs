@@ -37,7 +37,6 @@
             this.directionTileTemplate = new System.Windows.Forms.Label();
             this.numberTileTemplate = new System.Windows.Forms.Label();
             this.PictureTileTemplate = new System.Windows.Forms.PictureBox();
-            this.listOfStationsLabel = new System.Windows.Forms.Label();
             this.stationLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dirNotStraightRadioButton = new System.Windows.Forms.RadioButton();
@@ -53,6 +52,7 @@
             this.anyTypeRadioButton = new System.Windows.Forms.RadioButton();
             this.sortLabel = new System.Windows.Forms.Label();
             this.sortComboBox = new System.Windows.Forms.ComboBox();
+            this.listOfStationsListBox = new System.Windows.Forms.ListBox();
             this.routeTileTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureTileTemplate)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -80,7 +80,7 @@
             this.routePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.routePanel.Location = new System.Drawing.Point(34, 229);
             this.routePanel.Name = "routePanel";
-            this.routePanel.Size = new System.Drawing.Size(332, 295);
+            this.routePanel.Size = new System.Drawing.Size(332, 298);
             this.routePanel.TabIndex = 10;
             // 
             // routeTileTemplate
@@ -150,17 +150,6 @@
             this.PictureTileTemplate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureTileTemplate.TabIndex = 0;
             this.PictureTileTemplate.TabStop = false;
-            // 
-            // listOfStationsLabel
-            // 
-            this.listOfStationsLabel.BackColor = System.Drawing.Color.White;
-            this.listOfStationsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.listOfStationsLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listOfStationsLabel.Location = new System.Drawing.Point(389, 229);
-            this.listOfStationsLabel.Name = "listOfStationsLabel";
-            this.listOfStationsLabel.Size = new System.Drawing.Size(225, 295);
-            this.listOfStationsLabel.TabIndex = 12;
-            this.listOfStationsLabel.Text = "Оберіть маршрут";
             // 
             // stationLabel
             // 
@@ -351,6 +340,17 @@
             this.sortComboBox.TabIndex = 18;
             this.sortComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // listOfStationsListBox
+            // 
+            this.listOfStationsListBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.listOfStationsListBox.FormattingEnabled = true;
+            this.listOfStationsListBox.ItemHeight = 21;
+            this.listOfStationsListBox.Location = new System.Drawing.Point(390, 229);
+            this.listOfStationsListBox.Name = "listOfStationsListBox";
+            this.listOfStationsListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.listOfStationsListBox.Size = new System.Drawing.Size(225, 298);
+            this.listOfStationsListBox.TabIndex = 19;
+            // 
             // PublicTransportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,11 +358,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(662, 561);
+            this.Controls.Add(this.listOfStationsListBox);
             this.Controls.Add(this.sortComboBox);
             this.Controls.Add(this.sortLabel);
             this.Controls.Add(this.stationLabel);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.listOfStationsLabel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.routeTileTemplate);
@@ -396,7 +396,6 @@
         private System.Windows.Forms.Label directionTileTemplate;
         private System.Windows.Forms.Label timeTileTemplate;
         private System.Windows.Forms.Label frequencyTileTemplate;
-        private System.Windows.Forms.Label listOfStationsLabel;
         private System.Windows.Forms.Label stationLabel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton dirNotStraightRadioButton;
@@ -412,5 +411,6 @@
         private System.Windows.Forms.RadioButton busRadioButton;
         private System.Windows.Forms.Label sortLabel;
         private System.Windows.Forms.ComboBox sortComboBox;
+        private System.Windows.Forms.ListBox listOfStationsListBox;
     }
 }

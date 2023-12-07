@@ -119,7 +119,7 @@ namespace kursova
 
         private void routeTile_Click(object sender, EventArgs e)
         {
-            listOfStationsLabel.Text = "";
+            listOfStationsListBox.Items.Clear();
 
             RouteTile routeTile = sender as RouteTile;
 
@@ -141,7 +141,7 @@ namespace kursova
 
             foreach (var stop in routeTile.Route.Stops)
             {
-                listOfStationsLabel.Text += stop + '\n';
+                listOfStationsListBox.Items.Add(stop);
             }
         }
 

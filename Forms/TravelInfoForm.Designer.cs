@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TravelInfoForm));
             this.attractionPictureBox = new System.Windows.Forms.PictureBox();
-            this.attractionTextLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.sightLabel = new System.Windows.Forms.Label();
             this.attractionsComboBox = new System.Windows.Forms.ComboBox();
             this.locationLinkPictureBox = new System.Windows.Forms.PictureBox();
+            this.attractionRichTextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.attractionPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -49,16 +49,6 @@
             this.attractionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.attractionPictureBox.TabIndex = 0;
             this.attractionPictureBox.TabStop = false;
-            // 
-            // attractionTextLabel
-            // 
-            this.attractionTextLabel.BackColor = System.Drawing.Color.White;
-            this.attractionTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.attractionTextLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.attractionTextLabel.Location = new System.Drawing.Point(12, 103);
-            this.attractionTextLabel.Name = "attractionTextLabel";
-            this.attractionTextLabel.Size = new System.Drawing.Size(355, 302);
-            this.attractionTextLabel.TabIndex = 1;
             // 
             // button1
             // 
@@ -107,6 +97,16 @@
             this.locationLinkPictureBox.TabStop = false;
             this.locationLinkPictureBox.Click += new System.EventHandler(this.locationLinkPictureBox_Click);
             // 
+            // attractionRichTextBox
+            // 
+            this.attractionRichTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.attractionRichTextBox.Location = new System.Drawing.Point(12, 103);
+            this.attractionRichTextBox.Name = "attractionRichTextBox";
+            this.attractionRichTextBox.ReadOnly = true;
+            this.attractionRichTextBox.Size = new System.Drawing.Size(353, 302);
+            this.attractionRichTextBox.TabIndex = 24;
+            this.attractionRichTextBox.Text = "";
+            // 
             // TravelInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,11 +114,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.attractionRichTextBox);
             this.Controls.Add(this.locationLinkPictureBox);
             this.Controls.Add(this.attractionsComboBox);
             this.Controls.Add(this.sightLabel);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.attractionTextLabel);
             this.Controls.Add(this.attractionPictureBox);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -136,10 +136,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox attractionPictureBox;
-        private System.Windows.Forms.Label attractionTextLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label sightLabel;
         private System.Windows.Forms.ComboBox attractionsComboBox;
         private System.Windows.Forms.PictureBox locationLinkPictureBox;
+        private System.Windows.Forms.RichTextBox attractionRichTextBox;
     }
 }

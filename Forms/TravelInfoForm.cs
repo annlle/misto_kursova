@@ -68,7 +68,7 @@ namespace kursova
 
         private void attractionsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            attractionTextLabel.Text = "";
+            attractionRichTextBox.Text = "";
             attractionPictureBox.Image = null;
 
             string attractionName = attractionsComboBox.SelectedItem.ToString();
@@ -77,7 +77,7 @@ namespace kursova
             if (attraction == null)
                 return;
 
-            attractionTextLabel.Text = attraction.Description;
+            attractionRichTextBox.Text = attraction.Description;
             attractionPictureBox.Image = attraction.Image;
         }
 
