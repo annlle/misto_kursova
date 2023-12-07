@@ -45,18 +45,8 @@ namespace kursova
             foreach (var eventType in EventTranslations.UkrainianTranslations)
                 typeComboBox.Items.Add(eventType.Value);
 
-            // этот список случайных адресов должен браться из файла
-            List<Location> randomLocations = new List<Location>
-            {
-                new Location("Запоріжжя Чумаченка 15"),
-                new Location("Запоріжжя Світла 10"),
-                new Location("Запоріжжя Парамонова 8"),
-                new Location("Запоріжжя Північнокільцева 25"),
-                new Location("Запоріжжя Козака Бабури 3"),
-                new Location("Запоріжжя Миру 14а"),
-                new Location("Запоріжжя Перемоги 33"),
-                new Location("Запоріжжя Бульвар Шевченка 7")
-            };
+            // этот список случайных адресов берется из файла
+            List<Location> randomLocations = Event.ReadAddress();
 
             Random random = new Random();
 
