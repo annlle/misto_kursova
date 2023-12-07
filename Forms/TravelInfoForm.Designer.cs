@@ -125,6 +125,7 @@
             this.Name = "TravelInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Туристична інформація";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TravelInfoForm_FormClosed);
             this.Load += new System.EventHandler(this.TravelInfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.attractionPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkPictureBox)).EndInit();

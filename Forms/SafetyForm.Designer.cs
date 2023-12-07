@@ -266,6 +266,7 @@
             this.Name = "SafetyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Громадянська безпека";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SafetyForm_FormClosed);
             this.Load += new System.EventHandler(this.SafetyForm_Load);
             this.eventTileTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkTileTemplate)).EndInit();

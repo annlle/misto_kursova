@@ -204,5 +204,10 @@ namespace kursova
                 hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[5];
             }
         }
+
+        private void HospitalForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

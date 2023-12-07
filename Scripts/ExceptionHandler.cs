@@ -13,7 +13,6 @@ namespace kursova.Scripts
         {
             FileNotFound,
             FormNotFound,
-            InvalidEmail,
             InvalidPassword,
             UnknownError
             // Буду добавлять по необходимости
@@ -33,20 +32,17 @@ namespace kursova.Scripts
             switch (Type)
             {
                 case ErrorType.FileNotFound:
-                    MessageBox.Show($"Помилка! Відсутній файл. {ErrorDetails}", "Помилка!");
+                    MessageBox.Show($"Помилка! Відсутній файл. {ErrorDetails}", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case ErrorType.FormNotFound:
-                    MessageBox.Show($"Помилка завантаження вікна! {ErrorDetails}", "Помилка!");
-                    break;
-                case ErrorType.InvalidEmail:
-                    MessageBox.Show($"Помилка при введені пошти! {ErrorDetails}", "Помилка!");
+                    MessageBox.Show($"Помилка завантаження вікна! {ErrorDetails}", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case ErrorType.InvalidPassword:
-                    MessageBox.Show($"Невірний пароль! {ErrorDetails}", "Помилка!");
+                    MessageBox.Show($"Невірний пароль! {ErrorDetails}", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 // Буду добавлять по необходимости
                 default:
-                    MessageBox.Show($"Невідома помилка! {ErrorDetails}", "Помилка!");
+                    MessageBox.Show($"Невідома помилка! {ErrorDetails}", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
         }

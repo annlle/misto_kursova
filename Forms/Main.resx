@@ -731,7 +731,7 @@
   <data name="travelInfoButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAI4pSURBVHhe7d0F
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAI4pSURBVHhe7d0F
         eBTX+j/wuBAPRIBggQBBEkggIQR3d7fi7lKKa3GHogUKlFKgpUCpQaGFuru7l7bUe+u8//fs/XH/lH5h
         Z3dmdmd23+/zfJ7n3gK7O2dmz3t25JwAiUQikRiWmmw+e4h9zn5lJCxH7Zcv2Fm2mNVigUwikUgkEs0J
         YcPZ+wwVG2EPH7NxLIxJJBKJRHLNNGdvMFRQhD29y9oziUQikUhg1K/+PxkqIsLeLrJlLIhJJBKJROKI
@@ -1853,7 +1853,7 @@
   <data name="profileButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAKk+SURBVHhe7d0H
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAKk+SURBVHhe7d0H
         lBRV1gdwJjAMQxhgSEPOOcOQ45BzzjnnnJMkEQwkRREDKogCCipIFslRzBFFlF13TavuGndd9X33tgvf
         AH/oV6m7qvrec37n6DDTXf3eq7qvq15IJyEh4fqIJcmkMmlOupMRZAa5gzxAniLPk4PkBDlPLpCPybfX
         +ZGo6/DPrv89/lt+DX4tfk1+bX6PzeR+spTwMfCx8DE1I5UIHysfs4SEhISEhMRNIhepStqTcWQ52URe

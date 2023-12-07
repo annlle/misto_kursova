@@ -373,6 +373,7 @@
             this.Name = "PublicTransportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Громадський транспорт";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PublicTransportForm_FormClosed);
             this.Load += new System.EventHandler(this.PublicTransportForm_Load);
             this.routeTileTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureTileTemplate)).EndInit();
