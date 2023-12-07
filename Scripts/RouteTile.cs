@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kursova.Scripts.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -9,7 +10,7 @@ using System.Windows.Forms;
 
 namespace kursova.Scripts
 {
-    public class RouteTile : Panel
+    public class RouteTile : Tile
     {
         public Label Number { get; private set;}
         public Label Direction { get; private set;}
@@ -94,6 +95,17 @@ namespace kursova.Scripts
                 Cursor = Cursors.Hand
             };
             this.Controls.Add(TypePicture);
+        }
+
+        public override void PaintTile(Graphics g)
+        {
+            Brush brush = new SolidBrush(Color.White);
+
+            int width = this.Width;
+            int height = this.Height;
+            int cornerRadius = 10;
+
+            FillRoundedBackground(g, brush, cornerRadius * 2);
         }
     }
 }

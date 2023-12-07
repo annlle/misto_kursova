@@ -99,9 +99,9 @@ namespace kursova
                     continue;
                 }
 
-                RouteTile newTile = new RouteTile(routeTileTemplate, numberTileTemplate, directionTileTemplate, frequencyTileTemplate, timeTileTemplate, PictureTileTemplate, route);
+                Tile newTile = new RouteTile(routeTileTemplate, numberTileTemplate, directionTileTemplate, frequencyTileTemplate, timeTileTemplate, PictureTileTemplate, route);
                 newTile.Location = new Point(0, routePanel.Controls.Count * 65);
-                newTile.Paint += RouteTile_Paint;
+                newTile.Paint += newTile.Tile_Paint;
                 newTile.Click += routeTile_Click;
                 foreach (Control control in newTile.Controls)
                 {
@@ -150,18 +150,6 @@ namespace kursova
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
-        }
-
-        private void RouteTile_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Brush brush = new SolidBrush(Color.White);
-
-            int width = routeTileTemplate.Width;
-            int height = routeTileTemplate.Height;
-            int cornerRadius = 10;
-
-            GraphicsHelper.FillRoundedBackground(g, brush, width, height, cornerRadius * 2);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

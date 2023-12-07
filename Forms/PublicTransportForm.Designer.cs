@@ -96,7 +96,6 @@
             this.routeTileTemplate.Size = new System.Drawing.Size(305, 60);
             this.routeTileTemplate.TabIndex = 11;
             this.routeTileTemplate.Visible = false;
-            this.routeTileTemplate.Paint += new System.Windows.Forms.PaintEventHandler(this.RouteTile_Paint);
             // 
             // timeTileTemplate
             // 
