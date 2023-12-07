@@ -32,7 +32,7 @@ namespace kursova.Scripts
             string filePath = Path.Combine("Data", "user.json");
             if (File.Exists(filePath))
             {
-                string json = File.ReadAllText(filePath); 
+                string json = File.ReadAllText(filePath);
                 UsersList listOfUsers = JsonConvert.DeserializeObject<UsersList>(json);
 
                 if (listOfUsers != null && listOfUsers.Users != null)

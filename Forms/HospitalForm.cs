@@ -33,64 +33,7 @@ namespace kursova
             appointmentDatePicker.MaxDate = DateTime.Now.AddMonths(1);
             appointmentDatePicker.Value = DateTime.Now;
 
-            hospitals = new List<Hospital>
-            {
-                new Hospital
-                {
-                    Name = "Лікарня А",
-                    Doctors = new List<Doctor>
-                    {
-                        new Doctor { Name = "Др. Сміт", Sex = Sex.Male, Specialization = "Кардіолог" },
-                        new Doctor { Name = "Др. Джонсон", Sex = Sex.Female, Specialization = "Ортопедічний хірург" }
-                    },
-                    Location = new Location("Місто А"),
-                    PhoneNumber = "123-456-7890"
-                },
-                new Hospital
-                {
-                    Name = "Лікарня Б",
-                    Doctors = new List<Doctor>
-                    {
-                        new Doctor { Name = "Др. Коваль", Sex = Sex.Female, Specialization = "Педіатр" },
-                        new Doctor { Name = "Др. Петренко", Sex = Sex.Male, Specialization = "Хірург" }
-                    },
-                    Location = new Location("Місто Б"),
-                    PhoneNumber = "987-654-3210"
-                },
-                new Hospital
-                {
-                    Name = "Лікарня В",
-                    Doctors = new List<Doctor>
-                    {
-                        new Doctor { Name = "Др. Іванова", Sex = Sex.Female, Specialization = "Офтальмолог" },
-                        new Doctor { Name = "Др. Сидорова", Sex = Sex.Female, Specialization = "Терапевт" }
-                    },
-                    Location = new Location("Місто В"),
-                    PhoneNumber = "555-123-4567"
-                },
-                new Hospital
-                {
-                    Name = "Лікарня Г",
-                    Doctors = new List<Doctor>
-                    {
-                        new Doctor { Name = "Др. Петров", Sex = Sex.Male, Specialization = "Невролог" },
-                        new Doctor { Name = "Др. Соловей", Sex = Sex.Male, Specialization = "Хірург" }
-                    },
-                    Location = new Location("Місто Г"),
-                    PhoneNumber = "777-321-6540"
-                },
-                new Hospital
-                {
-                    Name = "Лікарня Д",
-                    Doctors = new List<Doctor>
-                    {
-                        new Doctor { Name = "Др. Ткачук", Sex = Sex.Male, Specialization = "Гінеколог" },
-                        new Doctor { Name = "Др. Шевченко", Sex = Sex.Female, Specialization = "Пульмонолог" }
-                    },
-                    Location = new Location("Місто Д"),
-                    PhoneNumber = "333-999-8888"
-                }
-            };
+            hospitals = new Hospital().ReadHospital();
 
             sortComboBox.SelectedIndex = 0;
         }
@@ -164,44 +107,62 @@ namespace kursova
 
             foreach (var hospital in hospitals)
             {
-                hospitalsListView.Items.Add(hospital.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[0];
+                if (hospital.Area == "Вознесенівський")
+                {
+                    hospitalsListView.Items.Add(hospital.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[0];
+                }
             }
 
             foreach (var hospital in hospitals)
             {
-                hospitalsListView.Items.Add(hospital.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[1];
+                if (hospital.Area == "Дніпровський")
+                {
+                    hospitalsListView.Items.Add(hospital.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[1];
+                }
             }
 
             foreach (var hospital in hospitals)
             {
-                hospitalsListView.Items.Add(hospital.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[2];
+                if (hospital.Area == "Заводський")
+                {
+                    hospitalsListView.Items.Add(hospital.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[2];
+                }
             }
 
             foreach (var hospital in hospitals)
             {
-                hospitalsListView.Items.Add(hospital.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[3];
+                if (hospital.Area == "Комунарський")
+                {
+                    hospitalsListView.Items.Add(hospital.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[3];
+                }
             }
 
             foreach (var hospital in hospitals)
             {
-                hospitalsListView.Items.Add(hospital.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[4];
+                if (hospital.Area == "Олександровський")
+                {
+                    hospitalsListView.Items.Add(hospital.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[4];
+                }                
             }
 
             foreach (var hospital in hospitals)
             {
-                hospitalsListView.Items.Add(hospital.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
-                hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[5];
+                if (hospital.Area == "Хортицький")
+                {
+                    hospitalsListView.Items.Add(hospital.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
+                    hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[5];
+                }                
             }
         }
     }
