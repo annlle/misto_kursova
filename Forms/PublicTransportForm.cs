@@ -25,58 +25,7 @@ namespace kursova
         {
             routePanel.VerticalScroll.SmallChange = 20;
 
-            // Тестовый список
-            StopReader stopReader = new StopReader();
-            List<Stops> stops = stopReader.ReadStop("Data/stop.xml");
-            routes = new List<Route>
-            {
-                new Route
-                {
-                    RouteNumber = 14,
-                    TypeOfTransport = TypeOfTransport.minibus,
-                    StraightDirection = true,
-                    Stops = stops[0].Name,
-                    Time = new Tuple<string, string>("06:00", "22:30"),
-                    Frequency = "Кожні 15-20 хв."
-                },
-                new Route
-                {
-                    RouteNumber = 5,
-                    TypeOfTransport = TypeOfTransport.trolleybus,
-                    StraightDirection = false,
-                    Stops = stops[1].Name,
-                    Time = new Tuple<string, string>("05:30", "21:45"),
-                    Frequency = "Кожні 20-25 хв."
-                },
-                new Route
-                {
-                    RouteNumber = 1,
-                    TypeOfTransport = TypeOfTransport.tram,
-                    StraightDirection = true,
-                    Stops = stops[2].Name,
-                    Time = new Tuple<string, string>("07:15", "23:00"),
-                    Frequency = "Кожні 25-30 хв."
-                },
-                new Route
-                {
-                    RouteNumber = 23,
-                    TypeOfTransport = TypeOfTransport.bus,
-                    StraightDirection = false,
-                    Stops = stops[3].Name,
-                    Time = new Tuple<string, string>("06:45", "22:15"),
-                    Frequency = "Кожні 18-20 хв."
-                },
-                new Route
-                {
-                    RouteNumber = 9,
-                    TypeOfTransport = TypeOfTransport.minibus,
-                    StraightDirection = true,
-                    Stops = stops[4].Name,
-                    Time = new Tuple<string, string>("07:30", "21:00"),
-                    Frequency = "Кожні 15-18 хв."
-                },
-            };
-
+            routes = Route.ReadRoutes();
             sortComboBox.SelectedIndex = 0;
         }
 

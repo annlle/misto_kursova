@@ -1,0 +1,320 @@
+<Routes>
+  <Route>
+    <RouteNumber>5</RouteNumber>
+    <TypeOfTransport>minibus</TypeOfTransport>
+    <StraightDirection>true</StraightDirection>
+    <Stops>
+      <Name>Вулиця Олімпійська</Name>
+      <Name>Вулиця Європейська</Name>
+      <Name>Сквер Гагарина</Name>
+      <Name>Вулиця Ситова</Name>
+      <Name>Клініка "Візус"</Name>
+      <Name>Вулиця Рязанська</Name>
+      <Name>Школа №88</Name>
+      <Name>Вулиця Юності</Name>
+      <Name>Вулиця Молочна</Name>
+      <Name>Селище Мокрянка</Name>
+      <Name>М'ясокомбінат</Name>
+      <Name>Цегляний завод</Name>
+      <Name>Овочева база</Name>
+    </Stops>
+    <Time>
+      <StartTime>6:00</StartTime>
+      <EndTime>22:30</EndTime>
+    </Time>
+    <Frequency>Кожні 15-20 хв.</Frequency>
+  </Route>
+  <Route>
+    <RouteNumber>40</RouteNumber>
+    <TypeOfTransport>minibus</TypeOfTransport>
+    <StraightDirection>true</StraightDirection>
+    <Stops>
+      <Name>Обласна лікарня</Name>
+      <Name>Вулиця Східна</Name>
+      <Name>Клініка "Візус"</Name>
+      <Name>Вулиця Радіо</Name>
+      <Name>Вулиця Оранжерейна</Name>
+      <Name>Школа №70</Name>
+      <Name>Автовокзал</Name>
+      <Name>Вулиця Базарна</Name>
+      <Name>Театр ім. Магара</Name>
+      <Name>Майдан Університетський</Name>
+      <Name>Обласна Бібліотека</Name>
+      <Name>Майдан Вернадського</Name>
+      <Name>Вулиця Гагаріна</Name>
+      <Name>Площа Фестивальна</Name>
+      <Name>ТЦ "Україна"</Name>
+      <Name>Вулиця Сталеварів</Name>
+      <Name>Вулиця Миру</Name>
+      <Name>Бульвар Шевченка</Name>
+      <Name>Проспект Металургів</Name>
+      <Name>Концертна зала ім. Глінки</Name>
+      <Name>Площа Запорізька</Name>
+    </Stops>
+    <Time>
+      <StartTime>7:00</StartTime>
+      <EndTime>22:00</EndTime>
+    </Time>
+    <Frequency>Кожні 10-15 хв.</Frequency>
+  </Route>
+  <Route>
+    <RouteNumber>85</RouteNumber>
+    <TypeOfTransport>minibus</TypeOfTransport>
+    <StraightDirection>false</StraightDirection>
+    <Stops>
+      <Name>Вулиця Чумаченко</Name>
+      <Name>Гімназія №6</Name>
+      <Name>Вулиця Європейська</Name>
+      <Name>Вулиця Висотна</Name>
+      <Name>Інститут ім. гетьмана Сагайдачного</Name>
+      <Name>Вулиця Олександра Говорухи</Name>
+      <Name>Вулиця Радіо</Name>
+      <Name>Вулиця Оранжерейна</Name>
+      <Name>Школа №70</Name>
+      <Name>Автовокзал</Name>
+      <Name>Вулиця Базарна</Name>
+      <Name>Театр ім. Магара</Name>
+      <Name>Майдан Університетський</Name>
+      <Name>Обласна Бібліотека</Name>
+      <Name>Майдан Вернадського</Name>
+      <Name>Вулиця Гагаріна</Name>
+      <Name>Площа Фестивальна</Name>
+      <Name>ТЦ "Україна"</Name>
+      <Name>Вулиця Сталеварів</Name>
+      <Name>Вулиця Миру</Name>
+      <Name>Бульвар Шевченка</Name>
+      <Name>Вулиця Патріотична</Name>
+      <Name>Вулиця Перемоги</Name>
+      <Name>Бульвар Гвардійський</Name>
+      <Name>Набережна</Name>
+    </Stops>
+    <Time>
+      <StartTime>6:00</StartTime>
+      <EndTime>22:40</EndTime>
+    </Time>
+    <Frequency>Кожні 10-20 хв.</Frequency>
+  </Route>
+  <Route>
+    <RouteNumber>12</RouteNumber>
+    <TypeOfTransport>tram</TypeOfTransport>
+    <StraightDirection>false</StraightDirection>
+    <Stops>
+      <Name>Кільце "Зелений Яр"</Name>
+      <Name>Вулиця Шевченка</Name>
+      <Name>Вулиця Звільнена</Name>
+      <Name>Ботанічний сад</Name>
+      <Name>Іванова</Name>
+      <Name>Андріївський собор</Name>
+      <Name>Центральна прохідна</Name>
+      <Name>Парк ім. Клімова</Name>
+      <Name>Вулиця Ф. Мовчанського</Name>
+      <Name>Міськпаливо</Name>
+      <Name>Вулиця Жуковського</Name>
+      <Name>Ринок "Європейський"</Name>
+      <Name>Вулиця Троїцька</Name>
+      <Name>Університет</Name>
+    </Stops>
+    <Time>
+      <StartTime>5:50</StartTime>
+      <EndTime>22:00</EndTime>
+    </Time>
+    <Frequency>Кожні 20-30 хв.</Frequency>
+  </Route>
+  <Route>
+    <RouteNumber>16</RouteNumber>
+    <TypeOfTransport>tram</TypeOfTransport>
+    <StraightDirection>true</StraightDirection>
+    <Stops>
+      <Name>Залізничний вокзал "Запоріжжя-1"</Name>
+      <Name>Автовокзал</Name>
+      <Name>Площа Соборна</Name>
+      <Name>Вулиця Троїцька</Name>
+      <Name>Майдан Волі</Name>
+      <Name>Вулиця Перша ливарна</Name>
+      <Name>Вулиця Фортечна</Name>
+      <Name>Малий ринок</Name>
+      <Name>Майдан Вернадського</Name>
+      <Name>Вулиця Шкільна</Name>
+      <Name>Парк Перемоги</Name>
+      <Name>Бульвар Центральний</Name>
+      <Name>Вулиця Патріотична</Name>
+      <Name>Вулиця Якова Новицького</Name>
+      <Name>ТЦ "Україна"</Name>
+      <Name>Запоріжцирк</Name>
+      <Name>Вулиця Заводська</Name>
+      <Name>Вулиця Діагональна</Name>
+      <Name>Завод "Склофлюсів"</Name>
+      <Name>Завод Феросплавів</Name>
+      <Name>Автоколона</Name>
+      <Name>Шлаковий кар'єр</Name>
+      <Name>Запорізький Ливарно-механічний завод</Name>
+      <Name>Шлакоблочний завод</Name>
+      <Name>ПрАТ "Запоріжвогнетрив"</Name>
+      <Name>Вулиця Глазунова</Name>
+      <Name>БК "Заводський"</Name>
+      <Name>Вулиця Фільтрова</Name>
+      <Name>Вулиця Молодіжна</Name>
+      <Name>Вулиця Лізи Чайкіної</Name>
+      <Name>Вулиця Вроцлавська</Name>
+      <Name>Павло-Кічкас</Name>
+    </Stops>
+    <Time>
+      <StartTime>5:30</StartTime>
+      <EndTime>22:20</EndTime>
+    </Time>
+    <Frequency>Кожні 15-40 хв.</Frequency>
+  </Route>
+  <Route>
+    <RouteNumber>17</RouteNumber>
+    <TypeOfTransport>trolleybus</TypeOfTransport>
+    <StraightDirection>false</StraightDirection>
+    <Stops>
+      <Name>Вулиця Сєдова</Name>
+      <Name>Вознесенська райадміністрація</Name>
+      <Name>Медичний центр</Name>
+      <Name>Майдан Профспілок</Name>
+      <Name>Вулиця Якова Новицького</Name>
+      <Name>ТЦ "Україна"</Name>
+      <Name>Вулиця Сталеварів</Name>
+      <Name>Вулиця Миру</Name>
+      <Name>Бульвар Шевченка</Name>
+      <Name>Площа Олександра Поляка</Name>
+      <Name>"Металургів"</Name>
+      <Name>Концертна зала ім. Глінки</Name>
+      <Name>Площа Запорізька</Name>
+      <Name>ДніпроГЕС</Name>
+      <Name>Вулиця Каховська</Name>
+      <Name>Вулиця Ладозька</Name>
+      <Name>Вулиця Бородинська</Name>
+      <Name>Школа №96</Name>
+      <Name>Вулиця Професора Толока</Name>
+      <Name>Вулиця Товариська</Name>
+    </Stops>
+    <Time>
+      <StartTime>6:40</StartTime>
+      <EndTime>22:00</EndTime>
+    </Time>
+    <Frequency>Кожні 45-100 хв.</Frequency>
+  </Route>
+  <Route>
+    <RouteNumber>9</RouteNumber>
+    <TypeOfTransport>trolleybus</TypeOfTransport>
+    <StraightDirection>true</StraightDirection>
+    <Stops>
+      <Name>Вулиця Сєдова</Name>
+      <Name>Вулиця Нахімова</Name>
+      <Name>Технічне учілище</Name>
+      <Name>Управління поліції</Name>
+      <Name>Вулиця Кам'яногірська</Name>
+      <Name>БК "Титан"</Name>
+      <Name>Вулиця Яценка</Name>
+      <Name>Міська лікарня №5</Name>
+      <Name>Інститут</Name>
+      <Name>Магазин "Ластівка"</Name>
+      <Name>Вознесенський ринок</Name>
+      <Name>Козак-палац</Name>
+      <Name>Вулиця Лермонтова</Name>
+      <Name>Міська лікарня №6</Name>
+      <Name>Вулиця Нижньодніпровська</Name>
+      <Name>Бульвар Шевченка</Name>
+      <Name>ТЦ "Хортиця"</Name>
+      <Name>Вулиця Тюленіна</Name>
+      <Name>Вулиця Богдана Хмельницького</Name>
+      <Name>Проспект Металургів</Name>
+      <Name>БК "ЗАлК"</Name>
+    </Stops>
+    <Time>
+      <StartTime>6:00</StartTime>
+      <EndTime>21:30</EndTime>
+    </Time>
+    <Frequency>Кожні 30-60 хв.</Frequency>
+  </Route>
+  <Route>
+    <RouteNumber>7</RouteNumber>
+    <TypeOfTransport>bus</TypeOfTransport>
+    <StraightDirection>true</StraightDirection>
+    <Stops>
+      <Name>Вулиця Базарна</Name>
+      <Name>Автовокзал</Name>
+      <Name>Вулиця Осипенка</Name>
+      <Name>Вулиця Зорепадна</Name>
+      <Name>Кінотеатр "Першотравневий"</Name>
+      <Name>Вулиця Саперна</Name>
+      <Name>Вулиця Стратосферна</Name>
+    </Stops>
+    <Time>
+      <StartTime>6:20</StartTime>
+      <EndTime>19:15</EndTime>
+    </Time>
+    <Frequency>Кожні 90-95 хв.</Frequency>
+  </Route>
+  <Route>
+    <RouteNumber>29</RouteNumber>
+    <TypeOfTransport>bus</TypeOfTransport>
+    <StraightDirection>false</StraightDirection>
+    <Stops>
+      <Name>4-й Південний мікрорайон</Name>
+      <Name>Вулиця Новокузнецька</Name>
+      <Name>Вулиця Автозаводська</Name>
+      <Name>Дитяча залізниця</Name>
+      <Name>Залізничний вокзал "Запоріжжя-1"</Name>
+      <Name>Автовокзал</Name>
+      <Name>Вулиця Базарна</Name>
+      <Name>Театр ім. Магара</Name>
+      <Name>Майдан Університетський</Name>
+      <Name>Обласна бібліотека</Name>
+      <Name>Майдан Вернадського</Name>
+      <Name>Вулиця Гагаріна</Name>
+      <Name>Площа Фестивальна</Name>
+      <Name>ТЦ "Україна"</Name>
+      <Name>Вулиця Сталеварів</Name>
+      <Name>Вулиця Миру</Name>
+      <Name>Бульвар Шевченка</Name>
+      <Name>Площа Олександра Поляка</Name>
+      <Name>Проспект Металургів</Name>
+      <Name>БК "ЗАлК"</Name>
+      <Name>Вулиця Макаренка</Name>
+      <Name>ДЕЗ (Завод "Укрграфіт")</Name>
+      <Name>Гаражний кооператив</Name>
+      <Name>Вулиця Футбольна</Name>
+      <Name>Вулиця Демократична</Name>
+      <Name>Павло-Кічкас</Name>
+      <Name>Вулиця Вроцлавська</Name>
+      <Name>Вулиця Лізи Чайкіної</Name>
+      <Name>Вулиця Молодіжна</Name>
+      <Name>Вулиця Фільтрова</Name>
+      <Name>БК "Заводський"</Name>
+      <Name>Вулиця Глазунова</Name>
+    </Stops>
+    <Time>
+      <StartTime>5:40</StartTime>
+      <EndTime>23:30</EndTime>
+    </Time>
+    <Frequency>Кожні 35-60 хв.</Frequency>
+  </Route>
+  <Route>
+    <RouteNumber>38</RouteNumber>
+    <TypeOfTransport>bus</TypeOfTransport>
+    <StraightDirection>false</StraightDirection>
+    <Stops>
+      <Name>17-й Хортицький мікрорайон</Name>
+      <Name>Завод "Супертрансформатор"</Name>
+      <Name>Вулиця Маршала Судця</Name>
+      <Name>Автобаза "Турист"</Name>
+      <Name>Вулиця Новгородська</Name>
+      <Name>Проспект Ювілейний</Name>
+      <Name>Диспетчерська</Name>
+      <Name>Проспект Інженера Преображенського</Name>
+      <Name>Запорізька Січ</Name>
+      <Name>Вулиця Тюленіна</Name>
+      <Name>Вулиця Богдана Хмельницького</Name>
+      <Name>Проспект Металургів</Name>
+      <Name>БК "ЗАлК"</Name>
+    </Stops>
+    <Time>
+      <StartTime>14:30</StartTime>
+      <EndTime>21:10</EndTime>
+    </Time>
+    <Frequency>Кожні 90-120 хв.</Frequency>
+  </Route>
+</Routes>
