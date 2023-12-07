@@ -55,6 +55,7 @@
             // 
             this.usersEmailTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersEmailTextBox.Location = new System.Drawing.Point(37, 106);
+            this.usersEmailTextBox.MaxLength = 40;
             this.usersEmailTextBox.Name = "usersEmailTextBox";
             this.usersEmailTextBox.Size = new System.Drawing.Size(234, 26);
             this.usersEmailTextBox.TabIndex = 1;
@@ -64,6 +65,7 @@
             // 
             this.usersPasswordTextBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersPasswordTextBox.Location = new System.Drawing.Point(37, 174);
+            this.usersPasswordTextBox.MaxLength = 100;
             this.usersPasswordTextBox.Name = "usersPasswordTextBox";
             this.usersPasswordTextBox.PasswordChar = '●';
             this.usersPasswordTextBox.Size = new System.Drawing.Size(234, 26);
@@ -162,6 +164,7 @@
             this.Name = "SignInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вхід";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignInForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

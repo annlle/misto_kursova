@@ -50,6 +50,7 @@
             this.maleRadioButton = new System.Windows.Forms.RadioButton();
             this.sexLabel = new System.Windows.Forms.Label();
             this.passwordCheckerLabel = new System.Windows.Forms.Label();
+            this.ageCheckerLabel = new System.Windows.Forms.Label();
             this.sexGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +80,7 @@
             // 
             this.signUpButton.Enabled = false;
             this.signUpButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.signUpButton.Location = new System.Drawing.Point(224, 358);
+            this.signUpButton.Location = new System.Drawing.Point(224, 365);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(200, 50);
             this.signUpButton.TabIndex = 9;
@@ -91,7 +92,7 @@
             // 
             this.usersPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersPasswordTextBox.Location = new System.Drawing.Point(369, 153);
-            this.usersPasswordTextBox.MaxLength = 20;
+            this.usersPasswordTextBox.MaxLength = 100;
             this.usersPasswordTextBox.Name = "usersPasswordTextBox";
             this.usersPasswordTextBox.PasswordChar = '●';
             this.usersPasswordTextBox.Size = new System.Drawing.Size(234, 22);
@@ -103,6 +104,7 @@
             // 
             this.usersEmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersEmailTextBox.Location = new System.Drawing.Point(368, 89);
+            this.usersEmailTextBox.MaxLength = 40;
             this.usersEmailTextBox.Name = "usersEmailTextBox";
             this.usersEmailTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersEmailTextBox.TabIndex = 7;
@@ -135,10 +137,12 @@
             // 
             this.usersSurnameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersSurnameTextBox.Location = new System.Drawing.Point(26, 89);
+            this.usersSurnameTextBox.MaxLength = 50;
             this.usersSurnameTextBox.Name = "usersSurnameTextBox";
             this.usersSurnameTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersSurnameTextBox.TabIndex = 12;
             this.usersSurnameTextBox.TextChanged += new System.EventHandler(this.usersSurnameTextBox_TextChanged);
+            this.usersSurnameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usersSurnameTextBox_KeyPress);
             // 
             // nameLabel
             // 
@@ -155,10 +159,12 @@
             // 
             this.usersNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersNameTextBox.Location = new System.Drawing.Point(26, 147);
+            this.usersNameTextBox.MaxLength = 50;
             this.usersNameTextBox.Name = "usersNameTextBox";
             this.usersNameTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersNameTextBox.TabIndex = 14;
             this.usersNameTextBox.TextChanged += new System.EventHandler(this.usersNameTextBox_TextChanged);
+            this.usersNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usersNameTextBox_KeyPress);
             // 
             // patronymLabel
             // 
@@ -175,10 +181,12 @@
             // 
             this.usersPatronymTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersPatronymTextBox.Location = new System.Drawing.Point(26, 203);
+            this.usersPatronymTextBox.MaxLength = 50;
             this.usersPatronymTextBox.Name = "usersPatronymTextBox";
             this.usersPatronymTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersPatronymTextBox.TabIndex = 16;
             this.usersPatronymTextBox.TextChanged += new System.EventHandler(this.usersPatronymTextBox_TextChanged);
+            this.usersPatronymTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usersPatronymTextBox_KeyPress);
             // 
             // ageLabel
             // 
@@ -195,7 +203,7 @@
             // 
             this.usersAgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.usersAgeTextBox.Location = new System.Drawing.Point(26, 260);
-            this.usersAgeTextBox.MaxLength = 2;
+            this.usersAgeTextBox.MaxLength = 3;
             this.usersAgeTextBox.Name = "usersAgeTextBox";
             this.usersAgeTextBox.Size = new System.Drawing.Size(234, 22);
             this.usersAgeTextBox.TabIndex = 18;
@@ -232,7 +240,7 @@
             this.sexGroupBox.Controls.Add(this.femaleRadioButton);
             this.sexGroupBox.Controls.Add(this.maleRadioButton);
             this.sexGroupBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sexGroupBox.Location = new System.Drawing.Point(26, 308);
+            this.sexGroupBox.Location = new System.Drawing.Point(26, 315);
             this.sexGroupBox.Name = "sexGroupBox";
             this.sexGroupBox.Size = new System.Drawing.Size(234, 44);
             this.sexGroupBox.TabIndex = 24;
@@ -265,7 +273,7 @@
             this.sexLabel.AutoSize = true;
             this.sexLabel.BackColor = System.Drawing.Color.Transparent;
             this.sexLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sexLabel.Location = new System.Drawing.Point(24, 292);
+            this.sexLabel.Location = new System.Drawing.Point(24, 299);
             this.sexLabel.Name = "sexLabel";
             this.sexLabel.Size = new System.Drawing.Size(52, 21);
             this.sexLabel.TabIndex = 25;
@@ -282,6 +290,17 @@
             this.passwordCheckerLabel.Size = new System.Drawing.Size(0, 17);
             this.passwordCheckerLabel.TabIndex = 27;
             // 
+            // ageCheckerLabel
+            // 
+            this.ageCheckerLabel.AutoSize = true;
+            this.ageCheckerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ageCheckerLabel.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ageCheckerLabel.ForeColor = System.Drawing.Color.Green;
+            this.ageCheckerLabel.Location = new System.Drawing.Point(24, 281);
+            this.ageCheckerLabel.Name = "ageCheckerLabel";
+            this.ageCheckerLabel.Size = new System.Drawing.Size(0, 17);
+            this.ageCheckerLabel.TabIndex = 28;
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +308,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(676, 444);
+            this.Controls.Add(this.ageCheckerLabel);
             this.Controls.Add(this.passwordCheckerLabel);
             this.Controls.Add(this.sexLabel);
             this.Controls.Add(this.sexGroupBox);
@@ -344,5 +364,6 @@
         private System.Windows.Forms.RadioButton maleRadioButton;
         private System.Windows.Forms.Label sexLabel;
         private System.Windows.Forms.Label passwordCheckerLabel;
+        private System.Windows.Forms.Label ageCheckerLabel;
     }
 }

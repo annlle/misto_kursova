@@ -30,12 +30,24 @@ namespace kursova
         {
             try
             {
+                bool fileFound = true;
+
+                if (!File.Exists("../../Forms/Main.cs") || !File.Exists("../../Forms/Main.Designer.cs") || !File.Exists("../../Forms/Main.resx"))
+                {
+                    fileFound = false;
+                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "Main");
+                }
+
                 if (usersPasswordTextBox.Text == User.Password)
                 {
                     User.CurrentUser = this.User; // выставляем текущего пользователя если пароль правильный
-                    this.Hide();
-                    MainForm mainForm = new MainForm();
-                    mainForm.ShowDialog();
+
+                    if (fileFound)
+                    {
+                        this.Hide();
+                        MainForm mainForm = new MainForm();
+                        mainForm.ShowDialog();
+                    }
                 }
                 else
                 {
@@ -64,7 +76,7 @@ namespace kursova
 
         private async Task CheckMail(CancellationToken cancellationToken)
         {
-            await Task.Delay(1000); // время перед выводом текста о проверке почты
+            await Task.Delay(500); // время перед выводом текста о проверке почты
 
             if (cancellationToken.IsCancellationRequested)
                 return;
@@ -91,9 +103,32 @@ namespace kursova
 
         private void signUpLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-            SignUpForm signUpForm = new SignUpForm();
-            signUpForm.ShowDialog();
+            bool fileFound = true;
+
+            try
+            {
+                if (!File.Exists("../../Forms/SignUpForm.cs") || !File.Exists("../../Forms/SignUpForm.Designer.cs") || !File.Exists("../../Forms/SignUpForm.resx"))
+                {
+                    fileFound = false;
+                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "SignUpForm");
+                }
+            }
+            catch (ExceptionHandler ex)
+            {
+                ex.HandleError();
+            }
+
+            if (fileFound)
+            {
+                this.Hide();
+                SignUpForm signUpForm = new SignUpForm();
+                signUpForm.ShowDialog();
+            }
+        }
+
+        private void SignInForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

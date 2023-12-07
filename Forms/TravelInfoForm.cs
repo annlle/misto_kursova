@@ -1,5 +1,6 @@
 ﻿using kursova.Scripts;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,11 @@ namespace kursova
         private void locationLinkPictureBox_Click(object sender, EventArgs e)
         {
             attraction.Location.OpenLink();
+        }
+
+        private void TravelInfoForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

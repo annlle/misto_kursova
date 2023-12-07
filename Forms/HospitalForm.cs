@@ -165,5 +165,10 @@ namespace kursova
                 }                
             }
         }
+
+        private void HospitalForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

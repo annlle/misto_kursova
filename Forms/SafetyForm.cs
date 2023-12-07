@@ -209,5 +209,10 @@ namespace kursova
             if (!locationListBox.Bounds.Contains(new Point(Cursor.Position.X - this.Location.X, Cursor.Position.Y - this.Location.Y)))
                 locationListBox.Visible = false;
         }
+
+        private void SafetyForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HospitalForm));
-            System.Windows.Forms.ListViewGroup listViewGroup29 = new System.Windows.Forms.ListViewGroup("Вознесенівський", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup30 = new System.Windows.Forms.ListViewGroup("Дніпровський", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup31 = new System.Windows.Forms.ListViewGroup("Заводський", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup32 = new System.Windows.Forms.ListViewGroup("Комунарський", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup33 = new System.Windows.Forms.ListViewGroup("Олександрівський", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup34 = new System.Windows.Forms.ListViewGroup("Хортицький", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup35 = new System.Windows.Forms.ListViewGroup("Шевченківський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Вознесенівський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Дніпровський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Заводський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Комунарський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Олександрівський", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Хортицький", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Шевченківський", System.Windows.Forms.HorizontalAlignment.Left);
             this.backButton = new System.Windows.Forms.Button();
             this.doctorPictureBox = new System.Windows.Forms.PictureBox();
             this.doctorNameLabel = new System.Windows.Forms.Label();
@@ -103,28 +103,28 @@
             this.hospitalHeader,
             this.adressHeader});
             this.hospitalsListView.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            listViewGroup29.Header = "Вознесенівський";
-            listViewGroup29.Name = "listViewGroup1";
-            listViewGroup30.Header = "Дніпровський";
-            listViewGroup30.Name = "listViewGroup2";
-            listViewGroup31.Header = "Заводський";
-            listViewGroup31.Name = "listViewGroup3";
-            listViewGroup32.Header = "Комунарський";
-            listViewGroup32.Name = "listViewGroup4";
-            listViewGroup33.Header = "Олександрівський";
-            listViewGroup33.Name = "listViewGroup5";
-            listViewGroup34.Header = "Хортицький";
-            listViewGroup34.Name = "listViewGroup6";
-            listViewGroup35.Header = "Шевченківський";
-            listViewGroup35.Name = "listViewGroup7";
+            listViewGroup1.Header = "Вознесенівський";
+            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup2.Header = "Дніпровський";
+            listViewGroup2.Name = "listViewGroup2";
+            listViewGroup3.Header = "Заводський";
+            listViewGroup3.Name = "listViewGroup3";
+            listViewGroup4.Header = "Комунарський";
+            listViewGroup4.Name = "listViewGroup4";
+            listViewGroup5.Header = "Олександрівський";
+            listViewGroup5.Name = "listViewGroup5";
+            listViewGroup6.Header = "Хортицький";
+            listViewGroup6.Name = "listViewGroup6";
+            listViewGroup7.Header = "Шевченківський";
+            listViewGroup7.Name = "listViewGroup7";
             this.hospitalsListView.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup29,
-            listViewGroup30,
-            listViewGroup31,
-            listViewGroup32,
-            listViewGroup33,
-            listViewGroup34,
-            listViewGroup35});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3,
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7});
             this.hospitalsListView.HideSelection = false;
             this.hospitalsListView.Location = new System.Drawing.Point(12, 80);
             this.hospitalsListView.MultiSelect = false;
@@ -226,6 +226,7 @@
             this.Name = "HospitalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Лікарня";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HospitalForm_FormClosed);
             this.Load += new System.EventHandler(this.HospitalForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.doctorPictureBox)).EndInit();
             this.ResumeLayout(false);

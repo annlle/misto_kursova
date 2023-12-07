@@ -95,5 +95,10 @@ namespace kursova
                 appointmentsListBox.Items.Add(item);
             }
         }
+
+        private void ProfileForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

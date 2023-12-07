@@ -12,12 +12,12 @@ namespace kursova.Scripts
 {
     public class RouteTile : Tile
     {
-        public Label Number { get; private set;}
-        public Label Direction { get; private set;}
-        public Label Frequency { get; private set;}
-        public Label Time { get; private set;}
-        public PictureBox TypePicture { get; private set;}
-        public Route Route { get; private set;}
+        public Label Number { get; private set; }
+        public Label Direction { get; private set; }
+        public Label Frequency { get; private set; }
+        public Label Time { get; private set; }
+        public PictureBox TypePicture { get; private set; }
+        public Route Route { get; private set; }
 
         private List<Image> typeImages = new List<Image>
         {
