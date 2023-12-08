@@ -18,7 +18,7 @@ namespace kursova
 {
     public partial class SignInForm : Form
     {
-        private User User = new User { };
+        private User User = new User();
 
         private CancellationTokenSource timerCancellation;
 
@@ -41,7 +41,7 @@ namespace kursova
 
                 if (usersPasswordTextBox.Text == Encryptor.Decrypt(User.Password))
                 {
-                    User.CurrentUser = User; // выставляем текущего пользователя если пароль правильный
+                    User.CurrentUser = User;
 
                     if (fileFound)
                     {
@@ -88,7 +88,7 @@ namespace kursova
                 signInButton.Enabled = false;
                 return;
             }
-            else if (User.CheckUserMail(usersEmailTextBox.Text))
+            else if (User.TryFindUser(usersEmailTextBox.Text, out User))
             {
                 mailCheckerLabel.Text = "Пошту знайдено!";
                 mailCheckerLabel.ForeColor = Color.DarkGreen;

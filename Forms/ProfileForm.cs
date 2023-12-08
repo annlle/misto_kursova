@@ -33,7 +33,7 @@ namespace kursova
             usersPatronymLabel.Text = User.CurrentUser.Patronymic;
             usersSexLabel.Text = User.CurrentUser.Sex == Sex.Male ? "Чоловік" : "Жінка";
             usersAgeLabel.Text = User.CurrentUser.Age.ToString();
-            usersEmailLabel.Text = User.CurrentUser.Mail;
+            usersEmailLabel.Text = Encryptor.Decrypt(User.CurrentUser.Mail);
             profilePicture.Image = User.CurrentUser.Sex == Sex.Male ? MalePicture : FemalePicture;
 
 
@@ -43,6 +43,9 @@ namespace kursova
             doctorLabel.Text = "";
             dateLabel.Text = "";
             locationLinkPictureBox.Visible = false;
+
+            // видалення пройшовших записів до врачів
+            User.CurrentUser.RemoveExpiredAppoinments();
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -91,7 +94,7 @@ namespace kursova
             {
                 string date = appointment.DateTime.ToString();
                 date = date.Remove(date.Length - 3, 3);
-                string item = appointment.Hospital.Name + " - " + date;
+                string item = appointment.Doctor.Specialization + " - " + date;
                 appointmentsListBox.Items.Add(item);
             }
         }

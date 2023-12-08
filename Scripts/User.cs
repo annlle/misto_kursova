@@ -19,22 +19,27 @@ namespace kursova.Scripts
         public int Age { get; set; }
         public string Mail { get; set; }
         public string Password { get; set; }
-        public List<Appointment> Appointments = new List<Appointment>();
+        public List<Appointment> Appointments { get; private set; } = new List<Appointment>();
 
         private static List<User> listOfUsers;
-        public static User CurrentUser 
-        { 
+        
+        private static User currentUser;
+        public static User CurrentUser
+        {
             get
             {
-                return CurrentUser;
+                return currentUser;
             }
             set
             {
                 foreach (var user in listOfUsers)
                 {
-                    if (user.Mail == value.Mail) // дописать
+                    if (user.Mail == value.Mail)
+                    {
+                        currentUser = user;
+                        break;
+                    }
                 }
-                CurrentUser = value;
             }
         }
 
@@ -64,47 +69,61 @@ namespace kursova.Scripts
             File.WriteAllText(filePath, json);
         }
 
-        public void RegisterUser(User newUser)
+        public void RegisterUser()
         {
-            if (newUser != null)
-            {
-                newUser.Mail = Encryptor.Encrypt(newUser.Mail);
-                newUser.Password = Encryptor.Encrypt(newUser.Password);
+            Mail = Encryptor.Encrypt(Mail);
+            Password = Encryptor.Encrypt(Password);
 
-                CurrentUser = newUser;
+            if (!listOfUsers.Contains(this))
+                listOfUsers.Add(this);
 
-                listOfUsers.Add(newUser);
-            }
+            CurrentUser = this;
+            SaveUsers();
         }
 
-        public void WriteUserAppointments(Appointment appointment)
+        public void AddAppoinment(Appointment appointment)
         {
             CurrentUser.Appointments.Add(appointment);
 
             SaveUsers();
         }
 
-        public bool CheckUserMail(string mail)
+        public void RemoveExpiredAppoinments()
         {
-            if (listOfUsers == null)
-                return false;
+            foreach (var appointment in this.Appointments)
+            {
+                if (appointment.DateTime < DateTime.Now)
+                    this.Appointments.Remove(appointment);
+            }
+        }
 
-            foreach (User user in listOfUsers)
+        public static bool IsUserRegistered(string mail)
+        {
+            return listOfUsers.Find(user => user.Mail == mail) != default(User);
+        }
+
+        public static bool TryFindUser(string mail, out User foundUser)
+        {
+            foreach (var user in listOfUsers)
             {
                 if (mail == Encryptor.Decrypt(user.Mail))
                 {
-                    this.Surname = user.Surname;
-                    this.Name = user.Name;
-                    this.Patronymic = user.Patronymic;
-                    this.Sex = user.Sex;
-                    this.Age = user.Age;
-                    this.Mail = user.Mail;
-                    this.Password = user.Password;
-                    this.Appointments = user.Appointments;
+                    foundUser = new User
+                    {
+                        Surname = user.Surname,
+                        Name = user.Name,
+                        Patronymic = user.Patronymic,
+                        Sex = user.Sex,
+                        Age = user.Age,
+                        Mail = user.Mail,
+                        Password = user.Password,
+                        Appointments = user.Appointments
+                    };
 
                     return true;
                 }
             }
+            foundUser = null;
             return false;
         }
     }

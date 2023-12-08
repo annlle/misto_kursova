@@ -18,10 +18,12 @@ namespace kursova.Scripts
         public Location Location { get; set; }
         public string PhoneNumber { get; set; }
 
-        public static List<Hospital> ReadHospitals()
+        public static List<Hospital> HospitalsList { get; set; }
+
+        static Hospital()
         {
             string filePath = Path.Combine("Data", "hospitals.json");
-            List<Hospital> hospitals = new List<Hospital>();
+            HospitalsList = new List<Hospital>();
 
             if (File.Exists(filePath))
             {
@@ -32,21 +34,17 @@ namespace kursova.Scripts
                 {
                     for (int i = 0; i < listOfHospitals.Count; i++)
                     {
-                        Hospital hospital = new Hospital
+                        HospitalsList.Add(new Hospital
                         {
                             Name = listOfHospitals[i].Name,
                             Area = listOfHospitals[i].Area,
                             Doctors = listOfHospitals[i].Doctors,
                             Location = new Location(listOfHospitals[i].Location.Name),
                             PhoneNumber = listOfHospitals[i].PhoneNumber
-                        };
-
-                        hospitals.Add(hospital);
+                        });
                     }
                 }
             }
-
-            return hospitals;
         }
     }
 }

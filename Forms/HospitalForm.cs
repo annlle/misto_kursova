@@ -33,7 +33,7 @@ namespace kursova
             appointmentDatePicker.MaxDate = DateTime.Now.AddMonths(1);
             appointmentDatePicker.Value = DateTime.Now;
 
-            hospitals = Hospital.ReadHospitals();
+            hospitals = Hospital.HospitalsList;
 
             sortComboBox.SelectedIndex = 0;
         }
@@ -94,7 +94,7 @@ namespace kursova
                 DateTime = dateTime
             };
 
-            User.CurrentUser.WriteUserAppointments(appointment);           
+            User.CurrentUser.AddAppoinment(appointment);
         }
 
         private void sortComboBox_SelectedIndexChanged(object sender, EventArgs e)

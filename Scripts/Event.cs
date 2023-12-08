@@ -18,6 +18,7 @@ namespace kursova.Scripts
         Accident,
         StructuralCollapse,
         Flood,
+        GasLeak,
         Other
     }
 
@@ -34,6 +35,7 @@ namespace kursova.Scripts
             { EventType.Accident, "Нещасний випадок" },
             { EventType.StructuralCollapse, "Обрушення споруд" },
             { EventType.Flood, "Затоплення" },
+            { EventType.GasLeak, "Витік газу" },
             { EventType.Other, "Інше" }
         };
     }
@@ -43,17 +45,5 @@ namespace kursova.Scripts
         public EventType EventType { get; set; }
         public Location Location { get; set; }
         public int DangerLevel { get; set; }
-
-        public static List<Location> ReadAddress()
-        {
-            string xmlFilePath = "Data/addresses.xml";
-
-            XDocument xdoc = XDocument.Load(xmlFilePath);
-
-            var locations = from location in xdoc.Element("Addresses").Elements("Name")
-                            select new Location((string)location);
-
-            return locations.ToList();
-        }
     }
 }

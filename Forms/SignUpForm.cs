@@ -49,7 +49,7 @@ namespace kursova
                 Password = usersPasswordTextBox.Text
             };
 
-            User.RegisterUser(User);
+            User.RegisterUser();
 
             try
             {
@@ -77,7 +77,7 @@ namespace kursova
         private void UpdateSignUpButtonState()
         {
             signUpButton.Enabled = false;
-            bool isEmailLabelValid = IsEmailValid() && !IsEmailOccupied();
+            bool isEmailLabelValid = IsEmailValid() && !User.IsUserRegistered(usersEmailTextBox.Text);
             bool isPasswordLabelValid = usersPasswordTextBox.Text.Length >= 8;
             bool isSurnameLabelValid = usersSurnameTextBox.Text.Length > 0;
             bool isNameLabelValid = usersNameTextBox.Text.Length > 0;
@@ -115,7 +115,7 @@ namespace kursova
             if (cancellationToken.IsCancellationRequested)
                 return;
 
-            if (IsEmailOccupied())
+            if (User.IsUserRegistered(usersEmailTextBox.Text))
             {
                 passwordLabel.Location = new System.Drawing.Point(365, 132);
                 usersPasswordTextBox.Location = new System.Drawing.Point(368, 156);
@@ -131,11 +131,6 @@ namespace kursova
                 mailCheckerLabel.Text = "Пошта не підходить!\nПритримуйтесь стандарту: example@email.com";
                 mailCheckerLabel.ForeColor = Color.Red;
             }
-        }
-
-        private bool IsEmailOccupied()
-        {
-            return User.CheckUserMail(usersEmailTextBox.Text);
         }
 
         private bool IsEmailValid()

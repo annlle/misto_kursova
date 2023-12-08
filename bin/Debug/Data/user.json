@@ -1,0 +1,134 @@
+[
+  {
+    "Surname": "Тестівна",
+    "Name": "Олександра",
+    "Patronymic": "Григорівна",
+    "Sex": 1,
+    "Age": 54,
+    "Mail": "oXXtnCR7QPV9xFPMU7YVW024u0wsJ47ZN8ne94Hep5s=",
+    "Password": "KjHsl8nTba451V76FmVZGA==",
+    "Appointments": [
+      {
+        "Hospital": {
+          "Name": "Міська лікарня №3",
+          "Area": "Вознесенівський",
+          "Doctors": [
+            {
+              "Name": "Щаслива Поліна Арсенівна",
+              "Sex": 1,
+              "Specialization": "Педіатр"
+            },
+            {
+              "Name": "Філевич Богдана Панасівна",
+              "Sex": 1,
+              "Specialization": "Офтальмолог"
+            },
+            {
+              "Name": "Паторжинська Клавдія Валентинівна",
+              "Sex": 1,
+              "Specialization": "Ларинголог"
+            },
+            {
+              "Name": "Яницька Ганна Денисівна",
+              "Sex": 1,
+              "Specialization": "Гінеколог"
+            },
+            {
+              "Name": "Кришень Олег Радимович",
+              "Sex": 0,
+              "Specialization": "Кардіолог"
+            },
+            {
+              "Name": "Кабалюк Єва Олександрівна",
+              "Sex": 1,
+              "Specialization": "Гастроентеролог"
+            },
+            {
+              "Name": "Химич Пилип Ігорович",
+              "Sex": 0,
+              "Specialization": "Невролог"
+            }
+          ],
+          "Location": {
+            "Name": "проспект Металургів, Запоріжжя, Запорізька область, Україна",
+            "ImageUrl": null,
+            "GoogleMapsLink": "https://www.google.com/maps?q=%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%9C%D0%B5%D1%82%D0%B0%D0%BB%D1%83%D1%80%D0%B3%D1%96%D0%B2%2C+%D0%97%D0%B0%D0%BF%D0%BE%D1%80%D1%96%D0%B6%D0%B6%D1%8F%2C+%D0%97%D0%B0%D0%BF%D0%BE%D1%80%D1%96%D0%B7%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0"
+          },
+          "PhoneNumber": "061-213-1564"
+        },
+        "Doctor": {
+          "Name": "Філевич Богдана Панасівна",
+          "Sex": 1,
+          "Specialization": "Офтальмолог"
+        },
+        "DateTime": "2023-12-12T14:00:29"
+      }
+    ]
+  },
+  {
+    "Surname": "Глєбов",
+    "Name": "Максим",
+    "Patronymic": "Максимович",
+    "Sex": 0,
+    "Age": 18,
+    "Mail": "8QWYMwX0wV5VRqGFew705KCp3BTMK0v7pwQt+b2VV5g=",
+    "Password": "l1elLeXjPyjEpGI5zBGiAw==",
+    "Appointments": [
+      {
+        "Hospital": {
+          "Name": "Медичний центр \"Айболіт\"",
+          "Area": "Заводський",
+          "Doctors": [
+            {
+              "Name": "Синицький Вадим Макарович",
+              "Sex": 0,
+              "Specialization": "Уролог"
+            },
+            {
+              "Name": "Собчук Діана Володимирівна",
+              "Sex": 1,
+              "Specialization": "Офтальмолог"
+            },
+            {
+              "Name": "Целуйко Віктор Юрійович",
+              "Sex": 0,
+              "Specialization": "Кардіолог"
+            },
+            {
+              "Name": "Гайда Григорій Борисович",
+              "Sex": 0,
+              "Specialization": "Хірург"
+            },
+            {
+              "Name": "Сташук Анастасія Артурівна",
+              "Sex": 1,
+              "Specialization": "Гінеколог"
+            },
+            {
+              "Name": "Демич Наталія Давидівна",
+              "Sex": 1,
+              "Specialization": "Педіатр"
+            },
+            {
+              "Name": "Дзерин Павло Денисович",
+              "Sex": 0,
+              "Specialization": "Пульмонолог"
+            }
+          ],
+          "Location": {
+            "Name": "вулиця Орджонікідзе, 28, Запоріжжя, Запорізька область, Україна",
+            "ImageUrl": null,
+            "GoogleMapsLink": "https://www.google.com/maps?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9E%D1%80%D0%B4%D0%B6%D0%BE%D0%BD%D1%96%D0%BA%D1%96%D0%B4%D0%B7%D0%B5%2C+28%2C+%D0%97%D0%B0%D0%BF%D0%BE%D1%80%D1%96%D0%B6%D0%B6%D1%8F%2C+%D0%97%D0%B0%D0%BF%D0%BE%D1%80%D1%96%D0%B7%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0"
+          },
+          "PhoneNumber": "073-911-2828"
+        },
+        "Doctor": {
+          "Name": "Гайда Григорій Борисович",
+          "Sex": 0,
+          "Specialization": "Хірург"
+        },
+        "DateTime": "2023-12-09T18:00:55"
+      }
+    ]
+  }
+]

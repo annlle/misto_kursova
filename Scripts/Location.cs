@@ -17,6 +17,18 @@ namespace kursova.Scripts
         public string ImageUrl { get; set; }
         public string GoogleMapsLink { get; set; }
 
+        public static List<Location> RandomLocationsList { get; set; }
+
+        static Location()
+        {
+            string xmlFilePath = "Data/addresses.xml";
+
+            XDocument xdoc = XDocument.Load(xmlFilePath);
+
+            RandomLocationsList = (from location in xdoc.Element("Addresses").Elements("Name")
+                            select new Location((string)location)).ToList();
+        }
+
         public Location(string locationName)
         {
             List<string> autoCompleteResults = GooglePlacesAutoComplete.GetAutoCompleteResults(locationName);
