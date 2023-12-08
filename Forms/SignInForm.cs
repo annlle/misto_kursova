@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml.Linq;
 using kursova.Scripts;
 using System.Threading;
+using kursova.Scripts.Extensions;
 
 namespace kursova
 {
@@ -38,9 +39,9 @@ namespace kursova
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "Main");
                 }
 
-                if (usersPasswordTextBox.Text == User.Password)
+                if (usersPasswordTextBox.Text == Encryptor.Decrypt(User.Password))
                 {
-                    User.CurrentUser = this.User; // выставляем текущего пользователя если пароль правильный
+                    User.CurrentUser = User; // выставляем текущего пользователя если пароль правильный
 
                     if (fileFound)
                     {

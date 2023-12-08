@@ -21,7 +21,7 @@ namespace kursova
 {
     public partial class SignUpForm : Form
     {
-        private User User = new User { };
+        private User User;
 
         private CancellationTokenSource timerCancellation;
         public SignUpForm()
@@ -38,10 +38,18 @@ namespace kursova
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            User.WriteUser(User.CurrentUser, usersEmailTextBox.Text, usersPasswordTextBox.Text, usersSurnameTextBox.Text,
-                usersNameTextBox.Text, usersPatronymTextBox.Text, maleRadioButton.Checked ? Sex.Male : Sex.Female, Convert.ToInt32(usersAgeTextBox.Text));
+            User = new User
+            {
+                Surname = usersSurnameTextBox.Text,
+                Name = usersNameTextBox.Text,
+                Patronymic = usersPatronymTextBox.Text,
+                Sex = maleRadioButton.Checked ? Sex.Male : Sex.Female,
+                Age = Convert.ToInt32(usersAgeTextBox.Text),
+                Mail = usersEmailTextBox.Text,
+                Password = usersPasswordTextBox.Text
+            };
 
-            User.CurrentUser.Mail = Encryptor.Decrypt(User.CurrentUser.Mail);
+            User.RegisterUser(User);
 
             try
             {

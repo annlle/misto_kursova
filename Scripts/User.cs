@@ -20,106 +20,78 @@ namespace kursova.Scripts
         public string Mail { get; set; }
         public string Password { get; set; }
         public List<Appointment> Appointments = new List<Appointment>();
-        public static User CurrentUser { get; set; } // мы можем создавать экземпляры пользователей (объекты класса), но при этом у нас всегда есть статический текущий
 
-        public List<User> ReadUser()
+        private static List<User> listOfUsers;
+        public static User CurrentUser 
+        { 
+            get
+            {
+                return CurrentUser;
+            }
+            set
+            {
+                foreach (var user in listOfUsers)
+                {
+                    if (user.Mail == value.Mail) // дописать
+                }
+                CurrentUser = value;
+            }
+        }
+
+        static User() // статичний конструктор
         {
             string filePath = Path.Combine("Data", "user.json");
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath);
-                List<User> listOfUsers = JsonConvert.DeserializeObject<List<User>>(json);
+                listOfUsers = JsonConvert.DeserializeObject<List<User>>(json);
 
-                if (listOfUsers != null && listOfUsers != null)
+                if (listOfUsers == null)
                 {
-                    for (int i = 0; i < listOfUsers.Count; i++)
-                    {
-                        Surname = listOfUsers[i].Surname;
-                        Name = listOfUsers[i].Name;
-                        Patronymic = listOfUsers[i].Patronymic;
-                        Sex = listOfUsers[i].Sex;
-                        Age = listOfUsers[i].Age;
-                        Mail = (listOfUsers[i].Mail);
-                        Password = listOfUsers[i].Password;
-                        Appointments = listOfUsers[i].Appointments;
-                    }
-
-                    return listOfUsers;
+                    listOfUsers = new List<User>();
                 }
-                else
-                    return null;
             }
             else
-                return null;
-        }
-
-        public void WriteUser(User newUser, string mail, string password, string surname, string name, string patronymic, Sex sex, int age)
-        {
-            string filePath = Path.Combine("Data", "user.json");
-
-            List<User> listOfUsers = ReadUser();
-
-            newUser = new User
-            {
-                Mail = mail,
-                Password = password,
-                Surname = surname,
-                Name = name,
-                Patronymic = patronymic,
-                Sex = sex,
-                Age = Convert.ToInt32(age),
-            };
-
-            if (listOfUsers == null)
             {
                 listOfUsers = new List<User>();
             }
+        }
+
+        public static void SaveUsers()
+        {
+            string filePath = Path.Combine("Data", "user.json");
+            string json = JsonConvert.SerializeObject(listOfUsers);
+            File.WriteAllText(filePath, json);
+        }
+
+        public void RegisterUser(User newUser)
+        {
             if (newUser != null)
             {
-                User.CurrentUser = newUser;
+                newUser.Mail = Encryptor.Encrypt(newUser.Mail);
+                newUser.Password = Encryptor.Encrypt(newUser.Password);
 
-                User.CurrentUser.Mail = Encryptor.Encrypt(User.CurrentUser.Mail);
-                User.CurrentUser.Password = Encryptor.Encrypt(User.CurrentUser.Password);
+                CurrentUser = newUser;
 
                 listOfUsers.Add(newUser);
-
-                string json = JsonConvert.SerializeObject(listOfUsers);
-                File.WriteAllText(filePath, json);
             }
         }
 
         public void WriteUserAppointments(Appointment appointment)
         {
-            string filePath = Path.Combine("Data", "user.json");
+            CurrentUser.Appointments.Add(appointment);
 
-            List<User> listOfUsers = ReadUser();
-
-            User.CurrentUser.Appointments.Add(appointment);
-            User.CurrentUser.Mail = Encryptor.Decrypt(User.CurrentUser.Mail);
-
-            string json = JsonConvert.SerializeObject(listOfUsers);
-            File.WriteAllText(filePath, json);
+            SaveUsers();
         }
 
         public bool CheckUserMail(string mail)
         {
-            // Сначала читается зашифрованная версия с файла, потом сразу дешифруется и заменяется в полях класса
-            // testmail@gmail.com : test123 (!ПРИ КЛЮЧЕ "secretKeyExample"!)
-
-            List<User> listOfUsers = ReadUser();
-
             if (listOfUsers == null)
                 return false;
 
             foreach (User user in listOfUsers)
             {
-                user.Mail = Encryptor.Decrypt(user.Mail);
-                user.Password = Encryptor.Decrypt(user.Password);
-            }
-
-            foreach (User user in listOfUsers)
-            {
-                if (mail == user.Mail)
+                if (mail == Encryptor.Decrypt(user.Mail))
                 {
                     this.Surname = user.Surname;
                     this.Name = user.Name;
