@@ -10,11 +10,6 @@ using kursova.Scripts.Extensions;
 
 namespace kursova.Scripts
 {
-    public class UsersList
-    {
-        public List<User> Users { get; set; }
-    }
-
     public class User
     {
         public string Surname { get; set; }
@@ -27,26 +22,26 @@ namespace kursova.Scripts
         public List<Appointment> Appointments = new List<Appointment>();
         public static User CurrentUser { get; set; } // мы можем создавать экземпляры пользователей (объекты класса), но при этом у нас всегда есть статический текущий
 
-        public UsersList ReadUser()
+        public List<User> ReadUser()
         {
             string filePath = Path.Combine("Data", "user.json");
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath);
-                UsersList listOfUsers = JsonConvert.DeserializeObject<UsersList>(json);
+                List<User> listOfUsers = JsonConvert.DeserializeObject<List<User>>(json);
 
-                if (listOfUsers != null && listOfUsers.Users != null)
+                if (listOfUsers != null && listOfUsers != null)
                 {
-                    for (int i = 0; i < listOfUsers.Users.Count; i++)
+                    for (int i = 0; i < listOfUsers.Count; i++)
                     {
-                        Surname = listOfUsers.Users[i].Surname;
-                        Name = listOfUsers.Users[i].Name;
-                        Patronymic = listOfUsers.Users[i].Patronymic;
-                        Sex = listOfUsers.Users[i].Sex;
-                        Age = listOfUsers.Users[i].Age;
-                        Mail = (listOfUsers.Users[i].Mail);
-                        Password = listOfUsers.Users[i].Password;
-                        Appointments = listOfUsers.Users[i].Appointments;
+                        Surname = listOfUsers[i].Surname;
+                        Name = listOfUsers[i].Name;
+                        Patronymic = listOfUsers[i].Patronymic;
+                        Sex = listOfUsers[i].Sex;
+                        Age = listOfUsers[i].Age;
+                        Mail = (listOfUsers[i].Mail);
+                        Password = listOfUsers[i].Password;
+                        Appointments = listOfUsers[i].Appointments;
                     }
 
                     return listOfUsers;
@@ -62,7 +57,7 @@ namespace kursova.Scripts
         {
             string filePath = Path.Combine("Data", "user.json");
 
-            UsersList listOfUsers = ReadUser();
+            List<User> listOfUsers = ReadUser();
 
             newUser = new User
             {
@@ -77,8 +72,7 @@ namespace kursova.Scripts
 
             if (listOfUsers == null)
             {
-                listOfUsers = new UsersList();
-                listOfUsers.Users = new List<User>();
+                listOfUsers = new List<User>();
             }
             if (newUser != null)
             {
@@ -87,7 +81,7 @@ namespace kursova.Scripts
                 User.CurrentUser.Mail = Encryptor.Encrypt(User.CurrentUser.Mail);
                 User.CurrentUser.Password = Encryptor.Encrypt(User.CurrentUser.Password);
 
-                listOfUsers.Users.Add(newUser);
+                listOfUsers.Add(newUser);
 
                 string json = JsonConvert.SerializeObject(listOfUsers);
                 File.WriteAllText(filePath, json);
@@ -98,7 +92,7 @@ namespace kursova.Scripts
         {
             string filePath = Path.Combine("Data", "user.json");
 
-            UsersList listOfUsers = ReadUser();
+            List<User> listOfUsers = ReadUser();
 
             User.CurrentUser.Appointments.Add(appointment);
             User.CurrentUser.Mail = Encryptor.Decrypt(User.CurrentUser.Mail);
@@ -112,18 +106,18 @@ namespace kursova.Scripts
             // Сначала читается зашифрованная версия с файла, потом сразу дешифруется и заменяется в полях класса
             // testmail@gmail.com : test123 (!ПРИ КЛЮЧЕ "secretKeyExample"!)
 
-            UsersList listOfUsers = ReadUser();
+            List<User> listOfUsers = ReadUser();
 
             if (listOfUsers == null)
                 return false;
 
-            foreach (User user in listOfUsers.Users)
+            foreach (User user in listOfUsers)
             {
                 user.Mail = Encryptor.Decrypt(user.Mail);
                 user.Password = Encryptor.Decrypt(user.Password);
             }
 
-            foreach (User user in listOfUsers.Users)
+            foreach (User user in listOfUsers)
             {
                 if (mail == user.Mail)
                 {

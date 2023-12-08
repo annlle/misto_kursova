@@ -10,11 +10,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace kursova.Scripts
 {
-    public class HospitalList
-    {
-        public List<Hospital> Hospitals { get; set; }
-    }
-
     public class Hospital
     {
         public string Name { get; set; }
@@ -23,39 +18,35 @@ namespace kursova.Scripts
         public Location Location { get; set; }
         public string PhoneNumber { get; set; }
 
-        public List<Hospital> ReadHospital()
+        public static List<Hospital> ReadHospitals()
         {
             string filePath = Path.Combine("Data", "hospitals.json");
+            List<Hospital> hospitals = new List<Hospital>();
 
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath);
-                HospitalList listOfHospitals = JsonConvert.DeserializeObject<HospitalList>(json);
+                List<Hospital> listOfHospitals = JsonConvert.DeserializeObject<List<Hospital>>(json);
 
-                if (listOfHospitals != null && listOfHospitals.Hospitals != null)
+                if (listOfHospitals != null && listOfHospitals != null)
                 {
-                    for (int i = 0; i < listOfHospitals.Hospitals.Count; i++)
+                    for (int i = 0; i < listOfHospitals.Count; i++)
                     {
-                        Name = listOfHospitals.Hospitals[i].Name;
-                        Area = listOfHospitals.Hospitals[i].Area;
-
-                        foreach (Doctor doctor in listOfHospitals.Hospitals[i].Doctors)
+                        Hospital hospital = new Hospital
                         {
-                            doctor.Name = doctor.Name;
-                            doctor.Sex = doctor.Sex;
-                            doctor.Specialization = doctor.Specialization;
-                        }
-                        Location = new Location(listOfHospitals.Hospitals[i].Location.Name);
-                        PhoneNumber = listOfHospitals.Hospitals[i].PhoneNumber;
-                    }
+                            Name = listOfHospitals[i].Name,
+                            Area = listOfHospitals[i].Area,
+                            Doctors = listOfHospitals[i].Doctors,
+                            Location = new Location(listOfHospitals[i].Location.Name),
+                            PhoneNumber = listOfHospitals[i].PhoneNumber
+                        };
 
-                    return listOfHospitals.Hospitals;
+                        hospitals.Add(hospital);
+                    }
                 }
-                else
-                    return null;
             }
-            else
-                return null;
+
+            return hospitals;
         }
     }
 }

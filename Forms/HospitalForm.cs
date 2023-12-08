@@ -33,7 +33,7 @@ namespace kursova
             appointmentDatePicker.MaxDate = DateTime.Now.AddMonths(1);
             appointmentDatePicker.Value = DateTime.Now;
 
-            hospitals = new Hospital().ReadHospital();
+            hospitals = Hospital.ReadHospitals();
 
             sortComboBox.SelectedIndex = 0;
         }
