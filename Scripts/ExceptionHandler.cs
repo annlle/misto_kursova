@@ -12,7 +12,6 @@ namespace kursova.Scripts
         public enum ErrorType
         {
             FileNotFound,
-            FormNotFound,
             InvalidPassword,
             UnknownError
             // Буду добавлять по необходимости
@@ -33,9 +32,6 @@ namespace kursova.Scripts
             {
                 case ErrorType.FileNotFound:
                     MessageBox.Show($"Помилка! Відсутній файл. {ErrorDetails}", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    break;
-                case ErrorType.FormNotFound:
-                    MessageBox.Show($"Помилка завантаження вікна! {ErrorDetails}", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case ErrorType.InvalidPassword:
                     MessageBox.Show($"Невірний пароль! {ErrorDetails}", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -144,69 +144,24 @@ namespace kursova
 
         private void faqMenuItemClick(object sender, EventArgs e)
         {
-            bool fileFound = true;
-
-            try
-            {
-                if (!File.Exists("../../Forms/FaqForm.cs") || !File.Exists("../../Forms/FaqForm.Designer.cs") || !File.Exists("../../Forms/FaqForm.resx"))
-                {
-                    fileFound = false;
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "FaqForm");
-                }
-
-                if (fileFound)
-                {
-                    FaqForm faqForm = new FaqForm();
-                    faqForm.ShowDialog();
-                }
-            }
-            catch (ExceptionHandler ex)
-            {
-                ex.HandleError();
-            }
+            FaqForm faqForm = new FaqForm();
+            faqForm.ShowDialog();
         }
 
         private void aboutDevelopersMenuItemClick(object sender, EventArgs e)
         {
-            bool fileFound = true;
-
-            try
-            {
-                if (!File.Exists("../../Forms/AboutDevelopersForm.cs") || !File.Exists("../../Forms/AboutDevelopersForm.Designer.cs") || !File.Exists("../../Forms/AboutDevelopersForm.resx"))
-                {
-                    fileFound = false;
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "AboutDevelopersForm");
-                }
-
-                if (fileFound)
-                {
-                    AboutDevelopersForm aboutDevelopersForm = new AboutDevelopersForm();
-                    aboutDevelopersForm.ShowDialog();
-                }
-            }
-            catch (ExceptionHandler ex)
-            {
-                ex.HandleError();
-            }
+            AboutDevelopersForm aboutDevelopersForm = new AboutDevelopersForm();
+            aboutDevelopersForm.ShowDialog();
         }
 
         private void publicTransportButtonClick(object sender, EventArgs e)
         {
-            bool fileFound = true;
-
             try
             {
-                if (!File.Exists("../../Forms/PublicTransportForm.cs") || !File.Exists("../../Forms/PublicTransportForm.Designer.cs") || !File.Exists("../../Forms/PublicTransportForm.resx"))
-                {
-                    fileFound = false;
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "PublicTransportForm");
-                }
-                
                 string xmlFilePath = "Data/routes.xml";
 
                 if (!File.Exists(xmlFilePath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{xmlFilePath}\"");
                 }
 
@@ -218,41 +173,28 @@ namespace kursova
                     string imagePath = Path.Combine(imagesFolder, fileName);
                     if (!File.Exists(imagePath))
                     {
-                        fileFound = false;
                         throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{fileName}\"");
                     }
                 }
+
+                this.Hide();
+                PublicTransportForm publicTransportForm = new PublicTransportForm();
+                publicTransportForm.ShowDialog();
             }
             catch (ExceptionHandler ex)
             {
                 ex.HandleError();
             }
-
-            if (fileFound)
-            {
-                this.Hide();
-                PublicTransportForm publicTransportForm = new PublicTransportForm();
-                publicTransportForm.ShowDialog();
-            }
         }
 
         private void profileButtonClick(object sender, EventArgs e)
         {
-            bool fileFound = true;
-
             try
             {
-                if (!File.Exists("../../Forms/ProfileForm.cs") || !File.Exists("../../Forms/ProfileForm.Designer.cs") || !File.Exists("../../Forms/ProfileForm.resx"))
-                {
-                    fileFound = false;
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "ProfileForm");
-                }
-
                 string hospitalsFilePath = Path.Combine("Data", "hospitals.json");
 
                 if (!File.Exists(hospitalsFilePath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{hospitalsFilePath}\"");
                 }
 
@@ -260,7 +202,6 @@ namespace kursova
 
                 if (!File.Exists(addressesFilePath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{addressesFilePath}\"");
                 }
 
@@ -269,76 +210,42 @@ namespace kursova
 
                 if (!File.Exists(imageManPath) && !File.Exists(imageWomanPath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{imageManPath}\", \"{imageWomanPath}\" ");
                 }
                 else if (!File.Exists(imageManPath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{imageManPath}\"");
                 }
                 else if (!File.Exists(imageWomanPath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{imageWomanPath}\" ");
                 }
+
+                this.Hide();
+                ProfileForm profileForm = new ProfileForm();
+                profileForm.ShowDialog();
             }
             catch (ExceptionHandler ex)
             {
                 ex.HandleError();
-            }
-
-            if (fileFound)
-            {
-                this.Hide();
-                ProfileForm profileForm = new ProfileForm();
-                profileForm.ShowDialog();
             }
         }
 
         private void safetyButtonClick(object sender, EventArgs e)
         {
-            bool fileFound = true;
-
-            try
-            {
-                if (!File.Exists("../../Forms/SafetyForm.cs") || !File.Exists("../../Forms/SafetyForm.Designer.cs") || !File.Exists("../../Forms/SafetyForm.resx"))
-                {
-                    fileFound = false;
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "SafetyForm");
-                }
-            }
-            catch (ExceptionHandler ex)
-            {
-                ex.HandleError();
-            }
-
-            if (fileFound)
-            {
-                this.Hide();
-                SafetyForm safetyForm = new SafetyForm();
-                safetyForm.ShowDialog();
-            }
+            this.Hide();
+            SafetyForm safetyForm = new SafetyForm();
+            safetyForm.ShowDialog();
         }
 
         private void travelInfoButtonClick(object sender, EventArgs e)
         {
-            bool fileFound = true;
-
             try
             {
-                if (!File.Exists("../../Forms/TravelInfoForm.cs") || !File.Exists("../../Forms/TravelInfoForm.Designer.cs") || !File.Exists("../../Forms/TravelInfoForm.resx"))
-                {
-                    fileFound = false;
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "TravelInfoForm");
-                }
-
                 string xmlFilePath = "Data/tourist-info.xml";
                 if (!File.Exists(xmlFilePath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{xmlFilePath}\"");
-            
                 }
 
                 string imagesFolder = "Data/Tourist-images";
@@ -348,74 +255,54 @@ namespace kursova
                     string imagePath = Path.Combine(imagesFolder, fileName);
                     if (!File.Exists(imagePath))
                     {
-                        fileFound = false;
                         throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{fileName}\"");
                     }
                 }
+
+                this.Hide();
+                TravelInfoForm travelInfoForm = new TravelInfoForm();
+                travelInfoForm.ShowDialog();
             }
             catch (ExceptionHandler ex)
             {
                 ex.HandleError();
             }
-
-            if (fileFound)
-            {
-                this.Hide();
-                TravelInfoForm travelInfoForm = new TravelInfoForm();
-                travelInfoForm.ShowDialog();
-            }
-            
         }
 
         private void hospitalButtonClick(object sender, EventArgs e)
         {
-            bool fileFound = true;
-
             try
             {
-                string filePath = Path.Combine("Data", "hospitals.json");
+                /*string filePath = Path.Combine("Data", "hospitals.json");
 
                 if (!File.Exists(filePath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{filePath}\"");
-                }
-
-                if (!File.Exists("../../Forms/HospitalForm.cs") || !File.Exists("../../Forms/HospitalForm.Designer.cs") || !File.Exists("../../Forms/HospitalForm.resx"))
-                {
-                    fileFound = false;
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "HospitalForm");
-                }
+                }*/
 
                 string doctorMalePath = "Data/doctor-male.png";
                 string doctorFemalePath = "Data/doctor-female.png";
 
                 if (!File.Exists(doctorMalePath) && !File.Exists(doctorFemalePath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{doctorMalePath}\", \"{doctorFemalePath}\" ");
                 }
                 else if (!File.Exists(doctorMalePath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{doctorMalePath}\"");
                 }
                 else if (!File.Exists(doctorFemalePath))
                 {
-                    fileFound = false;
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{doctorFemalePath}\" ");
                 }
+
+                this.Hide();
+                HospitalForm hospitalForm = new HospitalForm();
+                hospitalForm.ShowDialog();
             }
             catch (ExceptionHandler ex)
             {
                 ex.HandleError();
-            }
-
-            if (fileFound)
-            {
-                this.Hide();
-                HospitalForm hospitalForm = new HospitalForm();
-                hospitalForm.ShowDialog();
             }
         }
 

@@ -51,27 +51,9 @@ namespace kursova
 
             User.RegisterUser();
 
-            try
-            {
-                bool fileFound = true;
-
-                if (!File.Exists("../../Forms/Main.cs") || !File.Exists("../../Forms/Main.Designer.cs") || !File.Exists("../../Forms/Main.resx"))
-                {
-                    fileFound = false;
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "Main");
-                }
-
-                if (fileFound)
-                {
-                    this.Hide();
-                    MainForm mainForm = new MainForm();
-                    mainForm.ShowDialog();
-                }
-            }
-            catch (ExceptionHandler ex)
-            {
-                ex.HandleError();
-            }
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
         }
 
         private void UpdateSignUpButtonState()

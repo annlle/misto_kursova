@@ -32,24 +32,13 @@ namespace kursova
         {
             try
             {
-                bool fileFound = true;
-
-                if (!File.Exists("../../Forms/Main.cs") || !File.Exists("../../Forms/Main.Designer.cs") || !File.Exists("../../Forms/Main.resx"))
-                {
-                    fileFound = false;
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "Main");
-                }
-
                 if (usersPasswordTextBox.Text == Encryptor.Decrypt(User.Password))
                 {
                     User.CurrentUser = User;
 
-                    if (fileFound)
-                    {
-                        this.Hide();
-                        MainForm mainForm = new MainForm();
-                        mainForm.ShowDialog();
-                    }
+                    this.Hide();
+                    MainForm mainForm = new MainForm();
+                    mainForm.ShowDialog();
                 }
                 else
                 {
@@ -126,27 +115,9 @@ namespace kursova
 
         private void signUpLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            bool fileFound = true;
-
-            try
-            {
-                if (!File.Exists("../../Forms/SignUpForm.cs") || !File.Exists("../../Forms/SignUpForm.Designer.cs") || !File.Exists("../../Forms/SignUpForm.resx"))
-                {
-                    fileFound = false;
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "SignUpForm");
-                }
-            }
-            catch (ExceptionHandler ex)
-            {
-                ex.HandleError();
-            }
-
-            if (fileFound)
-            {
-                this.Hide();
-                SignUpForm signUpForm = new SignUpForm();
-                signUpForm.ShowDialog();
-            }
+            this.Hide();
+            SignUpForm signUpForm = new SignUpForm();
+            signUpForm.ShowDialog();
         }
 
         private void SignInForm_FormClosed(object sender, FormClosedEventArgs e)

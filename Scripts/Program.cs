@@ -21,11 +21,9 @@ namespace kursova
                 string envPath = ".env";
 
                 if (!File.Exists(envPath))
+                {
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, "Не знайдено \".env\"");
-                
-                if (!File.Exists("../../Forms/SignInForm.cs") || !File.Exists("../../Forms/SignInForm.Designer.cs") || !File.Exists("../../Forms/SignInForm.resx"))
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "SignInForm");
-
+                }
             }
             catch (ExceptionHandler ex)
             {

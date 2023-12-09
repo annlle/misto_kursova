@@ -40,10 +40,6 @@ namespace kursova
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            if (!File.Exists("../../Forms/Main.cs") || !File.Exists("../../Forms/Main.Designer.cs") || !File.Exists("../../Forms/Main.resx"))
-            {
-                throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "Main");
-            }
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
@@ -91,6 +87,13 @@ namespace kursova
         {
             try
             {
+                string hospitalsFilePath = Path.Combine("Data", "hospitals.json");
+
+                if (!File.Exists(hospitalsFilePath))
+                {
+                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{hospitalsFilePath}\"\nЗапис не створено.");
+                }
+
                 string addressesFilePath = "Data/addresses.xml";
 
                 if (!File.Exists(addressesFilePath))
@@ -107,9 +110,12 @@ namespace kursova
                     DateTime = dateTime
                 };
 
-                User.CurrentUser.AddAppoinment(appointment);
+                if (appointment.Doctor != null && appointment.Hospital != null && appointment.DateTime != null)
+                {
+                    User.CurrentUser.AddAppoinment(appointment);
+                }
             }
-            catch(ExceptionHandler ex)
+            catch (ExceptionHandler ex)
             {
                 ex.HandleError();
             }
