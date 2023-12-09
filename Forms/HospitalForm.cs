@@ -40,6 +40,10 @@ namespace kursova
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            if (!File.Exists("../../Forms/Main.cs") || !File.Exists("../../Forms/Main.Designer.cs") || !File.Exists("../../Forms/Main.resx"))
+            {
+                throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "Main");
+            }
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
@@ -85,16 +89,30 @@ namespace kursova
 
         private void signButton_Click(object sender, EventArgs e)
         {
-            DateTime dateTime = appointmentDatePicker.Value;
-
-            Appointment appointment = new Appointment
+            try
             {
-                Doctor = selectedDoctor,
-                Hospital = selectedHospital,
-                DateTime = dateTime
-            };
+                string addressesFilePath = "Data/addresses.xml";
 
-            User.CurrentUser.AddAppoinment(appointment);
+                if (!File.Exists(addressesFilePath))
+                {
+                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{addressesFilePath}\"\nЗапис не створено.");
+                }
+
+                DateTime dateTime = appointmentDatePicker.Value;
+
+                Appointment appointment = new Appointment
+                {
+                    Doctor = selectedDoctor,
+                    Hospital = selectedHospital,
+                    DateTime = dateTime
+                };
+
+                User.CurrentUser.AddAppoinment(appointment);
+            }
+            catch(ExceptionHandler ex)
+            {
+                ex.HandleError();
+            }
         }
 
         private void sortComboBox_SelectedIndexChanged(object sender, EventArgs e)

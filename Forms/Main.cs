@@ -248,6 +248,22 @@ namespace kursova
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "ProfileForm");
                 }
 
+                string hospitalsFilePath = Path.Combine("Data", "hospitals.json");
+
+                if (!File.Exists(hospitalsFilePath))
+                {
+                    fileFound = false;
+                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{hospitalsFilePath}\"");
+                }
+
+                string addressesFilePath = "Data/addresses.xml";
+
+                if (!File.Exists(addressesFilePath))
+                {
+                    fileFound = false;
+                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{addressesFilePath}\"");
+                }
+
                 string imageManPath = "Data/man.png";
                 string imageWomanPath = "Data/woman.png";
 
@@ -357,6 +373,14 @@ namespace kursova
 
             try
             {
+                string filePath = Path.Combine("Data", "hospitals.json");
+
+                if (!File.Exists(filePath))
+                {
+                    fileFound = false;
+                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{filePath}\"");
+                }
+
                 if (!File.Exists("../../Forms/HospitalForm.cs") || !File.Exists("../../Forms/HospitalForm.Designer.cs") || !File.Exists("../../Forms/HospitalForm.resx"))
                 {
                     fileFound = false;

@@ -1,5 +1,6 @@
 ﻿using kursova.Scripts.Extensions;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -21,13 +22,28 @@ namespace kursova.Scripts
 
         static Location()
         {
-            string xmlFilePath = "Data/addresses.xml";
+            try
+            {
+                string xmlFilePath = "Data/addresses.xml";
 
-            XDocument xdoc = XDocument.Load(xmlFilePath);
+                XDocument xdoc = XDocument.Load(xmlFilePath);
 
-            RandomLocationsList = (from location in xdoc.Element("Addresses").Elements("Name")
-                            select new Location((string)location)).ToList();
+                if (File.Exists(xmlFilePath))
+                {
+                    RandomLocationsList = (from location in xdoc.Element("Addresses").Elements("Name")
+                                           select new Location((string)location)).ToList();
+                }
+            else
+            {
+                throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{xmlFilePath}\"");
+            }
         }
+            catch (ExceptionHandler ex)
+            {
+                ex.HandleError();
+                Environment.Exit(1);
+            }
+}
 
         public Location(string locationName)
         {

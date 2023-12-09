@@ -60,6 +60,7 @@
             this.usersEmailTextBox.Size = new System.Drawing.Size(234, 26);
             this.usersEmailTextBox.TabIndex = 1;
             this.usersEmailTextBox.TextChanged += new System.EventHandler(this.usersEmailTextBox_TextChanged);
+            this.usersEmailTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usersEmailTextBox_KeyPress);
             // 
             // usersPasswordTextBox
             // 
@@ -70,6 +71,7 @@
             this.usersPasswordTextBox.PasswordChar = '●';
             this.usersPasswordTextBox.Size = new System.Drawing.Size(234, 26);
             this.usersPasswordTextBox.TabIndex = 2;
+            this.usersPasswordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usersPasswordTextBox_KeyPress);
             // 
             // signInButton
             // 

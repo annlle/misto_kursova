@@ -50,6 +50,10 @@ namespace kursova
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            if (!File.Exists("../../Forms/Main.cs") || !File.Exists("../../Forms/Main.Designer.cs") || !File.Exists("../../Forms/Main.resx"))
+            {
+                throw new ExceptionHandler(ExceptionHandler.ErrorType.FormNotFound, "Main");
+            }
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();

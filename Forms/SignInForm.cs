@@ -13,6 +13,7 @@ using System.Xml.Linq;
 using kursova.Scripts;
 using System.Threading;
 using kursova.Scripts.Extensions;
+using System.Text.RegularExpressions;
 
 namespace kursova
 {
@@ -99,6 +100,27 @@ namespace kursova
                 mailCheckerLabel.Text = "Пошту не знайдено!";
                 mailCheckerLabel.ForeColor = Color.Red;
                 signInButton.Enabled = false;
+            }
+        }
+
+        private void usersEmailTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool ctrlPressed = (Control.ModifierKeys & Keys.Control) == Keys.Control;
+
+            string pattern = @"^[a-zA-Z0-9.,!@#$%^&*()_+{}\[\]:;<>,.?~\\-]+$";
+
+            if (!(ctrlPressed || Regex.IsMatch(e.KeyChar.ToString(), pattern) || e.KeyChar == '\b'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void usersPasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string pattern = @"^[a-zA-Z0-9.,!@#$%^&*()_+{}\[\]:;<>,.?~\\-]+$";
+            if (!Regex.IsMatch(e.KeyChar.ToString(), pattern) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
             }
         }
 
