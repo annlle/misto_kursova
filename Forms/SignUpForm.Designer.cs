@@ -256,6 +256,8 @@
             this.femaleRadioButton.TabStop = true;
             this.femaleRadioButton.Text = "Жінка";
             this.femaleRadioButton.UseVisualStyleBackColor = true;
+            this.femaleRadioButton.CheckedChanged += new System.EventHandler(this.femaleRadioButton_CheckedChanged);
+            this.femaleRadioButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.femaleRadioButton_KeyPress);
             // 
             // maleRadioButton
             // 
@@ -267,6 +269,8 @@
             this.maleRadioButton.TabStop = true;
             this.maleRadioButton.Text = "Чоловік";
             this.maleRadioButton.UseVisualStyleBackColor = true;
+            this.maleRadioButton.CheckedChanged += new System.EventHandler(this.maleRadioButton_CheckedChanged);
+            this.maleRadioButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maleRadioButton_KeyPress);
             // 
             // sexLabel
             // 
@@ -334,6 +338,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Реєстрація";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUpForm_FormClosing);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SignUpForm_KeyPress);
             this.sexGroupBox.ResumeLayout(false);
             this.sexGroupBox.PerformLayout();
             this.ResumeLayout(false);

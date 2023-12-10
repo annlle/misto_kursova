@@ -62,6 +62,7 @@ namespace kursova
             doctorLabel.Text = "";
             dateLabel.Text = "";
             locationLinkPictureBox.Visible = false;
+            deleteAppointmentButton.Visible = false;
 
             if (appointmentsListBox.SelectedItems.Count < 1)
                 return;
@@ -78,6 +79,14 @@ namespace kursova
             doctorLabel.Text = currentAppointment.Doctor.Name;
             dateLabel.Text = currentAppointment.DateTime.ToString().Remove(date.Length, 3);
             locationLinkPictureBox.Visible = true;
+            deleteAppointmentButton.Visible = true;
+        }
+
+        private void deleteAppointmentButton_Click(object sender, EventArgs e)
+        {
+            User.CurrentUser.Appointments.Remove(currentAppointment);
+            User.SaveUsers();
+            UpdateAppointmentsList();
         }
 
         private void locationLinkPictureBox_Click(object sender, EventArgs e)

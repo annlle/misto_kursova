@@ -36,24 +36,39 @@ namespace kursova
             signInForm.ShowDialog();
         }
 
+        private void SignUp()
+        {
+            if (signUpButton.Enabled)
+            {
+                User = new User
+                {
+                    Surname = usersSurnameTextBox.Text,
+                    Name = usersNameTextBox.Text,
+                    Patronymic = usersPatronymTextBox.Text,
+                    Sex = maleRadioButton.Checked ? Sex.Male : Sex.Female,
+                    Age = Convert.ToInt32(usersAgeTextBox.Text),
+                    Mail = usersEmailTextBox.Text,
+                    Password = usersPasswordTextBox.Text
+                };
+
+                User.RegisterUser();
+
+                this.Hide();
+                MainForm mainForm = new MainForm();
+                mainForm.ShowDialog();
+            }
+            
+        }
+
+        private void SignUpForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SignUp();
+
+        }
+
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            User = new User
-            {
-                Surname = usersSurnameTextBox.Text,
-                Name = usersNameTextBox.Text,
-                Patronymic = usersPatronymTextBox.Text,
-                Sex = maleRadioButton.Checked ? Sex.Male : Sex.Female,
-                Age = Convert.ToInt32(usersAgeTextBox.Text),
-                Mail = usersEmailTextBox.Text,
-                Password = usersPasswordTextBox.Text
-            };
-
-            User.RegisterUser();
-
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
+            SignUp();
         }
 
         private void UpdateSignUpButtonState()
@@ -128,6 +143,12 @@ namespace kursova
             {
                 e.Handled = true;
             }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                SignUp();
+            }
         }
 
         private async void usersPasswordTextBox_TextChanged(object sender, EventArgs e)
@@ -167,6 +188,12 @@ namespace kursova
             {
                 e.Handled = true;
             }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                SignUp();
+            }
         }
 
         private void usersSurnameTextBox_TextChanged(object sender, EventArgs e)
@@ -179,6 +206,12 @@ namespace kursova
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b')
             {
                 e.Handled = true;
+            }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                SignUp();
             }
         }
 
@@ -193,6 +226,12 @@ namespace kursova
             {
                 e.Handled = true;
             }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                SignUp();
+            }
         }
 
         private void usersPatronymTextBox_TextChanged(object sender, EventArgs e)
@@ -205,6 +244,12 @@ namespace kursova
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b')
             {
                 e.Handled = true;
+            }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                SignUp();
             }
         }
 
@@ -254,6 +299,12 @@ namespace kursova
                 await Task.Delay(3000);
                 ageCheckerLabel.Text = "";
             }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                SignUp();
+            }
         }
 
         private void maleRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -261,15 +312,32 @@ namespace kursova
             UpdateSignUpButtonState();
         }
 
+        private void maleRadioButton_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                SignUp();
+            }
+        }
+
         private void femaleRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             UpdateSignUpButtonState();
+        }
+
+        private void femaleRadioButton_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                SignUp();
+            }
         }
 
         private void SignUpForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-
     }
 }

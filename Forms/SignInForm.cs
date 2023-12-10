@@ -28,7 +28,7 @@ namespace kursova
             InitializeComponent();
         }
 
-        private void signInButton_Click(object sender, EventArgs e)
+        private void SignIn()
         {
             try
             {
@@ -49,6 +49,11 @@ namespace kursova
             {
                 ex.HandleError();
             }
+        }
+
+        private void signInButton_Click(object sender, EventArgs e)
+        {
+            SignIn();
         }
 
         private async void usersEmailTextBox_TextChanged(object sender, EventArgs e)
@@ -102,6 +107,12 @@ namespace kursova
             {
                 e.Handled = true;
             }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                SignIn();
+            }
         }
 
         private void usersPasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -110,6 +121,12 @@ namespace kursova
             if (!Regex.IsMatch(e.KeyChar.ToString(), pattern) && e.KeyChar != '\b')
             {
                 e.Handled = true;
+            }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
+                SignIn();
             }
         }
 

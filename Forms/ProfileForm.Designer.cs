@@ -54,6 +54,7 @@
             this.dateLabel = new System.Windows.Forms.Label();
             this.sortComboBox = new System.Windows.Forms.ComboBox();
             this.sortLabel = new System.Windows.Forms.Label();
+            this.deleteAppointmentButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationLinkPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -350,6 +351,18 @@
             this.sortLabel.TabIndex = 27;
             this.sortLabel.Text = "Сортувати за";
             // 
+            // deleteAppointmentButton
+            // 
+            this.deleteAppointmentButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
+            this.deleteAppointmentButton.Location = new System.Drawing.Point(256, 440);
+            this.deleteAppointmentButton.Name = "deleteAppointmentButton";
+            this.deleteAppointmentButton.Size = new System.Drawing.Size(121, 37);
+            this.deleteAppointmentButton.TabIndex = 28;
+            this.deleteAppointmentButton.Text = "Видалити запис";
+            this.deleteAppointmentButton.UseVisualStyleBackColor = true;
+            this.deleteAppointmentButton.Visible = false;
+            this.deleteAppointmentButton.Click += new System.EventHandler(this.deleteAppointmentButton_Click);
+            // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,6 +370,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(564, 498);
+            this.Controls.Add(this.deleteAppointmentButton);
             this.Controls.Add(this.sortLabel);
             this.Controls.Add(this.sortComboBox);
             this.Controls.Add(this.dateLabel);
@@ -423,5 +437,6 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.ComboBox sortComboBox;
         private System.Windows.Forms.Label sortLabel;
+        private System.Windows.Forms.Button deleteAppointmentButton;
     }
 }
