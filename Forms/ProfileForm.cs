@@ -19,7 +19,7 @@ namespace kursova
         Image MalePicture = Image.FromFile(Path.Combine("Data", "man.png"));
         Image FemalePicture = Image.FromFile(Path.Combine("Data", "woman.png"));
         Appointment currentAppointment;
-        List<Appointment> appointments = User.CurrentUser.Appointments;
+        List<Appointment> appointments;
 
         public ProfileForm()
         {
@@ -46,6 +46,7 @@ namespace kursova
 
             // видалення пройшовших записів до врачів
             User.CurrentUser.RemoveExpiredAppoinments();
+            UpdateAppointmentsList();
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -86,7 +87,13 @@ namespace kursova
 
         private void sortComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UpdateAppointmentsList();
+        }
+
+        private void UpdateAppointmentsList()
+        {
             appointmentsListBox.Items.Clear();
+            appointments = User.CurrentUser.Appointments;
 
             appointments.QuickSort(appointment => appointment.DateTime, !(sortComboBox.Text == sortComboBox.Items[0].ToString()));
 

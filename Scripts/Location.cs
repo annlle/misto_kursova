@@ -15,7 +15,6 @@ namespace kursova.Scripts
     public class Location
     {
         public string Name { get; set; }
-        public string ImageUrl { get; set; }
         public string GoogleMapsLink { get; set; }
 
         public static List<Location> RandomLocationsList { get; set; }

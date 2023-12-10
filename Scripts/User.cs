@@ -90,11 +90,16 @@ namespace kursova.Scripts
 
         public void RemoveExpiredAppoinments()
         {
-            foreach (var appointment in this.Appointments)
+            for (int i = 0; i < Appointments.Count; i++)
             {
-                if (appointment.DateTime < DateTime.Now)
-                    this.Appointments.Remove(appointment);
+                if (Appointments[i].DateTime < DateTime.Now)
+                {
+                    Appointments.RemoveAt(i);
+                    i--;
+                }
             }
+
+            SaveUsers();
         }
 
         public static bool IsUserRegistered(string mail)
