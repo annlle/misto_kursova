@@ -104,7 +104,7 @@ namespace kursova.Scripts
 
         public static bool IsUserRegistered(string mail)
         {
-            return listOfUsers.Find(user => user.Mail == mail) != default(User);
+            return listOfUsers.Find(user => Encryptor.Decrypt(user.Mail) == mail) != default(User);
         }
 
         public static bool TryFindUser(string mail, out User foundUser)

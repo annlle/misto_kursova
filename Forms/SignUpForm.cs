@@ -22,8 +22,10 @@ namespace kursova
     public partial class SignUpForm : Form
     {
         private User User;
+        private bool emailRegistered = false;
 
         private CancellationTokenSource timerCancellation;
+
         public SignUpForm()
         {
             InitializeComponent();
@@ -74,7 +76,7 @@ namespace kursova
         private void UpdateSignUpButtonState()
         {
             signUpButton.Enabled = false;
-            bool isEmailLabelValid = IsEmailValid() && !User.IsUserRegistered(usersEmailTextBox.Text);
+            bool isEmailLabelValid = IsEmailValid() && !emailRegistered;
             bool isPasswordLabelValid = usersPasswordTextBox.Text.Length >= 8;
             bool isSurnameLabelValid = usersSurnameTextBox.Text.Length > 0;
             bool isNameLabelValid = usersNameTextBox.Text.Length > 0;
@@ -101,8 +103,6 @@ namespace kursova
             timerCancellation = new CancellationTokenSource();
 
             await CheckMail(timerCancellation.Token);
-
-            UpdateSignUpButtonState();
         }
 
         private async Task CheckMail(CancellationToken cancellationToken)
@@ -119,6 +119,9 @@ namespace kursova
                 passwordCheckerLabel.Location = new System.Drawing.Point(366, 178);
                 mailCheckerLabel.Text = "Пошта вже зайнята!";
                 mailCheckerLabel.ForeColor = Color.Red;
+
+                emailRegistered = true;
+                UpdateSignUpButtonState();
             }
             else if (!IsEmailValid() && usersEmailTextBox.Text.Length > 0)
             {
@@ -127,6 +130,9 @@ namespace kursova
                 passwordCheckerLabel.Location = new System.Drawing.Point(366, 193);
                 mailCheckerLabel.Text = "Пошта не підходить!\nПритримуйтесь стандарту: example@email.com";
                 mailCheckerLabel.ForeColor = Color.Red;
+
+                emailRegistered = false;
+                UpdateSignUpButtonState();
             }
         }
 
