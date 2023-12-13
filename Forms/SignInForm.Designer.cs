@@ -75,7 +75,11 @@
             // 
             // signInButton
             // 
+            this.signInButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signInButton.BackgroundImage")));
+            this.signInButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.signInButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signInButton.Enabled = false;
+            this.signInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signInButton.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.signInButton.Location = new System.Drawing.Point(76, 230);
             this.signInButton.Name = "signInButton";

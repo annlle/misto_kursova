@@ -78,14 +78,19 @@
             // 
             // signUpButton
             // 
+            this.signUpButton.BackColor = System.Drawing.Color.Transparent;
+            this.signUpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signUpButton.BackgroundImage")));
+            this.signUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.signUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signUpButton.Enabled = false;
+            this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signUpButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.signUpButton.Location = new System.Drawing.Point(224, 365);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(200, 50);
             this.signUpButton.TabIndex = 9;
             this.signUpButton.Text = "ЗАРЕЄСТРУВАТИСЯ";
-            this.signUpButton.UseVisualStyleBackColor = true;
+            this.signUpButton.UseVisualStyleBackColor = false;
             this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // usersPasswordTextBox
@@ -215,6 +220,7 @@
             this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(229)))), ((int)(((byte)(163)))));
             this.backButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButton.BackgroundImage")));
             this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backButton.Location = new System.Drawing.Point(12, 373);
             this.backButton.Name = "backButton";

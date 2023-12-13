@@ -190,6 +190,7 @@
             this.backButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.backButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButton.BackgroundImage")));
             this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backButton.Location = new System.Drawing.Point(12, 12);
             this.backButton.Name = "backButton";
@@ -353,6 +354,10 @@
             // 
             // deleteAppointmentButton
             // 
+            this.deleteAppointmentButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteAppointmentButton.BackgroundImage")));
+            this.deleteAppointmentButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deleteAppointmentButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteAppointmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteAppointmentButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F);
             this.deleteAppointmentButton.Location = new System.Drawing.Point(256, 440);
             this.deleteAppointmentButton.Name = "deleteAppointmentButton";

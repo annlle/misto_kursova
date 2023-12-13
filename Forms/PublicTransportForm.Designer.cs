@@ -65,6 +65,7 @@
             this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(174)))), ((int)(((byte)(81)))));
             this.backButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButton.BackgroundImage")));
             this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backButton.Location = new System.Drawing.Point(12, 12);
             this.backButton.Name = "backButton";

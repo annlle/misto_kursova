@@ -77,6 +77,7 @@
             this.safetyButton.BackColor = System.Drawing.Color.White;
             this.safetyButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("safetyButton.BackgroundImage")));
             this.safetyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.safetyButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.safetyButton.Location = new System.Drawing.Point(515, 77);
             this.safetyButton.Name = "safetyButton";
             this.safetyButton.Size = new System.Drawing.Size(131, 94);
@@ -89,6 +90,7 @@
             this.travelInfoButton.BackColor = System.Drawing.Color.White;
             this.travelInfoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("travelInfoButton.BackgroundImage")));
             this.travelInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.travelInfoButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.travelInfoButton.Location = new System.Drawing.Point(265, 242);
             this.travelInfoButton.Name = "travelInfoButton";
             this.travelInfoButton.Size = new System.Drawing.Size(131, 94);
@@ -101,6 +103,7 @@
             this.hospitalButton.BackColor = System.Drawing.Color.White;
             this.hospitalButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hospitalButton.BackgroundImage")));
             this.hospitalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.hospitalButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hospitalButton.Location = new System.Drawing.Point(515, 242);
             this.hospitalButton.Name = "hospitalButton";
             this.hospitalButton.Size = new System.Drawing.Size(131, 94);
@@ -161,6 +164,7 @@
             this.publicTransportButton.BackColor = System.Drawing.Color.White;
             this.publicTransportButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publicTransportButton.BackgroundImage")));
             this.publicTransportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.publicTransportButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.publicTransportButton.Location = new System.Drawing.Point(265, 78);
             this.publicTransportButton.Name = "publicTransportButton";
             this.publicTransportButton.Size = new System.Drawing.Size(131, 93);
@@ -173,6 +177,7 @@
             this.profileButton.BackColor = System.Drawing.Color.White;
             this.profileButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profileButton.BackgroundImage")));
             this.profileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.profileButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.profileButton.Location = new System.Drawing.Point(12, 12);
             this.profileButton.Name = "profileButton";
             this.profileButton.Size = new System.Drawing.Size(165, 161);

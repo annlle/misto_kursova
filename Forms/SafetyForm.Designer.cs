@@ -67,6 +67,7 @@
             this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(149)))), ((int)(((byte)(164)))));
             this.backButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButton.BackgroundImage")));
             this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backButton.Location = new System.Drawing.Point(14, 12);
             this.backButton.Name = "backButton";
@@ -108,6 +109,10 @@
             // 
             // postButton
             // 
+            this.postButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("postButton.BackgroundImage")));
+            this.postButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.postButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.postButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.postButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.postButton.Location = new System.Drawing.Point(121, 439);
             this.postButton.Name = "postButton";
