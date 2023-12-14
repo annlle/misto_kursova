@@ -29,7 +29,7 @@ namespace kursova.Scripts
             path.AddArc(x, y, width, width, 180, 180);
             path.AddArc(x, y + height - width, width, width, 0, 180);
 
-            // Сама отрисовка
+            // Власне відмальовка
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.FillPath(brush, path);
             g.SmoothingMode = SmoothingMode.Default;
@@ -44,7 +44,7 @@ namespace kursova.Scripts
             path.AddArc(Width - cornerCircleDiameter, Height - cornerCircleDiameter, cornerCircleDiameter, cornerCircleDiameter, 0, 90);
             path.AddArc(0, Height - cornerCircleDiameter, cornerCircleDiameter, cornerCircleDiameter, 90, 90);
 
-            // Сама отрисовка
+            // Власне відмальовка
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.FillPath(brush, path);
             g.SmoothingMode = SmoothingMode.Default;

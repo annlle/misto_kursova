@@ -83,43 +83,43 @@ namespace kursova.Scripts.Extensions
             apiKey = DotEnv.Read()["API_KEY"];
         }
 
-        public static List<string> GetAutoCompleteResults(string input)
+public static List<string> GetAutoCompleteResults(string input)
+{
+    string autoCompleteUrl = $"https://maps.googleapis.com/maps/api/place/autocomplete/json?language=uk&components=country:UA&input={WebUtility.UrlEncode(input)}&key={apiKey}&inputtype=textquery";
+
+    using (WebClient client = new WebClient())
+    {
+        string json;
+
+        client.Encoding = Encoding.UTF8;
+        try
         {
-            string autoCompleteUrl = $"https://maps.googleapis.com/maps/api/place/autocomplete/json?language=uk&components=country:UA&input={WebUtility.UrlEncode(input)}&key={apiKey}&inputtype=textquery";
-
-            using (WebClient client = new WebClient())
-            {
-                string json;
-
-                client.Encoding = Encoding.UTF8;
-                try
-                {
-                    json = client.DownloadString(autoCompleteUrl);
-                }
-                catch (Exception ex)
-                {
-                    return new List<string>();
-                }
-                    
-                JObject response = JObject.Parse(json);
-
-                if (response["status"].ToString() == "OK")
-                {
-                    JArray predictions = (JArray)response["predictions"];
-
-                    List<string> results = new List<string>();
-
-                    foreach (var prediction in predictions)
-                    {
-                        results.Add(prediction["description"].ToString());
-                    }
-
-                    return results;
-                }
-            }
-
+            json = client.DownloadString(autoCompleteUrl);
+        }
+        catch (Exception ex)
+        {
             return new List<string>();
         }
+            
+        JObject response = JObject.Parse(json);
+
+        if (response["status"].ToString() == "OK")
+        {
+            JArray predictions = (JArray)response["predictions"];
+
+            List<string> results = new List<string>();
+
+            foreach (var prediction in predictions)
+            {
+                results.Add(prediction["description"].ToString());
+            }
+
+            return results;
+        }
+    }
+
+    return new List<string>();
+}
     }
 
     public static class Sorter

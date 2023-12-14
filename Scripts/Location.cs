@@ -32,17 +32,17 @@ namespace kursova.Scripts
                     RandomLocationsList = (from location in xdoc.Element("Addresses").Elements("Name")
                                            select new Location((string)location)).ToList();
                 }
-            else
-            {
-                throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{xmlFilePath}\"");
+                else
+                {
+                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{xmlFilePath}\"");
+                }
             }
-        }
             catch (ExceptionHandler ex)
             {
                 ex.HandleError();
                 Environment.Exit(1);
             }
-}
+        }
 
         public Location(string locationName)
         {
@@ -53,7 +53,7 @@ namespace kursova.Scripts
 
         private string GenerateGoogleMapsLink(string locationName)
         {
-            return $"https://www.google.com/maps?q={WebUtility.UrlEncode(locationName)}"; // кодирование в URL формат, чтобы не было ошибок из-за возможных спец символов
+            return $"https://www.google.com/maps?q={WebUtility.UrlEncode(locationName)}"; // кодування в URL формат, щоб не було помилок через спец символи
         }
 
         public void OpenLink()
@@ -64,20 +64,13 @@ namespace kursova.Scripts
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Ошибка при открытии ссылки: {ex.Message}");
+                Console.WriteLine($"Помилка при відкритті посилання: {ex.Message}");
             }
         }
 
         public void OpenLink(object sender, EventArgs e)
         {
-            try
-            {
-                Process.Start(GoogleMapsLink);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка при открытии ссылки: {ex.Message}");
-            }
+            OpenLink();
         }
     }
 }

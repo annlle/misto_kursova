@@ -26,11 +26,9 @@ namespace kursova.Scripts
 
         public EventTile(Panel template, Label type, Label loc, PictureBox locLink, Event e)
         {
-            // Копирование свойств template
             this.Size = template.Size;
             this.BackColor = template.BackColor;
 
-            // Копирование свойств элементов
             Event = e;
 
             Type = new Label
@@ -76,9 +74,7 @@ namespace kursova.Scripts
 
             FillRoundedBackground(g, brush, cornerRadius * 2);
 
-            // Настройки капсулы
             brush = GetBrushByDangerLevel(Event.DangerLevel);
-            //brush = new SolidBrush(Color.Blue);
             int x = 8;
             int y = 7;
             width = 12;
