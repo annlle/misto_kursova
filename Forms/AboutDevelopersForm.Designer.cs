@@ -241,7 +241,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AboutDevelopersForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Про розробників";
             ((System.ComponentModel.ISupportInitialize)(this.glasses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.algorithms)).EndInit();

@@ -144,14 +144,36 @@ namespace kursova
 
         private void faqMenuItemClick(object sender, EventArgs e)
         {
-            FaqForm faqForm = new FaqForm();
-            faqForm.ShowDialog();
+            if (Program.aboutDevelopersForm != null && Program.aboutDevelopersForm.Visible)
+            {
+                Program.aboutDevelopersForm.Hide();
+            }
+            if (Program.faqForm == null)
+            {
+                Program.faqForm = new FaqForm();
+            }
+            else
+            {
+                Program.faqForm.Focus();
+            }
+            Program.faqForm.Show();
         }
 
         private void aboutDevelopersMenuItemClick(object sender, EventArgs e)
         {
-            AboutDevelopersForm aboutDevelopersForm = new AboutDevelopersForm();
-            aboutDevelopersForm.ShowDialog();
+            if (Program.faqForm != null && Program.faqForm.Visible)
+            {
+                Program.faqForm.Hide();
+            }
+            if (Program.aboutDevelopersForm == null)
+            {
+                Program.aboutDevelopersForm = new AboutDevelopersForm();
+            }
+            else
+            {
+                Program.aboutDevelopersForm.Focus();
+            }
+            Program.aboutDevelopersForm.Show();
         }
 
         private void publicTransportButtonClick(object sender, EventArgs e)
@@ -178,8 +200,11 @@ namespace kursova
                 }
 
                 this.Hide();
-                PublicTransportForm publicTransportForm = new PublicTransportForm();
-                publicTransportForm.ShowDialog();
+                if (Program.publicTransportForm == null || Program.publicTransportForm.IsDisposed)
+                {
+                    Program.publicTransportForm = new PublicTransportForm();
+                }
+                Program.publicTransportForm.Show();
             }
             catch (ExceptionHandler ex)
             {
@@ -222,8 +247,11 @@ namespace kursova
                 }
 
                 this.Hide();
-                ProfileForm profileForm = new ProfileForm();
-                profileForm.ShowDialog();
+                if (Program.profileForm == null)
+                {
+                    Program.profileForm = new ProfileForm();
+                }
+                Program.profileForm.Show();
             }
             catch (ExceptionHandler ex)
             {
@@ -233,9 +261,11 @@ namespace kursova
 
         private void safetyButtonClick(object sender, EventArgs e)
         {
-            this.Hide();
-            SafetyForm safetyForm = new SafetyForm();
-            safetyForm.ShowDialog();
+            if (Program.safetyForm == null)
+            {
+                Program.safetyForm = new SafetyForm();
+            }
+            Program.safetyForm.Show();
         }
 
         private void travelInfoButtonClick(object sender, EventArgs e)
@@ -260,8 +290,11 @@ namespace kursova
                 }
 
                 this.Hide();
-                TravelInfoForm travelInfoForm = new TravelInfoForm();
-                travelInfoForm.ShowDialog();
+                if (Program.travelInfoForm == null)
+                {
+                    Program.travelInfoForm = new TravelInfoForm();
+                }
+                Program.travelInfoForm.Show();
             }
             catch (ExceptionHandler ex)
             {
@@ -273,12 +306,12 @@ namespace kursova
         {
             try
             {
-                /*string filePath = Path.Combine("Data", "hospitals.json");
+                string filePath = Path.Combine("Data", "hospitals.json");
 
                 if (!File.Exists(filePath))
                 {
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{filePath}\"");
-                }*/
+                }
 
                 string doctorMalePath = "Data/doctor-male.png";
                 string doctorFemalePath = "Data/doctor-female.png";
@@ -297,8 +330,11 @@ namespace kursova
                 }
 
                 this.Hide();
-                HospitalForm hospitalForm = new HospitalForm();
-                hospitalForm.ShowDialog();
+                if (Program.hospitalForm == null)
+                {
+                    Program.hospitalForm = new HospitalForm();
+                }
+                Program.hospitalForm.Show();
             }
             catch (ExceptionHandler ex)
             {

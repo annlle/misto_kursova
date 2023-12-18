@@ -14,7 +14,6 @@ namespace kursova.Scripts
             FileNotFound,
             InvalidPassword,
             UnknownError
-            // Буду добавлять по необходимости
         }
 
         public ErrorType Type { get; private set; }
@@ -36,7 +35,6 @@ namespace kursova.Scripts
                 case ErrorType.InvalidPassword:
                     MessageBox.Show($"Невірний пароль! {ErrorDetails}", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
-                // Буду добавлять по необходимости
                 default:
                     MessageBox.Show($"Невідома помилка! {ErrorDetails}", "Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;

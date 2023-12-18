@@ -10,12 +10,23 @@ namespace kursova
 {
     internal static class Program
     {
+        public static SignInForm signInForm = null;
+        public static SignUpForm signUpForm = null;
+        public static MainForm mainForm = null;
+        public static AboutDevelopersForm aboutDevelopersForm = null;
+        public static FaqForm faqForm = null;
+        public static HospitalForm hospitalForm = null;
+        public static ProfileForm profileForm = null;
+        public static PublicTransportForm publicTransportForm = null;
+        public static SafetyForm safetyForm = null;
+        public static TravelInfoForm travelInfoForm = null;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            signUpForm = null;
             try
             {
                 string envPath = ".env";
@@ -32,7 +43,7 @@ namespace kursova
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignInForm());
+            Application.Run(signInForm = new SignInForm());
         }
     }
 }

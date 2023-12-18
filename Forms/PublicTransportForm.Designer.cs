@@ -372,7 +372,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PublicTransportForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Громадський транспорт";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PublicTransportForm_FormClosed);
             this.Load += new System.EventHandler(this.PublicTransportForm_Load);

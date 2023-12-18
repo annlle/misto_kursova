@@ -344,7 +344,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Реєстрація";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUpForm_FormClosing);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SignUpForm_KeyPress);
             this.sexGroupBox.ResumeLayout(false);
             this.sexGroupBox.PerformLayout();
             this.ResumeLayout(false);

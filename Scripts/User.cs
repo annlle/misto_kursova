@@ -22,7 +22,7 @@ namespace kursova.Scripts
         public List<Appointment> Appointments { get; private set; } = new List<Appointment>();
 
         private static List<User> listOfUsers;
-        
+
         private static User currentUser;
         public static User CurrentUser
         {

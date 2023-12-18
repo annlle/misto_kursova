@@ -27,6 +27,16 @@ namespace kursova
             InitializeComponent();
         }
 
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (Program.mainForm == null)
+            {
+                Program.mainForm = new MainForm();
+            }
+            Program.mainForm.Show();
+        }
+
         private void HospitalForm_Load(object sender, EventArgs e)
         {
             appointmentDatePicker.MinDate = DateTime.Now;
@@ -36,13 +46,6 @@ namespace kursova
             hospitals = Hospital.HospitalsList;
 
             sortComboBox.SelectedIndex = 0;
-        }
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
         }
 
         private void hospitalsListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -176,7 +179,7 @@ namespace kursova
                     hospitalsListView.Items.Add(hospital.Name);
                     hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
                     hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[4];
-                }                
+                }
             }
 
             foreach (var hospital in hospitals)
@@ -186,7 +189,7 @@ namespace kursova
                     hospitalsListView.Items.Add(hospital.Name);
                     hospitalsListView.Items[hospitalsListView.Items.Count - 1].SubItems.Add(hospital.Location.Name);
                     hospitalsListView.Items[hospitalsListView.Items.Count - 1].Group = hospitalsListView.Groups[5];
-                }                
+                }
             }
         }
 

@@ -22,6 +22,16 @@ namespace kursova
             InitializeComponent();
         }
 
+        private void backButtonClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (Program.mainForm == null)
+            {
+                Program.mainForm = new MainForm();
+            }
+            Program.mainForm.Show();
+        }
+
         private void PublicTransportForm_Load(object sender, EventArgs e)
         {
             routePanel.VerticalScroll.SmallChange = 20;
@@ -93,13 +103,6 @@ namespace kursova
             {
                 listOfStationsListBox.Items.Add(stop);
             }
-        }
-
-        private void backButtonClick(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

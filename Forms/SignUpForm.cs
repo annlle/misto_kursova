@@ -34,8 +34,11 @@ namespace kursova
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SignInForm signInForm = new SignInForm();
-            signInForm.ShowDialog();
+            if (Program.signInForm == null)
+            {
+                Program.signInForm = new SignInForm();
+            }
+            Program.signInForm.Show();
         }
 
         private void SignUp()
@@ -56,15 +59,12 @@ namespace kursova
                 User.RegisterUser();
 
                 this.Hide();
-                MainForm mainForm = new MainForm();
-                mainForm.ShowDialog();
+                if (Program.mainForm == null)
+                {
+                    Program.mainForm = new MainForm();
+                }
+                Program.mainForm.Show();
             }
-            
-        }
-
-        private void SignUpForm_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            SignUp();
 
         }
 

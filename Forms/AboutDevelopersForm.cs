@@ -16,6 +16,11 @@ namespace kursova
         {
             InitializeComponent();
         }
-
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+            base.OnFormClosing(e);
+        }
     }
 }

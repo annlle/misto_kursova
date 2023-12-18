@@ -36,6 +36,16 @@ namespace kursova
             InitializeComponent();
         }
 
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (Program.mainForm == null)
+            {
+                Program.mainForm = new MainForm();
+            }
+            Program.mainForm.Show();
+        }
+
         private void SafetyForm_Load(object sender, EventArgs e)
         {
             InitializeDangerBar();
@@ -68,13 +78,6 @@ namespace kursova
 
                 events.Add(newEvent);
             }
-        }
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
         }
 
         private void InitializeDangerBar()

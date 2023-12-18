@@ -26,6 +26,16 @@ namespace kursova
             InitializeComponent();
         }
 
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (Program.mainForm == null)
+            {
+                Program.mainForm = new MainForm();
+            }
+            Program.mainForm.Show();
+        }
+
         private void ProfileForm_Load(object sender, EventArgs e)
         {
             usersSurnameLabel.Text = User.CurrentUser.Surname;
@@ -47,13 +57,6 @@ namespace kursova
             // видалення пройшовших записів до врачів
             User.CurrentUser.RemoveExpiredAppoinments();
             UpdateAppointmentsList();
-        }
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
         }
 
         private void appointmentsListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,6 +90,7 @@ namespace kursova
             User.CurrentUser.Appointments.Remove(currentAppointment);
             User.SaveUsers();
             UpdateAppointmentsList();
+            deleteAppointmentButton.Visible = false;
         }
 
         private void locationLinkPictureBox_Click(object sender, EventArgs e)

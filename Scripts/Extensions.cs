@@ -27,6 +27,21 @@ namespace kursova.Scripts.Extensions
 
         static Encryptor()
         {
+            try
+            {
+                string envPath = ".env";
+
+                if (!File.Exists(envPath))
+                {
+                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, "Не знайдено \".env\"");
+                }
+            }
+            catch (ExceptionHandler ex)
+            {
+                ex.HandleError();
+                Environment.Exit(1);
+            }
+
             DotEnv.Load();
             key = DotEnv.Read()["ENCRYPTION_KEY"];
         }

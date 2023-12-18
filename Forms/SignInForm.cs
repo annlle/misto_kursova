@@ -37,8 +37,11 @@ namespace kursova
                     User.CurrentUser = User;
 
                     this.Hide();
-                    MainForm mainForm = new MainForm();
-                    mainForm.ShowDialog();
+                    if (Program.mainForm == null)
+                    {
+                        Program.mainForm = new MainForm();
+                    }
+                    Program.mainForm.Show();
                 }
                 else
                 {
@@ -133,8 +136,11 @@ namespace kursova
         private void signUpLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            SignUpForm signUpForm = new SignUpForm();
-            signUpForm.ShowDialog();
+            if (Program.signUpForm == null)
+            {
+                Program.signUpForm = new SignUpForm();
+            }
+            Program.signUpForm.Show();
         }
 
         private void SignInForm_FormClosed(object sender, FormClosedEventArgs e)

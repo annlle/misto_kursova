@@ -22,5 +22,12 @@ namespace kursova
             string projectGithubUrl = "https://github.com/annlle/misto_kursova";
             System.Diagnostics.Process.Start(projectGithubUrl);
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+            base.OnFormClosing(e);
+        }
     }
 }

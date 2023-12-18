@@ -124,7 +124,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TravelInfoForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Туристична інформація";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TravelInfoForm_FormClosed);
             this.Load += new System.EventHandler(this.TravelInfoForm_Load);

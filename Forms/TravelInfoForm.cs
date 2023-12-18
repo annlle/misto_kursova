@@ -25,8 +25,11 @@ namespace kursova
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
+            if (Program.mainForm == null)
+            {
+                Program.mainForm = new MainForm();
+            }
+            Program.mainForm.Show();
         }
 
         private void TravelInfoForm_Load(object sender, EventArgs e)

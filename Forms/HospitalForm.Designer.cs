@@ -229,7 +229,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HospitalForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Лікарня";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HospitalForm_FormClosed);
             this.Load += new System.EventHandler(this.HospitalForm_Load);
