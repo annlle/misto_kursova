@@ -71,6 +71,7 @@
             this.usersPasswordTextBox.PasswordChar = '●';
             this.usersPasswordTextBox.Size = new System.Drawing.Size(234, 26);
             this.usersPasswordTextBox.TabIndex = 2;
+            this.usersPasswordTextBox.TextChanged += new System.EventHandler(this.usersPasswordTextBox_TextChanged);
             this.usersPasswordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usersPasswordTextBox_KeyPress);
             // 
             // signInButton

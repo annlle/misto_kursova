@@ -32,21 +32,19 @@ namespace kursova
         {
             try
             {
-                if (usersPasswordTextBox.Text == Encryptor.Decrypt(User.Password))
-                {
-                    User.CurrentUser = User;
-
-                    this.Hide();
-                    if (Program.mainForm == null)
-                    {
-                        Program.mainForm = new MainForm();
-                    }
-                    Program.mainForm.Show();
-                }
-                else
+                if (usersPasswordTextBox.Text != Encryptor.Decrypt(User.Password))
                 {
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.InvalidPassword);
+                    
                 }
+                User.CurrentUser = User;
+
+                this.Hide();
+                if (Program.mainForm == null)
+                {
+                    Program.mainForm = new MainForm();
+                }
+                Program.mainForm.Show();
             }
             catch (ExceptionHandler ex)
             {
@@ -57,6 +55,16 @@ namespace kursova
         private void signInButton_Click(object sender, EventArgs e)
         {
             SignIn();
+        }
+
+        private bool TextBoxesValid()
+        {
+            return IsEmailRegistered() && usersPasswordTextBox.Text.Length > 0;
+        }
+
+        private void UpdateSignInButtonState()
+        {
+            signInButton.Enabled = TextBoxesValid();
         }
 
         private async void usersEmailTextBox_TextChanged(object sender, EventArgs e)
@@ -71,6 +79,12 @@ namespace kursova
             timerCancellation = new CancellationTokenSource();
 
             await CheckMail(timerCancellation.Token);
+            UpdateSignInButtonState();
+        }
+
+        private bool IsEmailRegistered()
+        {
+            return User.TryFindUser(usersEmailTextBox.Text, out User);
         }
 
         private async Task CheckMail(CancellationToken cancellationToken)
@@ -80,42 +94,37 @@ namespace kursova
             if (cancellationToken.IsCancellationRequested)
                 return;
 
-            if (usersEmailTextBox.Text.Length < 5) // порог длины почты (если меньше 5 символов, ничего не будет написано)
-            {
-                mailCheckerLabel.Text = "";
-                signInButton.Enabled = false;
-                return;
-            }
-            else if (User.TryFindUser(usersEmailTextBox.Text, out User))
+            if (IsEmailRegistered())
             {
                 mailCheckerLabel.Text = "Пошту знайдено!";
                 mailCheckerLabel.ForeColor = Color.DarkGreen;
-                signInButton.Enabled = true;
             }
-            else
+            else if (!IsEmailRegistered() && usersEmailTextBox.Text.Length != 0)
             {
                 mailCheckerLabel.Text = "Пошту не знайдено!";
                 mailCheckerLabel.ForeColor = Color.Red;
-                signInButton.Enabled = false;
             }
         }
 
         private void usersEmailTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            bool ctrlPressed = (Control.ModifierKeys & Keys.Control) == Keys.Control;
+            string pattern = @"^[a-zA-Z0-9.@]+$";
 
-            string pattern = @"^[a-zA-Z0-9.,!@#$%^&*()_+{}\[\]:;<>,.?~\\-]+$";
-
-            if (!(ctrlPressed || Regex.IsMatch(e.KeyChar.ToString(), pattern) || e.KeyChar == '\b'))
+            if (!Regex.IsMatch(e.KeyChar.ToString(), pattern) && e.KeyChar != '\b')
             {
                 e.Handled = true;
             }
 
-            if (e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter && TextBoxesValid())
             {
                 e.Handled = true;
                 SignIn();
             }
+        }
+
+        private void usersPasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateSignInButtonState();
         }
 
         private void usersPasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -125,8 +134,8 @@ namespace kursova
             {
                 e.Handled = true;
             }
-
-            if (e.KeyChar == (char)Keys.Enter)
+            
+            if (e.KeyChar == (char)Keys.Enter && TextBoxesValid())
             {
                 e.Handled = true;
                 SignIn();
