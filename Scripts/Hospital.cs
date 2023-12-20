@@ -32,13 +32,6 @@ namespace kursova.Scripts
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{hospitalsFilePath}\"");
                 }
 
-                string addressesFilePath = "Data/addresses.xml";
-
-                if (!File.Exists(addressesFilePath))
-                {
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{addressesFilePath}\"");
-                }
-
                 string json = File.ReadAllText(hospitalsFilePath);
                 List<Hospital> listOfHospitals = JsonConvert.DeserializeObject<List<Hospital>>(json);
 

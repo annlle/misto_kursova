@@ -220,14 +220,14 @@ namespace kursova
 
                 if (!File.Exists(hospitalsFilePath))
                 {
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{hospitalsFilePath}\"");
+                    //throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{hospitalsFilePath}\"");
                 }
 
                 string addressesFilePath = "Data/addresses.xml";
 
                 if (!File.Exists(addressesFilePath))
                 {
-                    throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{addressesFilePath}\"");
+                    //throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{addressesFilePath}\"");
                 }
 
                 string imageManPath = "Data/man.png";
@@ -308,10 +308,10 @@ namespace kursova
             {
                 string filePath = Path.Combine("Data", "hospitals.json");
 
-                if (!File.Exists(filePath))
+                /*if (!File.Exists(filePath))
                 {
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{filePath}\"");
-                }
+                }*/
 
                 string doctorMalePath = "Data/doctor-male.png";
                 string doctorFemalePath = "Data/doctor-female.png";

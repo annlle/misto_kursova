@@ -90,7 +90,7 @@ namespace kursova
         {
             try
             {
-                string hospitalsFilePath = Path.Combine("Data", "hospitals.json");
+                /*string hospitalsFilePath = Path.Combine("Data", "hospitals.json");
 
                 if (!File.Exists(hospitalsFilePath))
                 {
@@ -102,7 +102,7 @@ namespace kursova
                 if (!File.Exists(addressesFilePath))
                 {
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{addressesFilePath}\"\nЗапис не створено.");
-                }
+                }*/
 
                 DateTime dateTime = appointmentDatePicker.Value;
 

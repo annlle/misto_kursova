@@ -24,6 +24,7 @@ namespace kursova
         public ProfileForm()
         {
             InitializeComponent();
+            UpdateAppointmentsList();
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -122,6 +123,11 @@ namespace kursova
         private void ProfileForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ProfileForm_Activated(object sender, EventArgs e)
+        {
+            UpdateAppointmentsList();
         }
     }
 }

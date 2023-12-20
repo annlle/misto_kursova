@@ -25,17 +25,15 @@ namespace kursova.Scripts
             {
                 string xmlFilePath = "Data/addresses.xml";
 
-                XDocument xdoc = XDocument.Load(xmlFilePath);
-
-                if (File.Exists(xmlFilePath))
-                {
-                    RandomLocationsList = (from location in xdoc.Element("Addresses").Elements("Name")
-                                           select new Location((string)location)).ToList();
-                }
-                else
+                if (!File.Exists(xmlFilePath))
                 {
                     throw new ExceptionHandler(ExceptionHandler.ErrorType.FileNotFound, $"Не знайдено \"{xmlFilePath}\"");
                 }
+
+                XDocument xdoc = XDocument.Load(xmlFilePath);
+
+                RandomLocationsList = (from location in xdoc.Element("Addresses").Elements("Name")
+                                       select new Location((string)location)).ToList();
             }
             catch (ExceptionHandler ex)
             {
